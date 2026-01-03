@@ -17,7 +17,7 @@ layout: default
     <h2>Aulas do Módulo</h2>
     <ul>
       {% for lesson_id in page.lessons %}
-        {% assign lesson = site.data.lessons | where: "id", lesson_id | first %}
+        {% assign lesson = site.data.lessons.lessons | where: "id", lesson_id | first %}
         {% if lesson %}
           <li>
             <a href="{{ '/modules/' | append: page.slug | append: '/lessons/' | append: lesson.slug | relative_url }}">

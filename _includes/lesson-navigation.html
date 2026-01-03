@@ -1,6 +1,6 @@
 <nav class="lesson-navigation">
-  {% assign current_module = site.data.modules | where: "id", page.module | first %}
-  {% assign module_lessons = site.data.lessons | where: "module", page.module | sort: "order" %}
+  {% assign current_module = site.data.modules.modules | where: "id", page.module | first %}
+  {% assign module_lessons = site.data.lessons.lessons | where: "module", page.module | sort: "order" %}
   
   {% for lesson in module_lessons %}
     {% if lesson.id == page.lesson_id %}

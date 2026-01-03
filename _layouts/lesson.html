@@ -46,7 +46,7 @@ layout: default
   <h2>Exercícios Práticos</h2>
   {% if page.exercises %}
     {% for exercise_id in page.exercises %}
-      {% assign exercise = site.data.exercises | where: "id", exercise_id | first %}
+      {% assign exercise = site.data.exercises.exercises | where: "id", exercise_id | first %}
       {% if exercise %}
         <div class="exercise-card">
           <h3>{% if exercise.title %}{{ exercise.title }}{% else %}{{ exercise.slug | replace: '-', ' ' | capitalize }}{% endif %}</h3>
