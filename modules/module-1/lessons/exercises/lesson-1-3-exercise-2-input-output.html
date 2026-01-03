@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 1.3.2: Componente com Input e Output - Angular Expert - Do Básico ao Expert em 5 Dias</title>
+  <meta name="description" content="Treinamento intensivo e prático de Angular">
+  <link rel="stylesheet" href="/angular/assets/css/main.css">
+  
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Exercício 1.3.2: Componente com Input e Output | Angular Expert - Do Básico ao Expert em 5 Dias</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Exercício 1.3.2: Componente com Input e Output" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Treinamento intensivo e prático de Angular" />
+<meta property="og:description" content="Treinamento intensivo e prático de Angular" />
+<link rel="canonical" href="https://onosendae.github.io/angular/modules/module-1/lessons/exercises/lesson-1-3-exercise-2-input-output.html" />
+<meta property="og:url" content="https://onosendae.github.io/angular/modules/module-1/lessons/exercises/lesson-1-3-exercise-2-input-output.html" />
+<meta property="og:site_name" content="Angular Expert - Do Básico ao Expert em 5 Dias" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Exercício 1.3.2: Componente com Input e Output" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Treinamento intensivo e prático de Angular","headline":"Exercício 1.3.2: Componente com Input e Output","url":"https://onosendae.github.io/angular/modules/module-1/lessons/exercises/lesson-1-3-exercise-2-input-output.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Angular Expert - Do Básico ao Expert em 5 Dias",
+    "description": "Treinamento intensivo e prático de Angular",
+    "provider": {
+      "@type": "Organization",
+      "name": "Angular Expert"
+    },
+    "courseCode": "angular-expert-5-days",
+    "educationalLevel": "Advanced",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-content">
+    <h1 class="site-title">
+      <a href="/angular/">Angular Expert - Do Básico ao Expert em 5 Dias</a>
+    </h1>
+    <nav class="main-nav">
+      <a href="/angular/">Início</a>
+      <a href="/angular/about">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+
+  
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-navigation">
+  <h2>Módulos</h2>
+  <ul class="modules-list">
+    
+      <li>
+        <a href="/angular/modules/fundamentos-acelerados">
+          Fundamentos Acelerados
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/introducao-angular">
+                  Introdução ao Angular e Configuração
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/typescript-essencial">
+                  TypeScript Essencial para Angular
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/componentes-standalone">
+                  Componentes Standalone e Templates
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/data-binding">
+                  Data Binding e Diretivas Modernas
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/control-flow-pipes">
+                  Control Flow e Pipes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/desenvolvimento-intermediario">
+          Desenvolvimento Intermediário
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/servicos-di">
+                  Serviços e Injeção de Dependência
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/roteamento">
+                  Roteamento e Navegação Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/formularios-reativos">
+                  Formulários Reativos e Validação
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/http-client">
+                  HTTP Client e Interceptors
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/comunicacao-componentes">
+                  Comunicação entre Componentes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/programacao-reativa-estado">
+          Programação Reativa e Estado
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/rxjs-operators">
+                  RxJS Operators Avançados
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals">
+                  Signals e Signal-First Architecture
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/ngrx">
+                  NgRx - Gerenciamento de Estado
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/memory-leaks">
+                  Padrões Reativos e Memory Leaks
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals-observables">
+                  Integração Signals + Observables
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/performance-otimizacao">
+          Performance e Otimização
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/change-detection">
+                  Change Detection Strategies
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/lazy-loading">
+                  Lazy Loading e Code Splitting
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/deferrable-views">
+                  Deferrable Views e Performance
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/profiling">
+                  Profiling e Otimização
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/zonejs">
+                  Zone.js e Zoneless Apps
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/praticas-avancadas-projeto-final">
+          Práticas Avançadas e Projeto Final
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/testes">
+                  Testes Completos (Unitários, Integração, E2E)
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/ssr-pwa">
+                  SSR e PWA
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/seguranca">
+                  Segurança Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/arquitetura-avancada">
+                  Arquitetura Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/projeto-final">
+                  Projeto Final Completo
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+  </ul>
+</nav>
+
+
+    </aside>
+    
+    <main class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/angular/">Início</a></li>
+    
+      
+      
+        <li><a href="/angular/modules/fundamentos-acelerados">Fundamentos Acelerados</a></li>
+      
+    
+    
+      <li aria-current="page">Exercício 1.3.2: Componente com Input e Output</li>
+    
+  </ol>
+</nav>
+
+
+      <article class="exercise-content">
+  <header>
+    <h1>Exercício 1.3.2: Componente com Input e Output</h1>
+    <div class="exercise-meta">
+      
+        <span>Dificuldade: Intermediário</span>
+      
+      
+    </div>
+  </header>
+  
+  <h2 id="objetivo">Objetivo</h2>
+
+<p>Este exercício tem como objetivo praticar <strong>comunicação entre componentes</strong> através da <strong>implementação de @Input e @Output</strong>.</p>
+
+<p>Ao completar este exercício, você será capaz de:</p>
+
+<ul>
+  <li>Usar <code class="language-plaintext highlighter-rouge">@Input()</code> para receber dados do componente pai</li>
+  <li>Usar <code class="language-plaintext highlighter-rouge">@Output()</code> e <code class="language-plaintext highlighter-rouge">EventEmitter</code> para emitir eventos</li>
+  <li>Entender comunicação unidirecional de dados</li>
+  <li>Criar componentes reutilizáveis e comunicativos</li>
+</ul>
+
+<hr />
+
+<h2 id="descrição">Descrição</h2>
+
+<p>Você precisa criar um componente <code class="language-plaintext highlighter-rouge">ButtonComponent</code> que recebe configurações via <code class="language-plaintext highlighter-rouge">@Input</code> e emite eventos via <code class="language-plaintext highlighter-rouge">@Output</code> quando clicado. O componente deve ser flexível e reutilizável.</p>
+
+<h3 id="contexto">Contexto</h3>
+
+<p>Um sistema precisa de um componente de botão reutilizável que pode ser configurado com diferentes textos, estilos e ações. O componente deve comunicar cliques ao componente pai.</p>
+
+<h3 id="tarefa">Tarefa</h3>
+
+<p>Crie um componente <code class="language-plaintext highlighter-rouge">ButtonComponent</code> com:</p>
+
+<ol>
+  <li><strong>@Input <code class="language-plaintext highlighter-rouge">label</code></strong>: Texto do botão (string, obrigatório)</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>@Input <code class="language-plaintext highlighter-rouge">variant</code></strong>: Variante do botão - ‘primary’</td>
+          <td>‘secondary’</td>
+          <td>‘danger’ (padrão: ‘primary’)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><strong>@Input <code class="language-plaintext highlighter-rouge">disabled</code></strong>: Se o botão está desabilitado (boolean, padrão: false)</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>@Input <code class="language-plaintext highlighter-rouge">size</code></strong>: Tamanho do botão - ‘small’</td>
+          <td>‘medium’</td>
+          <td>‘large’ (padrão: ‘medium’)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><strong>@Output <code class="language-plaintext highlighter-rouge">clicked</code></strong>: EventEmitter que emite quando botão é clicado</li>
+  <li><strong>Template</strong>: Botão com classes dinâmicas baseadas nas propriedades</li>
+  <li><strong>Estilos</strong>: CSS para diferentes variantes e tamanhos</li>
+</ol>
+
+<hr />
+
+<h2 id="requisitos">Requisitos</h2>
+
+<h3 id="funcionalidades-obrigatórias">Funcionalidades Obrigatórias</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">@Input()</code> decorators implementados corretamente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">@Output()</code> com <code class="language-plaintext highlighter-rouge">EventEmitter</code> implementado</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Template usa property binding para classes dinâmicas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Event binding no botão chama método que emite evento</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Estilos CSS para diferentes variantes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Estilos CSS para diferentes tamanhos</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Componente pode ser usado com diferentes configurações</li>
+</ul>
+
+<h3 id="critérios-de-qualidade">Critérios de Qualidade</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Código segue boas práticas aprendidas na aula</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Tipos são explícitos (não usa <code class="language-plaintext highlighter-rouge">any</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />EventEmitter é tipado corretamente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Código é legível e bem organizado</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Componente é reutilizável</li>
+</ul>
+
+<hr />
+
+<h2 id="dicas">Dicas</h2>
+
+<h3 id="dica-1-input-básico">Dica 1: @Input Básico</h3>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Input</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">label</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="dica-2-input-com-valor-padrão">Dica 2: @Input com Valor Padrão</h3>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">variant</span><span class="p">:</span> <span class="dl">'</span><span class="s1">primary</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">secondary</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">danger</span><span class="dl">'</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">primary</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="dica-3-output-com-eventemitter">Dica 3: @Output com EventEmitter</h3>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Output</span><span class="p">,</span> <span class="nx">EventEmitter</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Output</span><span class="p">()</span> <span class="nx">clicked</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventEmitter</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="nf">onClick</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">clicked</span><span class="p">.</span><span class="nf">emit</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="dica-4-classes-dinâmicas-no-template">Dica 4: Classes Dinâmicas no Template</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> 
+  <span class="na">[class.btn-primary]=</span><span class="s">"variant === 'primary'"</span>
+  <span class="na">[class.btn-secondary]=</span><span class="s">"variant === 'secondary'"</span>
+  <span class="na">[disabled]=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>
+  {{ label }}
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<h3 id="dica-5-usar-ngclass">Dica 5: Usar ngClass</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> 
+  <span class="na">[ngClass]=</span><span class="s">"{
+    'btn-primary': variant === 'primary',
+    'btn-small': size === 'small'
+  }"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="solução-esperada">Solução Esperada</h2>
+
+<h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
+
+<p><strong>button.component.ts</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">Input</span><span class="p">,</span> <span class="nx">Output</span><span class="p">,</span> <span class="nx">EventEmitter</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-button</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">CommonModule</span><span class="p">],</span>
+  <span class="na">templateUrl</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./button.component.html</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">styleUrls</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">./button.component.css</span><span class="dl">'</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ButtonComponent</span> <span class="p">{</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">label</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">variant</span><span class="p">:</span> <span class="dl">'</span><span class="s1">primary</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">secondary</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">danger</span><span class="dl">'</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">primary</span><span class="dl">'</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">disabled</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">size</span><span class="p">:</span> <span class="dl">'</span><span class="s1">small</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">medium</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">large</span><span class="dl">'</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">medium</span><span class="dl">'</span><span class="p">;</span>
+  
+  <span class="p">@</span><span class="nd">Output</span><span class="p">()</span> <span class="nx">clicked</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventEmitter</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">();</span>
+
+  <span class="nf">onClick</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">disabled</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">clicked</span><span class="p">.</span><span class="nf">emit</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="kd">get</span> <span class="nf">buttonClasses</span><span class="p">():</span> <span class="kr">string</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">`btn btn-</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">variant</span><span class="p">}</span><span class="s2"> btn-</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">size</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>button.component.html</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> 
+  <span class="na">[class]=</span><span class="s">"buttonClasses"</span>
+  <span class="na">[disabled]=</span><span class="s">"disabled"</span>
+  <span class="na">(click)=</span><span class="s">"onClick()"</span><span class="nt">&gt;</span>
+  
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<p><strong>button.component.css</strong></p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.btn</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+  <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">500</span><span class="p">;</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="nb">all</span> <span class="m">0.3s</span> <span class="nb">ease</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn</span><span class="nd">:disabled</span> <span class="p">{</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0.6</span><span class="p">;</span>
+  <span class="nl">cursor</span><span class="p">:</span> <span class="n">not-allowed</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-primary</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nx">#1976d2</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">white</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-primary</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:disabled</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nx">#1565c0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-secondary</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nx">#757575</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">white</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-secondary</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:disabled</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nx">#616161</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-danger</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nx">#d32f2f</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">white</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-danger</span><span class="nd">:hover:not</span><span class="o">(</span><span class="nd">:disabled</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nx">#c62828</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-small</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">6px</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">0.875rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-medium</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-large</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">14px</span> <span class="m">28px</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.125rem</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>app.component.ts</strong> (exemplo de uso)</p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ButtonComponent</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./button/button.component</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-root</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">ButtonComponent</span><span class="p">],</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;app-button 
+      label="Clique Aqui"
+      variant="primary"
+      size="medium"
+      (clicked)="onButtonClick()"&gt;
+    &lt;/app-button&gt;
+    
+    &lt;app-button 
+      label="Cancelar"
+      variant="secondary"
+      size="small"
+      (clicked)="onCancel()"&gt;
+    &lt;/app-button&gt;
+    
+    &lt;app-button 
+      label="Deletar"
+      variant="danger"
+      size="large"
+      [disabled]="isDeleting"
+      (clicked)="onDelete()"&gt;
+    &lt;/app-button&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">AppComponent</span> <span class="p">{</span>
+  <span class="nl">isDeleting</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+  <span class="nf">onButtonClick</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Botão clicado!</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nf">onCancel</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Cancelado</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nf">onDelete</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">isDeleting</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Deletando...</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Explicação da Solução</strong>:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">@Input()</code> decorators recebem dados do componente pai</li>
+  <li><code class="language-plaintext highlighter-rouge">@Output()</code> com <code class="language-plaintext highlighter-rouge">EventEmitter</code> emite eventos</li>
+  <li>Método <code class="language-plaintext highlighter-rouge">onClick()</code> verifica se está desabilitado antes de emitir</li>
+  <li><code class="language-plaintext highlighter-rouge">buttonClasses</code> getter gera classes dinâmicas</li>
+  <li>Template usa property binding e event binding</li>
+  <li>Estilos CSS para diferentes variantes e tamanhos</li>
+</ol>
+
+<p><strong>Decisões de Design</strong>:</p>
+
+<ul>
+  <li>Tipos union para variantes e tamanhos garantem type safety</li>
+  <li>Getter <code class="language-plaintext highlighter-rouge">buttonClasses</code> centraliza lógica de classes</li>
+  <li>Verificação de <code class="language-plaintext highlighter-rouge">disabled</code> previne eventos quando desabilitado</li>
+  <li>Estilos seguem padrão de design consistente</li>
+</ul>
+
+<hr />
+
+<h2 id="testes">Testes</h2>
+
+<h3 id="casos-de-teste">Casos de Teste</h3>
+
+<p><strong>Teste 1</strong>: Botão com label personalizado</p>
+<ul>
+  <li><strong>Input</strong>: <code class="language-plaintext highlighter-rouge">&lt;app-button label="Meu Botão"&gt;&lt;/app-button&gt;</code></li>
+  <li><strong>Output Esperado</strong>: Botão deve exibir “Meu Botão”</li>
+</ul>
+
+<p><strong>Teste 2</strong>: Variantes diferentes</p>
+<ul>
+  <li><strong>Input</strong>: Botões com <code class="language-plaintext highlighter-rouge">variant="primary"</code>, <code class="language-plaintext highlighter-rouge">variant="secondary"</code>, <code class="language-plaintext highlighter-rouge">variant="danger"</code></li>
+  <li><strong>Output Esperado</strong>: Cada botão deve ter cor correspondente</li>
+</ul>
+
+<p><strong>Teste 3</strong>: Tamanhos diferentes</p>
+<ul>
+  <li><strong>Input</strong>: Botões com <code class="language-plaintext highlighter-rouge">size="small"</code>, <code class="language-plaintext highlighter-rouge">size="medium"</code>, <code class="language-plaintext highlighter-rouge">size="large"</code></li>
+  <li><strong>Output Esperado</strong>: Cada botão deve ter tamanho correspondente</li>
+</ul>
+
+<p><strong>Teste 4</strong>: Botão desabilitado</p>
+<ul>
+  <li><strong>Input</strong>: <code class="language-plaintext highlighter-rouge">&lt;app-button [disabled]="true"&gt;&lt;/app-button&gt;</code></li>
+  <li><strong>Output Esperado</strong>: Botão deve estar desabilitado e não emitir eventos</li>
+</ul>
+
+<p><strong>Teste 5</strong>: Evento emitido ao clicar</p>
+<ul>
+  <li><strong>Input</strong>: Clicar no botão</li>
+  <li><strong>Output Esperado</strong>: Evento <code class="language-plaintext highlighter-rouge">clicked</code> deve ser emitido (verificar no console)</li>
+</ul>
+
+<hr />
+
+<h2 id="extensões-opcional">Extensões (Opcional)</h2>
+
+<p>Se você completou o exercício e quer um desafio adicional:</p>
+
+<ol>
+  <li><strong>Adicionar Ícone</strong>: Adicione <code class="language-plaintext highlighter-rouge">@Input() icon?: string</code> para exibir ícones</li>
+  <li><strong>Adicionar Loading</strong>: Adicione <code class="language-plaintext highlighter-rouge">@Input() loading: boolean</code> com spinner</li>
+  <li><strong>Emitir Dados</strong>: Modifique <code class="language-plaintext highlighter-rouge">EventEmitter</code> para emitir dados: <code class="language-plaintext highlighter-rouge">EventEmitter&lt;{label: string, timestamp: number}&gt;</code></li>
+  <li><strong>Acessibilidade</strong>: Adicione atributos ARIA para melhor acessibilidade</li>
+</ol>
+
+<hr />
+
+<h2 id="referências-úteis">Referências Úteis</h2>
+
+<ul>
+  <li><strong><a href="https://angular.io/api/core/Input">@Input Decorator</a></strong>: Documentação oficial</li>
+  <li><strong><a href="https://angular.io/api/core/Output">@Output Decorator</a></strong>: Documentação oficial</li>
+  <li><strong><a href="https://angular.io/api/core/EventEmitter">EventEmitter</a></strong>: Documentação do EventEmitter</li>
+  <li><strong><a href="https://angular.io/guide/inputs-outputs">Component Communication</a></strong>: Guia de comunicação</li>
+</ul>
+
+<hr />
+
+<h2 id="checklist-de-qualidade">Checklist de Qualidade</h2>
+
+<p>Antes de considerar este exercício completo:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Objetivo está claro</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Descrição fornece contexto suficiente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Requisitos são específicos e mensuráveis</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Dicas guiam sem dar solução completa</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Solução esperada está completa e explicada</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Casos de teste cobrem cenários principais</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Referências úteis estão incluídas</li>
+</ul>
+
+
+</article>
+
+<nav class="exercise-navigation">
+  <a href="">← Voltar para a aula</a>
+</nav>
+
+
+    </main>
+  </div>
+  
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Angular Expert - Do Básico ao Expert em 5 Dias. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+  <div id="progress-tracker" class="progress-tracker" style="display: none;">
+  <div class="overall-progress">
+    <h3>Progresso Geral</h3>
+    <div class="progress-bar">
+      <div class="progress-fill" id="overall-progress-fill"></div>
+    </div>
+    <span id="overall-progress-text">0%</span>
+  </div>
+</div>
+
+
+  
+  <script src="/angular/assets/js/navigation.js"></script>
+  <script src="/angular/assets/js/progress-tracker.js"></script>
+  <script src="/angular/assets/js/analytics.js"></script>
+  <script>
+    window.siteData = {
+      modules: [{"id":"module-1","title":"Fundamentos Acelerados","slug":"fundamentos-acelerados","duration":"8 horas","description":"Estabeleça as bases sólidas do Angular","lessons":["lesson-1-1","lesson-1-2","lesson-1-3","lesson-1-4","lesson-1-5"],"order":1},{"id":"module-2","title":"Desenvolvimento Intermediário","slug":"desenvolvimento-intermediario","duration":"8 horas","description":"Construa funcionalidades completas de aplicações reais","lessons":["lesson-2-1","lesson-2-2","lesson-2-3","lesson-2-4","lesson-2-5"],"order":2},{"id":"module-3","title":"Programação Reativa e Estado","slug":"programacao-reativa-estado","duration":"8 horas","description":"Domine programação reativa e gerenciamento de estado","lessons":["lesson-3-1","lesson-3-2","lesson-3-3","lesson-3-4","lesson-3-5"],"order":3},{"id":"module-4","title":"Performance e Otimização","slug":"performance-otimizacao","duration":"8 horas","description":"Crie aplicações extremamente performáticas","lessons":["lesson-4-1","lesson-4-2","lesson-4-3","lesson-4-4","lesson-4-5"],"order":4},{"id":"module-5","title":"Práticas Avançadas e Projeto Final","slug":"praticas-avancadas-projeto-final","duration":"8 horas","description":"Consolide conhecimento através de práticas avançadas","lessons":["lesson-5-1","lesson-5-2","lesson-5-3","lesson-5-4","lesson-5-5"],"order":5}],
+      lessons: [{"id":"lesson-1-1","title":"Introdução ao Angular e Configuração","slug":"introducao-angular","module":"module-1","order":1,"duration":"60 minutos","level":"Básico","prerequisites":[],"podcast":{"file":"assets/podcasts/01-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Fundação Angular: Tipagem, Encapsulamento e Generics","description":"Neste episódio, exploramos os fundamentos essenciais do Angular moderno. Você aprenderá sobre a arquitetura baseada em componentes, como o TypeScript fortalece o desenvolvimento Angular, e os conceitos de encapsulamento e generics que tornam o framework poderoso e escalável.","duration":"45-60 minutos"}},{"id":"lesson-1-2","title":"TypeScript Essencial para Angular","slug":"typescript-essencial","module":"module-1","order":2,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-1"]},{"id":"lesson-1-3","title":"Componentes Standalone e Templates","slug":"componentes-standalone","module":"module-1","order":3,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-2"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-4","title":"Data Binding e Diretivas Modernas","slug":"data-binding","module":"module-1","order":4,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-3"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-5","title":"Control Flow e Pipes","slug":"control-flow-pipes","module":"module-1","order":5,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-4"]},{"id":"lesson-2-1","title":"Serviços e Injeção de Dependência","slug":"servicos-di","module":"module-2","order":1,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-1-5"],"podcast":{"file":"assets/podcasts/02.1-Serviços_e_Injeção_de_Dependência_no_Angular.m4a","title":"Serviços e Injeção de Dependência no Angular","description":"Descubra como os serviços são o coração da arquitetura Angular.","duration":"50-65 minutos"}},{"id":"lesson-2-2","title":"Roteamento e Navegação Avançada","slug":"roteamento","module":"module-2","order":2,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-1"],"podcast":{"file":"assets/podcasts/02.2-SilêncioRouter_Guards_Resolvers_Lazy_Loading.m4a","title":"Router, Guards, Resolvers e Lazy Loading","description":"Domine o sistema de roteamento avançado do Angular.","duration":"55-70 minutos"}},{"id":"lesson-2-3","title":"Formulários Reativos e Validação","slug":"formularios-reativos","module":"module-2","order":3,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-2"],"podcast":{"file":"assets/podcasts/02.3-Dominando_os_Formulários_Reativos_do_Angular.m4a","title":"Dominando os Formulários Reativos do Angular","description":"Formulários reativos são uma das funcionalidades mais poderosas do Angular.","duration":"60-75 minutos"}},{"id":"lesson-2-4","title":"HTTP Client e Interceptors","slug":"http-client","module":"module-2","order":4,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-2-3"],"podcast":{"file":"assets/podcasts/02.4-HttpClient_e_Interceptors_no_Angular.m4a","title":"HttpClient e Interceptors no Angular","description":"Aprenda a consumir APIs REST de forma profissional com HttpClient.","duration":"50-65 minutos"}},{"id":"lesson-2-5","title":"Comunicação entre Componentes","slug":"comunicacao-componentes","module":"module-2","order":5,"duration":"60 minutos","level":"Intermediário","prerequisites":["lesson-2-4"],"podcast":{"file":"assets/podcasts/02.5-Comunicação_entre_Componentes_Input_Output_ViewChild.m4a","title":"Comunicação entre Componentes - Input, Output, ViewChild","description":"Domine todos os padrões de comunicação entre componentes no Angular.","duration":"45-60 minutos"}},{"id":"lesson-3-1","title":"RxJS Operators Avançados","slug":"rxjs-operators","module":"module-3","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-2-5"],"podcast":{"file":"assets/podcasts/03.1RxJS_Operators_Observables_SwitchMap_e_Busca_Perfeita.m4a","title":"RxJS Operators, Observables, SwitchMap e Busca Perfeita","description":"RxJS é fundamental para Angular moderno.","duration":"65-80 minutos"}},{"id":"lesson-3-2","title":"Signals e Signal-First Architecture","slug":"signals","module":"module-3","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-1"],"podcast":{"file":"assets/podcasts/03.2-Angular_Signals__O_Guia_Completo_e_Prático.m4a","title":"Angular Signals - O Guia Completo e Prático","description":"Signals são a nova forma reativa do Angular.","duration":"60-75 minutos"}},{"id":"lesson-3-3","title":"NgRx - Gerenciamento de Estado","slug":"ngrx","module":"module-3","order":3,"duration":"150 minutos","level":"Avançado","prerequisites":["lesson-3-2"],"podcast":{"file":"assets/podcasts/03.3-NgRx_quando_vale_a_pena_usar.m4a","title":"NgRx - Quando Vale a Pena Usar","description":"NgRx é poderoso, mas nem sempre necessário.","duration":"70-85 minutos"}},{"id":"lesson-3-4","title":"Padrões Reativos e Memory Leaks","slug":"memory-leaks","module":"module-3","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-3-3"],"podcast":{"file":"assets/podcasts/03.4-Combatendo_Memory_Leaks_com_Async_Pipe.m4a","title":"Combatendo Memory Leaks com Async Pipe","description":"Memory leaks são um problema comum em aplicações Angular reativas.","duration":"50-65 minutos"}},{"id":"lesson-3-5","title":"Integração Signals + Observables","slug":"signals-observables","module":"module-3","order":5,"duration":"30 minutos","level":"Avançado","prerequisites":["lesson-3-4"],"podcast":{"file":"assets/podcasts/03.5-toSignal_e_toObservable_as_pontes_do_Angular.m4a","title":"toSignal e toObservable - As Pontes do Angular","description":"Angular oferece funções para integrar Signals com Observables.","duration":"40-50 minutos"}},{"id":"lesson-4-1","title":"Change Detection Strategies","slug":"change-detection","module":"module-4","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-5"],"podcast":{"file":"assets/podcasts/04.1-OnPush_Imutabilidade_e_Performance_de_Apps.m4a","title":"OnPush, Imutabilidade e Performance de Apps","description":"Change Detection é crítico para performance.","duration":"60-75 minutos"}},{"id":"lesson-4-2","title":"Lazy Loading e Code Splitting","slug":"lazy-loading","module":"module-4","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-1"],"podcast":{"file":"assets/podcasts/04.2-Lazy_Loading_e_Code_Splitting_na_Web.m4a","title":"Lazy Loading e Code Splitting na Web","description":"Otimize o carregamento inicial da sua aplicação com lazy loading avançado.","duration":"55-70 minutos"}},{"id":"lesson-4-3","title":"Deferrable Views e Performance","slug":"deferrable-views","module":"module-4","order":3,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-2"],"podcast":{"file":"assets/podcasts/04.3-Angular_Deferrable_Views_no_Código_(@defer).m4a","title":"Angular Deferrable Views no Código (@defer)","description":"Deferrable Views são a nova forma de lazy loading de componentes no Angular.","duration":"50-65 minutos"}},{"id":"lesson-4-4","title":"Profiling e Otimização","slug":"profiling","module":"module-4","order":4,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-3"],"podcast":{"file":"assets/podcasts/04.4-Profiling_Angular_Otimização_Como_Fazer.m4a","title":"Profiling Angular - Otimização Como Fazer","description":"Aprenda a identificar gargalos de performance usando Angular DevTools.","duration":"55-70 minutos"}},{"id":"lesson-4-5","title":"Zone.js e Zoneless Apps","slug":"zonejs","module":"module-4","order":5,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-4-4"],"podcast":{"file":"assets/podcasts/04.5-Zone.m4a","title":"Zone.js e Zoneless Apps","description":"Zone.js é o motor da change detection tradicional do Angular.","duration":"50-65 minutos"}},{"id":"lesson-5-1","title":"Testes Completos (Unitários, Integração, E2E)","slug":"testes","module":"module-5","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-5"],"podcast":{"file":"assets/podcasts/05.1-Testes_Unitários_Integração_E2E_Angular.m4a","title":"Testes Unitários, Integração e E2E no Angular","description":"Testes são essenciais para aplicações profissionais.","duration":"70-85 minutos"}},{"id":"lesson-5-2","title":"SSR e PWA","slug":"ssr-pwa","module":"module-5","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-1"]},{"id":"lesson-5-3","title":"Segurança Avançada","slug":"seguranca","module":"module-5","order":3,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-2"]},{"id":"lesson-5-4","title":"Arquitetura Avançada","slug":"arquitetura-avancada","module":"module-5","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-3"]},{"id":"lesson-5-5","title":"Projeto Final Completo","slug":"projeto-final","module":"module-5","order":5,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-4"]}]
+    };
+    
+  </script>
+</body>
+</html>
+

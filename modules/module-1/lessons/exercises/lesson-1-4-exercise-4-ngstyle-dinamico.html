@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 1.4.4: Estilos Dinâmicos com ngStyle - Angular Expert - Do Básico ao Expert em 5 Dias</title>
+  <meta name="description" content="Treinamento intensivo e prático de Angular">
+  <link rel="stylesheet" href="/angular/assets/css/main.css">
+  
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Exercício 1.4.4: Estilos Dinâmicos com ngStyle | Angular Expert - Do Básico ao Expert em 5 Dias</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Exercício 1.4.4: Estilos Dinâmicos com ngStyle" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Treinamento intensivo e prático de Angular" />
+<meta property="og:description" content="Treinamento intensivo e prático de Angular" />
+<link rel="canonical" href="https://onosendae.github.io/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-4-ngstyle-dinamico.html" />
+<meta property="og:url" content="https://onosendae.github.io/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-4-ngstyle-dinamico.html" />
+<meta property="og:site_name" content="Angular Expert - Do Básico ao Expert em 5 Dias" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Exercício 1.4.4: Estilos Dinâmicos com ngStyle" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Treinamento intensivo e prático de Angular","headline":"Exercício 1.4.4: Estilos Dinâmicos com ngStyle","url":"https://onosendae.github.io/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-4-ngstyle-dinamico.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Angular Expert - Do Básico ao Expert em 5 Dias",
+    "description": "Treinamento intensivo e prático de Angular",
+    "provider": {
+      "@type": "Organization",
+      "name": "Angular Expert"
+    },
+    "courseCode": "angular-expert-5-days",
+    "educationalLevel": "Advanced",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-content">
+    <h1 class="site-title">
+      <a href="/angular/">Angular Expert - Do Básico ao Expert em 5 Dias</a>
+    </h1>
+    <nav class="main-nav">
+      <a href="/angular/">Início</a>
+      <a href="/angular/about">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+
+  
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-navigation">
+  <h2>Módulos</h2>
+  <ul class="modules-list">
+    
+      <li>
+        <a href="/angular/modules/fundamentos-acelerados">
+          Fundamentos Acelerados
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/introducao-angular">
+                  Introdução ao Angular e Configuração
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/typescript-essencial">
+                  TypeScript Essencial para Angular
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/componentes-standalone">
+                  Componentes Standalone e Templates
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/data-binding">
+                  Data Binding e Diretivas Modernas
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/control-flow-pipes">
+                  Control Flow e Pipes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/desenvolvimento-intermediario">
+          Desenvolvimento Intermediário
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/servicos-di">
+                  Serviços e Injeção de Dependência
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/roteamento">
+                  Roteamento e Navegação Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/formularios-reativos">
+                  Formulários Reativos e Validação
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/http-client">
+                  HTTP Client e Interceptors
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/comunicacao-componentes">
+                  Comunicação entre Componentes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/programacao-reativa-estado">
+          Programação Reativa e Estado
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/rxjs-operators">
+                  RxJS Operators Avançados
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals">
+                  Signals e Signal-First Architecture
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/ngrx">
+                  NgRx - Gerenciamento de Estado
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/memory-leaks">
+                  Padrões Reativos e Memory Leaks
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals-observables">
+                  Integração Signals + Observables
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/performance-otimizacao">
+          Performance e Otimização
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/change-detection">
+                  Change Detection Strategies
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/lazy-loading">
+                  Lazy Loading e Code Splitting
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/deferrable-views">
+                  Deferrable Views e Performance
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/profiling">
+                  Profiling e Otimização
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/zonejs">
+                  Zone.js e Zoneless Apps
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/praticas-avancadas-projeto-final">
+          Práticas Avançadas e Projeto Final
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/testes">
+                  Testes Completos (Unitários, Integração, E2E)
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/ssr-pwa">
+                  SSR e PWA
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/seguranca">
+                  Segurança Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/arquitetura-avancada">
+                  Arquitetura Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/projeto-final">
+                  Projeto Final Completo
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+  </ul>
+</nav>
+
+
+    </aside>
+    
+    <main class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/angular/">Início</a></li>
+    
+      
+      
+        <li><a href="/angular/modules/fundamentos-acelerados">Fundamentos Acelerados</a></li>
+      
+    
+    
+      <li aria-current="page">Exercício 1.4.4: Estilos Dinâmicos com ngStyle</li>
+    
+  </ol>
+</nav>
+
+
+      <article class="exercise-content">
+  <header>
+    <h1>Exercício 1.4.4: Estilos Dinâmicos com ngStyle</h1>
+    <div class="exercise-meta">
+      
+        <span>Dificuldade: Intermediário</span>
+      
+      
+    </div>
+  </header>
+  
+  <h2 id="objetivo">Objetivo</h2>
+
+<p>Este exercício tem como objetivo praticar <strong>ngStyle</strong> através da <strong>criação de um seletor de cores que aplica estilos dinamicamente</strong>.</p>
+
+<p>Ao completar este exercício, você será capaz de:</p>
+
+<ul>
+  <li>Usar <code class="language-plaintext highlighter-rouge">[ngStyle]</code> com objetos</li>
+  <li>Aplicar estilos inline dinamicamente</li>
+  <li>Criar interfaces visuais dinâmicas</li>
+  <li>Combinar múltiplos estilos</li>
+</ul>
+
+<hr />
+
+<h2 id="descrição">Descrição</h2>
+
+<p>Você precisa criar um componente <code class="language-plaintext highlighter-rouge">ColorPickerComponent</code> que permite escolher cor de fundo, cor de texto e tamanho da fonte, aplicando estilos dinamicamente usando <code class="language-plaintext highlighter-rouge">[ngStyle]</code>.</p>
+
+<h3 id="contexto">Contexto</h3>
+
+<p>Um editor de texto precisa de um seletor de cores para personalizar aparência. O componente deve aplicar estilos em tempo real conforme o usuário seleciona opções.</p>
+
+<h3 id="tarefa">Tarefa</h3>
+
+<p>Crie um componente <code class="language-plaintext highlighter-rouge">ColorPickerComponent</code> com:</p>
+
+<ol>
+  <li><strong>Seletor de Cor de Fundo</strong>: Input color para escolher cor de fundo</li>
+  <li><strong>Seletor de Cor de Texto</strong>: Input color para escolher cor de texto</li>
+  <li><strong>Slider de Tamanho</strong>: Range input para tamanho da fonte</li>
+  <li><strong>Preview</strong>: Área de preview que aplica estilos dinamicamente</li>
+  <li><strong>ngStyle</strong>: Usar <code class="language-plaintext highlighter-rouge">[ngStyle]</code> para aplicar estilos</li>
+</ol>
+
+<hr />
+
+<h2 id="requisitos">Requisitos</h2>
+
+<h3 id="funcionalidades-obrigatórias">Funcionalidades Obrigatórias</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Componente criado com seletores de cor</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Slider para tamanho da fonte</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">[ngStyle]</code> usado para aplicar estilos</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Preview atualiza em tempo real</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Estilos são aplicados corretamente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Código compila sem erros</li>
+</ul>
+
+<h3 id="critérios-de-qualidade">Critérios de Qualidade</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Código segue boas práticas aprendidas na aula</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Estilos são aplicados dinamicamente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Interface é intuitiva</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Código é legível e bem organizado</li>
+</ul>
+
+<hr />
+
+<h2 id="dicas">Dicas</h2>
+
+<h3 id="dica-1-ngstyle-com-objeto">Dica 1: ngStyle com Objeto</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">[ngStyle]=</span><span class="s">"{ 'background-color': bgColor, 'color': textColor }"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="dica-2-ngstyle-com-método">Dica 2: ngStyle com Método</h3>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">getStyles</span><span class="p">():</span> <span class="p">{[</span><span class="nx">key</span><span class="p">:</span> <span class="kr">string</span><span class="p">]:</span> <span class="kr">string</span><span class="p">}</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">background-color</span><span class="dl">'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">bgColor</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">color</span><span class="dl">'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">textColor</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">font-size</span><span class="dl">'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">fontSize</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">px</span><span class="dl">'</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="dica-3-property-binding-de-estilo">Dica 3: Property Binding de Estilo</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">[style.background-color]=</span><span class="s">"bgColor"</span> <span class="na">[style.font-size.px]=</span><span class="s">"fontSize"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="dica-4-input-color">Dica 4: Input Color</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"color"</span> <span class="na">[(ngModel)]=</span><span class="s">"bgColor"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="solução-esperada">Solução Esperada</h2>
+
+<h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
+
+<p><strong>color-picker.component.ts</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">FormsModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/forms</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-color-picker</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">FormsModule</span><span class="p">,</span> <span class="nx">CommonModule</span><span class="p">],</span>
+  <span class="na">templateUrl</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./color-picker.component.html</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">styleUrls</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">./color-picker.component.css</span><span class="dl">'</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ColorPickerComponent</span> <span class="p">{</span>
+  <span class="nl">backgroundColor</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">textColor</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">#000000</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">fontSize</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+  <span class="nl">fontFamily</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Arial</span><span class="dl">'</span><span class="p">;</span>
+  
+  <span class="nf">getStyles</span><span class="p">():</span> <span class="p">{[</span><span class="nx">key</span><span class="p">:</span> <span class="kr">string</span><span class="p">]:</span> <span class="kr">string</span><span class="p">}</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="dl">'</span><span class="s1">background-color</span><span class="dl">'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">color</span><span class="dl">'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">textColor</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">font-size</span><span class="dl">'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">fontSize</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">px</span><span class="dl">'</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">font-family</span><span class="dl">'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">fontFamily</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">padding</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">2rem</span><span class="dl">'</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">border-radius</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">8px</span><span class="dl">'</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">min-height</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">200px</span><span class="dl">'</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+  
+  <span class="nf">resetStyles</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">textColor</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">#000000</span><span class="dl">'</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">fontSize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">fontFamily</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Arial</span><span class="dl">'</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>color-picker.component.html</strong></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"color-picker"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Seletor de Cores e Estilos<span class="nt">&lt;/h2&gt;</span>
+  
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"controls"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"control-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>Cor de Fundo:<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> 
+        <span class="na">type=</span><span class="s">"color"</span> 
+        <span class="na">[(ngModel)]=</span><span class="s">"backgroundColor"</span>
+        <span class="na">name=</span><span class="s">"backgroundColor"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span&gt;</span>{{ backgroundColor }}<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"control-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>Cor do Texto:<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> 
+        <span class="na">type=</span><span class="s">"color"</span> 
+        <span class="na">[(ngModel)]=</span><span class="s">"textColor"</span>
+        <span class="na">name=</span><span class="s">"textColor"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span&gt;</span>{{ textColor }}<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"control-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>Tamanho da Fonte: {{ fontSize }}px<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> 
+        <span class="na">type=</span><span class="s">"range"</span> 
+        <span class="na">[(ngModel)]=</span><span class="s">"fontSize"</span>
+        <span class="na">name=</span><span class="s">"fontSize"</span>
+        <span class="na">min=</span><span class="s">"12"</span>
+        <span class="na">max=</span><span class="s">"48"</span>
+        <span class="na">step=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"control-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>Fonte:<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;select</span> <span class="na">[(ngModel)]=</span><span class="s">"fontFamily"</span> <span class="na">name=</span><span class="s">"fontFamily"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Arial"</span><span class="nt">&gt;</span>Arial<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Georgia"</span><span class="nt">&gt;</span>Georgia<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Courier New"</span><span class="nt">&gt;</span>Courier New<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Times New Roman"</span><span class="nt">&gt;</span>Times New Roman<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    
+    <span class="nt">&lt;button</span> <span class="na">(click)=</span><span class="s">"resetStyles()"</span><span class="nt">&gt;</span>Resetar<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"preview"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>Preview<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"preview-content"</span> <span class="na">[ngStyle]=</span><span class="s">"getStyles()"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Este é um texto de exemplo que demonstra como os estilos são aplicados dinamicamente.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Você pode ver como a cor de fundo, cor do texto, tamanho da fonte e família de fonte mudam em tempo real.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-output"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>Código CSS Gerado<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;pre&gt;</span>{{ getStyles() | json }}<span class="nt">&lt;/pre&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p><strong>color-picker.component.css</strong></p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.color-picker</span> <span class="p">{</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">800px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.controls</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">grid</span><span class="p">;</span>
+  <span class="nl">gap</span><span class="p">:</span> <span class="m">1.5rem</span><span class="p">;</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">1.5rem</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nx">#f5f5f5</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">8px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.control-group</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">flex</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">gap</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.control-group</span> <span class="nt">label</span> <span class="p">{</span>
+  <span class="nl">min-width</span><span class="p">:</span> <span class="m">150px</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">500</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.control-group</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s1">"color"</span><span class="o">]</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">60px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nx">#ddd</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+  <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.control-group</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s1">"range"</span><span class="o">]</span> <span class="p">{</span>
+  <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.control-group</span> <span class="nt">select</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0.5rem</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nx">#ddd</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+  <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">button</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0.75rem</span> <span class="m">1.5rem</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nx">#1976d2</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">white</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+  <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.preview</span> <span class="p">{</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.preview-content</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">dashed</span> <span class="nx">#ddd</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.code-output</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nx">#f9f9f9</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">pre</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nx">#263238</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">#aed581</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+  <span class="nl">overflow-x</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Explicação da Solução</strong>:</p>
+
+<ol>
+  <li>Propriedades para cada estilo (cor, tamanho, fonte)</li>
+  <li><code class="language-plaintext highlighter-rouge">getStyles()</code> retorna objeto com estilos</li>
+  <li><code class="language-plaintext highlighter-rouge">[ngStyle]</code> aplica estilos dinamicamente</li>
+  <li>Two-way binding sincroniza controles e preview</li>
+  <li>Código CSS gerado exibido para referência</li>
+  <li>Botão reset restaura valores padrão</li>
+</ol>
+
+<p><strong>Decisões de Design</strong>:</p>
+
+<ul>
+  <li>Método <code class="language-plaintext highlighter-rouge">getStyles()</code> centraliza lógica</li>
+  <li>Preview atualiza em tempo real</li>
+  <li>Código CSS exibido para aprendizado</li>
+  <li>Interface intuitiva e organizada</li>
+</ul>
+
+<hr />
+
+<h2 id="testes">Testes</h2>
+
+<h3 id="casos-de-teste">Casos de Teste</h3>
+
+<p><strong>Teste 1</strong>: Cor de fundo aplicada</p>
+<ul>
+  <li><strong>Input</strong>: Selecionar cor de fundo</li>
+  <li><strong>Output Esperado</strong>: Preview deve mudar cor de fundo</li>
+</ul>
+
+<p><strong>Teste 2</strong>: Tamanho da fonte aplicado</p>
+<ul>
+  <li><strong>Input</strong>: Mover slider de tamanho</li>
+  <li><strong>Output Esperado</strong>: Texto deve mudar de tamanho</li>
+</ul>
+
+<p><strong>Teste 3</strong>: Múltiplos estilos aplicados</p>
+<ul>
+  <li><strong>Input</strong>: Mudar múltiplos controles</li>
+  <li><strong>Output Esperado</strong>: Todos os estilos devem ser aplicados simultaneamente</li>
+</ul>
+
+<p><strong>Teste 4</strong>: Reset funciona</p>
+<ul>
+  <li><strong>Input</strong>: Clicar em “Resetar”</li>
+  <li><strong>Output Esperado</strong>: Todos os valores devem voltar ao padrão</li>
+</ul>
+
+<hr />
+
+<h2 id="extensões-opcional">Extensões (Opcional)</h2>
+
+<ol>
+  <li><strong>Salvar Presets</strong>: Salve combinações de estilos favoritas</li>
+  <li><strong>Exportar CSS</strong>: Botão para copiar CSS gerado</li>
+  <li><strong>Mais Opções</strong>: Adicione opções para padding, margin, border</li>
+  <li><strong>Temas Pré-definidos</strong>: Botões para aplicar temas pré-definidos</li>
+</ol>
+
+<hr />
+
+<h2 id="referências-úteis">Referências Úteis</h2>
+
+<ul>
+  <li><strong><a href="https://angular.io/api/common/NgStyle">ngStyle</a></strong>: Documentação oficial</li>
+  <li><strong><a href="https://angular.io/guide/attribute-binding#style-binding">Style Binding</a></strong>: Guia de binding de estilos</li>
+</ul>
+
+<hr />
+
+<h2 id="checklist-de-qualidade">Checklist de Qualidade</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Objetivo está claro</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Descrição fornece contexto suficiente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Requisitos são específicos e mensuráveis</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Dicas guiam sem dar solução completa</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Solução esperada está completa e explicada</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Casos de teste cobrem cenários principais</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Referências úteis estão incluídas</li>
+</ul>
+
+
+</article>
+
+<nav class="exercise-navigation">
+  <a href="">← Voltar para a aula</a>
+</nav>
+
+
+    </main>
+  </div>
+  
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Angular Expert - Do Básico ao Expert em 5 Dias. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+  <div id="progress-tracker" class="progress-tracker" style="display: none;">
+  <div class="overall-progress">
+    <h3>Progresso Geral</h3>
+    <div class="progress-bar">
+      <div class="progress-fill" id="overall-progress-fill"></div>
+    </div>
+    <span id="overall-progress-text">0%</span>
+  </div>
+</div>
+
+
+  
+  <script src="/angular/assets/js/navigation.js"></script>
+  <script src="/angular/assets/js/progress-tracker.js"></script>
+  <script src="/angular/assets/js/analytics.js"></script>
+  <script>
+    window.siteData = {
+      modules: [{"id":"module-1","title":"Fundamentos Acelerados","slug":"fundamentos-acelerados","duration":"8 horas","description":"Estabeleça as bases sólidas do Angular","lessons":["lesson-1-1","lesson-1-2","lesson-1-3","lesson-1-4","lesson-1-5"],"order":1},{"id":"module-2","title":"Desenvolvimento Intermediário","slug":"desenvolvimento-intermediario","duration":"8 horas","description":"Construa funcionalidades completas de aplicações reais","lessons":["lesson-2-1","lesson-2-2","lesson-2-3","lesson-2-4","lesson-2-5"],"order":2},{"id":"module-3","title":"Programação Reativa e Estado","slug":"programacao-reativa-estado","duration":"8 horas","description":"Domine programação reativa e gerenciamento de estado","lessons":["lesson-3-1","lesson-3-2","lesson-3-3","lesson-3-4","lesson-3-5"],"order":3},{"id":"module-4","title":"Performance e Otimização","slug":"performance-otimizacao","duration":"8 horas","description":"Crie aplicações extremamente performáticas","lessons":["lesson-4-1","lesson-4-2","lesson-4-3","lesson-4-4","lesson-4-5"],"order":4},{"id":"module-5","title":"Práticas Avançadas e Projeto Final","slug":"praticas-avancadas-projeto-final","duration":"8 horas","description":"Consolide conhecimento através de práticas avançadas","lessons":["lesson-5-1","lesson-5-2","lesson-5-3","lesson-5-4","lesson-5-5"],"order":5}],
+      lessons: [{"id":"lesson-1-1","title":"Introdução ao Angular e Configuração","slug":"introducao-angular","module":"module-1","order":1,"duration":"60 minutos","level":"Básico","prerequisites":[],"podcast":{"file":"assets/podcasts/01-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Fundação Angular: Tipagem, Encapsulamento e Generics","description":"Neste episódio, exploramos os fundamentos essenciais do Angular moderno. Você aprenderá sobre a arquitetura baseada em componentes, como o TypeScript fortalece o desenvolvimento Angular, e os conceitos de encapsulamento e generics que tornam o framework poderoso e escalável.","duration":"45-60 minutos"}},{"id":"lesson-1-2","title":"TypeScript Essencial para Angular","slug":"typescript-essencial","module":"module-1","order":2,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-1"]},{"id":"lesson-1-3","title":"Componentes Standalone e Templates","slug":"componentes-standalone","module":"module-1","order":3,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-2"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-4","title":"Data Binding e Diretivas Modernas","slug":"data-binding","module":"module-1","order":4,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-3"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-5","title":"Control Flow e Pipes","slug":"control-flow-pipes","module":"module-1","order":5,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-4"]},{"id":"lesson-2-1","title":"Serviços e Injeção de Dependência","slug":"servicos-di","module":"module-2","order":1,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-1-5"],"podcast":{"file":"assets/podcasts/02.1-Serviços_e_Injeção_de_Dependência_no_Angular.m4a","title":"Serviços e Injeção de Dependência no Angular","description":"Descubra como os serviços são o coração da arquitetura Angular.","duration":"50-65 minutos"}},{"id":"lesson-2-2","title":"Roteamento e Navegação Avançada","slug":"roteamento","module":"module-2","order":2,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-1"],"podcast":{"file":"assets/podcasts/02.2-SilêncioRouter_Guards_Resolvers_Lazy_Loading.m4a","title":"Router, Guards, Resolvers e Lazy Loading","description":"Domine o sistema de roteamento avançado do Angular.","duration":"55-70 minutos"}},{"id":"lesson-2-3","title":"Formulários Reativos e Validação","slug":"formularios-reativos","module":"module-2","order":3,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-2"],"podcast":{"file":"assets/podcasts/02.3-Dominando_os_Formulários_Reativos_do_Angular.m4a","title":"Dominando os Formulários Reativos do Angular","description":"Formulários reativos são uma das funcionalidades mais poderosas do Angular.","duration":"60-75 minutos"}},{"id":"lesson-2-4","title":"HTTP Client e Interceptors","slug":"http-client","module":"module-2","order":4,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-2-3"],"podcast":{"file":"assets/podcasts/02.4-HttpClient_e_Interceptors_no_Angular.m4a","title":"HttpClient e Interceptors no Angular","description":"Aprenda a consumir APIs REST de forma profissional com HttpClient.","duration":"50-65 minutos"}},{"id":"lesson-2-5","title":"Comunicação entre Componentes","slug":"comunicacao-componentes","module":"module-2","order":5,"duration":"60 minutos","level":"Intermediário","prerequisites":["lesson-2-4"],"podcast":{"file":"assets/podcasts/02.5-Comunicação_entre_Componentes_Input_Output_ViewChild.m4a","title":"Comunicação entre Componentes - Input, Output, ViewChild","description":"Domine todos os padrões de comunicação entre componentes no Angular.","duration":"45-60 minutos"}},{"id":"lesson-3-1","title":"RxJS Operators Avançados","slug":"rxjs-operators","module":"module-3","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-2-5"],"podcast":{"file":"assets/podcasts/03.1RxJS_Operators_Observables_SwitchMap_e_Busca_Perfeita.m4a","title":"RxJS Operators, Observables, SwitchMap e Busca Perfeita","description":"RxJS é fundamental para Angular moderno.","duration":"65-80 minutos"}},{"id":"lesson-3-2","title":"Signals e Signal-First Architecture","slug":"signals","module":"module-3","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-1"],"podcast":{"file":"assets/podcasts/03.2-Angular_Signals__O_Guia_Completo_e_Prático.m4a","title":"Angular Signals - O Guia Completo e Prático","description":"Signals são a nova forma reativa do Angular.","duration":"60-75 minutos"}},{"id":"lesson-3-3","title":"NgRx - Gerenciamento de Estado","slug":"ngrx","module":"module-3","order":3,"duration":"150 minutos","level":"Avançado","prerequisites":["lesson-3-2"],"podcast":{"file":"assets/podcasts/03.3-NgRx_quando_vale_a_pena_usar.m4a","title":"NgRx - Quando Vale a Pena Usar","description":"NgRx é poderoso, mas nem sempre necessário.","duration":"70-85 minutos"}},{"id":"lesson-3-4","title":"Padrões Reativos e Memory Leaks","slug":"memory-leaks","module":"module-3","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-3-3"],"podcast":{"file":"assets/podcasts/03.4-Combatendo_Memory_Leaks_com_Async_Pipe.m4a","title":"Combatendo Memory Leaks com Async Pipe","description":"Memory leaks são um problema comum em aplicações Angular reativas.","duration":"50-65 minutos"}},{"id":"lesson-3-5","title":"Integração Signals + Observables","slug":"signals-observables","module":"module-3","order":5,"duration":"30 minutos","level":"Avançado","prerequisites":["lesson-3-4"],"podcast":{"file":"assets/podcasts/03.5-toSignal_e_toObservable_as_pontes_do_Angular.m4a","title":"toSignal e toObservable - As Pontes do Angular","description":"Angular oferece funções para integrar Signals com Observables.","duration":"40-50 minutos"}},{"id":"lesson-4-1","title":"Change Detection Strategies","slug":"change-detection","module":"module-4","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-5"],"podcast":{"file":"assets/podcasts/04.1-OnPush_Imutabilidade_e_Performance_de_Apps.m4a","title":"OnPush, Imutabilidade e Performance de Apps","description":"Change Detection é crítico para performance.","duration":"60-75 minutos"}},{"id":"lesson-4-2","title":"Lazy Loading e Code Splitting","slug":"lazy-loading","module":"module-4","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-1"],"podcast":{"file":"assets/podcasts/04.2-Lazy_Loading_e_Code_Splitting_na_Web.m4a","title":"Lazy Loading e Code Splitting na Web","description":"Otimize o carregamento inicial da sua aplicação com lazy loading avançado.","duration":"55-70 minutos"}},{"id":"lesson-4-3","title":"Deferrable Views e Performance","slug":"deferrable-views","module":"module-4","order":3,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-2"],"podcast":{"file":"assets/podcasts/04.3-Angular_Deferrable_Views_no_Código_(@defer).m4a","title":"Angular Deferrable Views no Código (@defer)","description":"Deferrable Views são a nova forma de lazy loading de componentes no Angular.","duration":"50-65 minutos"}},{"id":"lesson-4-4","title":"Profiling e Otimização","slug":"profiling","module":"module-4","order":4,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-3"],"podcast":{"file":"assets/podcasts/04.4-Profiling_Angular_Otimização_Como_Fazer.m4a","title":"Profiling Angular - Otimização Como Fazer","description":"Aprenda a identificar gargalos de performance usando Angular DevTools.","duration":"55-70 minutos"}},{"id":"lesson-4-5","title":"Zone.js e Zoneless Apps","slug":"zonejs","module":"module-4","order":5,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-4-4"],"podcast":{"file":"assets/podcasts/04.5-Zone.m4a","title":"Zone.js e Zoneless Apps","description":"Zone.js é o motor da change detection tradicional do Angular.","duration":"50-65 minutos"}},{"id":"lesson-5-1","title":"Testes Completos (Unitários, Integração, E2E)","slug":"testes","module":"module-5","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-5"],"podcast":{"file":"assets/podcasts/05.1-Testes_Unitários_Integração_E2E_Angular.m4a","title":"Testes Unitários, Integração e E2E no Angular","description":"Testes são essenciais para aplicações profissionais.","duration":"70-85 minutos"}},{"id":"lesson-5-2","title":"SSR e PWA","slug":"ssr-pwa","module":"module-5","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-1"]},{"id":"lesson-5-3","title":"Segurança Avançada","slug":"seguranca","module":"module-5","order":3,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-2"]},{"id":"lesson-5-4","title":"Arquitetura Avançada","slug":"arquitetura-avancada","module":"module-5","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-3"]},{"id":"lesson-5-5","title":"Projeto Final Completo","slug":"projeto-final","module":"module-5","order":5,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-4"]}]
+    };
+    
+  </script>
+</body>
+</html>
+

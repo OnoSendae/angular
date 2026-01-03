@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 2.2.4: Resolvers - Angular Expert - Do Básico ao Expert em 5 Dias</title>
+  <meta name="description" content="Treinamento intensivo e prático de Angular">
+  <link rel="stylesheet" href="/angular/assets/css/main.css">
+  
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Exercício 2.2.4: Resolvers | Angular Expert - Do Básico ao Expert em 5 Dias</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Exercício 2.2.4: Resolvers" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Treinamento intensivo e prático de Angular" />
+<meta property="og:description" content="Treinamento intensivo e prático de Angular" />
+<link rel="canonical" href="https://onosendae.github.io/angular/modules/module-2/lessons/exercises/lesson-2-2-exercise-4-resolvers.html" />
+<meta property="og:url" content="https://onosendae.github.io/angular/modules/module-2/lessons/exercises/lesson-2-2-exercise-4-resolvers.html" />
+<meta property="og:site_name" content="Angular Expert - Do Básico ao Expert em 5 Dias" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Exercício 2.2.4: Resolvers" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Treinamento intensivo e prático de Angular","headline":"Exercício 2.2.4: Resolvers","url":"https://onosendae.github.io/angular/modules/module-2/lessons/exercises/lesson-2-2-exercise-4-resolvers.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Angular Expert - Do Básico ao Expert em 5 Dias",
+    "description": "Treinamento intensivo e prático de Angular",
+    "provider": {
+      "@type": "Organization",
+      "name": "Angular Expert"
+    },
+    "courseCode": "angular-expert-5-days",
+    "educationalLevel": "Advanced",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-content">
+    <h1 class="site-title">
+      <a href="/angular/">Angular Expert - Do Básico ao Expert em 5 Dias</a>
+    </h1>
+    <nav class="main-nav">
+      <a href="/angular/">Início</a>
+      <a href="/angular/about">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+
+  
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-navigation">
+  <h2>Módulos</h2>
+  <ul class="modules-list">
+    
+      <li>
+        <a href="/angular/modules/fundamentos-acelerados">
+          Fundamentos Acelerados
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/introducao-angular">
+                  Introdução ao Angular e Configuração
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/typescript-essencial">
+                  TypeScript Essencial para Angular
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/componentes-standalone">
+                  Componentes Standalone e Templates
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/data-binding">
+                  Data Binding e Diretivas Modernas
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/control-flow-pipes">
+                  Control Flow e Pipes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/desenvolvimento-intermediario">
+          Desenvolvimento Intermediário
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/servicos-di">
+                  Serviços e Injeção de Dependência
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/roteamento">
+                  Roteamento e Navegação Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/formularios-reativos">
+                  Formulários Reativos e Validação
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/http-client">
+                  HTTP Client e Interceptors
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/comunicacao-componentes">
+                  Comunicação entre Componentes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/programacao-reativa-estado">
+          Programação Reativa e Estado
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/rxjs-operators">
+                  RxJS Operators Avançados
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals">
+                  Signals e Signal-First Architecture
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/ngrx">
+                  NgRx - Gerenciamento de Estado
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/memory-leaks">
+                  Padrões Reativos e Memory Leaks
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals-observables">
+                  Integração Signals + Observables
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/performance-otimizacao">
+          Performance e Otimização
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/change-detection">
+                  Change Detection Strategies
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/lazy-loading">
+                  Lazy Loading e Code Splitting
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/deferrable-views">
+                  Deferrable Views e Performance
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/profiling">
+                  Profiling e Otimização
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/zonejs">
+                  Zone.js e Zoneless Apps
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/praticas-avancadas-projeto-final">
+          Práticas Avançadas e Projeto Final
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/testes">
+                  Testes Completos (Unitários, Integração, E2E)
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/ssr-pwa">
+                  SSR e PWA
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/seguranca">
+                  Segurança Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/arquitetura-avancada">
+                  Arquitetura Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/projeto-final">
+                  Projeto Final Completo
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+  </ul>
+</nav>
+
+
+    </aside>
+    
+    <main class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/angular/">Início</a></li>
+    
+      
+      
+        <li><a href="/angular/modules/desenvolvimento-intermediario">Desenvolvimento Intermediário</a></li>
+      
+    
+    
+      <li aria-current="page">Exercício 2.2.4: Resolvers</li>
+    
+  </ol>
+</nav>
+
+
+      <article class="exercise-content">
+  <header>
+    <h1>Exercício 2.2.4: Resolvers</h1>
+    <div class="exercise-meta">
+      
+        <span>Dificuldade: Intermediário</span>
+      
+      
+    </div>
+  </header>
+  
+  <h2 id="objetivo">Objetivo</h2>
+
+<p>Este exercício tem como objetivo praticar <strong>Resolvers</strong> através da <strong>implementação de pré-carregamento de dados antes da ativação de rotas</strong>.</p>
+
+<p>Ao completar este exercício, você será capaz de:</p>
+
+<ul>
+  <li>Criar resolvers funcionais (ResolveFn)</li>
+  <li>Pré-carregar dados antes de ativar rota</li>
+  <li>Acessar dados resolvidos via ActivatedRoute.data</li>
+  <li>Tratar erros em resolvers</li>
+  <li>Combinar múltiplos resolvers</li>
+</ul>
+
+<hr />
+
+<h2 id="descrição">Descrição</h2>
+
+<p>Você precisa criar um sistema onde dados de produtos são pré-carregados antes de exibir a página de detalhes, garantindo que dados estejam disponíveis imediatamente.</p>
+
+<h3 id="contexto">Contexto</h3>
+
+<p>Uma aplicação de e-commerce precisa garantir que dados de produtos estejam disponíveis antes de renderizar a página de detalhes, evitando estados de loading.</p>
+
+<h3 id="tarefa">Tarefa</h3>
+
+<p>Crie:</p>
+
+<ol>
+  <li><strong>ProductService</strong>: Serviço que busca produtos</li>
+  <li><strong>ProductResolver</strong>: Resolver que pré-carrega produto</li>
+  <li><strong>ProductListResolver</strong>: Resolver que pré-carrega lista</li>
+  <li><strong>Rotas com Resolvers</strong>: Configure resolvers nas rotas</li>
+  <li><strong>Componentes</strong>: Componentes que usam dados resolvidos</li>
+</ol>
+
+<hr />
+
+<h2 id="requisitos">Requisitos</h2>
+
+<h3 id="funcionalidades-obrigatórias">Funcionalidades Obrigatórias</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ProductService criado</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ProductResolver implementado</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ProductListResolver implementado</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Rotas configuradas com resolvers</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Componentes acessam dados via route.data</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Tratamento de erros implementado</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Dados disponíveis antes de renderizar</li>
+</ul>
+
+<h3 id="critérios-de-qualidade">Critérios de Qualidade</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Código segue boas práticas aprendidas na aula</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Resolvers são funcionais (ResolveFn)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Erros são tratados adequadamente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Código é legível</li>
+</ul>
+
+<hr />
+
+<h2 id="solução-esperada">Solução Esperada</h2>
+
+<h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
+
+<p><strong>product.model.ts</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kr">interface</span> <span class="nx">Product</span> <span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">description</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">price</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">category</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>product.service.ts</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Observable</span><span class="p">,</span> <span class="k">of</span><span class="p">,</span> <span class="nx">delay</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">rxjs</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Product</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./product.model</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Injectable</span><span class="p">({</span>
+  <span class="na">providedIn</span><span class="p">:</span> <span class="dl">'</span><span class="s1">root</span><span class="dl">'</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ProductService</span> <span class="p">{</span>
+  <span class="k">private</span> <span class="nx">products</span><span class="p">:</span> <span class="nx">Product</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Notebook</span><span class="dl">'</span><span class="p">,</span> <span class="na">description</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Notebook gamer</span><span class="dl">'</span><span class="p">,</span> <span class="na">price</span><span class="p">:</span> <span class="mi">2500</span><span class="p">,</span> <span class="na">category</span><span class="p">:</span> <span class="dl">'</span><span class="s1">electronics</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Smartphone</span><span class="dl">'</span><span class="p">,</span> <span class="na">description</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Smartphone top</span><span class="dl">'</span><span class="p">,</span> <span class="na">price</span><span class="p">:</span> <span class="mi">1500</span><span class="p">,</span> <span class="na">category</span><span class="p">:</span> <span class="dl">'</span><span class="s1">electronics</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Livro</span><span class="dl">'</span><span class="p">,</span> <span class="na">description</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Livro Angular</span><span class="dl">'</span><span class="p">,</span> <span class="na">price</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="na">category</span><span class="p">:</span> <span class="dl">'</span><span class="s1">books</span><span class="dl">'</span> <span class="p">}</span>
+  <span class="p">];</span>
+  
+  <span class="nf">getProduct</span><span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">):</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">Product</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">product</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="nx">p</span> <span class="o">=&gt;</span> <span class="nx">p</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">id</span><span class="p">);</span>
+    <span class="k">if </span><span class="p">(</span><span class="o">!</span><span class="nx">product</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nc">Error</span><span class="p">(</span><span class="s2">`Product with id </span><span class="p">${</span><span class="nx">id</span><span class="p">}</span><span class="s2"> not found`</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="k">of</span><span class="p">(</span><span class="nx">product</span><span class="p">).</span><span class="nf">pipe</span><span class="p">(</span><span class="nf">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">));</span>
+  <span class="p">}</span>
+  
+  <span class="nf">getProducts</span><span class="p">():</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">Product</span><span class="p">[]</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">of</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">products</span><span class="p">).</span><span class="nf">pipe</span><span class="p">(</span><span class="nf">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>product.resolver.ts</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">inject</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ResolveFn</span><span class="p">,</span> <span class="nx">Router</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/router</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Observable</span><span class="p">,</span> <span class="k">of</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">rxjs</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">catchError</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">rxjs/operators</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ProductService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./product.service</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Product</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./product.model</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">productResolver</span><span class="p">:</span> <span class="nx">ResolveFn</span><span class="o">&lt;</span><span class="nx">Product</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">(</span><span class="nx">route</span><span class="p">,</span> <span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">productService</span> <span class="o">=</span> <span class="nf">inject</span><span class="p">(</span><span class="nx">ProductService</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nf">inject</span><span class="p">(</span><span class="nx">Router</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">productId</span> <span class="o">=</span> <span class="nc">Number</span><span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">paramMap</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="p">));</span>
+  
+  <span class="k">return</span> <span class="nx">productService</span><span class="p">.</span><span class="nf">getProduct</span><span class="p">(</span><span class="nx">productId</span><span class="p">).</span><span class="nf">pipe</span><span class="p">(</span>
+    <span class="nf">catchError</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nf">error</span><span class="p">(</span><span class="dl">'</span><span class="s1">Error loading product:</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+      <span class="nx">router</span><span class="p">.</span><span class="nf">navigate</span><span class="p">([</span><span class="dl">'</span><span class="s1">/products</span><span class="dl">'</span><span class="p">]);</span>
+      <span class="k">return</span> <span class="k">of</span><span class="p">(</span><span class="kc">null</span> <span class="kd">as </span><span class="kr">any</span><span class="p">);</span>
+    <span class="p">})</span>
+  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p><strong>product-list.resolver.ts</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">inject</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ResolveFn</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/router</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ProductService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./product.service</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Product</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./product.model</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">productListResolver</span><span class="p">:</span> <span class="nx">ResolveFn</span><span class="o">&lt;</span><span class="nx">Product</span><span class="p">[]</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">(</span><span class="nx">route</span><span class="p">,</span> <span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">productService</span> <span class="o">=</span> <span class="nf">inject</span><span class="p">(</span><span class="nx">ProductService</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">productService</span><span class="p">.</span><span class="nf">getProducts</span><span class="p">();</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p><strong>app.routes.ts</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Routes</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/router</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ProductListComponent</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./products/product-list.component</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ProductDetailComponent</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./products/product-detail.component</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">productResolver</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./resolvers/product.resolver</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">productListResolver</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./resolvers/product-list.resolver</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">routes</span><span class="p">:</span> <span class="nx">Routes</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">products</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">component</span><span class="p">:</span> <span class="nx">ProductListComponent</span><span class="p">,</span>
+    <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span> <span class="na">products</span><span class="p">:</span> <span class="nx">productListResolver</span> <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">products/:id</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">component</span><span class="p">:</span> <span class="nx">ProductDetailComponent</span><span class="p">,</span>
+    <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span> <span class="na">product</span><span class="p">:</span> <span class="nx">productResolver</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">];</span>
+</code></pre></div></div>
+
+<p><strong>product-list.component.ts</strong></p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">OnInit</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ActivatedRoute</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/router</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">RouterModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/router</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Product</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./product.model</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-product-list</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">CommonModule</span><span class="p">,</span> <span class="nx">RouterModule</span><span class="p">],</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;div&gt;
+      &lt;h1&gt;Produtos&lt;/h1&gt;
+      &lt;ul&gt;
+        @for (product of products; track product.id) {
+          &lt;li&gt;
+            &lt;a [routerLink]="['/products', product.id]"&gt;
+              {{ product.name }} - R$ {{ product.price }}
+            &lt;/a&gt;
+          &lt;/li&gt;
+        }
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ProductListComponent</span> <span class="k">implements</span> <span class="nx">OnInit</span> <span class="p">{</span>
+  <span class="nl">products</span><span class="p">:</span> <span class="nx">Product</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+  
+  <span class="nf">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">route</span><span class="p">:</span> <span class="nx">ActivatedRoute</span><span class="p">)</span> <span class="p">{}</span>
+  
+  <span class="nf">ngOnInit</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">products</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">.</span><span class="nx">snapshot</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="dl">'</span><span class="s1">products</span><span class="dl">'</span><span class="p">]</span> <span class="o">||</span> <span class="p">[];</span>
+    
+    <span class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">products</span> <span class="o">=</span> <span class="nx">data</span><span class="p">[</span><span class="dl">'</span><span class="s1">products</span><span class="dl">'</span><span class="p">]</span> <span class="o">||</span> <span class="p">[];</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>product-detail.component.ts</strong></p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">OnInit</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ActivatedRoute</span><span class="p">,</span> <span class="nx">Router</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/router</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Product</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./product.model</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-product-detail</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">CommonModule</span><span class="p">],</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;div&gt;
+      @if (product) {
+        &lt;h1&gt;{{ product.name }}&lt;/h1&gt;
+        &lt;p&gt;{{ product.description }}&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Preço:&lt;/strong&gt; R$ {{ product.price }}&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; {{ product.category }}&lt;/p&gt;
+        &lt;button (click)="goBack()"&gt;Voltar&lt;/button&gt;
+      } @else {
+        &lt;p&gt;Produto não encontrado&lt;/p&gt;
+      }
+    &lt;/div&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ProductDetailComponent</span> <span class="k">implements</span> <span class="nx">OnInit</span> <span class="p">{</span>
+  <span class="nl">product</span><span class="p">:</span> <span class="nx">Product</span> <span class="o">|</span> <span class="kc">null</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  
+  <span class="nf">constructor</span><span class="p">(</span>
+    <span class="k">private</span> <span class="nx">route</span><span class="p">:</span> <span class="nx">ActivatedRoute</span><span class="p">,</span>
+    <span class="k">private</span> <span class="nx">router</span><span class="p">:</span> <span class="nx">Router</span>
+  <span class="p">)</span> <span class="p">{}</span>
+  
+  <span class="nf">ngOnInit</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">product</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">.</span><span class="nx">snapshot</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="dl">'</span><span class="s1">product</span><span class="dl">'</span><span class="p">]</span> <span class="o">||</span> <span class="kc">null</span><span class="p">;</span>
+    
+    <span class="k">if </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">product</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nf">navigate</span><span class="p">([</span><span class="dl">'</span><span class="s1">/products</span><span class="dl">'</span><span class="p">]);</span>
+    <span class="p">}</span>
+    
+    <span class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">product</span> <span class="o">=</span> <span class="nx">data</span><span class="p">[</span><span class="dl">'</span><span class="s1">product</span><span class="dl">'</span><span class="p">]</span> <span class="o">||</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+  
+  <span class="nf">goBack</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nf">navigate</span><span class="p">([</span><span class="dl">'</span><span class="s1">/products</span><span class="dl">'</span><span class="p">]);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Explicação da Solução</strong>:</p>
+
+<ol>
+  <li>Resolvers pré-carregam dados antes de ativar rota</li>
+  <li>Dados acessados via route.snapshot.data ou route.data</li>
+  <li>Tratamento de erros com catchError</li>
+  <li>Redirecionamento em caso de erro</li>
+  <li>Múltiplos resolvers podem ser combinados</li>
+  <li>Componente não precisa lidar com loading states</li>
+</ol>
+
+<hr />
+
+<h2 id="testes">Testes</h2>
+
+<h3 id="casos-de-teste">Casos de Teste</h3>
+
+<p><strong>Teste 1</strong>: Resolver carrega dados</p>
+<ul>
+  <li><strong>Input</strong>: Navegar para /products/1</li>
+  <li><strong>Output Esperado</strong>: Dados do produto disponíveis imediatamente</li>
+</ul>
+
+<p><strong>Teste 2</strong>: Resolver trata erro</p>
+<ul>
+  <li><strong>Input</strong>: Navegar para /products/999 (inexistente)</li>
+  <li><strong>Output Esperado</strong>: Redireciona para /products</li>
+</ul>
+
+<p><strong>Teste 3</strong>: Lista resolver funciona</p>
+<ul>
+  <li><strong>Input</strong>: Navegar para /products</li>
+  <li><strong>Output Esperado</strong>: Lista de produtos disponível imediatamente</li>
+</ul>
+
+<hr />
+
+<h2 id="extensões-opcional">Extensões (Opcional)</h2>
+
+<ol>
+  <li><strong>Múltiplos Resolvers</strong>: Combine múltiplos resolvers em uma rota</li>
+  <li><strong>Resolvers Assíncronos</strong>: Implemente resolvers com operações assíncronas complexas</li>
+  <li><strong>Cache</strong>: Implemente cache de dados resolvidos</li>
+</ol>
+
+<hr />
+
+<h2 id="referências-úteis">Referências Úteis</h2>
+
+<ul>
+  <li><strong><a href="https://angular.io/guide/router#resolve-pre-fetching-component-data">Resolvers</a></strong>: Guia oficial</li>
+  <li><strong><a href="https://angular.io/api/router/ResolveFn">ResolveFn</a></strong>: Documentação ResolveFn</li>
+</ul>
+
+<hr />
+
+<h2 id="checklist-de-qualidade">Checklist de Qualidade</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Objetivo está claro</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Descrição fornece contexto suficiente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Requisitos são específicos e mensuráveis</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Dicas guiam sem dar solução completa</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Solução esperada está completa e explicada</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Casos de teste cobrem cenários principais</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Referências úteis estão incluídas</li>
+</ul>
+
+
+</article>
+
+<nav class="exercise-navigation">
+  <a href="">← Voltar para a aula</a>
+</nav>
+
+
+    </main>
+  </div>
+  
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Angular Expert - Do Básico ao Expert em 5 Dias. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+  <div id="progress-tracker" class="progress-tracker" style="display: none;">
+  <div class="overall-progress">
+    <h3>Progresso Geral</h3>
+    <div class="progress-bar">
+      <div class="progress-fill" id="overall-progress-fill"></div>
+    </div>
+    <span id="overall-progress-text">0%</span>
+  </div>
+</div>
+
+
+  
+  <script src="/angular/assets/js/navigation.js"></script>
+  <script src="/angular/assets/js/progress-tracker.js"></script>
+  <script src="/angular/assets/js/analytics.js"></script>
+  <script>
+    window.siteData = {
+      modules: [{"id":"module-1","title":"Fundamentos Acelerados","slug":"fundamentos-acelerados","duration":"8 horas","description":"Estabeleça as bases sólidas do Angular","lessons":["lesson-1-1","lesson-1-2","lesson-1-3","lesson-1-4","lesson-1-5"],"order":1},{"id":"module-2","title":"Desenvolvimento Intermediário","slug":"desenvolvimento-intermediario","duration":"8 horas","description":"Construa funcionalidades completas de aplicações reais","lessons":["lesson-2-1","lesson-2-2","lesson-2-3","lesson-2-4","lesson-2-5"],"order":2},{"id":"module-3","title":"Programação Reativa e Estado","slug":"programacao-reativa-estado","duration":"8 horas","description":"Domine programação reativa e gerenciamento de estado","lessons":["lesson-3-1","lesson-3-2","lesson-3-3","lesson-3-4","lesson-3-5"],"order":3},{"id":"module-4","title":"Performance e Otimização","slug":"performance-otimizacao","duration":"8 horas","description":"Crie aplicações extremamente performáticas","lessons":["lesson-4-1","lesson-4-2","lesson-4-3","lesson-4-4","lesson-4-5"],"order":4},{"id":"module-5","title":"Práticas Avançadas e Projeto Final","slug":"praticas-avancadas-projeto-final","duration":"8 horas","description":"Consolide conhecimento através de práticas avançadas","lessons":["lesson-5-1","lesson-5-2","lesson-5-3","lesson-5-4","lesson-5-5"],"order":5}],
+      lessons: [{"id":"lesson-1-1","title":"Introdução ao Angular e Configuração","slug":"introducao-angular","module":"module-1","order":1,"duration":"60 minutos","level":"Básico","prerequisites":[],"podcast":{"file":"assets/podcasts/01-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Fundação Angular: Tipagem, Encapsulamento e Generics","description":"Neste episódio, exploramos os fundamentos essenciais do Angular moderno. Você aprenderá sobre a arquitetura baseada em componentes, como o TypeScript fortalece o desenvolvimento Angular, e os conceitos de encapsulamento e generics que tornam o framework poderoso e escalável.","duration":"45-60 minutos"}},{"id":"lesson-1-2","title":"TypeScript Essencial para Angular","slug":"typescript-essencial","module":"module-1","order":2,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-1"]},{"id":"lesson-1-3","title":"Componentes Standalone e Templates","slug":"componentes-standalone","module":"module-1","order":3,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-2"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-4","title":"Data Binding e Diretivas Modernas","slug":"data-binding","module":"module-1","order":4,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-3"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-5","title":"Control Flow e Pipes","slug":"control-flow-pipes","module":"module-1","order":5,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-4"]},{"id":"lesson-2-1","title":"Serviços e Injeção de Dependência","slug":"servicos-di","module":"module-2","order":1,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-1-5"],"podcast":{"file":"assets/podcasts/02.1-Serviços_e_Injeção_de_Dependência_no_Angular.m4a","title":"Serviços e Injeção de Dependência no Angular","description":"Descubra como os serviços são o coração da arquitetura Angular.","duration":"50-65 minutos"}},{"id":"lesson-2-2","title":"Roteamento e Navegação Avançada","slug":"roteamento","module":"module-2","order":2,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-1"],"podcast":{"file":"assets/podcasts/02.2-SilêncioRouter_Guards_Resolvers_Lazy_Loading.m4a","title":"Router, Guards, Resolvers e Lazy Loading","description":"Domine o sistema de roteamento avançado do Angular.","duration":"55-70 minutos"}},{"id":"lesson-2-3","title":"Formulários Reativos e Validação","slug":"formularios-reativos","module":"module-2","order":3,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-2"],"podcast":{"file":"assets/podcasts/02.3-Dominando_os_Formulários_Reativos_do_Angular.m4a","title":"Dominando os Formulários Reativos do Angular","description":"Formulários reativos são uma das funcionalidades mais poderosas do Angular.","duration":"60-75 minutos"}},{"id":"lesson-2-4","title":"HTTP Client e Interceptors","slug":"http-client","module":"module-2","order":4,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-2-3"],"podcast":{"file":"assets/podcasts/02.4-HttpClient_e_Interceptors_no_Angular.m4a","title":"HttpClient e Interceptors no Angular","description":"Aprenda a consumir APIs REST de forma profissional com HttpClient.","duration":"50-65 minutos"}},{"id":"lesson-2-5","title":"Comunicação entre Componentes","slug":"comunicacao-componentes","module":"module-2","order":5,"duration":"60 minutos","level":"Intermediário","prerequisites":["lesson-2-4"],"podcast":{"file":"assets/podcasts/02.5-Comunicação_entre_Componentes_Input_Output_ViewChild.m4a","title":"Comunicação entre Componentes - Input, Output, ViewChild","description":"Domine todos os padrões de comunicação entre componentes no Angular.","duration":"45-60 minutos"}},{"id":"lesson-3-1","title":"RxJS Operators Avançados","slug":"rxjs-operators","module":"module-3","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-2-5"],"podcast":{"file":"assets/podcasts/03.1RxJS_Operators_Observables_SwitchMap_e_Busca_Perfeita.m4a","title":"RxJS Operators, Observables, SwitchMap e Busca Perfeita","description":"RxJS é fundamental para Angular moderno.","duration":"65-80 minutos"}},{"id":"lesson-3-2","title":"Signals e Signal-First Architecture","slug":"signals","module":"module-3","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-1"],"podcast":{"file":"assets/podcasts/03.2-Angular_Signals__O_Guia_Completo_e_Prático.m4a","title":"Angular Signals - O Guia Completo e Prático","description":"Signals são a nova forma reativa do Angular.","duration":"60-75 minutos"}},{"id":"lesson-3-3","title":"NgRx - Gerenciamento de Estado","slug":"ngrx","module":"module-3","order":3,"duration":"150 minutos","level":"Avançado","prerequisites":["lesson-3-2"],"podcast":{"file":"assets/podcasts/03.3-NgRx_quando_vale_a_pena_usar.m4a","title":"NgRx - Quando Vale a Pena Usar","description":"NgRx é poderoso, mas nem sempre necessário.","duration":"70-85 minutos"}},{"id":"lesson-3-4","title":"Padrões Reativos e Memory Leaks","slug":"memory-leaks","module":"module-3","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-3-3"],"podcast":{"file":"assets/podcasts/03.4-Combatendo_Memory_Leaks_com_Async_Pipe.m4a","title":"Combatendo Memory Leaks com Async Pipe","description":"Memory leaks são um problema comum em aplicações Angular reativas.","duration":"50-65 minutos"}},{"id":"lesson-3-5","title":"Integração Signals + Observables","slug":"signals-observables","module":"module-3","order":5,"duration":"30 minutos","level":"Avançado","prerequisites":["lesson-3-4"],"podcast":{"file":"assets/podcasts/03.5-toSignal_e_toObservable_as_pontes_do_Angular.m4a","title":"toSignal e toObservable - As Pontes do Angular","description":"Angular oferece funções para integrar Signals com Observables.","duration":"40-50 minutos"}},{"id":"lesson-4-1","title":"Change Detection Strategies","slug":"change-detection","module":"module-4","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-5"],"podcast":{"file":"assets/podcasts/04.1-OnPush_Imutabilidade_e_Performance_de_Apps.m4a","title":"OnPush, Imutabilidade e Performance de Apps","description":"Change Detection é crítico para performance.","duration":"60-75 minutos"}},{"id":"lesson-4-2","title":"Lazy Loading e Code Splitting","slug":"lazy-loading","module":"module-4","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-1"],"podcast":{"file":"assets/podcasts/04.2-Lazy_Loading_e_Code_Splitting_na_Web.m4a","title":"Lazy Loading e Code Splitting na Web","description":"Otimize o carregamento inicial da sua aplicação com lazy loading avançado.","duration":"55-70 minutos"}},{"id":"lesson-4-3","title":"Deferrable Views e Performance","slug":"deferrable-views","module":"module-4","order":3,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-2"],"podcast":{"file":"assets/podcasts/04.3-Angular_Deferrable_Views_no_Código_(@defer).m4a","title":"Angular Deferrable Views no Código (@defer)","description":"Deferrable Views são a nova forma de lazy loading de componentes no Angular.","duration":"50-65 minutos"}},{"id":"lesson-4-4","title":"Profiling e Otimização","slug":"profiling","module":"module-4","order":4,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-3"],"podcast":{"file":"assets/podcasts/04.4-Profiling_Angular_Otimização_Como_Fazer.m4a","title":"Profiling Angular - Otimização Como Fazer","description":"Aprenda a identificar gargalos de performance usando Angular DevTools.","duration":"55-70 minutos"}},{"id":"lesson-4-5","title":"Zone.js e Zoneless Apps","slug":"zonejs","module":"module-4","order":5,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-4-4"],"podcast":{"file":"assets/podcasts/04.5-Zone.m4a","title":"Zone.js e Zoneless Apps","description":"Zone.js é o motor da change detection tradicional do Angular.","duration":"50-65 minutos"}},{"id":"lesson-5-1","title":"Testes Completos (Unitários, Integração, E2E)","slug":"testes","module":"module-5","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-5"],"podcast":{"file":"assets/podcasts/05.1-Testes_Unitários_Integração_E2E_Angular.m4a","title":"Testes Unitários, Integração e E2E no Angular","description":"Testes são essenciais para aplicações profissionais.","duration":"70-85 minutos"}},{"id":"lesson-5-2","title":"SSR e PWA","slug":"ssr-pwa","module":"module-5","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-1"]},{"id":"lesson-5-3","title":"Segurança Avançada","slug":"seguranca","module":"module-5","order":3,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-2"]},{"id":"lesson-5-4","title":"Arquitetura Avançada","slug":"arquitetura-avancada","module":"module-5","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-3"]},{"id":"lesson-5-5","title":"Projeto Final Completo","slug":"projeto-final","module":"module-5","order":5,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-4"]}]
+    };
+    
+  </script>
+</body>
+</html>
+

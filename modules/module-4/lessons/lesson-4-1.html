@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 4.1: Change Detection Strategies - Angular Expert - Do Básico ao Expert em 5 Dias</title>
+  <meta name="description" content="Treinamento intensivo e prático de Angular">
+  <link rel="stylesheet" href="/angular/assets/css/main.css">
+  
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Aula 4.1: Change Detection Strategies | Angular Expert - Do Básico ao Expert em 5 Dias</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Aula 4.1: Change Detection Strategies" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Treinamento intensivo e prático de Angular" />
+<meta property="og:description" content="Treinamento intensivo e prático de Angular" />
+<link rel="canonical" href="https://onosendae.github.io/angular/modules/module-4/lessons/lesson-4-1.html" />
+<meta property="og:url" content="https://onosendae.github.io/angular/modules/module-4/lessons/lesson-4-1.html" />
+<meta property="og:site_name" content="Angular Expert - Do Básico ao Expert em 5 Dias" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Aula 4.1: Change Detection Strategies" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Treinamento intensivo e prático de Angular","headline":"Aula 4.1: Change Detection Strategies","url":"https://onosendae.github.io/angular/modules/module-4/lessons/lesson-4-1.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Angular Expert - Do Básico ao Expert em 5 Dias",
+    "description": "Treinamento intensivo e prático de Angular",
+    "provider": {
+      "@type": "Organization",
+      "name": "Angular Expert"
+    },
+    "courseCode": "angular-expert-5-days",
+    "educationalLevel": "Advanced",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-content">
+    <h1 class="site-title">
+      <a href="/angular/">Angular Expert - Do Básico ao Expert em 5 Dias</a>
+    </h1>
+    <nav class="main-nav">
+      <a href="/angular/">Início</a>
+      <a href="/angular/about">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+
+  
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-navigation">
+  <h2>Módulos</h2>
+  <ul class="modules-list">
+    
+      <li>
+        <a href="/angular/modules/fundamentos-acelerados">
+          Fundamentos Acelerados
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/introducao-angular">
+                  Introdução ao Angular e Configuração
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/typescript-essencial">
+                  TypeScript Essencial para Angular
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/componentes-standalone">
+                  Componentes Standalone e Templates
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/data-binding">
+                  Data Binding e Diretivas Modernas
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/control-flow-pipes">
+                  Control Flow e Pipes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/desenvolvimento-intermediario">
+          Desenvolvimento Intermediário
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/servicos-di">
+                  Serviços e Injeção de Dependência
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/roteamento">
+                  Roteamento e Navegação Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/formularios-reativos">
+                  Formulários Reativos e Validação
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/http-client">
+                  HTTP Client e Interceptors
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/comunicacao-componentes">
+                  Comunicação entre Componentes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/programacao-reativa-estado">
+          Programação Reativa e Estado
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/rxjs-operators">
+                  RxJS Operators Avançados
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals">
+                  Signals e Signal-First Architecture
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/ngrx">
+                  NgRx - Gerenciamento de Estado
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/memory-leaks">
+                  Padrões Reativos e Memory Leaks
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals-observables">
+                  Integração Signals + Observables
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/performance-otimizacao">
+          Performance e Otimização
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/change-detection">
+                  Change Detection Strategies
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/lazy-loading">
+                  Lazy Loading e Code Splitting
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/deferrable-views">
+                  Deferrable Views e Performance
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/profiling">
+                  Profiling e Otimização
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/zonejs">
+                  Zone.js e Zoneless Apps
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/praticas-avancadas-projeto-final">
+          Práticas Avançadas e Projeto Final
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/testes">
+                  Testes Completos (Unitários, Integração, E2E)
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/ssr-pwa">
+                  SSR e PWA
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/seguranca">
+                  Segurança Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/arquitetura-avancada">
+                  Arquitetura Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/projeto-final">
+                  Projeto Final Completo
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+  </ul>
+</nav>
+
+
+    </aside>
+    
+    <main class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/angular/">Início</a></li>
+    
+      
+      
+        <li><a href="/angular/modules/performance-otimizacao">Performance e Otimização</a></li>
+      
+    
+    
+      <li aria-current="page">Aula 4.1: Change Detection Strategies</li>
+    
+  </ol>
+</nav>
+
+
+      <script type="application/json" id="lesson-data">
+{
+  "lesson_id": "lesson-4-1",
+  "module_id": "module-4"
+}
+</script>
+
+<div class="podcast-player-container">
+  
+    <div class="podcast-player" id="podcast-player">
+  <div class="podcast-info">
+    <h3>OnPush, Imutabilidade e Performance de Apps</h3>
+    <p class="podcast-description">Change Detection é crítico para performance.</p>
+  </div>
+  
+  <div class="player-controls">
+    <button id="podcast-play" class="play-button" aria-label="Reproduzir podcast">
+      ▶
+    </button>
+    <button id="podcast-pause" class="pause-button" style="display: none;" aria-label="Pausar podcast">
+      ⏸
+    </button>
+    
+    <div class="progress-bar" id="podcast-progress">
+      <div class="progress" id="podcast-progress-fill"></div>
+    </div>
+    
+    <div class="time-display">
+      <span id="podcast-current-time">0:00</span> / <span id="podcast-duration">0:00</span>
+    </div>
+    
+    <div class="speed-control">
+      <label for="podcast-speed">Velocidade:</label>
+      <select id="podcast-speed">
+        <option value="0.5">0.5x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+    </div>
+    
+    <div class="volume-control">
+      <label for="podcast-volume">Volume:</label>
+      <input type="range" id="podcast-volume" min="0" max="100" value="100">
+    </div>
+  </div>
+</div>
+
+<div id="podcast-indicator" class="podcast-playing-indicator">
+  🎧 Podcast tocando
+</div>
+
+<script type="application/json" id="podcast-data">
+{
+  "audioFile": "/angular/assets/podcasts/04.1-OnPush_Imutabilidade_e_Performance_de_Apps.m4a",
+  "lessonId": "lesson-4-1",
+  "podcastTitle": "OnPush, Imutabilidade e Performance de Apps"
+}
+</script>
+
+
+  
+</div>
+
+<article class="lesson-content">
+  <header>
+    <h1>Aula 4.1: Change Detection Strategies</h1>
+    <div class="lesson-meta">
+      <span>Duração: 120 minutos</span>
+      <span>Nível: Avançado</span>
+    </div>
+  </header>
+  
+  <h2 id="introdução">Introdução</h2>
+
+<p>Nesta aula, você dominará estratégias avançadas de change detection no Angular. Change detection é um dos aspectos mais importantes para performance em aplicações Angular, e entender como otimizá-la é essencial para criar aplicações rápidas e responsivas.</p>
+
+<h3 id="o-que-você-vai-aprender">O que você vai aprender</h3>
+
+<ul>
+  <li>Entender Default vs OnPush change detection</li>
+  <li>Implementar OnPush strategy em componentes</li>
+  <li>Trabalhar com imutabilidade</li>
+  <li>Usar ChangeDetectorRef para controle manual</li>
+  <li>Implementar trackBy functions para otimização</li>
+  <li>Aplicar OnPush everywhere pattern</li>
+</ul>
+
+<h3 id="por-que-isso-é-importante">Por que isso é importante</h3>
+
+<p>Change detection pode ser um grande gargalo de performance em aplicações Angular. OnPush strategy pode reduzir drasticamente o número de verificações de mudanças, melhorando significativamente a performance. É uma das otimizações mais impactantes que você pode fazer.</p>
+
+<hr />
+
+<h2 id="conceitos-teóricos">Conceitos Teóricos</h2>
+
+<h3 id="default-strategy">Default Strategy</h3>
+
+<p><strong>Definição</strong>: Default strategy verifica mudanças em todos os componentes em cada ciclo de change detection.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Default Strategy:</p>
+<ul>
+  <li>Verifica todos componentes em cada ciclo</li>
+  <li>Executa após eventos, timers, HTTP, etc.</li>
+  <li>Compara valores usando === (referência)</li>
+  <li>Pode ser ineficiente em aplicações grandes</li>
+  <li>Fácil de usar mas pode causar problemas de performance</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Default strategy é como verificar todas as portas de um prédio toda vez que algo acontece, mesmo que apenas uma porta tenha mudado.</p>
+
+<p><strong>Visualização</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Event ──→ Zone.js ──→ Change Detection ──→ Check ALL Components
+</code></pre></div></div>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-default</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`&lt;p&gt;&lt;/p&gt;`</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">DefaultComponent</span> <span class="p">{</span>
+  <span class="nx">data</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Hello</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="onpush-strategy">OnPush Strategy</h3>
+
+<p><strong>Definição</strong>: OnPush strategy verifica mudanças apenas quando inputs mudam ou eventos ocorrem no componente.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>OnPush Strategy:</p>
+<ul>
+  <li>Verifica apenas quando inputs mudam (por referência)</li>
+  <li>Verifica quando eventos ocorrem no componente</li>
+  <li>Requer imutabilidade para funcionar corretamente</li>
+  <li>Muito mais eficiente que Default</li>
+  <li>Reduz drasticamente verificações desnecessárias</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>OnPush é como verificar apenas as portas que realmente mudaram, economizando tempo e recursos.</p>
+
+<p><strong>Visualização</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input Change ──→ OnPush Check ──→ Update if Changed
+Event ──→ OnPush Check ──→ Update if Changed
+</code></pre></div></div>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-onpush</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">changeDetection</span><span class="p">:</span> <span class="nx">ChangeDetectionStrategy</span><span class="p">.</span><span class="nx">OnPush</span><span class="p">,</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`&lt;p&gt;&lt;/p&gt;`</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">OnPushComponent</span> <span class="p">{</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">data</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Hello</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="imutabilidade">Imutabilidade</h3>
+
+<p><strong>Definição</strong>: Imutabilidade significa não modificar objetos existentes, mas criar novos objetos quando mudanças são necessárias.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Imutabilidade:</p>
+<ul>
+  <li>Não modifica objetos existentes</li>
+  <li>Cria novos objetos para mudanças</li>
+  <li>Permite comparação por referência (===)</li>
+  <li>Essencial para OnPush funcionar</li>
+  <li>Facilita debugging e testes</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Imutabilidade é como criar uma nova versão de um documento ao invés de editar o original. Você sempre sabe qual é a versão atual.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">ImmutableComponent</span> <span class="p">{</span>
+  <span class="nx">items</span> <span class="o">=</span> <span class="nx">signal</span><span class="o">&lt;</span><span class="nx">Item</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">([]);</span>
+  
+  <span class="nf">addItem</span><span class="p">(</span><span class="nx">item</span><span class="p">:</span> <span class="nx">Item</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="nx">items</span> <span class="o">=&gt;</span> <span class="p">[...</span><span class="nx">items</span><span class="p">,</span> <span class="nx">item</span><span class="p">]);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">updateItem</span><span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">,</span> <span class="nx">changes</span><span class="p">:</span> <span class="nb">Partial</span><span class="o">&lt;</span><span class="nx">Item</span><span class="o">&gt;</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="nx">items</span> <span class="o">=&gt;</span>
+      <span class="nx">items</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">id</span> <span class="p">?</span> <span class="p">{</span> <span class="p">...</span><span class="nx">item</span><span class="p">,</span> <span class="p">...</span><span class="nx">changes</span> <span class="p">}</span> <span class="p">:</span> <span class="nx">item</span><span class="p">)</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="changedetectorref">ChangeDetectorRef</h3>
+
+<p><strong>Definição</strong>: ChangeDetectorRef fornece métodos para controlar change detection manualmente.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>ChangeDetectorRef:</p>
+<ul>
+  <li>detectChanges(): Força verificação imediata</li>
+  <li>detach(): Desconecta do ciclo de change detection</li>
+  <li>reattach(): Reconecta ao ciclo</li>
+  <li>markForCheck(): Marca para verificação no próximo ciclo</li>
+  <li>Útil para otimizações avançadas</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>ChangeDetectorRef é como um controle remoto para change detection. Você pode forçar verificações quando necessário ou desabilitar quando não precisa.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-manual</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">changeDetection</span><span class="p">:</span> <span class="nx">ChangeDetectionStrategy</span><span class="p">.</span><span class="nx">OnPush</span><span class="p">,</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`&lt;p&gt;&lt;/p&gt;`</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ManualComponent</span> <span class="p">{</span>
+  <span class="nx">data</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Hello</span><span class="dl">'</span><span class="p">;</span>
+  
+  <span class="nf">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">cdr</span><span class="p">:</span> <span class="nx">ChangeDetectorRef</span><span class="p">)</span> <span class="p">{}</span>
+  
+  <span class="nf">updateData</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Updated</span><span class="dl">'</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">cdr</span><span class="p">.</span><span class="nf">markForCheck</span><span class="p">();</span>
+  <span class="p">}</span>
+  
+  <span class="nf">detachComponent</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">cdr</span><span class="p">.</span><span class="nf">detach</span><span class="p">();</span>
+  <span class="p">}</span>
+  
+  <span class="nf">reattachComponent</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">cdr</span><span class="p">.</span><span class="nf">reattach</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="trackby-functions">trackBy Functions</h3>
+
+<p><strong>Definição</strong>: trackBy functions ajudam Angular a identificar itens em listas, melhorando performance de *ngFor.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>trackBy Functions:</p>
+<ul>
+  <li>Identifica itens únicos em listas</li>
+  <li>Evita re-renderização desnecessária</li>
+  <li>Melhora performance de *ngFor</li>
+  <li>Reduz trabalho do change detection</li>
+  <li>Essencial para listas grandes</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>trackBy é como dar um ID único para cada item em uma lista. Angular sabe exatamente qual item mudou sem precisar verificar todos.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-trackby</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;ul&gt;
+      @for (item of items(); track trackById($index, item)) {
+        &lt;li&gt;&lt;/li&gt;
+      }
+    &lt;/ul&gt;
+  `</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">TrackByComponent</span> <span class="p">{</span>
+  <span class="nx">items</span> <span class="o">=</span> <span class="nx">signal</span><span class="o">&lt;</span><span class="nx">Item</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">([]);</span>
+  
+  <span class="nf">trackById</span><span class="p">(</span><span class="nx">index</span><span class="p">:</span> <span class="kr">number</span><span class="p">,</span> <span class="nx">item</span><span class="p">:</span> <span class="nx">Item</span><span class="p">):</span> <span class="kr">number</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="exemplos-práticos-completos">Exemplos Práticos Completos</h2>
+
+<h3 id="exemplo-1-componente-onpush-completo">Exemplo 1: Componente OnPush Completo</h3>
+
+<p><strong>Contexto</strong>: Criar componente completo usando OnPush strategy com imutabilidade.</p>
+
+<p><strong>Código</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">Input</span><span class="p">,</span> <span class="nx">ChangeDetectionStrategy</span><span class="p">,</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">computed</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">User</span> <span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">email</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-user-list</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">CommonModule</span><span class="p">],</span>
+  <span class="na">changeDetection</span><span class="p">:</span> <span class="nx">ChangeDetectionStrategy</span><span class="p">.</span><span class="nx">OnPush</span><span class="p">,</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;div&gt;
+      &lt;h2&gt;Usuários (OnPush)&lt;/h2&gt;
+      &lt;p&gt;Total: {{ userCount() }}&lt;/p&gt;
+      &lt;ul&gt;
+        @for (user of users(); track user.id) {
+          &lt;li&gt;{{ user.name }} - {{ user.email }}&lt;/li&gt;
+        }
+      &lt;/ul&gt;
+      &lt;button (click)="addUser()"&gt;Adicionar Usuário&lt;/button&gt;
+    &lt;/div&gt;
+  `</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">UserListComponent</span> <span class="p">{</span>
+  <span class="nx">users</span> <span class="o">=</span> <span class="nx">signal</span><span class="o">&lt;</span><span class="nx">User</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">([]);</span>
+  
+  <span class="nx">userCount</span> <span class="o">=</span> <span class="nf">computed</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nf">users</span><span class="p">().</span><span class="nx">length</span><span class="p">);</span>
+  
+  <span class="nf">addUser</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="na">newUser</span><span class="p">:</span> <span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">id</span><span class="p">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nf">now</span><span class="p">(),</span>
+      <span class="na">name</span><span class="p">:</span> <span class="s2">`User </span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nf">users</span><span class="p">().</span><span class="nx">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+      <span class="na">email</span><span class="p">:</span> <span class="s2">`user</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nf">users</span><span class="p">().</span><span class="nx">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span><span class="s2">@example.com`</span>
+    <span class="p">};</span>
+    
+    <span class="k">this</span><span class="p">.</span><span class="nx">users</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="nx">users</span> <span class="o">=&gt;</span> <span class="p">[...</span><span class="nx">users</span><span class="p">,</span> <span class="nx">newUser</span><span class="p">]);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">updateUser</span><span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">,</span> <span class="nx">changes</span><span class="p">:</span> <span class="nb">Partial</span><span class="o">&lt;</span><span class="nx">User</span><span class="o">&gt;</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">users</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="nx">users</span> <span class="o">=&gt;</span>
+      <span class="nx">users</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="nx">user</span> <span class="o">=&gt;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">id</span> <span class="p">?</span> <span class="p">{</span> <span class="p">...</span><span class="nx">user</span><span class="p">,</span> <span class="p">...</span><span class="nx">changes</span> <span class="p">}</span> <span class="p">:</span> <span class="nx">user</span><span class="p">)</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">removeUser</span><span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">users</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="nx">users</span> <span class="o">=&gt;</span> <span class="nx">users</span><span class="p">.</span><span class="nf">filter</span><span class="p">(</span><span class="nx">user</span> <span class="o">=&gt;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">id</span> <span class="o">!==</span> <span class="nx">id</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="padrões-e-boas-práticas">Padrões e Boas Práticas</h2>
+
+<h3 id="-boas-práticas">✅ Boas Práticas</h3>
+
+<ol>
+  <li><strong>Use OnPush sempre que possível</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Melhor performance</li>
+      <li><strong>Exemplo</strong>: <code class="language-plaintext highlighter-rouge">changeDetection: ChangeDetectionStrategy.OnPush</code></li>
+    </ul>
+  </li>
+  <li><strong>Mantenha imutabilidade</strong>
+    <ul>
+      <li><strong>Por quê</strong>: OnPush requer imutabilidade</li>
+      <li><strong>Exemplo</strong>: <code class="language-plaintext highlighter-rouge">[...items, newItem]</code> ao invés de <code class="language-plaintext highlighter-rouge">items.push(newItem)</code></li>
+    </ul>
+  </li>
+  <li><strong>Use trackBy em listas</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Melhora performance de *ngFor</li>
+      <li><strong>Exemplo</strong>: <code class="language-plaintext highlighter-rouge">track trackById($index, item)</code></li>
+    </ul>
+  </li>
+  <li><strong>Use markForCheck() quando necessário</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Força verificação em OnPush</li>
+      <li><strong>Exemplo</strong>: Após atualizações assíncronas</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="-anti-padrões-comuns">❌ Anti-padrões Comuns</h3>
+
+<ol>
+  <li><strong>Não mutar objetos em OnPush</strong>
+    <ul>
+      <li><strong>Problema</strong>: Change detection não detecta mudanças</li>
+      <li><strong>Solução</strong>: Sempre criar novos objetos</li>
+    </ul>
+  </li>
+  <li><strong>Não esquecer trackBy em listas grandes</strong>
+    <ul>
+      <li><strong>Problema</strong>: Performance ruim</li>
+      <li><strong>Solução</strong>: Sempre usar trackBy</li>
+    </ul>
+  </li>
+  <li><strong>Não usar Default quando OnPush é possível</strong>
+    <ul>
+      <li><strong>Problema</strong>: Performance desnecessariamente ruim</li>
+      <li><strong>Solução</strong>: Prefira OnPush</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="exercícios-práticos">Exercícios Práticos</h2>
+
+<h3 id="exercício-1-implementar-onpush-básico-básico">Exercício 1: Implementar OnPush Básico (Básico)</h3>
+
+<p><strong>Objetivo</strong>: Converter componente para OnPush</p>
+
+<p><strong>Descrição</strong>: 
+Converta componente de Default para OnPush strategy.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-4-1-1-onpush-basico.md</code></p>
+
+<hr />
+
+<h3 id="exercício-2-imutabilidade-e-onpush-intermediário">Exercício 2: Imutabilidade e OnPush (Intermediário)</h3>
+
+<p><strong>Objetivo</strong>: Implementar imutabilidade com OnPush</p>
+
+<p><strong>Descrição</strong>:
+Crie componente OnPush que usa imutabilidade para atualizar estado.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-4-1-2-imutabilidade.md</code></p>
+
+<hr />
+
+<h3 id="exercício-3-changedetectorref-manual-intermediário">Exercício 3: ChangeDetectorRef Manual (Intermediário)</h3>
+
+<p><strong>Objetivo</strong>: Usar ChangeDetectorRef para controle manual</p>
+
+<p><strong>Descrição</strong>:
+Crie componente que usa ChangeDetectorRef para controle manual de change detection.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-4-1-3-changedetectorref.md</code></p>
+
+<hr />
+
+<h3 id="exercício-4-trackby-functions-intermediário">Exercício 4: trackBy Functions (Intermediário)</h3>
+
+<p><strong>Objetivo</strong>: Implementar trackBy functions</p>
+
+<p><strong>Descrição</strong>:
+Crie componente com lista grande usando trackBy para otimização.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-4-1-4-trackby.md</code></p>
+
+<hr />
+
+<h3 id="exercício-5-onpush-everywhere-avançado">Exercício 5: OnPush Everywhere (Avançado)</h3>
+
+<p><strong>Objetivo</strong>: Aplicar OnPush em toda aplicação</p>
+
+<p><strong>Descrição</strong>:
+Converta aplicação completa para usar OnPush em todos componentes.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-4-1-5-onpush-everywhere.md</code></p>
+
+<hr />
+
+<h3 id="exercício-6-otimização-completa-avançado">Exercício 6: Otimização Completa (Avançado)</h3>
+
+<p><strong>Objetivo</strong>: Otimizar aplicação completa</p>
+
+<p><strong>Descrição</strong>:
+Aplique todas técnicas de otimização de change detection em aplicação real.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-4-1-6-otimizacao-completa.md</code></p>
+
+<hr />
+
+<h2 id="referências-externas">Referências Externas</h2>
+
+<h3 id="documentação-oficial">Documentação Oficial</h3>
+
+<ul>
+  <li><strong><a href="https://angular.io/guide/change-detection">Change Detection</a></strong>: Guia completo</li>
+  <li><strong><a href="https://angular.io/api/core/ChangeDetectionStrategy">OnPush</a></strong>: Documentação OnPush</li>
+  <li><strong><a href="https://angular.io/api/core/ChangeDetectorRef">ChangeDetectorRef</a></strong>: Documentação ChangeDetectorRef</li>
+</ul>
+
+<hr />
+
+<h2 id="resumo">Resumo</h2>
+
+<h3 id="principais-conceitos">Principais Conceitos</h3>
+
+<ul>
+  <li>Default strategy verifica todos componentes</li>
+  <li>OnPush strategy verifica apenas quando necessário</li>
+  <li>Imutabilidade é essencial para OnPush</li>
+  <li>ChangeDetectorRef permite controle manual</li>
+  <li>trackBy functions melhoram performance de listas</li>
+</ul>
+
+<h3 id="pontos-chave-para-lembrar">Pontos-Chave para Lembrar</h3>
+
+<ul>
+  <li>Use OnPush sempre que possível</li>
+  <li>Mantenha imutabilidade</li>
+  <li>Use trackBy em listas</li>
+  <li>Use markForCheck() quando necessário</li>
+  <li>Prefira OnPush sobre Default</li>
+</ul>
+
+<h3 id="próximos-passos">Próximos Passos</h3>
+
+<ul>
+  <li>Próxima aula: Lazy Loading e Code Splitting</li>
+  <li>Praticar OnPush em componentes</li>
+  <li>Explorar otimizações avançadas</li>
+</ul>
+
+<hr />
+
+<h2 id="checklist-de-qualidade">Checklist de Qualidade</h2>
+
+<p>Antes de considerar esta aula completa:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Introdução clara e envolvente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Todos os conceitos têm definições e explicações detalhadas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Analogias presentes para conceitos abstratos</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Diagramas ASCII para visualização de conceitos complexos</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Exemplos práticos completos e funcionais</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Boas práticas e anti-padrões documentados</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Exercícios práticos ordenados por dificuldade</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Referências externas validadas e organizadas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Resumo com pontos principais</li>
+</ul>
+
+<hr />
+
+<p><strong>Aula Anterior</strong>: <a href="./lesson-3-5-signals-observables.md">Aula 3.5: Integração Signals + Observables</a><br />
+<strong>Próxima Aula</strong>: <a href="./lesson-4-2-lazy-loading.md">Aula 4.2: Lazy Loading e Code Splitting</a><br />
+<strong>Voltar ao Módulo</strong>: <a href="../modules/module-4-performance-otimizacao.md">Módulo 4: Performance e Otimização</a></p>
+
+
+  
+  <div class="lesson-actions">
+    <button class="mark-lesson-complete" 
+            data-lesson-id="lesson-4-1" 
+            data-module-id="module-4"
+            aria-label="Marcar aula como completa">
+      Marcar como concluída
+    </button>
+  </div>
+</article>
+
+<nav class="lesson-navigation">
+  <nav class="lesson-navigation">
+  
+  
+  
+  
+    
+      
+      
+      
+      
+      
+      
+      
+        
+        <a href="/angular/modules/performance-otimizacao/lessons/lazy-loading" class="next-lesson">
+          Lazy Loading e Code Splitting →
+        </a>
+      
+      
+      
+</nav>
+
+
+</nav>
+
+<section class="exercises">
+  <h2>Exercícios Práticos</h2>
+  
+    
+      
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 4.1.1: Implementar OnPush Básico</h3>
+          <a href="/angular/modules/module-4/lessons/exercises/lesson-4-1-exercise-1-onpush-basico">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 4.1.2: Imutabilidade e OnPush</h3>
+          <a href="/angular/modules/module-4/lessons/exercises/lesson-4-1-exercise-2-imutabilidade">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 4.1.3: ChangeDetectorRef Manual</h3>
+          <a href="/angular/modules/module-4/lessons/exercises/lesson-4-1-exercise-3-changedetectorref">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 4.1.4: trackBy Functions</h3>
+          <a href="/angular/modules/module-4/lessons/exercises/lesson-4-1-exercise-4-trackby">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 4.1.5: OnPush Everywhere</h3>
+          <a href="/angular/modules/module-4/lessons/exercises/lesson-4-1-exercise-5-onpush-everywhere">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 4.1.6: Otimização Completa</h3>
+          <a href="/angular/modules/module-4/lessons/exercises/lesson-4-1-exercise-6-otimizacao-completa">Ver exercício</a>
+        </div>
+      
+    
+  
+</section>
+
+<script src="/angular/assets/js/podcast-player.js"></script>
+
+
+    </main>
+  </div>
+  
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Angular Expert - Do Básico ao Expert em 5 Dias. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+  <div id="progress-tracker" class="progress-tracker" style="display: none;">
+  <div class="overall-progress">
+    <h3>Progresso Geral</h3>
+    <div class="progress-bar">
+      <div class="progress-fill" id="overall-progress-fill"></div>
+    </div>
+    <span id="overall-progress-text">0%</span>
+  </div>
+</div>
+
+
+  
+  <script src="/angular/assets/js/navigation.js"></script>
+  <script src="/angular/assets/js/progress-tracker.js"></script>
+  <script src="/angular/assets/js/analytics.js"></script>
+  <script>
+    window.siteData = {
+      modules: [{"id":"module-1","title":"Fundamentos Acelerados","slug":"fundamentos-acelerados","duration":"8 horas","description":"Estabeleça as bases sólidas do Angular","lessons":["lesson-1-1","lesson-1-2","lesson-1-3","lesson-1-4","lesson-1-5"],"order":1},{"id":"module-2","title":"Desenvolvimento Intermediário","slug":"desenvolvimento-intermediario","duration":"8 horas","description":"Construa funcionalidades completas de aplicações reais","lessons":["lesson-2-1","lesson-2-2","lesson-2-3","lesson-2-4","lesson-2-5"],"order":2},{"id":"module-3","title":"Programação Reativa e Estado","slug":"programacao-reativa-estado","duration":"8 horas","description":"Domine programação reativa e gerenciamento de estado","lessons":["lesson-3-1","lesson-3-2","lesson-3-3","lesson-3-4","lesson-3-5"],"order":3},{"id":"module-4","title":"Performance e Otimização","slug":"performance-otimizacao","duration":"8 horas","description":"Crie aplicações extremamente performáticas","lessons":["lesson-4-1","lesson-4-2","lesson-4-3","lesson-4-4","lesson-4-5"],"order":4},{"id":"module-5","title":"Práticas Avançadas e Projeto Final","slug":"praticas-avancadas-projeto-final","duration":"8 horas","description":"Consolide conhecimento através de práticas avançadas","lessons":["lesson-5-1","lesson-5-2","lesson-5-3","lesson-5-4","lesson-5-5"],"order":5}],
+      lessons: [{"id":"lesson-1-1","title":"Introdução ao Angular e Configuração","slug":"introducao-angular","module":"module-1","order":1,"duration":"60 minutos","level":"Básico","prerequisites":[],"podcast":{"file":"assets/podcasts/01-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Fundação Angular: Tipagem, Encapsulamento e Generics","description":"Neste episódio, exploramos os fundamentos essenciais do Angular moderno. Você aprenderá sobre a arquitetura baseada em componentes, como o TypeScript fortalece o desenvolvimento Angular, e os conceitos de encapsulamento e generics que tornam o framework poderoso e escalável.","duration":"45-60 minutos"}},{"id":"lesson-1-2","title":"TypeScript Essencial para Angular","slug":"typescript-essencial","module":"module-1","order":2,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-1"]},{"id":"lesson-1-3","title":"Componentes Standalone e Templates","slug":"componentes-standalone","module":"module-1","order":3,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-2"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-4","title":"Data Binding e Diretivas Modernas","slug":"data-binding","module":"module-1","order":4,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-3"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-5","title":"Control Flow e Pipes","slug":"control-flow-pipes","module":"module-1","order":5,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-4"]},{"id":"lesson-2-1","title":"Serviços e Injeção de Dependência","slug":"servicos-di","module":"module-2","order":1,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-1-5"],"podcast":{"file":"assets/podcasts/02.1-Serviços_e_Injeção_de_Dependência_no_Angular.m4a","title":"Serviços e Injeção de Dependência no Angular","description":"Descubra como os serviços são o coração da arquitetura Angular.","duration":"50-65 minutos"}},{"id":"lesson-2-2","title":"Roteamento e Navegação Avançada","slug":"roteamento","module":"module-2","order":2,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-1"],"podcast":{"file":"assets/podcasts/02.2-SilêncioRouter_Guards_Resolvers_Lazy_Loading.m4a","title":"Router, Guards, Resolvers e Lazy Loading","description":"Domine o sistema de roteamento avançado do Angular.","duration":"55-70 minutos"}},{"id":"lesson-2-3","title":"Formulários Reativos e Validação","slug":"formularios-reativos","module":"module-2","order":3,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-2"],"podcast":{"file":"assets/podcasts/02.3-Dominando_os_Formulários_Reativos_do_Angular.m4a","title":"Dominando os Formulários Reativos do Angular","description":"Formulários reativos são uma das funcionalidades mais poderosas do Angular.","duration":"60-75 minutos"}},{"id":"lesson-2-4","title":"HTTP Client e Interceptors","slug":"http-client","module":"module-2","order":4,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-2-3"],"podcast":{"file":"assets/podcasts/02.4-HttpClient_e_Interceptors_no_Angular.m4a","title":"HttpClient e Interceptors no Angular","description":"Aprenda a consumir APIs REST de forma profissional com HttpClient.","duration":"50-65 minutos"}},{"id":"lesson-2-5","title":"Comunicação entre Componentes","slug":"comunicacao-componentes","module":"module-2","order":5,"duration":"60 minutos","level":"Intermediário","prerequisites":["lesson-2-4"],"podcast":{"file":"assets/podcasts/02.5-Comunicação_entre_Componentes_Input_Output_ViewChild.m4a","title":"Comunicação entre Componentes - Input, Output, ViewChild","description":"Domine todos os padrões de comunicação entre componentes no Angular.","duration":"45-60 minutos"}},{"id":"lesson-3-1","title":"RxJS Operators Avançados","slug":"rxjs-operators","module":"module-3","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-2-5"],"podcast":{"file":"assets/podcasts/03.1RxJS_Operators_Observables_SwitchMap_e_Busca_Perfeita.m4a","title":"RxJS Operators, Observables, SwitchMap e Busca Perfeita","description":"RxJS é fundamental para Angular moderno.","duration":"65-80 minutos"}},{"id":"lesson-3-2","title":"Signals e Signal-First Architecture","slug":"signals","module":"module-3","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-1"],"podcast":{"file":"assets/podcasts/03.2-Angular_Signals__O_Guia_Completo_e_Prático.m4a","title":"Angular Signals - O Guia Completo e Prático","description":"Signals são a nova forma reativa do Angular.","duration":"60-75 minutos"}},{"id":"lesson-3-3","title":"NgRx - Gerenciamento de Estado","slug":"ngrx","module":"module-3","order":3,"duration":"150 minutos","level":"Avançado","prerequisites":["lesson-3-2"],"podcast":{"file":"assets/podcasts/03.3-NgRx_quando_vale_a_pena_usar.m4a","title":"NgRx - Quando Vale a Pena Usar","description":"NgRx é poderoso, mas nem sempre necessário.","duration":"70-85 minutos"}},{"id":"lesson-3-4","title":"Padrões Reativos e Memory Leaks","slug":"memory-leaks","module":"module-3","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-3-3"],"podcast":{"file":"assets/podcasts/03.4-Combatendo_Memory_Leaks_com_Async_Pipe.m4a","title":"Combatendo Memory Leaks com Async Pipe","description":"Memory leaks são um problema comum em aplicações Angular reativas.","duration":"50-65 minutos"}},{"id":"lesson-3-5","title":"Integração Signals + Observables","slug":"signals-observables","module":"module-3","order":5,"duration":"30 minutos","level":"Avançado","prerequisites":["lesson-3-4"],"podcast":{"file":"assets/podcasts/03.5-toSignal_e_toObservable_as_pontes_do_Angular.m4a","title":"toSignal e toObservable - As Pontes do Angular","description":"Angular oferece funções para integrar Signals com Observables.","duration":"40-50 minutos"}},{"id":"lesson-4-1","title":"Change Detection Strategies","slug":"change-detection","module":"module-4","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-5"],"podcast":{"file":"assets/podcasts/04.1-OnPush_Imutabilidade_e_Performance_de_Apps.m4a","title":"OnPush, Imutabilidade e Performance de Apps","description":"Change Detection é crítico para performance.","duration":"60-75 minutos"}},{"id":"lesson-4-2","title":"Lazy Loading e Code Splitting","slug":"lazy-loading","module":"module-4","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-1"],"podcast":{"file":"assets/podcasts/04.2-Lazy_Loading_e_Code_Splitting_na_Web.m4a","title":"Lazy Loading e Code Splitting na Web","description":"Otimize o carregamento inicial da sua aplicação com lazy loading avançado.","duration":"55-70 minutos"}},{"id":"lesson-4-3","title":"Deferrable Views e Performance","slug":"deferrable-views","module":"module-4","order":3,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-2"],"podcast":{"file":"assets/podcasts/04.3-Angular_Deferrable_Views_no_Código_(@defer).m4a","title":"Angular Deferrable Views no Código (@defer)","description":"Deferrable Views são a nova forma de lazy loading de componentes no Angular.","duration":"50-65 minutos"}},{"id":"lesson-4-4","title":"Profiling e Otimização","slug":"profiling","module":"module-4","order":4,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-3"],"podcast":{"file":"assets/podcasts/04.4-Profiling_Angular_Otimização_Como_Fazer.m4a","title":"Profiling Angular - Otimização Como Fazer","description":"Aprenda a identificar gargalos de performance usando Angular DevTools.","duration":"55-70 minutos"}},{"id":"lesson-4-5","title":"Zone.js e Zoneless Apps","slug":"zonejs","module":"module-4","order":5,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-4-4"],"podcast":{"file":"assets/podcasts/04.5-Zone.m4a","title":"Zone.js e Zoneless Apps","description":"Zone.js é o motor da change detection tradicional do Angular.","duration":"50-65 minutos"}},{"id":"lesson-5-1","title":"Testes Completos (Unitários, Integração, E2E)","slug":"testes","module":"module-5","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-5"],"podcast":{"file":"assets/podcasts/05.1-Testes_Unitários_Integração_E2E_Angular.m4a","title":"Testes Unitários, Integração e E2E no Angular","description":"Testes são essenciais para aplicações profissionais.","duration":"70-85 minutos"}},{"id":"lesson-5-2","title":"SSR e PWA","slug":"ssr-pwa","module":"module-5","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-1"]},{"id":"lesson-5-3","title":"Segurança Avançada","slug":"seguranca","module":"module-5","order":3,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-2"]},{"id":"lesson-5-4","title":"Arquitetura Avançada","slug":"arquitetura-avancada","module":"module-5","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-3"]},{"id":"lesson-5-5","title":"Projeto Final Completo","slug":"projeto-final","module":"module-5","order":5,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-4"]}]
+    };
+    
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 2.5: Comunicação entre Componentes - Angular Expert - Do Básico ao Expert em 5 Dias</title>
+  <meta name="description" content="Treinamento intensivo e prático de Angular">
+  <link rel="stylesheet" href="/angular/assets/css/main.css">
+  
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Aula 2.5: Comunicação entre Componentes | Angular Expert - Do Básico ao Expert em 5 Dias</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Aula 2.5: Comunicação entre Componentes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Treinamento intensivo e prático de Angular" />
+<meta property="og:description" content="Treinamento intensivo e prático de Angular" />
+<link rel="canonical" href="https://onosendae.github.io/angular/modules/module-2/lessons/lesson-2-5.html" />
+<meta property="og:url" content="https://onosendae.github.io/angular/modules/module-2/lessons/lesson-2-5.html" />
+<meta property="og:site_name" content="Angular Expert - Do Básico ao Expert em 5 Dias" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Aula 2.5: Comunicação entre Componentes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Treinamento intensivo e prático de Angular","headline":"Aula 2.5: Comunicação entre Componentes","url":"https://onosendae.github.io/angular/modules/module-2/lessons/lesson-2-5.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Angular Expert - Do Básico ao Expert em 5 Dias",
+    "description": "Treinamento intensivo e prático de Angular",
+    "provider": {
+      "@type": "Organization",
+      "name": "Angular Expert"
+    },
+    "courseCode": "angular-expert-5-days",
+    "educationalLevel": "Advanced",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-content">
+    <h1 class="site-title">
+      <a href="/angular/">Angular Expert - Do Básico ao Expert em 5 Dias</a>
+    </h1>
+    <nav class="main-nav">
+      <a href="/angular/">Início</a>
+      <a href="/angular/about">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+
+  
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-navigation">
+  <h2>Módulos</h2>
+  <ul class="modules-list">
+    
+      <li>
+        <a href="/angular/modules/fundamentos-acelerados">
+          Fundamentos Acelerados
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/introducao-angular">
+                  Introdução ao Angular e Configuração
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/typescript-essencial">
+                  TypeScript Essencial para Angular
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/componentes-standalone">
+                  Componentes Standalone e Templates
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/data-binding">
+                  Data Binding e Diretivas Modernas
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/control-flow-pipes">
+                  Control Flow e Pipes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/desenvolvimento-intermediario">
+          Desenvolvimento Intermediário
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/servicos-di">
+                  Serviços e Injeção de Dependência
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/roteamento">
+                  Roteamento e Navegação Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/formularios-reativos">
+                  Formulários Reativos e Validação
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/http-client">
+                  HTTP Client e Interceptors
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/comunicacao-componentes">
+                  Comunicação entre Componentes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/programacao-reativa-estado">
+          Programação Reativa e Estado
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/rxjs-operators">
+                  RxJS Operators Avançados
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals">
+                  Signals e Signal-First Architecture
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/ngrx">
+                  NgRx - Gerenciamento de Estado
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/memory-leaks">
+                  Padrões Reativos e Memory Leaks
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals-observables">
+                  Integração Signals + Observables
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/performance-otimizacao">
+          Performance e Otimização
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/change-detection">
+                  Change Detection Strategies
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/lazy-loading">
+                  Lazy Loading e Code Splitting
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/deferrable-views">
+                  Deferrable Views e Performance
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/profiling">
+                  Profiling e Otimização
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/zonejs">
+                  Zone.js e Zoneless Apps
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/praticas-avancadas-projeto-final">
+          Práticas Avançadas e Projeto Final
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/testes">
+                  Testes Completos (Unitários, Integração, E2E)
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/ssr-pwa">
+                  SSR e PWA
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/seguranca">
+                  Segurança Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/arquitetura-avancada">
+                  Arquitetura Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/projeto-final">
+                  Projeto Final Completo
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+  </ul>
+</nav>
+
+
+    </aside>
+    
+    <main class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/angular/">Início</a></li>
+    
+      
+      
+        <li><a href="/angular/modules/desenvolvimento-intermediario">Desenvolvimento Intermediário</a></li>
+      
+    
+    
+      <li aria-current="page">Aula 2.5: Comunicação entre Componentes</li>
+    
+  </ol>
+</nav>
+
+
+      <script type="application/json" id="lesson-data">
+{
+  "lesson_id": "lesson-2-5",
+  "module_id": "module-2"
+}
+</script>
+
+<div class="podcast-player-container">
+  
+    <div class="podcast-player" id="podcast-player">
+  <div class="podcast-info">
+    <h3>Comunicação entre Componentes - Input, Output, ViewChild</h3>
+    <p class="podcast-description">Domine todos os padrões de comunicação entre componentes no Angular.</p>
+  </div>
+  
+  <div class="player-controls">
+    <button id="podcast-play" class="play-button" aria-label="Reproduzir podcast">
+      ▶
+    </button>
+    <button id="podcast-pause" class="pause-button" style="display: none;" aria-label="Pausar podcast">
+      ⏸
+    </button>
+    
+    <div class="progress-bar" id="podcast-progress">
+      <div class="progress" id="podcast-progress-fill"></div>
+    </div>
+    
+    <div class="time-display">
+      <span id="podcast-current-time">0:00</span> / <span id="podcast-duration">0:00</span>
+    </div>
+    
+    <div class="speed-control">
+      <label for="podcast-speed">Velocidade:</label>
+      <select id="podcast-speed">
+        <option value="0.5">0.5x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+    </div>
+    
+    <div class="volume-control">
+      <label for="podcast-volume">Volume:</label>
+      <input type="range" id="podcast-volume" min="0" max="100" value="100">
+    </div>
+  </div>
+</div>
+
+<div id="podcast-indicator" class="podcast-playing-indicator">
+  🎧 Podcast tocando
+</div>
+
+<script type="application/json" id="podcast-data">
+{
+  "audioFile": "/angular/assets/podcasts/02.5-Comunica%C3%A7%C3%A3o_entre_Componentes_Input_Output_ViewChild.m4a",
+  "lessonId": "lesson-2-5",
+  "podcastTitle": "Comunicação entre Componentes - Input, Output, ViewChild"
+}
+</script>
+
+
+  
+</div>
+
+<article class="lesson-content">
+  <header>
+    <h1>Aula 2.5: Comunicação entre Componentes</h1>
+    <div class="lesson-meta">
+      <span>Duração: 60 minutos</span>
+      <span>Nível: Intermediário</span>
+    </div>
+  </header>
+  
+  <h2 id="introdução">Introdução</h2>
+
+<p>Nesta aula, você dominará todas as formas de comunicação entre componentes no Angular. Comunicação eficiente entre componentes é essencial para criar aplicações bem estruturadas e manuteníveis. Você aprenderá desde comunicação pai-filho básica até padrões avançados como Master/Detail.</p>
+
+<h3 id="o-que-você-vai-aprender">O que você vai aprender</h3>
+
+<ul>
+  <li>Usar @Input() e @Output() para comunicação pai-filho</li>
+  <li>Trabalhar com ViewChild e ContentChild</li>
+  <li>Usar Template Reference Variables</li>
+  <li>Implementar comunicação via serviços</li>
+  <li>Aplicar padrões Smart/Dumb Components</li>
+  <li>Criar padrão Master/Detail</li>
+</ul>
+
+<h3 id="por-que-isso-é-importante">Por que isso é importante</h3>
+
+<p>Componentes precisam se comunicar para criar aplicações funcionais. Entender diferentes formas de comunicação permite escolher a melhor abordagem para cada situação, criando código mais limpo e manutenível.</p>
+
+<hr />
+
+<h2 id="conceitos-teóricos">Conceitos Teóricos</h2>
+
+<h3 id="input-e-output">@Input() e @Output()</h3>
+
+<p><strong>Definição</strong>: <code class="language-plaintext highlighter-rouge">@Input()</code> permite passar dados do componente pai para o filho, e <code class="language-plaintext highlighter-rouge">@Output()</code> permite que o filho emita eventos para o pai.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>@Input():</p>
+<ul>
+  <li>Passa dados do pai para o filho</li>
+  <li>Pode ter valores padrão</li>
+  <li>Suporta setters para lógica customizada</li>
+  <li>Type-safe com TypeScript</li>
+</ul>
+
+<p>@Output():</p>
+<ul>
+  <li>Emite eventos do filho para o pai</li>
+  <li>Usa EventEmitter</li>
+  <li>Permite passar dados no evento</li>
+  <li>Pai escuta via event binding</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>@Input() é como receber uma carta (dados) do correio. @Output() é como enviar uma carta de volta (evento) para o remetente.</p>
+
+<p><strong>Visualização</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Parent Component          Child Component
+┌──────────────┐         ┌──────────────┐
+│              │  @Input │              │
+│   [data]  ───┼─────────→│  @Input()    │
+│              │         │              │
+│              │  @Output│              │
+│   (event) ←──┼─────────│  @Output()   │
+└──────────────┘         └──────────────┘
+</code></pre></div></div>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">Input</span><span class="p">,</span> <span class="nx">Output</span><span class="p">,</span> <span class="nx">EventEmitter</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-child</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;div&gt;
+      &lt;h3&gt;{{ title }}&lt;/h3&gt;
+      &lt;p&gt;{{ message }}&lt;/p&gt;
+      &lt;button (click)="onClick()"&gt;Clique aqui&lt;/button&gt;
+    &lt;/div&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ChildComponent</span> <span class="p">{</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">title</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Título Padrão</span><span class="dl">'</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">message</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  
+  <span class="p">@</span><span class="nd">Output</span><span class="p">()</span> <span class="nx">buttonClick</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventEmitter</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">();</span>
+  
+  <span class="nf">onClick</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nf">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">Botão foi clicado!</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-parent</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">ChildComponent</span><span class="p">],</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;app-child 
+      [title]="childTitle"
+      [message]="childMessage"
+      (buttonClick)="handleClick($event)"&gt;
+    &lt;/app-child&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ParentComponent</span> <span class="p">{</span>
+  <span class="nx">childTitle</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Título do Filho</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nx">childMessage</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Mensagem do pai</span><span class="dl">'</span><span class="p">;</span>
+  
+  <span class="nf">handleClick</span><span class="p">(</span><span class="nx">message</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="viewchild-e-viewchildren">ViewChild e ViewChildren</h3>
+
+<p><strong>Definição</strong>: <code class="language-plaintext highlighter-rouge">ViewChild</code> e <code class="language-plaintext highlighter-rouge">ViewChildren</code> permitem acessar componentes filhos diretamente no template do componente pai.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>ViewChild:</p>
+<ul>
+  <li>Acessa primeiro componente filho</li>
+  <li>Retorna ElementRef, Component ou Directive</li>
+  <li>Disponível após ngAfterViewInit</li>
+  <li>Pode usar template reference variable</li>
+</ul>
+
+<p>ViewChildren:</p>
+<ul>
+  <li>Acessa todos componentes filhos</li>
+  <li>Retorna QueryList</li>
+  <li>Permite iterar sobre filhos</li>
+  <li>Reativo a mudanças</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>ViewChild é como ter uma referência direta a um filho específico. Você pode chamá-lo diretamente ao invés de esperar que ele te chame.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">ViewChild</span><span class="p">,</span> <span class="nx">ViewChildren</span><span class="p">,</span> <span class="nx">QueryList</span><span class="p">,</span> <span class="nx">AfterViewInit</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">ChildComponent</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./child.component</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-parent</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">ChildComponent</span><span class="p">],</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;div&gt;
+      &lt;app-child #firstChild&gt;&lt;/app-child&gt;
+      &lt;app-child #secondChild&gt;&lt;/app-child&gt;
+      &lt;button (click)="callChildMethod()"&gt;Chamar Método do Filho&lt;/button&gt;
+    &lt;/div&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ParentComponent</span> <span class="k">implements</span> <span class="nx">AfterViewInit</span> <span class="p">{</span>
+  <span class="p">@</span><span class="nd">ViewChild</span><span class="p">(</span><span class="dl">'</span><span class="s1">firstChild</span><span class="dl">'</span><span class="p">)</span> <span class="nx">firstChild</span><span class="o">!</span><span class="p">:</span> <span class="nx">ChildComponent</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">ViewChild</span><span class="p">(</span><span class="nx">ChildComponent</span><span class="p">)</span> <span class="nx">firstChildComponent</span><span class="o">!</span><span class="p">:</span> <span class="nx">ChildComponent</span><span class="p">;</span>
+  
+  <span class="p">@</span><span class="nd">ViewChildren</span><span class="p">(</span><span class="nx">ChildComponent</span><span class="p">)</span> <span class="nx">children</span><span class="o">!</span><span class="p">:</span> <span class="nx">QueryList</span><span class="o">&lt;</span><span class="nx">ChildComponent</span><span class="o">&gt;</span><span class="p">;</span>
+  
+  <span class="nf">ngAfterViewInit</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">First child:</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">All children:</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nf">toArray</span><span class="p">());</span>
+  <span class="p">}</span>
+  
+  <span class="nf">callChildMethod</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">.</span><span class="nf">someMethod</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nf">forEach</span><span class="p">(</span><span class="nx">child</span> <span class="o">=&gt;</span> <span class="nx">child</span><span class="p">.</span><span class="nf">someMethod</span><span class="p">());</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="contentchild-e-contentchildren">ContentChild e ContentChildren</h3>
+
+<p><strong>Definição</strong>: <code class="language-plaintext highlighter-rouge">ContentChild</code> e <code class="language-plaintext highlighter-rouge">ContentChildren</code> permitem acessar conteúdo projetado via <code class="language-plaintext highlighter-rouge">ng-content</code>.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>ContentChild:</p>
+<ul>
+  <li>Acessa primeiro conteúdo projetado</li>
+  <li>Disponível após ngAfterContentInit</li>
+  <li>Útil para componentes wrapper</li>
+</ul>
+
+<p>ContentChildren:</p>
+<ul>
+  <li>Acessa todo conteúdo projetado</li>
+  <li>Retorna QueryList</li>
+  <li>Reativo a mudanças</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>ContentChild é como acessar conteúdo que foi “inserido” no seu componente através de ng-content, como se fosse um slot.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">ContentChild</span><span class="p">,</span> <span class="nx">ContentChildren</span><span class="p">,</span> <span class="nx">QueryList</span><span class="p">,</span> <span class="nx">AfterContentInit</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-card-header</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`&lt;ng-content&gt;&lt;/ng-content&gt;`</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">CardHeaderComponent</span> <span class="p">{}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-card</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">CardHeaderComponent</span><span class="p">],</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;div class="card"&gt;
+      &lt;ng-content select="app-card-header"&gt;&lt;/ng-content&gt;
+      &lt;div class="card-body"&gt;
+        &lt;ng-content&gt;&lt;/ng-content&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">CardComponent</span> <span class="k">implements</span> <span class="nx">AfterContentInit</span> <span class="p">{</span>
+  <span class="p">@</span><span class="nd">ContentChild</span><span class="p">(</span><span class="nx">CardHeaderComponent</span><span class="p">)</span> <span class="nx">header</span><span class="o">!</span><span class="p">:</span> <span class="nx">CardHeaderComponent</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">ContentChildren</span><span class="p">(</span><span class="nx">CardHeaderComponent</span><span class="p">)</span> <span class="nx">headers</span><span class="o">!</span><span class="p">:</span> <span class="nx">QueryList</span><span class="o">&lt;</span><span class="nx">CardHeaderComponent</span><span class="o">&gt;</span><span class="p">;</span>
+  
+  <span class="nf">ngAfterContentInit</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Header:</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">header</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="template-reference-variables">Template Reference Variables</h3>
+
+<p><strong>Definição</strong>: Template Reference Variables permitem criar referências a elementos ou componentes no template.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Template Reference Variables:</p>
+<ul>
+  <li>Criadas com <code class="language-plaintext highlighter-rouge">#variableName</code></li>
+  <li>Acessíveis no template</li>
+  <li>Podem referenciar elementos DOM, componentes ou diretivas</li>
+  <li>Úteis com ViewChild</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Template Reference Variables são como dar um nome a algo no template para poder referenciá-lo depois.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-example</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;input #inputRef type="text" (input)="onInput(inputRef.value)"&gt;
+    &lt;button (click)="inputRef.focus()"&gt;Focar Input&lt;/button&gt;
+    &lt;app-child #childRef&gt;&lt;/app-child&gt;
+    &lt;button (click)="childRef.someMethod()"&gt;Chamar Filho&lt;/button&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ExampleComponent</span> <span class="p">{</span>
+  <span class="nf">onInput</span><span class="p">(</span><span class="nx">value</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Input value:</span><span class="dl">'</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="comunicação-via-serviços">Comunicação via Serviços</h3>
+
+<p><strong>Definição</strong>: Serviços podem ser usados para comunicação entre componentes que não têm relação pai-filho direta.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Comunicação via serviços:</p>
+<ul>
+  <li>Útil para componentes irmãos</li>
+  <li>Usa Subject ou BehaviorSubject</li>
+  <li>Permite comunicação assíncrona</li>
+  <li>Centraliza lógica de comunicação</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Comunicação via serviços é como usar um sistema de correio central. Componentes enviam e recebem mensagens através de um serviço compartilhado.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">BehaviorSubject</span><span class="p">,</span> <span class="nx">Observable</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">rxjs</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Injectable</span><span class="p">({</span>
+  <span class="na">providedIn</span><span class="p">:</span> <span class="dl">'</span><span class="s1">root</span><span class="dl">'</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">MessageService</span> <span class="p">{</span>
+  <span class="k">private</span> <span class="nx">message$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BehaviorSubject</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">''</span><span class="p">);</span>
+  
+  <span class="nf">sendMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">message$</span><span class="p">.</span><span class="nf">next</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">getMessage</span><span class="p">():</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">message$</span><span class="p">.</span><span class="nf">asObservable</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-sender</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;input #input type="text"&gt;
+    &lt;button (click)="send(input.value)"&gt;Enviar&lt;/button&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">SenderComponent</span> <span class="p">{</span>
+  <span class="nf">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">messageService</span><span class="p">:</span> <span class="nx">MessageService</span><span class="p">)</span> <span class="p">{}</span>
+  
+  <span class="nf">send</span><span class="p">(</span><span class="nx">message</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">messageService</span><span class="p">.</span><span class="nf">sendMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-receiver</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`&lt;p&gt;{{ message }}&lt;/p&gt;`</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ReceiverComponent</span> <span class="k">implements</span> <span class="nx">OnInit</span><span class="p">,</span> <span class="nx">OnDestroy</span> <span class="p">{</span>
+  <span class="nl">message</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  <span class="k">private</span> <span class="nx">subscription</span><span class="p">?:</span> <span class="nx">Subscription</span><span class="p">;</span>
+  
+  <span class="nf">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">messageService</span><span class="p">:</span> <span class="nx">MessageService</span><span class="p">)</span> <span class="p">{}</span>
+  
+  <span class="nf">ngOnInit</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">subscription</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">messageService</span><span class="p">.</span><span class="nf">getMessage</span><span class="p">().</span><span class="nf">subscribe</span><span class="p">(</span>
+      <span class="nx">message</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">message</span> <span class="o">=</span> <span class="nx">message</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">ngOnDestroy</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">subscription</span><span class="p">?.</span><span class="nf">unsubscribe</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="smart-e-dumb-components">Smart e Dumb Components</h3>
+
+<p><strong>Definição</strong>: Padrão de arquitetura onde Smart Components (Container) gerenciam lógica e estado, e Dumb Components (Presentational) apenas exibem dados.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Smart Components:</p>
+<ul>
+  <li>Gerenciam estado e lógica</li>
+  <li>Fazem chamadas HTTP</li>
+  <li>Passam dados para Dumb Components</li>
+  <li>Escutam eventos de Dumb Components</li>
+</ul>
+
+<p>Dumb Components:</p>
+<ul>
+  <li>Apenas exibem dados</li>
+  <li>Recebem dados via @Input</li>
+  <li>Emitem eventos via @Output</li>
+  <li>Fáceis de testar e reutilizar</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Smart Components são como gerentes que tomam decisões e gerenciam recursos. Dumb Components são como funcionários que apenas executam tarefas específicas.</p>
+
+<p><strong>Visualização</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Smart Component (Container)
+┌─────────────────────────┐
+│ - Estado                │
+│ - Lógica de Negócio     │
+│ - HTTP Calls            │
+│                         │
+│  ┌──────────────────┐   │
+│  │ Dumb Component   │   │
+│  │ - Apenas UI      │   │
+│  │ - @Input/@Output │   │
+│  └──────────────────┘   │
+└─────────────────────────┘
+</code></pre></div></div>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-product-list-smart</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">ProductListDumbComponent</span><span class="p">],</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;app-product-list-dumb
+      [products]="products$ | async"
+      [loading]="loading"
+      (productSelected)="onProductSelected($event)"
+      (refresh)="loadProducts()"&gt;
+    &lt;/app-product-list-dumb&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ProductListSmartComponent</span> <span class="k">implements</span> <span class="nx">OnInit</span> <span class="p">{</span>
+  <span class="nx">products$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BehaviorSubject</span><span class="o">&lt;</span><span class="nx">Product</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">([]);</span>
+  <span class="nx">loading</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  
+  <span class="nf">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">productService</span><span class="p">:</span> <span class="nx">ProductService</span><span class="p">)</span> <span class="p">{}</span>
+  
+  <span class="nf">ngOnInit</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nf">loadProducts</span><span class="p">();</span>
+  <span class="p">}</span>
+  
+  <span class="nf">loadProducts</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">loading</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">productService</span><span class="p">.</span><span class="nf">getProducts</span><span class="p">().</span><span class="nf">subscribe</span><span class="p">({</span>
+      <span class="na">next</span><span class="p">:</span> <span class="p">(</span><span class="nx">products</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">products$</span><span class="p">.</span><span class="nf">next</span><span class="p">(</span><span class="nx">products</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">loading</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+  
+  <span class="nf">onProductSelected</span><span class="p">(</span><span class="nx">product</span><span class="p">:</span> <span class="nx">Product</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Selected:</span><span class="dl">'</span><span class="p">,</span> <span class="nx">product</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-product-list-dumb</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    @if (loading) {
+      &lt;p&gt;Carregando...&lt;/p&gt;
+    } @else {
+      &lt;ul&gt;
+        @for (product of products; track product.id) {
+          &lt;li (click)="selectProduct(product)"&gt;
+            {{ product.name }}
+          &lt;/li&gt;
+        }
+      &lt;/ul&gt;
+      &lt;button (click)="refresh.emit()"&gt;Atualizar&lt;/button&gt;
+    }
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ProductListDumbComponent</span> <span class="p">{</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">products</span><span class="p">:</span> <span class="nx">Product</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">loading</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">Output</span><span class="p">()</span> <span class="nx">productSelected</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventEmitter</span><span class="o">&lt;</span><span class="nx">Product</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="p">@</span><span class="nd">Output</span><span class="p">()</span> <span class="nx">refresh</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventEmitter</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">();</span>
+  
+  <span class="nf">selectProduct</span><span class="p">(</span><span class="nx">product</span><span class="p">:</span> <span class="nx">Product</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">productSelected</span><span class="p">.</span><span class="nf">emit</span><span class="p">(</span><span class="nx">product</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="padrão-masterdetail">Padrão Master/Detail</h3>
+
+<p><strong>Definição</strong>: Padrão onde um componente Master exibe lista e um componente Detail exibe detalhes do item selecionado.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Master/Detail:</p>
+<ul>
+  <li>Master exibe lista de itens</li>
+  <li>Detail exibe detalhes do item selecionado</li>
+  <li>Comunicação via serviço ou eventos</li>
+  <li>Útil para interfaces complexas</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Master/Detail é como uma lista de contatos (Master) e detalhes do contato selecionado (Detail). Quando você clica em um contato, os detalhes aparecem.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">Injectable</span><span class="p">({</span>
+  <span class="na">providedIn</span><span class="p">:</span> <span class="dl">'</span><span class="s1">root</span><span class="dl">'</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">SelectionService</span> <span class="p">{</span>
+  <span class="k">private</span> <span class="nx">selectedItem$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BehaviorSubject</span><span class="o">&lt;</span><span class="kr">any</span><span class="o">&gt;</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+  
+  <span class="nf">selectItem</span><span class="p">(</span><span class="nx">item</span><span class="p">:</span> <span class="kr">any</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">selectedItem$</span><span class="p">.</span><span class="nf">next</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">getSelectedItem</span><span class="p">():</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="kr">any</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">selectedItem$</span><span class="p">.</span><span class="nf">asObservable</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-master</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;ul&gt;
+      @for (item of items; track item.id) {
+        &lt;li (click)="selectItem(item)" [class.selected]="item.id === selectedId"&gt;
+          {{ item.name }}
+        &lt;/li&gt;
+      }
+    &lt;/ul&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">MasterComponent</span> <span class="p">{</span>
+  <span class="nl">items</span><span class="p">:</span> <span class="nx">Item</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="nl">selectedId</span><span class="p">:</span> <span class="kr">number</span> <span class="o">|</span> <span class="kc">null</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  
+  <span class="nf">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">selectionService</span><span class="p">:</span> <span class="nx">SelectionService</span><span class="p">)</span> <span class="p">{}</span>
+  
+  <span class="nf">selectItem</span><span class="p">(</span><span class="nx">item</span><span class="p">:</span> <span class="nx">Item</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">selectedId</span> <span class="o">=</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">selectionService</span><span class="p">.</span><span class="nf">selectItem</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-detail</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    @if (selectedItem) {
+      &lt;h2&gt;{{ selectedItem.name }}&lt;/h2&gt;
+      &lt;p&gt;{{ selectedItem.description }}&lt;/p&gt;
+    } @else {
+      &lt;p&gt;Selecione um item&lt;/p&gt;
+    }
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">DetailComponent</span> <span class="k">implements</span> <span class="nx">OnInit</span><span class="p">,</span> <span class="nx">OnDestroy</span> <span class="p">{</span>
+  <span class="nl">selectedItem</span><span class="p">:</span> <span class="nx">Item</span> <span class="o">|</span> <span class="kc">null</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="k">private</span> <span class="nx">subscription</span><span class="p">?:</span> <span class="nx">Subscription</span><span class="p">;</span>
+  
+  <span class="nf">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">selectionService</span><span class="p">:</span> <span class="nx">SelectionService</span><span class="p">)</span> <span class="p">{}</span>
+  
+  <span class="nf">ngOnInit</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">subscription</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">selectionService</span><span class="p">.</span><span class="nf">getSelectedItem</span><span class="p">().</span><span class="nf">subscribe</span><span class="p">(</span>
+      <span class="nx">item</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">selectedItem</span> <span class="o">=</span> <span class="nx">item</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">ngOnDestroy</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">subscription</span><span class="p">?.</span><span class="nf">unsubscribe</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="exemplos-práticos-completos">Exemplos Práticos Completos</h2>
+
+<h3 id="exemplo-1-comunicação-completa">Exemplo 1: Comunicação Completa</h3>
+
+<p><strong>Contexto</strong>: Criar sistema de comunicação completo usando todas as técnicas.</p>
+
+<p><strong>Código</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-parent</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">ChildComponent</span><span class="p">],</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;app-child 
+      [data]="parentData"
+      (dataChange)="handleDataChange($event)"&gt;
+    &lt;/app-child&gt;
+    &lt;p&gt;Dados recebidos: {{ receivedData }}&lt;/p&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ParentComponent</span> <span class="p">{</span>
+  <span class="nx">parentData</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Dados do pai</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">receivedData</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  
+  <span class="nf">handleDataChange</span><span class="p">(</span><span class="nx">data</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">receivedData</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-child</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;div&gt;
+      &lt;p&gt;Dados recebidos: {{ data }}&lt;/p&gt;
+      &lt;input [(ngModel)]="inputValue"&gt;
+      &lt;button (click)="sendData()"&gt;Enviar&lt;/button&gt;
+    &lt;/div&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ChildComponent</span> <span class="p">{</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">data</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">Output</span><span class="p">()</span> <span class="nx">dataChange</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventEmitter</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="nl">inputValue</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  
+  <span class="nf">sendData</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">dataChange</span><span class="p">.</span><span class="nf">emit</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">inputValue</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="padrões-e-boas-práticas">Padrões e Boas Práticas</h2>
+
+<h3 id="-boas-práticas">✅ Boas Práticas</h3>
+
+<ol>
+  <li><strong>Use @Input/@Output para comunicação pai-filho</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Simples e direto</li>
+      <li><strong>Exemplo</strong>: <code class="language-plaintext highlighter-rouge">@Input() data</code>, <code class="language-plaintext highlighter-rouge">@Output() change</code></li>
+    </ul>
+  </li>
+  <li><strong>Use serviços para componentes irmãos</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Evita prop drilling</li>
+      <li><strong>Exemplo</strong>: BehaviorSubject em serviço</li>
+    </ul>
+  </li>
+  <li><strong>Separe Smart e Dumb Components</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Melhor testabilidade e reutilização</li>
+      <li><strong>Exemplo</strong>: Container e Presentational</li>
+    </ul>
+  </li>
+  <li><strong>Use ViewChild apenas quando necessário</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Cria acoplamento</li>
+      <li><strong>Exemplo</strong>: Quando precisa chamar método do filho</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="-anti-padrões-comuns">❌ Anti-padrões Comuns</h3>
+
+<ol>
+  <li><strong>Não use ViewChild para comunicação simples</strong>
+    <ul>
+      <li><strong>Problema</strong>: Cria acoplamento desnecessário</li>
+      <li><strong>Solução</strong>: Use @Input/@Output</li>
+    </ul>
+  </li>
+  <li><strong>Não faça prop drilling excessivo</strong>
+    <ul>
+      <li><strong>Problema</strong>: Código difícil de manter</li>
+      <li><strong>Solução</strong>: Use serviços ou state management</li>
+    </ul>
+  </li>
+  <li><strong>Não misture lógica e apresentação</strong>
+    <ul>
+      <li><strong>Problema</strong>: Componentes difíceis de testar</li>
+      <li><strong>Solução</strong>: Separe Smart e Dumb Components</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="exercícios-práticos">Exercícios Práticos</h2>
+
+<h3 id="exercício-1-input-e-output-básicos-básico">Exercício 1: @Input e @Output Básicos (Básico)</h3>
+
+<p><strong>Objetivo</strong>: Criar comunicação pai-filho básica</p>
+
+<p><strong>Descrição</strong>: 
+Crie componente filho que recebe dados via @Input e emite eventos via @Output.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-2-5-1-input-output.md</code></p>
+
+<hr />
+
+<h3 id="exercício-2-viewchild-e-contentchild-intermediário">Exercício 2: ViewChild e ContentChild (Intermediário)</h3>
+
+<p><strong>Objetivo</strong>: Trabalhar com ViewChild e ContentChild</p>
+
+<p><strong>Descrição</strong>:
+Crie componente que usa ViewChild para acessar filho e ContentChild para conteúdo projetado.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-2-5-2-viewchild-contentchild.md</code></p>
+
+<hr />
+
+<h3 id="exercício-3-comunicação-via-serviços-intermediário">Exercício 3: Comunicação via Serviços (Intermediário)</h3>
+
+<p><strong>Objetivo</strong>: Implementar comunicação entre componentes irmãos</p>
+
+<p><strong>Descrição</strong>:
+Crie serviço que permite comunicação entre componentes que não têm relação direta.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-2-5-3-comunicacao-servicos.md</code></p>
+
+<hr />
+
+<h3 id="exercício-4-padrão-masterdetail-completo-avançado">Exercício 4: Padrão Master/Detail Completo (Avançado)</h3>
+
+<p><strong>Objetivo</strong>: Criar padrão Master/Detail completo</p>
+
+<p><strong>Descrição</strong>:
+Crie aplicação Master/Detail completa usando todas as técnicas de comunicação aprendidas.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-2-5-4-master-detail.md</code></p>
+
+<hr />
+
+<h2 id="referências-externas">Referências Externas</h2>
+
+<h3 id="documentação-oficial">Documentação Oficial</h3>
+
+<ul>
+  <li><strong><a href="https://angular.io/guide/component-interaction">Component Interaction</a></strong>: Guia oficial</li>
+  <li><strong><a href="https://angular.io/api/core/ViewChild">ViewChild</a></strong>: Documentação ViewChild</li>
+  <li><strong><a href="https://angular.io/api/core/Input">Input/Output</a></strong>: Documentação @Input/@Output</li>
+</ul>
+
+<hr />
+
+<h2 id="resumo">Resumo</h2>
+
+<h3 id="principais-conceitos">Principais Conceitos</h3>
+
+<ul>
+  <li>@Input() passa dados do pai para o filho</li>
+  <li>@Output() emite eventos do filho para o pai</li>
+  <li>ViewChild acessa componentes filhos</li>
+  <li>ContentChild acessa conteúdo projetado</li>
+  <li>Serviços permitem comunicação entre componentes irmãos</li>
+  <li>Smart/Dumb Components separam lógica e apresentação</li>
+  <li>Master/Detail é padrão comum para listas e detalhes</li>
+</ul>
+
+<h3 id="pontos-chave-para-lembrar">Pontos-Chave para Lembrar</h3>
+
+<ul>
+  <li>Use @Input/@Output para comunicação pai-filho</li>
+  <li>Use serviços para componentes irmãos</li>
+  <li>Separe Smart e Dumb Components</li>
+  <li>ViewChild apenas quando necessário</li>
+  <li>Escolha a técnica apropriada para cada situação</li>
+</ul>
+
+<h3 id="próximos-passos">Próximos Passos</h3>
+
+<ul>
+  <li>Próximo módulo: Programação Reativa e Estado</li>
+  <li>Praticar criando componentes comunicativos</li>
+  <li>Explorar padrões avançados de comunicação</li>
+</ul>
+
+<hr />
+
+<h2 id="checklist-de-qualidade">Checklist de Qualidade</h2>
+
+<p>Antes de considerar esta aula completa:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Introdução clara e envolvente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Todos os conceitos têm definições e explicações detalhadas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Analogias presentes para conceitos abstratos</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Diagramas ASCII para visualização de conceitos complexos</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Exemplos práticos completos e funcionais</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Boas práticas e anti-padrões documentados</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Exercícios práticos ordenados por dificuldade</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Referências externas validadas e organizadas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Resumo com pontos principais</li>
+</ul>
+
+<hr />
+
+<p><strong>Aula Anterior</strong>: <a href="./lesson-2-4-http-client.md">Aula 2.4: HTTP Client e Interceptors</a><br />
+<strong>Próxima Aula</strong>: <a href="../modules/module-3-programacao-reativa-estado.md">Aula 3.1: RxJS e Programação Reativa</a><br />
+<strong>Voltar ao Módulo</strong>: <a href="../modules/module-2-desenvolvimento-intermediario.md">Módulo 2: Desenvolvimento Intermediário</a></p>
+
+
+  
+  <div class="lesson-actions">
+    <button class="mark-lesson-complete" 
+            data-lesson-id="lesson-2-5" 
+            data-module-id="module-2"
+            aria-label="Marcar aula como completa">
+      Marcar como concluída
+    </button>
+  </div>
+</article>
+
+<nav class="lesson-navigation">
+  <nav class="lesson-navigation">
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      
+      
+      
+      
+        
+        <a href="/angular/modules/desenvolvimento-intermediario/lessons/http-client" class="prev-lesson">
+          ← HTTP Client e Interceptors
+        </a>
+      
+      
+      
+      
+      
+</nav>
+
+
+</nav>
+
+<section class="exercises">
+  <h2>Exercícios Práticos</h2>
+  
+    
+      
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 2.5.1: @Input e @Output Básicos</h3>
+          <a href="/angular/modules/module-2/lessons/exercises/lesson-2-5-exercise-1-input-output">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 2.5.2: ViewChild e ContentChild</h3>
+          <a href="/angular/modules/module-2/lessons/exercises/lesson-2-5-exercise-2-viewchild-contentchild">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 2.5.3: Comunicação via Serviços</h3>
+          <a href="/angular/modules/module-2/lessons/exercises/lesson-2-5-exercise-3-comunicacao-servicos">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 2.5.4: Padrão Master/Detail Completo</h3>
+          <a href="/angular/modules/module-2/lessons/exercises/lesson-2-5-exercise-4-master-detail">Ver exercício</a>
+        </div>
+      
+    
+  
+</section>
+
+<script src="/angular/assets/js/podcast-player.js"></script>
+
+
+    </main>
+  </div>
+  
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Angular Expert - Do Básico ao Expert em 5 Dias. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+  <div id="progress-tracker" class="progress-tracker" style="display: none;">
+  <div class="overall-progress">
+    <h3>Progresso Geral</h3>
+    <div class="progress-bar">
+      <div class="progress-fill" id="overall-progress-fill"></div>
+    </div>
+    <span id="overall-progress-text">0%</span>
+  </div>
+</div>
+
+
+  
+  <script src="/angular/assets/js/navigation.js"></script>
+  <script src="/angular/assets/js/progress-tracker.js"></script>
+  <script src="/angular/assets/js/analytics.js"></script>
+  <script>
+    window.siteData = {
+      modules: [{"id":"module-1","title":"Fundamentos Acelerados","slug":"fundamentos-acelerados","duration":"8 horas","description":"Estabeleça as bases sólidas do Angular","lessons":["lesson-1-1","lesson-1-2","lesson-1-3","lesson-1-4","lesson-1-5"],"order":1},{"id":"module-2","title":"Desenvolvimento Intermediário","slug":"desenvolvimento-intermediario","duration":"8 horas","description":"Construa funcionalidades completas de aplicações reais","lessons":["lesson-2-1","lesson-2-2","lesson-2-3","lesson-2-4","lesson-2-5"],"order":2},{"id":"module-3","title":"Programação Reativa e Estado","slug":"programacao-reativa-estado","duration":"8 horas","description":"Domine programação reativa e gerenciamento de estado","lessons":["lesson-3-1","lesson-3-2","lesson-3-3","lesson-3-4","lesson-3-5"],"order":3},{"id":"module-4","title":"Performance e Otimização","slug":"performance-otimizacao","duration":"8 horas","description":"Crie aplicações extremamente performáticas","lessons":["lesson-4-1","lesson-4-2","lesson-4-3","lesson-4-4","lesson-4-5"],"order":4},{"id":"module-5","title":"Práticas Avançadas e Projeto Final","slug":"praticas-avancadas-projeto-final","duration":"8 horas","description":"Consolide conhecimento através de práticas avançadas","lessons":["lesson-5-1","lesson-5-2","lesson-5-3","lesson-5-4","lesson-5-5"],"order":5}],
+      lessons: [{"id":"lesson-1-1","title":"Introdução ao Angular e Configuração","slug":"introducao-angular","module":"module-1","order":1,"duration":"60 minutos","level":"Básico","prerequisites":[],"podcast":{"file":"assets/podcasts/01-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Fundação Angular: Tipagem, Encapsulamento e Generics","description":"Neste episódio, exploramos os fundamentos essenciais do Angular moderno. Você aprenderá sobre a arquitetura baseada em componentes, como o TypeScript fortalece o desenvolvimento Angular, e os conceitos de encapsulamento e generics que tornam o framework poderoso e escalável.","duration":"45-60 minutos"}},{"id":"lesson-1-2","title":"TypeScript Essencial para Angular","slug":"typescript-essencial","module":"module-1","order":2,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-1"]},{"id":"lesson-1-3","title":"Componentes Standalone e Templates","slug":"componentes-standalone","module":"module-1","order":3,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-2"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-4","title":"Data Binding e Diretivas Modernas","slug":"data-binding","module":"module-1","order":4,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-3"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-5","title":"Control Flow e Pipes","slug":"control-flow-pipes","module":"module-1","order":5,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-4"]},{"id":"lesson-2-1","title":"Serviços e Injeção de Dependência","slug":"servicos-di","module":"module-2","order":1,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-1-5"],"podcast":{"file":"assets/podcasts/02.1-Serviços_e_Injeção_de_Dependência_no_Angular.m4a","title":"Serviços e Injeção de Dependência no Angular","description":"Descubra como os serviços são o coração da arquitetura Angular.","duration":"50-65 minutos"}},{"id":"lesson-2-2","title":"Roteamento e Navegação Avançada","slug":"roteamento","module":"module-2","order":2,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-1"],"podcast":{"file":"assets/podcasts/02.2-SilêncioRouter_Guards_Resolvers_Lazy_Loading.m4a","title":"Router, Guards, Resolvers e Lazy Loading","description":"Domine o sistema de roteamento avançado do Angular.","duration":"55-70 minutos"}},{"id":"lesson-2-3","title":"Formulários Reativos e Validação","slug":"formularios-reativos","module":"module-2","order":3,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-2"],"podcast":{"file":"assets/podcasts/02.3-Dominando_os_Formulários_Reativos_do_Angular.m4a","title":"Dominando os Formulários Reativos do Angular","description":"Formulários reativos são uma das funcionalidades mais poderosas do Angular.","duration":"60-75 minutos"}},{"id":"lesson-2-4","title":"HTTP Client e Interceptors","slug":"http-client","module":"module-2","order":4,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-2-3"],"podcast":{"file":"assets/podcasts/02.4-HttpClient_e_Interceptors_no_Angular.m4a","title":"HttpClient e Interceptors no Angular","description":"Aprenda a consumir APIs REST de forma profissional com HttpClient.","duration":"50-65 minutos"}},{"id":"lesson-2-5","title":"Comunicação entre Componentes","slug":"comunicacao-componentes","module":"module-2","order":5,"duration":"60 minutos","level":"Intermediário","prerequisites":["lesson-2-4"],"podcast":{"file":"assets/podcasts/02.5-Comunicação_entre_Componentes_Input_Output_ViewChild.m4a","title":"Comunicação entre Componentes - Input, Output, ViewChild","description":"Domine todos os padrões de comunicação entre componentes no Angular.","duration":"45-60 minutos"}},{"id":"lesson-3-1","title":"RxJS Operators Avançados","slug":"rxjs-operators","module":"module-3","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-2-5"],"podcast":{"file":"assets/podcasts/03.1RxJS_Operators_Observables_SwitchMap_e_Busca_Perfeita.m4a","title":"RxJS Operators, Observables, SwitchMap e Busca Perfeita","description":"RxJS é fundamental para Angular moderno.","duration":"65-80 minutos"}},{"id":"lesson-3-2","title":"Signals e Signal-First Architecture","slug":"signals","module":"module-3","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-1"],"podcast":{"file":"assets/podcasts/03.2-Angular_Signals__O_Guia_Completo_e_Prático.m4a","title":"Angular Signals - O Guia Completo e Prático","description":"Signals são a nova forma reativa do Angular.","duration":"60-75 minutos"}},{"id":"lesson-3-3","title":"NgRx - Gerenciamento de Estado","slug":"ngrx","module":"module-3","order":3,"duration":"150 minutos","level":"Avançado","prerequisites":["lesson-3-2"],"podcast":{"file":"assets/podcasts/03.3-NgRx_quando_vale_a_pena_usar.m4a","title":"NgRx - Quando Vale a Pena Usar","description":"NgRx é poderoso, mas nem sempre necessário.","duration":"70-85 minutos"}},{"id":"lesson-3-4","title":"Padrões Reativos e Memory Leaks","slug":"memory-leaks","module":"module-3","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-3-3"],"podcast":{"file":"assets/podcasts/03.4-Combatendo_Memory_Leaks_com_Async_Pipe.m4a","title":"Combatendo Memory Leaks com Async Pipe","description":"Memory leaks são um problema comum em aplicações Angular reativas.","duration":"50-65 minutos"}},{"id":"lesson-3-5","title":"Integração Signals + Observables","slug":"signals-observables","module":"module-3","order":5,"duration":"30 minutos","level":"Avançado","prerequisites":["lesson-3-4"],"podcast":{"file":"assets/podcasts/03.5-toSignal_e_toObservable_as_pontes_do_Angular.m4a","title":"toSignal e toObservable - As Pontes do Angular","description":"Angular oferece funções para integrar Signals com Observables.","duration":"40-50 minutos"}},{"id":"lesson-4-1","title":"Change Detection Strategies","slug":"change-detection","module":"module-4","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-5"],"podcast":{"file":"assets/podcasts/04.1-OnPush_Imutabilidade_e_Performance_de_Apps.m4a","title":"OnPush, Imutabilidade e Performance de Apps","description":"Change Detection é crítico para performance.","duration":"60-75 minutos"}},{"id":"lesson-4-2","title":"Lazy Loading e Code Splitting","slug":"lazy-loading","module":"module-4","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-1"],"podcast":{"file":"assets/podcasts/04.2-Lazy_Loading_e_Code_Splitting_na_Web.m4a","title":"Lazy Loading e Code Splitting na Web","description":"Otimize o carregamento inicial da sua aplicação com lazy loading avançado.","duration":"55-70 minutos"}},{"id":"lesson-4-3","title":"Deferrable Views e Performance","slug":"deferrable-views","module":"module-4","order":3,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-2"],"podcast":{"file":"assets/podcasts/04.3-Angular_Deferrable_Views_no_Código_(@defer).m4a","title":"Angular Deferrable Views no Código (@defer)","description":"Deferrable Views são a nova forma de lazy loading de componentes no Angular.","duration":"50-65 minutos"}},{"id":"lesson-4-4","title":"Profiling e Otimização","slug":"profiling","module":"module-4","order":4,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-3"],"podcast":{"file":"assets/podcasts/04.4-Profiling_Angular_Otimização_Como_Fazer.m4a","title":"Profiling Angular - Otimização Como Fazer","description":"Aprenda a identificar gargalos de performance usando Angular DevTools.","duration":"55-70 minutos"}},{"id":"lesson-4-5","title":"Zone.js e Zoneless Apps","slug":"zonejs","module":"module-4","order":5,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-4-4"],"podcast":{"file":"assets/podcasts/04.5-Zone.m4a","title":"Zone.js e Zoneless Apps","description":"Zone.js é o motor da change detection tradicional do Angular.","duration":"50-65 minutos"}},{"id":"lesson-5-1","title":"Testes Completos (Unitários, Integração, E2E)","slug":"testes","module":"module-5","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-5"],"podcast":{"file":"assets/podcasts/05.1-Testes_Unitários_Integração_E2E_Angular.m4a","title":"Testes Unitários, Integração e E2E no Angular","description":"Testes são essenciais para aplicações profissionais.","duration":"70-85 minutos"}},{"id":"lesson-5-2","title":"SSR e PWA","slug":"ssr-pwa","module":"module-5","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-1"]},{"id":"lesson-5-3","title":"Segurança Avançada","slug":"seguranca","module":"module-5","order":3,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-2"]},{"id":"lesson-5-4","title":"Arquitetura Avançada","slug":"arquitetura-avancada","module":"module-5","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-3"]},{"id":"lesson-5-5","title":"Projeto Final Completo","slug":"projeto-final","module":"module-5","order":5,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-4"]}]
+    };
+    
+  </script>
+</body>
+</html>
+

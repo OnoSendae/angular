@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 1.4.5: Diretiva Customizada Highlight - Angular Expert - Do Básico ao Expert em 5 Dias</title>
+  <meta name="description" content="Treinamento intensivo e prático de Angular">
+  <link rel="stylesheet" href="/angular/assets/css/main.css">
+  
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Exercício 1.4.5: Diretiva Customizada Highlight | Angular Expert - Do Básico ao Expert em 5 Dias</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Exercício 1.4.5: Diretiva Customizada Highlight" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Treinamento intensivo e prático de Angular" />
+<meta property="og:description" content="Treinamento intensivo e prático de Angular" />
+<link rel="canonical" href="https://onosendae.github.io/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-5-diretiva-customizada.html" />
+<meta property="og:url" content="https://onosendae.github.io/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-5-diretiva-customizada.html" />
+<meta property="og:site_name" content="Angular Expert - Do Básico ao Expert em 5 Dias" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Exercício 1.4.5: Diretiva Customizada Highlight" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Treinamento intensivo e prático de Angular","headline":"Exercício 1.4.5: Diretiva Customizada Highlight","url":"https://onosendae.github.io/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-5-diretiva-customizada.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Angular Expert - Do Básico ao Expert em 5 Dias",
+    "description": "Treinamento intensivo e prático de Angular",
+    "provider": {
+      "@type": "Organization",
+      "name": "Angular Expert"
+    },
+    "courseCode": "angular-expert-5-days",
+    "educationalLevel": "Advanced",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-content">
+    <h1 class="site-title">
+      <a href="/angular/">Angular Expert - Do Básico ao Expert em 5 Dias</a>
+    </h1>
+    <nav class="main-nav">
+      <a href="/angular/">Início</a>
+      <a href="/angular/about">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+
+  
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-navigation">
+  <h2>Módulos</h2>
+  <ul class="modules-list">
+    
+      <li>
+        <a href="/angular/modules/fundamentos-acelerados">
+          Fundamentos Acelerados
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/introducao-angular">
+                  Introdução ao Angular e Configuração
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/typescript-essencial">
+                  TypeScript Essencial para Angular
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/componentes-standalone">
+                  Componentes Standalone e Templates
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/data-binding">
+                  Data Binding e Diretivas Modernas
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/control-flow-pipes">
+                  Control Flow e Pipes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/desenvolvimento-intermediario">
+          Desenvolvimento Intermediário
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/servicos-di">
+                  Serviços e Injeção de Dependência
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/roteamento">
+                  Roteamento e Navegação Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/formularios-reativos">
+                  Formulários Reativos e Validação
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/http-client">
+                  HTTP Client e Interceptors
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/comunicacao-componentes">
+                  Comunicação entre Componentes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/programacao-reativa-estado">
+          Programação Reativa e Estado
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/rxjs-operators">
+                  RxJS Operators Avançados
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals">
+                  Signals e Signal-First Architecture
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/ngrx">
+                  NgRx - Gerenciamento de Estado
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/memory-leaks">
+                  Padrões Reativos e Memory Leaks
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals-observables">
+                  Integração Signals + Observables
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/performance-otimizacao">
+          Performance e Otimização
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/change-detection">
+                  Change Detection Strategies
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/lazy-loading">
+                  Lazy Loading e Code Splitting
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/deferrable-views">
+                  Deferrable Views e Performance
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/profiling">
+                  Profiling e Otimização
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/zonejs">
+                  Zone.js e Zoneless Apps
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/praticas-avancadas-projeto-final">
+          Práticas Avançadas e Projeto Final
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/testes">
+                  Testes Completos (Unitários, Integração, E2E)
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/ssr-pwa">
+                  SSR e PWA
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/seguranca">
+                  Segurança Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/arquitetura-avancada">
+                  Arquitetura Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/projeto-final">
+                  Projeto Final Completo
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+  </ul>
+</nav>
+
+
+    </aside>
+    
+    <main class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/angular/">Início</a></li>
+    
+      
+      
+        <li><a href="/angular/modules/fundamentos-acelerados">Fundamentos Acelerados</a></li>
+      
+    
+    
+      <li aria-current="page">Exercício 1.4.5: Diretiva Customizada Highlight</li>
+    
+  </ol>
+</nav>
+
+
+      <article class="exercise-content">
+  <header>
+    <h1>Exercício 1.4.5: Diretiva Customizada Highlight</h1>
+    <div class="exercise-meta">
+      
+        <span>Dificuldade: Intermediário</span>
+      
+      
+    </div>
+  </header>
+  
+  <h2 id="objetivo">Objetivo</h2>
+
+<p>Este exercício tem como objetivo praticar <strong>criação de diretivas customizadas</strong> através da <strong>implementação de uma diretiva highlight que muda cor de fundo ao passar o mouse</strong>.</p>
+
+<p>Ao completar este exercício, você será capaz de:</p>
+
+<ul>
+  <li>Criar diretivas customizadas standalone</li>
+  <li>Usar <code class="language-plaintext highlighter-rouge">@HostBinding</code> para modificar propriedades do host</li>
+  <li>Usar <code class="language-plaintext highlighter-rouge">@HostListener</code> para responder a eventos</li>
+  <li>Usar <code class="language-plaintext highlighter-rouge">@Input</code> para receber dados na diretiva</li>
+  <li>Acessar elemento com <code class="language-plaintext highlighter-rouge">ElementRef</code></li>
+</ul>
+
+<hr />
+
+<h2 id="descrição">Descrição</h2>
+
+<p>Você precisa criar uma diretiva <code class="language-plaintext highlighter-rouge">HighlightDirective</code> que muda a cor de fundo de um elemento quando o mouse passa sobre ele. A diretiva deve aceitar cor customizada via <code class="language-plaintext highlighter-rouge">@Input</code>.</p>
+
+<h3 id="contexto">Contexto</h3>
+
+<p>Um sistema precisa de uma forma reutilizável de destacar elementos quando o usuário interage com eles. Uma diretiva customizada é a solução ideal para este caso.</p>
+
+<h3 id="tarefa">Tarefa</h3>
+
+<p>Crie uma diretiva <code class="language-plaintext highlighter-rouge">HighlightDirective</code> com:</p>
+
+<ol>
+  <li><strong>@Input <code class="language-plaintext highlighter-rouge">appHighlight</code></strong>: Cor de destaque (padrão: ‘yellow’)</li>
+  <li><strong>@Input <code class="language-plaintext highlighter-rouge">defaultColor</code></strong>: Cor padrão (padrão: ‘transparent’)</li>
+  <li><strong>@HostBinding</strong>: Modificar <code class="language-plaintext highlighter-rouge">style.backgroundColor</code></li>
+  <li><strong>@HostListener</strong>: Responder a <code class="language-plaintext highlighter-rouge">mouseenter</code> e <code class="language-plaintext highlighter-rouge">mouseleave</code></li>
+  <li><strong>Standalone</strong>: Diretiva deve ser standalone</li>
+  <li><strong>Uso</strong>: Aplicar diretiva em elementos HTML</li>
+</ol>
+
+<hr />
+
+<h2 id="requisitos">Requisitos</h2>
+
+<h3 id="funcionalidades-obrigatórias">Funcionalidades Obrigatórias</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Diretiva criada com decorator <code class="language-plaintext highlighter-rouge">@Directive</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">@Input</code> para cor de highlight</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">@Input</code> para cor padrão</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">@HostBinding</code> para backgroundColor</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">@HostListener</code> para mouseenter</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">@HostListener</code> para mouseleave</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Diretiva funciona quando aplicada</li>
+</ul>
+
+<h3 id="critérios-de-qualidade">Critérios de Qualidade</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Código segue boas práticas aprendidas na aula</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Diretiva é reutilizável</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Código é legível e bem organizado</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Diretiva é standalone</li>
+</ul>
+
+<hr />
+
+<h2 id="dicas">Dicas</h2>
+
+<h3 id="dica-1-estrutura-básica">Dica 1: Estrutura Básica</h3>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Directive</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Directive</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">[appHighlight]</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">HighlightDirective</span> <span class="p">{}</span>
+</code></pre></div></div>
+
+<h3 id="dica-2-hostbinding">Dica 2: @HostBinding</h3>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">HostBinding</span><span class="p">(</span><span class="dl">'</span><span class="s1">style.backgroundColor</span><span class="dl">'</span><span class="p">)</span> <span class="nx">backgroundColor</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="dica-3-hostlistener">Dica 3: @HostListener</h3>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">HostListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseenter</span><span class="dl">'</span><span class="p">)</span> <span class="nf">onMouseEnter</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">yellow</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="dica-4-input-com-mesmo-nome-do-seletor">Dica 4: @Input com Mesmo Nome do Seletor</h3>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">appHighlight</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">yellow</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="solução-esperada">Solução Esperada</h2>
+
+<h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
+
+<p><strong>highlight.directive.ts</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Directive</span><span class="p">,</span> <span class="nx">HostBinding</span><span class="p">,</span> <span class="nx">HostListener</span><span class="p">,</span> <span class="nx">Input</span><span class="p">,</span> <span class="nx">OnInit</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Directive</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">[appHighlight]</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">HighlightDirective</span> <span class="k">implements</span> <span class="nx">OnInit</span> <span class="p">{</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">appHighlight</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">yellow</span><span class="dl">'</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">defaultColor</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">transparent</span><span class="dl">'</span><span class="p">;</span>
+  
+  <span class="p">@</span><span class="nd">HostBinding</span><span class="p">(</span><span class="dl">'</span><span class="s1">style.backgroundColor</span><span class="dl">'</span><span class="p">)</span> <span class="nx">backgroundColor</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">HostBinding</span><span class="p">(</span><span class="dl">'</span><span class="s1">style.cursor</span><span class="dl">'</span><span class="p">)</span> <span class="nx">cursor</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">pointer</span><span class="dl">'</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">HostBinding</span><span class="p">(</span><span class="dl">'</span><span class="s1">style.transition</span><span class="dl">'</span><span class="p">)</span> <span class="nx">transition</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">background-color 0.3s ease</span><span class="dl">'</span><span class="p">;</span>
+  
+  <span class="nf">ngOnInit</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultColor</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="p">@</span><span class="nd">HostListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseenter</span><span class="dl">'</span><span class="p">)</span> <span class="nf">onMouseEnter</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">appHighlight</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="p">@</span><span class="nd">HostListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseleave</span><span class="dl">'</span><span class="p">)</span> <span class="nf">onMouseLeave</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultColor</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>exemplo-uso.component.ts</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">HighlightDirective</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./highlight.directive</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-exemplo-uso</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">HighlightDirective</span><span class="p">,</span> <span class="nx">CommonModule</span><span class="p">],</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;div class="highlight-examples"&gt;
+      &lt;h2&gt;Exemplos de Highlight Directive&lt;/h2&gt;
+      
+      &lt;div class="example-section"&gt;
+        &lt;h3&gt;Highlight Padrão (Amarelo)&lt;/h3&gt;
+        &lt;p appHighlight&gt;
+          Passe o mouse sobre este texto para ver o highlight padrão.
+        &lt;/p&gt;
+      &lt;/div&gt;
+      
+      &lt;div class="example-section"&gt;
+        &lt;h3&gt;Highlight Customizado&lt;/h3&gt;
+        &lt;p 
+          appHighlight 
+          [appHighlight]="'lightblue'"
+          [defaultColor]="'lightgray'"&gt;
+          Este texto tem cor de highlight customizada (azul claro).
+        &lt;/p&gt;
+      &lt;/div&gt;
+      
+      &lt;div class="example-section"&gt;
+        &lt;h3&gt;Diferentes Cores&lt;/h3&gt;
+        &lt;div class="color-grid"&gt;
+          &lt;div 
+            *ngFor="let color of colors"
+            class="color-box"
+            [appHighlight]="color"
+            [defaultColor]="'white'"&gt;
+            
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;div class="example-section"&gt;
+        &lt;h3&gt;Em Botões&lt;/h3&gt;
+        &lt;button 
+          appHighlight 
+          [appHighlight]="'#4caf50'"
+          [defaultColor]="'#1976d2'"&gt;
+          Botão com Highlight
+        &lt;/button&gt;
+      &lt;/div&gt;
+      
+      &lt;div class="example-section"&gt;
+        &lt;h3&gt;Em Cards&lt;/h3&gt;
+        &lt;div 
+          class="card"
+          appHighlight
+          [appHighlight]="'#fff3e0'"
+          [defaultColor]="'white'"&gt;
+          &lt;h4&gt;Card com Highlight&lt;/h4&gt;
+          &lt;p&gt;Passe o mouse sobre o card inteiro.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  `</span><span class="p">,</span>
+  <span class="na">styles</span><span class="p">:</span> <span class="p">[</span><span class="s2">`
+    .highlight-examples {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .example-section {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+    }
+    
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .color-box {
+      padding: 2rem;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+    
+    .card {
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  `</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ExemploUsoComponent</span> <span class="p">{</span>
+  <span class="nl">colors</span><span class="p">:</span> <span class="kr">string</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="dl">'</span><span class="s1">lightblue</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">lightgreen</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">lightyellow</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">lightpink</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">lightcoral</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">lightcyan</span><span class="dl">'</span>
+  <span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Explicação da Solução</strong>:</p>
+
+<ol>
+  <li>Diretiva criada com <code class="language-plaintext highlighter-rouge">@Directive</code> e <code class="language-plaintext highlighter-rouge">standalone: true</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@Input appHighlight</code> recebe cor de destaque</li>
+  <li><code class="language-plaintext highlighter-rouge">@Input defaultColor</code> recebe cor padrão</li>
+  <li><code class="language-plaintext highlighter-rouge">@HostBinding</code> modifica <code class="language-plaintext highlighter-rouge">style.backgroundColor</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@HostListener</code> responde a eventos de mouse</li>
+  <li><code class="language-plaintext highlighter-rouge">ngOnInit</code> inicializa cor padrão</li>
+  <li>Diretiva pode ser aplicada em qualquer elemento</li>
+</ol>
+
+<p><strong>Decisões de Design</strong>:</p>
+
+<ul>
+  <li>Nome do seletor igual ao <code class="language-plaintext highlighter-rouge">@Input</code> para conveniência</li>
+  <li>Transição CSS para animação suave</li>
+  <li>Cursor pointer indica interatividade</li>
+  <li>Valores padrão sensatos</li>
+</ul>
+
+<hr />
+
+<h2 id="testes">Testes</h2>
+
+<h3 id="casos-de-teste">Casos de Teste</h3>
+
+<p><strong>Teste 1</strong>: Highlight padrão funciona</p>
+<ul>
+  <li><strong>Input</strong>: <code class="language-plaintext highlighter-rouge">&lt;p appHighlight&gt;Texto&lt;/p&gt;</code></li>
+  <li><strong>Output Esperado</strong>: Fundo deve mudar para amarelo ao passar mouse</li>
+</ul>
+
+<p><strong>Teste 2</strong>: Cor customizada funciona</p>
+<ul>
+  <li><strong>Input</strong>: <code class="language-plaintext highlighter-rouge">&lt;p [appHighlight]="'blue'"&gt;Texto&lt;/p&gt;</code></li>
+  <li><strong>Output Esperado</strong>: Fundo deve mudar para azul ao passar mouse</li>
+</ul>
+
+<p><strong>Teste 3</strong>: Cor padrão funciona</p>
+<ul>
+  <li><strong>Input</strong>: <code class="language-plaintext highlighter-rouge">&lt;p [defaultColor]="'gray'"&gt;Texto&lt;/p&gt;</code></li>
+  <li><strong>Output Esperado</strong>: Fundo inicial deve ser cinza</li>
+</ul>
+
+<p><strong>Teste 4</strong>: Mouseleave restaura cor</p>
+<ul>
+  <li><strong>Input</strong>: Passar mouse e depois remover</li>
+  <li><strong>Output Esperado</strong>: Cor deve voltar ao padrão</li>
+</ul>
+
+<hr />
+
+<h2 id="extensões-opcional">Extensões (Opcional)</h2>
+
+<ol>
+  <li><strong>Click Highlight</strong>: Adicione highlight ao clicar</li>
+  <li><strong>Delay</strong>: Adicione delay antes de aplicar highlight</li>
+  <li><strong>Animação</strong>: Adicione animação mais complexa</li>
+  <li><strong>Múltiplas Propriedades</strong>: Modifique outras propriedades além de backgroundColor</li>
+</ol>
+
+<hr />
+
+<h2 id="referências-úteis">Referências Úteis</h2>
+
+<ul>
+  <li><strong><a href="https://angular.io/guide/attribute-directives">Attribute Directives</a></strong>: Guia oficial</li>
+  <li><strong><a href="https://angular.io/api/core/Directive">@Directive</a></strong>: Documentação @Directive</li>
+  <li><strong><a href="https://angular.io/api/core/HostBinding">@HostBinding</a></strong>: Documentação @HostBinding</li>
+  <li><strong><a href="https://angular.io/api/core/HostListener">@HostListener</a></strong>: Documentação @HostListener</li>
+</ul>
+
+<hr />
+
+<h2 id="checklist-de-qualidade">Checklist de Qualidade</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Objetivo está claro</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Descrição fornece contexto suficiente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Requisitos são específicos e mensuráveis</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Dicas guiam sem dar solução completa</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Solução esperada está completa e explicada</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Casos de teste cobrem cenários principais</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Referências úteis estão incluídas</li>
+</ul>
+
+
+</article>
+
+<nav class="exercise-navigation">
+  <a href="">← Voltar para a aula</a>
+</nav>
+
+
+    </main>
+  </div>
+  
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Angular Expert - Do Básico ao Expert em 5 Dias. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+  <div id="progress-tracker" class="progress-tracker" style="display: none;">
+  <div class="overall-progress">
+    <h3>Progresso Geral</h3>
+    <div class="progress-bar">
+      <div class="progress-fill" id="overall-progress-fill"></div>
+    </div>
+    <span id="overall-progress-text">0%</span>
+  </div>
+</div>
+
+
+  
+  <script src="/angular/assets/js/navigation.js"></script>
+  <script src="/angular/assets/js/progress-tracker.js"></script>
+  <script src="/angular/assets/js/analytics.js"></script>
+  <script>
+    window.siteData = {
+      modules: [{"id":"module-1","title":"Fundamentos Acelerados","slug":"fundamentos-acelerados","duration":"8 horas","description":"Estabeleça as bases sólidas do Angular","lessons":["lesson-1-1","lesson-1-2","lesson-1-3","lesson-1-4","lesson-1-5"],"order":1},{"id":"module-2","title":"Desenvolvimento Intermediário","slug":"desenvolvimento-intermediario","duration":"8 horas","description":"Construa funcionalidades completas de aplicações reais","lessons":["lesson-2-1","lesson-2-2","lesson-2-3","lesson-2-4","lesson-2-5"],"order":2},{"id":"module-3","title":"Programação Reativa e Estado","slug":"programacao-reativa-estado","duration":"8 horas","description":"Domine programação reativa e gerenciamento de estado","lessons":["lesson-3-1","lesson-3-2","lesson-3-3","lesson-3-4","lesson-3-5"],"order":3},{"id":"module-4","title":"Performance e Otimização","slug":"performance-otimizacao","duration":"8 horas","description":"Crie aplicações extremamente performáticas","lessons":["lesson-4-1","lesson-4-2","lesson-4-3","lesson-4-4","lesson-4-5"],"order":4},{"id":"module-5","title":"Práticas Avançadas e Projeto Final","slug":"praticas-avancadas-projeto-final","duration":"8 horas","description":"Consolide conhecimento através de práticas avançadas","lessons":["lesson-5-1","lesson-5-2","lesson-5-3","lesson-5-4","lesson-5-5"],"order":5}],
+      lessons: [{"id":"lesson-1-1","title":"Introdução ao Angular e Configuração","slug":"introducao-angular","module":"module-1","order":1,"duration":"60 minutos","level":"Básico","prerequisites":[],"podcast":{"file":"assets/podcasts/01-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Fundação Angular: Tipagem, Encapsulamento e Generics","description":"Neste episódio, exploramos os fundamentos essenciais do Angular moderno. Você aprenderá sobre a arquitetura baseada em componentes, como o TypeScript fortalece o desenvolvimento Angular, e os conceitos de encapsulamento e generics que tornam o framework poderoso e escalável.","duration":"45-60 minutos"}},{"id":"lesson-1-2","title":"TypeScript Essencial para Angular","slug":"typescript-essencial","module":"module-1","order":2,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-1"]},{"id":"lesson-1-3","title":"Componentes Standalone e Templates","slug":"componentes-standalone","module":"module-1","order":3,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-2"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-4","title":"Data Binding e Diretivas Modernas","slug":"data-binding","module":"module-1","order":4,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-3"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-5","title":"Control Flow e Pipes","slug":"control-flow-pipes","module":"module-1","order":5,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-4"]},{"id":"lesson-2-1","title":"Serviços e Injeção de Dependência","slug":"servicos-di","module":"module-2","order":1,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-1-5"],"podcast":{"file":"assets/podcasts/02.1-Serviços_e_Injeção_de_Dependência_no_Angular.m4a","title":"Serviços e Injeção de Dependência no Angular","description":"Descubra como os serviços são o coração da arquitetura Angular.","duration":"50-65 minutos"}},{"id":"lesson-2-2","title":"Roteamento e Navegação Avançada","slug":"roteamento","module":"module-2","order":2,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-1"],"podcast":{"file":"assets/podcasts/02.2-SilêncioRouter_Guards_Resolvers_Lazy_Loading.m4a","title":"Router, Guards, Resolvers e Lazy Loading","description":"Domine o sistema de roteamento avançado do Angular.","duration":"55-70 minutos"}},{"id":"lesson-2-3","title":"Formulários Reativos e Validação","slug":"formularios-reativos","module":"module-2","order":3,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-2"],"podcast":{"file":"assets/podcasts/02.3-Dominando_os_Formulários_Reativos_do_Angular.m4a","title":"Dominando os Formulários Reativos do Angular","description":"Formulários reativos são uma das funcionalidades mais poderosas do Angular.","duration":"60-75 minutos"}},{"id":"lesson-2-4","title":"HTTP Client e Interceptors","slug":"http-client","module":"module-2","order":4,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-2-3"],"podcast":{"file":"assets/podcasts/02.4-HttpClient_e_Interceptors_no_Angular.m4a","title":"HttpClient e Interceptors no Angular","description":"Aprenda a consumir APIs REST de forma profissional com HttpClient.","duration":"50-65 minutos"}},{"id":"lesson-2-5","title":"Comunicação entre Componentes","slug":"comunicacao-componentes","module":"module-2","order":5,"duration":"60 minutos","level":"Intermediário","prerequisites":["lesson-2-4"],"podcast":{"file":"assets/podcasts/02.5-Comunicação_entre_Componentes_Input_Output_ViewChild.m4a","title":"Comunicação entre Componentes - Input, Output, ViewChild","description":"Domine todos os padrões de comunicação entre componentes no Angular.","duration":"45-60 minutos"}},{"id":"lesson-3-1","title":"RxJS Operators Avançados","slug":"rxjs-operators","module":"module-3","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-2-5"],"podcast":{"file":"assets/podcasts/03.1RxJS_Operators_Observables_SwitchMap_e_Busca_Perfeita.m4a","title":"RxJS Operators, Observables, SwitchMap e Busca Perfeita","description":"RxJS é fundamental para Angular moderno.","duration":"65-80 minutos"}},{"id":"lesson-3-2","title":"Signals e Signal-First Architecture","slug":"signals","module":"module-3","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-1"],"podcast":{"file":"assets/podcasts/03.2-Angular_Signals__O_Guia_Completo_e_Prático.m4a","title":"Angular Signals - O Guia Completo e Prático","description":"Signals são a nova forma reativa do Angular.","duration":"60-75 minutos"}},{"id":"lesson-3-3","title":"NgRx - Gerenciamento de Estado","slug":"ngrx","module":"module-3","order":3,"duration":"150 minutos","level":"Avançado","prerequisites":["lesson-3-2"],"podcast":{"file":"assets/podcasts/03.3-NgRx_quando_vale_a_pena_usar.m4a","title":"NgRx - Quando Vale a Pena Usar","description":"NgRx é poderoso, mas nem sempre necessário.","duration":"70-85 minutos"}},{"id":"lesson-3-4","title":"Padrões Reativos e Memory Leaks","slug":"memory-leaks","module":"module-3","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-3-3"],"podcast":{"file":"assets/podcasts/03.4-Combatendo_Memory_Leaks_com_Async_Pipe.m4a","title":"Combatendo Memory Leaks com Async Pipe","description":"Memory leaks são um problema comum em aplicações Angular reativas.","duration":"50-65 minutos"}},{"id":"lesson-3-5","title":"Integração Signals + Observables","slug":"signals-observables","module":"module-3","order":5,"duration":"30 minutos","level":"Avançado","prerequisites":["lesson-3-4"],"podcast":{"file":"assets/podcasts/03.5-toSignal_e_toObservable_as_pontes_do_Angular.m4a","title":"toSignal e toObservable - As Pontes do Angular","description":"Angular oferece funções para integrar Signals com Observables.","duration":"40-50 minutos"}},{"id":"lesson-4-1","title":"Change Detection Strategies","slug":"change-detection","module":"module-4","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-5"],"podcast":{"file":"assets/podcasts/04.1-OnPush_Imutabilidade_e_Performance_de_Apps.m4a","title":"OnPush, Imutabilidade e Performance de Apps","description":"Change Detection é crítico para performance.","duration":"60-75 minutos"}},{"id":"lesson-4-2","title":"Lazy Loading e Code Splitting","slug":"lazy-loading","module":"module-4","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-1"],"podcast":{"file":"assets/podcasts/04.2-Lazy_Loading_e_Code_Splitting_na_Web.m4a","title":"Lazy Loading e Code Splitting na Web","description":"Otimize o carregamento inicial da sua aplicação com lazy loading avançado.","duration":"55-70 minutos"}},{"id":"lesson-4-3","title":"Deferrable Views e Performance","slug":"deferrable-views","module":"module-4","order":3,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-2"],"podcast":{"file":"assets/podcasts/04.3-Angular_Deferrable_Views_no_Código_(@defer).m4a","title":"Angular Deferrable Views no Código (@defer)","description":"Deferrable Views são a nova forma de lazy loading de componentes no Angular.","duration":"50-65 minutos"}},{"id":"lesson-4-4","title":"Profiling e Otimização","slug":"profiling","module":"module-4","order":4,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-3"],"podcast":{"file":"assets/podcasts/04.4-Profiling_Angular_Otimização_Como_Fazer.m4a","title":"Profiling Angular - Otimização Como Fazer","description":"Aprenda a identificar gargalos de performance usando Angular DevTools.","duration":"55-70 minutos"}},{"id":"lesson-4-5","title":"Zone.js e Zoneless Apps","slug":"zonejs","module":"module-4","order":5,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-4-4"],"podcast":{"file":"assets/podcasts/04.5-Zone.m4a","title":"Zone.js e Zoneless Apps","description":"Zone.js é o motor da change detection tradicional do Angular.","duration":"50-65 minutos"}},{"id":"lesson-5-1","title":"Testes Completos (Unitários, Integração, E2E)","slug":"testes","module":"module-5","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-5"],"podcast":{"file":"assets/podcasts/05.1-Testes_Unitários_Integração_E2E_Angular.m4a","title":"Testes Unitários, Integração e E2E no Angular","description":"Testes são essenciais para aplicações profissionais.","duration":"70-85 minutos"}},{"id":"lesson-5-2","title":"SSR e PWA","slug":"ssr-pwa","module":"module-5","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-1"]},{"id":"lesson-5-3","title":"Segurança Avançada","slug":"seguranca","module":"module-5","order":3,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-2"]},{"id":"lesson-5-4","title":"Arquitetura Avançada","slug":"arquitetura-avancada","module":"module-5","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-3"]},{"id":"lesson-5-5","title":"Projeto Final Completo","slug":"projeto-final","module":"module-5","order":5,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-4"]}]
+    };
+    
+  </script>
+</body>
+</html>
+

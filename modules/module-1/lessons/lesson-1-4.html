@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 1.4: Data Binding e Diretivas Modernas - Angular Expert - Do Básico ao Expert em 5 Dias</title>
+  <meta name="description" content="Treinamento intensivo e prático de Angular">
+  <link rel="stylesheet" href="/angular/assets/css/main.css">
+  
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Aula 1.4: Data Binding e Diretivas Modernas | Angular Expert - Do Básico ao Expert em 5 Dias</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Aula 1.4: Data Binding e Diretivas Modernas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Treinamento intensivo e prático de Angular" />
+<meta property="og:description" content="Treinamento intensivo e prático de Angular" />
+<link rel="canonical" href="https://onosendae.github.io/angular/modules/module-1/lessons/lesson-1-4.html" />
+<meta property="og:url" content="https://onosendae.github.io/angular/modules/module-1/lessons/lesson-1-4.html" />
+<meta property="og:site_name" content="Angular Expert - Do Básico ao Expert em 5 Dias" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Aula 1.4: Data Binding e Diretivas Modernas" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Treinamento intensivo e prático de Angular","headline":"Aula 1.4: Data Binding e Diretivas Modernas","url":"https://onosendae.github.io/angular/modules/module-1/lessons/lesson-1-4.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Angular Expert - Do Básico ao Expert em 5 Dias",
+    "description": "Treinamento intensivo e prático de Angular",
+    "provider": {
+      "@type": "Organization",
+      "name": "Angular Expert"
+    },
+    "courseCode": "angular-expert-5-days",
+    "educationalLevel": "Advanced",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-content">
+    <h1 class="site-title">
+      <a href="/angular/">Angular Expert - Do Básico ao Expert em 5 Dias</a>
+    </h1>
+    <nav class="main-nav">
+      <a href="/angular/">Início</a>
+      <a href="/angular/about">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+
+  
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-navigation">
+  <h2>Módulos</h2>
+  <ul class="modules-list">
+    
+      <li>
+        <a href="/angular/modules/fundamentos-acelerados">
+          Fundamentos Acelerados
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/introducao-angular">
+                  Introdução ao Angular e Configuração
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/typescript-essencial">
+                  TypeScript Essencial para Angular
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/componentes-standalone">
+                  Componentes Standalone e Templates
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/data-binding">
+                  Data Binding e Diretivas Modernas
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/control-flow-pipes">
+                  Control Flow e Pipes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/desenvolvimento-intermediario">
+          Desenvolvimento Intermediário
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/servicos-di">
+                  Serviços e Injeção de Dependência
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/roteamento">
+                  Roteamento e Navegação Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/formularios-reativos">
+                  Formulários Reativos e Validação
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/http-client">
+                  HTTP Client e Interceptors
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/comunicacao-componentes">
+                  Comunicação entre Componentes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/programacao-reativa-estado">
+          Programação Reativa e Estado
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/rxjs-operators">
+                  RxJS Operators Avançados
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals">
+                  Signals e Signal-First Architecture
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/ngrx">
+                  NgRx - Gerenciamento de Estado
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/memory-leaks">
+                  Padrões Reativos e Memory Leaks
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals-observables">
+                  Integração Signals + Observables
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/performance-otimizacao">
+          Performance e Otimização
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/change-detection">
+                  Change Detection Strategies
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/lazy-loading">
+                  Lazy Loading e Code Splitting
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/deferrable-views">
+                  Deferrable Views e Performance
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/profiling">
+                  Profiling e Otimização
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/zonejs">
+                  Zone.js e Zoneless Apps
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/praticas-avancadas-projeto-final">
+          Práticas Avançadas e Projeto Final
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/testes">
+                  Testes Completos (Unitários, Integração, E2E)
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/ssr-pwa">
+                  SSR e PWA
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/seguranca">
+                  Segurança Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/arquitetura-avancada">
+                  Arquitetura Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/projeto-final">
+                  Projeto Final Completo
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+  </ul>
+</nav>
+
+
+    </aside>
+    
+    <main class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/angular/">Início</a></li>
+    
+      
+      
+        <li><a href="/angular/modules/fundamentos-acelerados">Fundamentos Acelerados</a></li>
+      
+    
+    
+      <li aria-current="page">Aula 1.4: Data Binding e Diretivas Modernas</li>
+    
+  </ol>
+</nav>
+
+
+      <script type="application/json" id="lesson-data">
+{
+  "lesson_id": "lesson-1-4",
+  "module_id": "module-1"
+}
+</script>
+
+<div class="podcast-player-container">
+  
+    <div class="podcast-player" id="podcast-player">
+  <div class="podcast-info">
+    <h3>Componentes Standalone, Templates, Data Binding e Diretivas Modernas</h3>
+    <p class="podcast-description">Mergulhe profundamente nos componentes standalone do Angular.</p>
+  </div>
+  
+  <div class="player-controls">
+    <button id="podcast-play" class="play-button" aria-label="Reproduzir podcast">
+      ▶
+    </button>
+    <button id="podcast-pause" class="pause-button" style="display: none;" aria-label="Pausar podcast">
+      ⏸
+    </button>
+    
+    <div class="progress-bar" id="podcast-progress">
+      <div class="progress" id="podcast-progress-fill"></div>
+    </div>
+    
+    <div class="time-display">
+      <span id="podcast-current-time">0:00</span> / <span id="podcast-duration">0:00</span>
+    </div>
+    
+    <div class="speed-control">
+      <label for="podcast-speed">Velocidade:</label>
+      <select id="podcast-speed">
+        <option value="0.5">0.5x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+    </div>
+    
+    <div class="volume-control">
+      <label for="podcast-volume">Volume:</label>
+      <input type="range" id="podcast-volume" min="0" max="100" value="100">
+    </div>
+  </div>
+</div>
+
+<div id="podcast-indicator" class="podcast-playing-indicator">
+  🎧 Podcast tocando
+</div>
+
+<script type="application/json" id="podcast-data">
+{
+  "audioFile": "/angular/assets/podcasts/01.3e4-Funda%C3%A7%C3%A3o_Angular_Tipagem_Encapsulamento_e_Generics.m4a",
+  "lessonId": "lesson-1-4",
+  "podcastTitle": "Componentes Standalone, Templates, Data Binding e Diretivas Modernas"
+}
+</script>
+
+
+  
+</div>
+
+<article class="lesson-content">
+  <header>
+    <h1>Aula 1.4: Data Binding e Diretivas Modernas</h1>
+    <div class="lesson-meta">
+      <span>Duração: 120 minutos</span>
+      <span>Nível: Básico</span>
+    </div>
+  </header>
+  
+  <h2 id="introdução">Introdução</h2>
+
+<p>Nesta aula, você dominará todas as formas de data binding do Angular e aprenderá a usar diretivas modernas de forma eficiente. Data binding é o coração da comunicação entre componente e template no Angular.</p>
+
+<h3 id="o-que-você-vai-aprender">O que você vai aprender</h3>
+
+<ul>
+  <li>Interpolação e suas variações</li>
+  <li>Property Binding avançado</li>
+  <li>Event Binding e manipulação de eventos</li>
+  <li>Two-Way Data Binding com ngModel</li>
+  <li>Binding de classes e estilos dinâmicos</li>
+  <li>Diretivas estruturais (*ngIf, *ngFor, *ngSwitch)</li>
+  <li>Diretivas de atributo ([ngClass], [ngStyle])</li>
+  <li>Criação de diretivas customizadas</li>
+</ul>
+
+<h3 id="por-que-isso-é-importante">Por que isso é importante</h3>
+
+<p>Data binding é fundamental no Angular. Sem entender completamente como dados fluem entre componente e template, você não conseguirá criar aplicações interativas eficientes. Diretivas são ferramentas poderosas para manipular o DOM de forma declarativa.</p>
+
+<hr />
+
+<h2 id="conceitos-teóricos">Conceitos Teóricos</h2>
+
+<h3 id="interpolação-">Interpolação ()</h3>
+
+<p><strong>Definição</strong>: Interpolação é a forma mais simples de exibir dados do componente no template usando a sintaxe ``.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Interpolação converte expressões em strings e as exibe no template. Suporta:</p>
+<ul>
+  <li>
+    <p>Variáveis simples: ``</p>
+  </li>
+  <li>
+    <p>Expressões: <code class="language-plaintext highlighter-rouge">{{ 1 + 1 }}</code></p>
+  </li>
+  <li>Chamadas de método: ``</li>
+  <li>Propriedades aninhadas: ``</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Interpolação é como preencher um formulário em branco. O template é o formulário, e `` são os campos que serão preenchidos com dados do componente.</p>
+
+<p><strong>Visualização</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Component                    Template
+┌────────────────┐            ┌─────────────┐
+│ name = "João"  │  ────────→ │ {{ name }}  │
+│ age = 30       │  ────────→ │ {{ age }}   │
+└────────────────┘            └─────────────┘
+                              ↓
+
+                          "João"
+                          "30"
+</code></pre></div></div>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">UserComponent</span> <span class="p">{</span>
+  <span class="nl">userName</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">João Silva</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">userAge</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+  <span class="nl">isActive</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+  
+  <span class="nf">getDisplayName</span><span class="p">():</span> <span class="kr">string</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">`</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">userName</span><span class="p">}</span><span class="s2"> (</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">userAge</span><span class="p">}</span><span class="s2">)`</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>{{ userName }}<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>Idade: {{ userAge }}<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Status: {{ isActive ? 'Ativo' : 'Inativo' }}<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>{{ getDisplayName() }}<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="property-binding-property">Property Binding ([property])</h3>
+
+<p><strong>Definição</strong>: Property Binding permite definir propriedades de elementos HTML ou diretivas usando a sintaxe <code class="language-plaintext highlighter-rouge">[property]="expression"</code>.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Property binding é unidirecional (componente → template) e é usado para:</p>
+<ul>
+  <li>Propriedades HTML: <code class="language-plaintext highlighter-rouge">[src]</code>, <code class="language-plaintext highlighter-rouge">[href]</code>, <code class="language-plaintext highlighter-rouge">[disabled]</code></li>
+  <li>Propriedades de componentes: <code class="language-plaintext highlighter-rouge">[user]</code>, <code class="language-plaintext highlighter-rouge">[config]</code></li>
+  <li>Propriedades de diretivas: <code class="language-plaintext highlighter-rouge">[ngClass]</code>, <code class="language-plaintext highlighter-rouge">[ngStyle]</code></li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Property binding é como configurar um aparelho. Você define as configurações (propriedades) e o aparelho funciona de acordo com essas configurações.</p>
+
+<p><strong>Visualização</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Component                    Template
+┌─────────────┐            ┌─────────────┐
+│ imageUrl    │  ────────→ │ [src]="..." │
+│ isDisabled  │  ────────→ │ [disabled]  │
+└─────────────┘            └─────────────┘
+</code></pre></div></div>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">ImageComponent</span> <span class="p">{</span>
+  <span class="nl">imageUrl</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https://example.com/image.jpg</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">isDisabled</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="nl">buttonText</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Clique aqui</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">[src]=</span><span class="s">"imageUrl"</span> <span class="na">[alt]=</span><span class="s">"buttonText"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">[disabled]=</span><span class="s">"isDisabled"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">[value]=</span><span class="s">"buttonText"</span> <span class="na">[readonly]=</span><span class="s">"isDisabled"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="event-binding-event">Event Binding ((event))</h3>
+
+<p><strong>Definição</strong>: Event Binding permite responder a eventos do DOM usando a sintaxe <code class="language-plaintext highlighter-rouge">(event)="handler()"</code>.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Event binding é unidirecional (template → componente) e captura eventos como:</p>
+<ul>
+  <li>Eventos do mouse: <code class="language-plaintext highlighter-rouge">(click)</code>, <code class="language-plaintext highlighter-rouge">(mouseenter)</code>, <code class="language-plaintext highlighter-rouge">(mouseleave)</code></li>
+  <li>Eventos do teclado: <code class="language-plaintext highlighter-rouge">(keyup)</code>, <code class="language-plaintext highlighter-rouge">(keydown)</code>, <code class="language-plaintext highlighter-rouge">(keypress)</code></li>
+  <li>Eventos de formulário: <code class="language-plaintext highlighter-rouge">(submit)</code>, <code class="language-plaintext highlighter-rouge">(change)</code>, <code class="language-plaintext highlighter-rouge">(input)</code></li>
+  <li>Eventos customizados: <code class="language-plaintext highlighter-rouge">(customEvent)</code></li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Event binding é como instalar um botão de emergência. Quando alguém pressiona o botão (evento), uma ação é executada (handler).</p>
+
+<p><strong>Visualização</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Template                    Component
+┌─────────────┐            ┌─────────────┐
+│ (click)     │  ────────→ │ onClick()   │
+│ (keyup)     │  ────────→ │ onKeyUp()   │
+└─────────────┘            └─────────────┘
+</code></pre></div></div>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">ButtonComponent</span> <span class="p">{</span>
+  <span class="nl">clickCount</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  
+  <span class="nf">onClick</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">clickCount</span><span class="o">++</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Botão clicado!</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">onKeyUp</span><span class="p">(</span><span class="nx">event</span><span class="p">:</span> <span class="nx">KeyboardEvent</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Tecla pressionada:</span><span class="dl">'</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">key</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">onMouseEnter</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Mouse entrou</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">(click)=</span><span class="s">"onClick()"</span><span class="nt">&gt;</span>Clique aqui<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">(keyup)=</span><span class="s">"onKeyUp($event)"</span> <span class="na">placeholder=</span><span class="s">"Digite algo"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">(mouseenter)=</span><span class="s">"onMouseEnter()"</span><span class="nt">&gt;</span>Passe o mouse<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;p&gt;</span>Cliques: <span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="two-way-data-binding-ngmodel">Two-Way Data Binding ([(ngModel)])</h3>
+
+<p><strong>Definição</strong>: Two-Way Data Binding combina property binding e event binding para criar comunicação bidirecional usando <code class="language-plaintext highlighter-rouge">[(ngModel)]="property"</code>.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Two-way binding é uma combinação de:</p>
+<ul>
+  <li>Property binding: <code class="language-plaintext highlighter-rouge">[ngModel]="property"</code></li>
+  <li>Event binding: <code class="language-plaintext highlighter-rouge">(ngModelChange)="property = $event"</code></li>
+</ul>
+
+<p>Isso cria sincronização automática entre template e componente.</p>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Two-way binding é como um espelho mágico que reflete e modifica simultaneamente. Quando você muda algo no template, o componente atualiza, e vice-versa.</p>
+
+<p><strong>Visualização</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Component  ←──────────────→  Template
+┌─────────┐                ┌─────────────┐
+│ name    │  ←───────────→ │ [(ngModel)] │
+└─────────┘                └─────────────┘
+</code></pre></div></div>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">FormsModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/forms</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">FormComponent</span> <span class="p">{</span>
+  <span class="nl">userName</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  <span class="nl">userEmail</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  <span class="nl">isSubscribed</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">[(ngModel)]=</span><span class="s">"userName"</span> <span class="na">placeholder=</span><span class="s">"Nome"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">[(ngModel)]=</span><span class="s">"userEmail"</span> <span class="na">placeholder=</span><span class="s">"Email"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">[(ngModel)]=</span><span class="s">"isSubscribed"</span><span class="nt">&gt;</span> Inscrever-se
+
+<span class="nt">&lt;p&gt;</span>Nome: <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Email: <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Inscrito: <span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="binding-de-classes-e-estilos">Binding de Classes e Estilos</h3>
+
+<p><strong>Definição</strong>: Angular oferece formas especiais de binding para classes CSS e estilos inline usando <code class="language-plaintext highlighter-rouge">[ngClass]</code> e <code class="language-plaintext highlighter-rouge">[ngStyle]</code>.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p><strong>ngClass</strong> aceita:</p>
+<ul>
+  <li>String: <code class="language-plaintext highlighter-rouge">[ngClass]="'class1 class2'"</code></li>
+  <li>Array: <code class="language-plaintext highlighter-rouge">[ngClass]="['class1', 'class2']"</code></li>
+  <li>Object: <code class="language-plaintext highlighter-rouge">[ngClass]="{active: isActive, disabled: isDisabled}"</code></li>
+</ul>
+
+<p><strong>ngStyle</strong> aceita:</p>
+<ul>
+  <li>Object: <code class="language-plaintext highlighter-rouge">[ngStyle]="{color: textColor, fontSize: fontSize + 'px'}"</code></li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Binding de classes é como trocar de roupa dinamicamente. Você pode adicionar ou remover roupas (classes) baseado em condições.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">StyledComponent</span> <span class="p">{</span>
+  <span class="nl">isActive</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="nl">isDisabled</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="nl">textColor</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">blue</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">fontSize</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+  
+  <span class="nf">getClasses</span><span class="p">():</span> <span class="p">{[</span><span class="nx">key</span><span class="p">:</span> <span class="kr">string</span><span class="p">]:</span> <span class="nx">boolean</span><span class="p">}</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="dl">'</span><span class="s1">active</span><span class="dl">'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">isActive</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">disabled</span><span class="dl">'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">isDisabled</span><span class="p">,</span>
+      <span class="dl">'</span><span class="s1">highlight</span><span class="dl">'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">isActive</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">isDisabled</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">[ngClass]=</span><span class="s">"getClasses()"</span><span class="nt">&gt;</span>Conteúdo<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">[ngClass]=</span><span class="s">"{'active': isActive, 'error': !isActive}"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">[ngStyle]=</span><span class="s">"{'color': textColor, 'font-size': fontSize + 'px'}"</span><span class="nt">&gt;</span>Texto<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">[style.color]=</span><span class="s">"textColor"</span> <span class="na">[style.font-size.px]=</span><span class="s">"fontSize"</span><span class="nt">&gt;</span>Texto 2<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="diretivas-estruturais">Diretivas Estruturais</h3>
+
+<p><strong>Definição</strong>: Diretivas estruturais modificam a estrutura do DOM adicionando, removendo ou manipulando elementos usando <code class="language-plaintext highlighter-rouge">*</code> prefix.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Principais diretivas estruturais:</p>
+
+<ol>
+  <li><strong>*ngIf</strong>: Adiciona/remove elementos baseado em condição</li>
+  <li><strong>*ngFor</strong>: Repete elementos para cada item em uma lista</li>
+  <li><strong>*ngSwitch</strong>: Seleciona um elemento de múltiplas opções</li>
+</ol>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Diretivas estruturais são como instruções de construção. <code class="language-plaintext highlighter-rouge">*ngIf</code> decide se constrói ou não, <code class="language-plaintext highlighter-rouge">*ngFor</code> constrói múltiplas cópias, <code class="language-plaintext highlighter-rouge">*ngSwitch</code> escolhe qual construir.</p>
+
+<p><strong>Visualização</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*ngIf                    *ngFor
+┌─────────┐            ┌─────────┐
+│ if true │  → Exibe   │ for item│  → Repete
+│ if false│  → Remove  │ in list │     elemento
+└─────────┘            └─────────┘
+</code></pre></div></div>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">ListComponent</span> <span class="p">{</span>
+  <span class="nl">items</span><span class="p">:</span> <span class="kr">string</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">Item 1</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Item 2</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Item 3</span><span class="dl">'</span><span class="p">];</span>
+  <span class="nl">showList</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="nl">selectedValue</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">option1</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">*ngIf=</span><span class="s">"showList"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">*ngFor=</span><span class="s">"let item of items; let i = index"</span><span class="nt">&gt;</span>
+      . 
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">[ngSwitch]=</span><span class="s">"selectedValue"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">*ngSwitchCase=</span><span class="s">"'option1'"</span><span class="nt">&gt;</span>Opção 1 selecionada<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">*ngSwitchCase=</span><span class="s">"'option2'"</span><span class="nt">&gt;</span>Opção 2 selecionada<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">*ngSwitchDefault</span><span class="nt">&gt;</span>Nenhuma opção selecionada<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="diretivas-de-atributo">Diretivas de Atributo</h3>
+
+<p><strong>Definição</strong>: Diretivas de atributo modificam a aparência ou comportamento de elementos existentes sem alterar a estrutura do DOM.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Diretivas de atributo principais:</p>
+
+<ol>
+  <li><strong>[ngClass]</strong>: Adiciona/remove classes CSS dinamicamente</li>
+  <li><strong>[ngStyle]</strong>: Aplica estilos inline dinamicamente</li>
+  <li><strong>[ngModel]</strong>: Two-way binding para formulários</li>
+</ol>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">AttributeDirectiveComponent</span> <span class="p">{</span>
+  <span class="nl">isHighlighted</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="nl">currentColor</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">blue</span><span class="dl">'</span><span class="p">;</span>
+  
+  <span class="nf">toggleHighlight</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">isHighlighted</span> <span class="o">=</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">isHighlighted</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> 
+  <span class="na">[ngClass]=</span><span class="s">"{'highlight': isHighlighted, 'active': true}"</span>
+  <span class="na">[ngStyle]=</span><span class="s">"{'background-color': currentColor}"</span><span class="nt">&gt;</span>
+  Conteúdo estilizado
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="criando-diretivas-customizadas">Criando Diretivas Customizadas</h3>
+
+<p><strong>Definição</strong>: Você pode criar suas próprias diretivas para adicionar comportamento customizado a elementos.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Diretivas customizadas podem:</p>
+<ul>
+  <li>Modificar aparência com <code class="language-plaintext highlighter-rouge">@HostBinding</code></li>
+  <li>Responder a eventos com <code class="language-plaintext highlighter-rouge">@HostListener</code></li>
+  <li>Receber dados com <code class="language-plaintext highlighter-rouge">@Input</code></li>
+  <li>Acessar elemento com <code class="language-plaintext highlighter-rouge">ElementRef</code></li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Diretivas customizadas são como extensões personalizadas. Você cria ferramentas específicas para suas necessidades.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Directive</span><span class="p">,</span> <span class="nx">HostBinding</span><span class="p">,</span> <span class="nx">HostListener</span><span class="p">,</span> <span class="nx">Input</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Directive</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">[appHighlight]</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">HighlightDirective</span> <span class="p">{</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">appHighlight</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">yellow</span><span class="dl">'</span><span class="p">;</span>
+  <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">defaultColor</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">transparent</span><span class="dl">'</span><span class="p">;</span>
+  
+  <span class="p">@</span><span class="nd">HostBinding</span><span class="p">(</span><span class="dl">'</span><span class="s1">style.backgroundColor</span><span class="dl">'</span><span class="p">)</span> <span class="nx">backgroundColor</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  
+  <span class="nf">ngOnInit</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultColor</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="p">@</span><span class="nd">HostListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseenter</span><span class="dl">'</span><span class="p">)</span> <span class="nf">onMouseEnter</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">appHighlight</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="p">@</span><span class="nd">HostListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseleave</span><span class="dl">'</span><span class="p">)</span> <span class="nf">onMouseLeave</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultColor</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">[appHighlight]=</span><span class="s">"'yellow'"</span> <span class="na">[defaultColor]=</span><span class="s">"'lightblue'"</span><span class="nt">&gt;</span>
+  Passe o mouse sobre mim
+<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="exemplos-práticos-completos">Exemplos Práticos Completos</h2>
+
+<h3 id="exemplo-1-formulário-com-two-way-binding">Exemplo 1: Formulário com Two-Way Binding</h3>
+
+<p><strong>Contexto</strong>: Criar formulário completo com validação e two-way binding.</p>
+
+<p><strong>Código</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">FormsModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/forms</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">User</span> <span class="p">{</span>
+  <span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">email</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">subscribe</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-user-form</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">FormsModule</span><span class="p">,</span> <span class="nx">CommonModule</span><span class="p">],</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;form (ngSubmit)="onSubmit()"&gt;
+      &lt;div&gt;
+        &lt;label&gt;Nome:&lt;/label&gt;
+        &lt;input [(ngModel)]="user.name" name="name" required&gt;
+      &lt;/div&gt;
+      
+      &lt;div&gt;
+        &lt;label&gt;Email:&lt;/label&gt;
+        &lt;input [(ngModel)]="user.email" type="email" name="email" required&gt;
+      &lt;/div&gt;
+      
+      &lt;div&gt;
+        &lt;label&gt;Idade:&lt;/label&gt;
+        &lt;input [(ngModel)]="user.age" type="number" name="age" min="18"&gt;
+      &lt;/div&gt;
+      
+      &lt;div&gt;
+        &lt;label&gt;
+          &lt;input type="checkbox" [(ngModel)]="user.subscribe" name="subscribe"&gt;
+          Receber newsletter
+        &lt;/label&gt;
+      &lt;/div&gt;
+      
+      &lt;button type="submit" [disabled]="!isValid()"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;
+    
+    &lt;div *ngIf="submitted"&gt;
+      &lt;h3&gt;Dados enviados:&lt;/h3&gt;
+      &lt;pre&gt;{{ user | json }}&lt;/pre&gt;
+    &lt;/div&gt;
+  `</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">UserFormComponent</span> <span class="p">{</span>
+  <span class="nl">user</span><span class="p">:</span> <span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+    <span class="na">email</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+    <span class="na">age</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+    <span class="na">subscribe</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">};</span>
+  
+  <span class="nl">submitted</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  
+  <span class="nf">isValid</span><span class="p">():</span> <span class="nx">boolean</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> 
+           <span class="k">this</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">email</span><span class="p">.</span><span class="nf">includes</span><span class="p">(</span><span class="dl">'</span><span class="s1">@</span><span class="dl">'</span><span class="p">)</span> <span class="o">&amp;&amp;</span> 
+           <span class="k">this</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="nf">onSubmit</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">submitted</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Formulário enviado:</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">user</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="exemplo-2-lista-interativa-com-diretivas">Exemplo 2: Lista Interativa com Diretivas</h3>
+
+<p><strong>Contexto</strong>: Criar lista interativa com filtros e ações.</p>
+
+<p><strong>Código</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">Task</span> <span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">title</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">completed</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+  <span class="nl">priority</span><span class="p">:</span> <span class="dl">'</span><span class="s1">low</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">medium</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">high</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-task-list</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">CommonModule</span><span class="p">],</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;div class="task-list"&gt;
+      &lt;input 
+        [(ngModel)]="searchTerm" 
+        placeholder="Buscar tarefas..."
+        (input)="filterTasks()"&gt;
+      
+      &lt;div class="filters"&gt;
+        &lt;button 
+          *ngFor="let filter of filters"
+          [class.active]="activeFilter === filter"
+          (click)="setFilter(filter)"&gt;
+          {{ filter }}
+        &lt;/button&gt;
+      &lt;/div&gt;
+      
+      &lt;ul&gt;
+        &lt;li 
+          *ngFor="let task of filteredTasks; trackBy: trackByTaskId"
+          [ngClass]="{
+            'completed': task.completed,
+            'high-priority': task.priority === 'high',
+            'medium-priority': task.priority === 'medium',
+            'low-priority': task.priority === 'low'
+          }"
+          (click)="toggleTask(task.id)"&gt;
+          &lt;span&gt;{{ task.title }}&lt;/span&gt;
+          &lt;span [ngSwitch]="task.priority"&gt;
+            &lt;span *ngSwitchCase="'high'" class="badge high"&gt;Alta&lt;/span&gt;
+            &lt;span *ngSwitchCase="'medium'" class="badge medium"&gt;Média&lt;/span&gt;
+            &lt;span *ngSwitchDefault class="badge low"&gt;Baixa&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      
+      &lt;p *ngIf="filteredTasks.length === 0"&gt;Nenhuma tarefa encontrada&lt;/p&gt;
+    &lt;/div&gt;
+  `</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">TaskListComponent</span> <span class="p">{</span>
+  <span class="nl">tasks</span><span class="p">:</span> <span class="nx">Task</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Tarefa 1</span><span class="dl">'</span><span class="p">,</span> <span class="na">completed</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="na">priority</span><span class="p">:</span> <span class="dl">'</span><span class="s1">high</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Tarefa 2</span><span class="dl">'</span><span class="p">,</span> <span class="na">completed</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">priority</span><span class="p">:</span> <span class="dl">'</span><span class="s1">medium</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Tarefa 3</span><span class="dl">'</span><span class="p">,</span> <span class="na">completed</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="na">priority</span><span class="p">:</span> <span class="dl">'</span><span class="s1">low</span><span class="dl">'</span> <span class="p">}</span>
+  <span class="p">];</span>
+  
+  <span class="nl">filteredTasks</span><span class="p">:</span> <span class="nx">Task</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="nl">searchTerm</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  <span class="nl">activeFilter</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">all</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">filters</span><span class="p">:</span> <span class="kr">string</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">all</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">active</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">completed</span><span class="dl">'</span><span class="p">];</span>
+  
+  <span class="nf">ngOnInit</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nf">filterTasks</span><span class="p">();</span>
+  <span class="p">}</span>
+  
+  <span class="nf">filterTasks</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">filtered</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">tasks</span><span class="p">;</span>
+    
+    <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">searchTerm</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">filtered</span> <span class="o">=</span> <span class="nx">filtered</span><span class="p">.</span><span class="nf">filter</span><span class="p">(</span><span class="nx">t</span> <span class="o">=&gt;</span> 
+        <span class="nx">t</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nf">toLowerCase</span><span class="p">().</span><span class="nf">includes</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">searchTerm</span><span class="p">.</span><span class="nf">toLowerCase</span><span class="p">())</span>
+      <span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">activeFilter</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">active</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">filtered</span> <span class="o">=</span> <span class="nx">filtered</span><span class="p">.</span><span class="nf">filter</span><span class="p">(</span><span class="nx">t</span> <span class="o">=&gt;</span> <span class="o">!</span><span class="nx">t</span><span class="p">.</span><span class="nx">completed</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">activeFilter</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">completed</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">filtered</span> <span class="o">=</span> <span class="nx">filtered</span><span class="p">.</span><span class="nf">filter</span><span class="p">(</span><span class="nx">t</span> <span class="o">=&gt;</span> <span class="nx">t</span><span class="p">.</span><span class="nx">completed</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="k">this</span><span class="p">.</span><span class="nx">filteredTasks</span> <span class="o">=</span> <span class="nx">filtered</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="nf">setFilter</span><span class="p">(</span><span class="nx">filter</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">activeFilter</span> <span class="o">=</span> <span class="nx">filter</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nf">filterTasks</span><span class="p">();</span>
+  <span class="p">}</span>
+  
+  <span class="nf">toggleTask</span><span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">task</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">tasks</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="nx">t</span> <span class="o">=&gt;</span> <span class="nx">t</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">id</span><span class="p">);</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">task</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">task</span><span class="p">.</span><span class="nx">completed</span> <span class="o">=</span> <span class="o">!</span><span class="nx">task</span><span class="p">.</span><span class="nx">completed</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nf">filterTasks</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="nf">trackByTaskId</span><span class="p">(</span><span class="nx">index</span><span class="p">:</span> <span class="kr">number</span><span class="p">,</span> <span class="nx">task</span><span class="p">:</span> <span class="nx">Task</span><span class="p">):</span> <span class="kr">number</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">task</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="padrões-e-boas-práticas">Padrões e Boas Práticas</h2>
+
+<h3 id="-boas-práticas">✅ Boas Práticas</h3>
+
+<ol>
+  <li><strong>Use trackBy com *ngFor</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Melhora performance ao evitar re-renderizações desnecessárias</li>
+      <li><strong>Exemplo</strong>: <code class="language-plaintext highlighter-rouge">*ngFor="let item of items; trackBy: trackById"</code></li>
+    </ul>
+  </li>
+  <li><strong>Evite lógica complexa no template</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Dificulta manutenção e testes</li>
+      <li><strong>Exemplo</strong>: Mova lógica para métodos ou getters</li>
+    </ul>
+  </li>
+  <li><strong>Use property binding para propriedades boolean</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Mais claro e type-safe</li>
+      <li><strong>Exemplo</strong>: <code class="language-plaintext highlighter-rouge">[disabled]="isDisabled"</code> ao invés de <code class="language-plaintext highlighter-rouge">disabled=""</code></li>
+    </ul>
+  </li>
+  <li><strong>Combine diretivas quando necessário</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Cria comportamentos complexos de forma declarativa</li>
+      <li><strong>Exemplo</strong>: <code class="language-plaintext highlighter-rouge">*ngFor</code> com <code class="language-plaintext highlighter-rouge">*ngIf</code> em elementos diferentes</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="-anti-padrões-comuns">❌ Anti-padrões Comuns</h3>
+
+<ol>
+  <li><strong>Não use interpolação para propriedades boolean</strong>
+    <ul>
+      <li><strong>Problema</strong>: Converte para string “true”/”false”</li>
+      <li><strong>Solução</strong>: Use property binding <code class="language-plaintext highlighter-rouge">[disabled]="isDisabled"</code></li>
+    </ul>
+  </li>
+  <li><strong>Não esqueça trackBy em listas grandes</strong>
+    <ul>
+      <li><strong>Problema</strong>: Performance ruim com muitas iterações</li>
+      <li><strong>Solução</strong>: Sempre use <code class="language-plaintext highlighter-rouge">trackBy</code> em <code class="language-plaintext highlighter-rouge">*ngFor</code></li>
+    </ul>
+  </li>
+  <li><strong>Não misture *ngIf e *ngFor no mesmo elemento</strong>
+    <ul>
+      <li><strong>Problema</strong>: Angular não permite</li>
+      <li><strong>Solução</strong>: Use <code class="language-plaintext highlighter-rouge">&lt;ng-container&gt;</code> ou elementos separados</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="exercícios-práticos">Exercícios Práticos</h2>
+
+<h3 id="exercício-1-formulário-com-two-way-binding-básico">Exercício 1: Formulário com Two-Way Binding (Básico)</h3>
+
+<p><strong>Objetivo</strong>: Criar formulário usando two-way binding</p>
+
+<p><strong>Descrição</strong>: 
+Crie um formulário de contato com campos nome, email e mensagem usando <code class="language-plaintext highlighter-rouge">[(ngModel)]</code>. Exiba os dados em tempo real abaixo do formulário.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-1-4-1-two-way-binding.md</code></p>
+
+<hr />
+
+<h3 id="exercício-2-lista-com-ngfor-e-filtros-básico">Exercício 2: Lista com *ngFor e Filtros (Básico)</h3>
+
+<p><strong>Objetivo</strong>: Trabalhar com diretivas estruturais</p>
+
+<p><strong>Descrição</strong>:
+Crie uma lista de produtos usando <code class="language-plaintext highlighter-rouge">*ngFor</code> com filtros por categoria. Use <code class="language-plaintext highlighter-rouge">trackBy</code> para otimização.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-1-4-2-ngfor-filtros.md</code></p>
+
+<hr />
+
+<h3 id="exercício-3-classes-dinâmicas-com-ngclass-intermediário">Exercício 3: Classes Dinâmicas com ngClass (Intermediário)</h3>
+
+<p><strong>Objetivo</strong>: Aplicar classes CSS dinamicamente</p>
+
+<p><strong>Descrição</strong>:
+Crie um componente de status que muda classes CSS baseado em diferentes estados (ativo, inativo, pendente, erro).</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-1-4-3-ngclass-dinamico.md</code></p>
+
+<hr />
+
+<h3 id="exercício-4-estilos-dinâmicos-com-ngstyle-intermediário">Exercício 4: Estilos Dinâmicos com ngStyle (Intermediário)</h3>
+
+<p><strong>Objetivo</strong>: Aplicar estilos inline dinamicamente</p>
+
+<p><strong>Descrição</strong>:
+Crie um seletor de cores que aplica estilos dinamicamente usando <code class="language-plaintext highlighter-rouge">[ngStyle]</code>. Permita escolher cor de fundo, texto e tamanho da fonte.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-1-4-4-ngstyle-dinamico.md</code></p>
+
+<hr />
+
+<h3 id="exercício-5-diretiva-customizada-highlight-avançado">Exercício 5: Diretiva Customizada Highlight (Avançado)</h3>
+
+<p><strong>Objetivo</strong>: Criar diretiva customizada</p>
+
+<p><strong>Descrição</strong>:
+Crie uma diretiva <code class="language-plaintext highlighter-rouge">appHighlight</code> que muda cor de fundo ao passar o mouse. A diretiva deve aceitar cor via <code class="language-plaintext highlighter-rouge">@Input</code>.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-1-4-5-diretiva-customizada.md</code></p>
+
+<hr />
+
+<h3 id="exercício-6-componente-interativo-completo-avançado">Exercício 6: Componente Interativo Completo (Avançado)</h3>
+
+<p><strong>Objetivo</strong>: Combinar todas as técnicas aprendidas</p>
+
+<p><strong>Descrição</strong>:
+Crie um componente de dashboard que usa interpolação, property binding, event binding, two-way binding, diretivas estruturais e de atributo.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-1-4-6-componente-interativo.md</code></p>
+
+<hr />
+
+<h3 id="exercício-7-formulário-avançado-com-validação-visual-avançado">Exercício 7: Formulário Avançado com Validação Visual (Avançado)</h3>
+
+<p><strong>Objetivo</strong>: Aplicar validação visual com binding</p>
+
+<p><strong>Descrição</strong>:
+Crie formulário com validação que muda classes e estilos baseado no estado de validação dos campos (válido, inválido, touched, dirty).</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-1-4-7-validacao-visual.md</code></p>
+
+<hr />
+
+<h2 id="referências-externas">Referências Externas</h2>
+
+<h3 id="documentação-oficial">Documentação Oficial</h3>
+
+<ul>
+  <li><strong><a href="https://angular.io/guide/template-syntax">Template Syntax</a></strong>: Guia completo de sintaxe de templates</li>
+  <li><strong><a href="https://angular.io/guide/property-binding">Property Binding</a></strong>: Documentação de property binding</li>
+  <li><strong><a href="https://angular.io/guide/event-binding">Event Binding</a></strong>: Documentação de event binding</li>
+  <li><strong><a href="https://angular.io/guide/two-way-binding">Two-Way Binding</a></strong>: Documentação de two-way binding</li>
+  <li><strong><a href="https://angular.io/guide/structural-directives">Structural Directives</a></strong>: Diretivas estruturais</li>
+  <li><strong><a href="https://angular.io/guide/attribute-directives">Attribute Directives</a></strong>: Diretivas de atributo</li>
+</ul>
+
+<hr />
+
+<h2 id="resumo">Resumo</h2>
+
+<h3 id="principais-conceitos">Principais Conceitos</h3>
+
+<ul>
+  <li>Interpolação exibe dados do componente no template</li>
+  <li>Property binding define propriedades de elementos</li>
+  <li>Event binding responde a eventos do DOM</li>
+  <li>Two-way binding sincroniza template e componente</li>
+  <li>Diretivas estruturais modificam estrutura do DOM</li>
+  <li>Diretivas de atributo modificam aparência/comportamento</li>
+  <li>Diretivas customizadas adicionam comportamento específico</li>
+</ul>
+
+<h3 id="pontos-chave-para-lembrar">Pontos-Chave para Lembrar</h3>
+
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">trackBy</code> em <code class="language-plaintext highlighter-rouge">*ngFor</code> para melhor performance</li>
+  <li>Evite lógica complexa no template</li>
+  <li>Two-way binding requer <code class="language-plaintext highlighter-rouge">FormsModule</code></li>
+  <li>Diretivas customizadas são poderosas para reutilização</li>
+  <li>Combine diferentes tipos de binding para criar UIs interativas</li>
+</ul>
+
+<h3 id="próximos-passos">Próximos Passos</h3>
+
+<ul>
+  <li>Próxima aula: Control Flow e Pipes</li>
+  <li>Praticar criando componentes interativos</li>
+  <li>Explorar diretivas customizadas avançadas</li>
+</ul>
+
+<hr />
+
+<h2 id="checklist-de-qualidade">Checklist de Qualidade</h2>
+
+<p>Antes de considerar esta aula completa:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Introdução clara e envolvente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Todos os conceitos têm definições e explicações detalhadas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Analogias presentes para conceitos abstratos</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Diagramas ASCII para visualização de conceitos complexos</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Exemplos práticos completos e funcionais</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Boas práticas e anti-padrões documentados</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Exercícios práticos ordenados por dificuldade</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Referências externas validadas e organizadas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Resumo com pontos principais</li>
+</ul>
+
+<hr />
+
+<p><strong>Aula Anterior</strong>: <a href="./lesson-1-3-componentes-standalone.md">Aula 1.3: Componentes Standalone e Templates</a><br />
+<strong>Próxima Aula</strong>: <a href="./lesson-1-5-control-flow-pipes.md">Aula 1.5: Control Flow e Pipes</a><br />
+<strong>Voltar ao Módulo</strong>: <a href="../modules/module-1-fundamentos-acelerados.md">Módulo 1: Fundamentos Acelerados</a></p>
+
+
+  
+  <div class="lesson-actions">
+    <button class="mark-lesson-complete" 
+            data-lesson-id="lesson-1-4" 
+            data-module-id="module-1"
+            aria-label="Marcar aula como completa">
+      Marcar como concluída
+    </button>
+  </div>
+</article>
+
+<nav class="lesson-navigation">
+  <nav class="lesson-navigation">
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      
+      
+      
+      
+        
+        <a href="/angular/modules/fundamentos-acelerados/lessons/componentes-standalone" class="prev-lesson">
+          ← Componentes Standalone e Templates
+        </a>
+      
+      
+      
+        
+        <a href="/angular/modules/fundamentos-acelerados/lessons/control-flow-pipes" class="next-lesson">
+          Control Flow e Pipes →
+        </a>
+      
+      
+      
+</nav>
+
+
+</nav>
+
+<section class="exercises">
+  <h2>Exercícios Práticos</h2>
+  
+    
+      
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 1.4.1: Formulário com Two-Way Binding</h3>
+          <a href="/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-1-two-way-binding">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 1.4.2: Lista com *ngFor e Filtros</h3>
+          <a href="/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-2-ngfor-filtros">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 1.4.3: Classes Dinâmicas com ngClass</h3>
+          <a href="/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-3-ngclass-dinamico">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 1.4.4: Estilos Dinâmicos com ngStyle</h3>
+          <a href="/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-4-ngstyle-dinamico">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 1.4.5: Diretiva Customizada Highlight</h3>
+          <a href="/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-5-diretiva-customizada">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 1.4.6: Componente Interativo Completo</h3>
+          <a href="/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-6-componente-interativo">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 1.4.7: Formulário com Validação Visual</h3>
+          <a href="/angular/modules/module-1/lessons/exercises/lesson-1-4-exercise-7-validacao-visual">Ver exercício</a>
+        </div>
+      
+    
+  
+</section>
+
+<script src="/angular/assets/js/podcast-player.js"></script>
+
+
+    </main>
+  </div>
+  
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Angular Expert - Do Básico ao Expert em 5 Dias. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+  <div id="progress-tracker" class="progress-tracker" style="display: none;">
+  <div class="overall-progress">
+    <h3>Progresso Geral</h3>
+    <div class="progress-bar">
+      <div class="progress-fill" id="overall-progress-fill"></div>
+    </div>
+    <span id="overall-progress-text">0%</span>
+  </div>
+</div>
+
+
+  
+  <script src="/angular/assets/js/navigation.js"></script>
+  <script src="/angular/assets/js/progress-tracker.js"></script>
+  <script src="/angular/assets/js/analytics.js"></script>
+  <script>
+    window.siteData = {
+      modules: [{"id":"module-1","title":"Fundamentos Acelerados","slug":"fundamentos-acelerados","duration":"8 horas","description":"Estabeleça as bases sólidas do Angular","lessons":["lesson-1-1","lesson-1-2","lesson-1-3","lesson-1-4","lesson-1-5"],"order":1},{"id":"module-2","title":"Desenvolvimento Intermediário","slug":"desenvolvimento-intermediario","duration":"8 horas","description":"Construa funcionalidades completas de aplicações reais","lessons":["lesson-2-1","lesson-2-2","lesson-2-3","lesson-2-4","lesson-2-5"],"order":2},{"id":"module-3","title":"Programação Reativa e Estado","slug":"programacao-reativa-estado","duration":"8 horas","description":"Domine programação reativa e gerenciamento de estado","lessons":["lesson-3-1","lesson-3-2","lesson-3-3","lesson-3-4","lesson-3-5"],"order":3},{"id":"module-4","title":"Performance e Otimização","slug":"performance-otimizacao","duration":"8 horas","description":"Crie aplicações extremamente performáticas","lessons":["lesson-4-1","lesson-4-2","lesson-4-3","lesson-4-4","lesson-4-5"],"order":4},{"id":"module-5","title":"Práticas Avançadas e Projeto Final","slug":"praticas-avancadas-projeto-final","duration":"8 horas","description":"Consolide conhecimento através de práticas avançadas","lessons":["lesson-5-1","lesson-5-2","lesson-5-3","lesson-5-4","lesson-5-5"],"order":5}],
+      lessons: [{"id":"lesson-1-1","title":"Introdução ao Angular e Configuração","slug":"introducao-angular","module":"module-1","order":1,"duration":"60 minutos","level":"Básico","prerequisites":[],"podcast":{"file":"assets/podcasts/01-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Fundação Angular: Tipagem, Encapsulamento e Generics","description":"Neste episódio, exploramos os fundamentos essenciais do Angular moderno. Você aprenderá sobre a arquitetura baseada em componentes, como o TypeScript fortalece o desenvolvimento Angular, e os conceitos de encapsulamento e generics que tornam o framework poderoso e escalável.","duration":"45-60 minutos"}},{"id":"lesson-1-2","title":"TypeScript Essencial para Angular","slug":"typescript-essencial","module":"module-1","order":2,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-1"]},{"id":"lesson-1-3","title":"Componentes Standalone e Templates","slug":"componentes-standalone","module":"module-1","order":3,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-2"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-4","title":"Data Binding e Diretivas Modernas","slug":"data-binding","module":"module-1","order":4,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-3"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-5","title":"Control Flow e Pipes","slug":"control-flow-pipes","module":"module-1","order":5,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-4"]},{"id":"lesson-2-1","title":"Serviços e Injeção de Dependência","slug":"servicos-di","module":"module-2","order":1,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-1-5"],"podcast":{"file":"assets/podcasts/02.1-Serviços_e_Injeção_de_Dependência_no_Angular.m4a","title":"Serviços e Injeção de Dependência no Angular","description":"Descubra como os serviços são o coração da arquitetura Angular.","duration":"50-65 minutos"}},{"id":"lesson-2-2","title":"Roteamento e Navegação Avançada","slug":"roteamento","module":"module-2","order":2,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-1"],"podcast":{"file":"assets/podcasts/02.2-SilêncioRouter_Guards_Resolvers_Lazy_Loading.m4a","title":"Router, Guards, Resolvers e Lazy Loading","description":"Domine o sistema de roteamento avançado do Angular.","duration":"55-70 minutos"}},{"id":"lesson-2-3","title":"Formulários Reativos e Validação","slug":"formularios-reativos","module":"module-2","order":3,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-2"],"podcast":{"file":"assets/podcasts/02.3-Dominando_os_Formulários_Reativos_do_Angular.m4a","title":"Dominando os Formulários Reativos do Angular","description":"Formulários reativos são uma das funcionalidades mais poderosas do Angular.","duration":"60-75 minutos"}},{"id":"lesson-2-4","title":"HTTP Client e Interceptors","slug":"http-client","module":"module-2","order":4,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-2-3"],"podcast":{"file":"assets/podcasts/02.4-HttpClient_e_Interceptors_no_Angular.m4a","title":"HttpClient e Interceptors no Angular","description":"Aprenda a consumir APIs REST de forma profissional com HttpClient.","duration":"50-65 minutos"}},{"id":"lesson-2-5","title":"Comunicação entre Componentes","slug":"comunicacao-componentes","module":"module-2","order":5,"duration":"60 minutos","level":"Intermediário","prerequisites":["lesson-2-4"],"podcast":{"file":"assets/podcasts/02.5-Comunicação_entre_Componentes_Input_Output_ViewChild.m4a","title":"Comunicação entre Componentes - Input, Output, ViewChild","description":"Domine todos os padrões de comunicação entre componentes no Angular.","duration":"45-60 minutos"}},{"id":"lesson-3-1","title":"RxJS Operators Avançados","slug":"rxjs-operators","module":"module-3","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-2-5"],"podcast":{"file":"assets/podcasts/03.1RxJS_Operators_Observables_SwitchMap_e_Busca_Perfeita.m4a","title":"RxJS Operators, Observables, SwitchMap e Busca Perfeita","description":"RxJS é fundamental para Angular moderno.","duration":"65-80 minutos"}},{"id":"lesson-3-2","title":"Signals e Signal-First Architecture","slug":"signals","module":"module-3","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-1"],"podcast":{"file":"assets/podcasts/03.2-Angular_Signals__O_Guia_Completo_e_Prático.m4a","title":"Angular Signals - O Guia Completo e Prático","description":"Signals são a nova forma reativa do Angular.","duration":"60-75 minutos"}},{"id":"lesson-3-3","title":"NgRx - Gerenciamento de Estado","slug":"ngrx","module":"module-3","order":3,"duration":"150 minutos","level":"Avançado","prerequisites":["lesson-3-2"],"podcast":{"file":"assets/podcasts/03.3-NgRx_quando_vale_a_pena_usar.m4a","title":"NgRx - Quando Vale a Pena Usar","description":"NgRx é poderoso, mas nem sempre necessário.","duration":"70-85 minutos"}},{"id":"lesson-3-4","title":"Padrões Reativos e Memory Leaks","slug":"memory-leaks","module":"module-3","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-3-3"],"podcast":{"file":"assets/podcasts/03.4-Combatendo_Memory_Leaks_com_Async_Pipe.m4a","title":"Combatendo Memory Leaks com Async Pipe","description":"Memory leaks são um problema comum em aplicações Angular reativas.","duration":"50-65 minutos"}},{"id":"lesson-3-5","title":"Integração Signals + Observables","slug":"signals-observables","module":"module-3","order":5,"duration":"30 minutos","level":"Avançado","prerequisites":["lesson-3-4"],"podcast":{"file":"assets/podcasts/03.5-toSignal_e_toObservable_as_pontes_do_Angular.m4a","title":"toSignal e toObservable - As Pontes do Angular","description":"Angular oferece funções para integrar Signals com Observables.","duration":"40-50 minutos"}},{"id":"lesson-4-1","title":"Change Detection Strategies","slug":"change-detection","module":"module-4","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-5"],"podcast":{"file":"assets/podcasts/04.1-OnPush_Imutabilidade_e_Performance_de_Apps.m4a","title":"OnPush, Imutabilidade e Performance de Apps","description":"Change Detection é crítico para performance.","duration":"60-75 minutos"}},{"id":"lesson-4-2","title":"Lazy Loading e Code Splitting","slug":"lazy-loading","module":"module-4","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-1"],"podcast":{"file":"assets/podcasts/04.2-Lazy_Loading_e_Code_Splitting_na_Web.m4a","title":"Lazy Loading e Code Splitting na Web","description":"Otimize o carregamento inicial da sua aplicação com lazy loading avançado.","duration":"55-70 minutos"}},{"id":"lesson-4-3","title":"Deferrable Views e Performance","slug":"deferrable-views","module":"module-4","order":3,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-2"],"podcast":{"file":"assets/podcasts/04.3-Angular_Deferrable_Views_no_Código_(@defer).m4a","title":"Angular Deferrable Views no Código (@defer)","description":"Deferrable Views são a nova forma de lazy loading de componentes no Angular.","duration":"50-65 minutos"}},{"id":"lesson-4-4","title":"Profiling e Otimização","slug":"profiling","module":"module-4","order":4,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-3"],"podcast":{"file":"assets/podcasts/04.4-Profiling_Angular_Otimização_Como_Fazer.m4a","title":"Profiling Angular - Otimização Como Fazer","description":"Aprenda a identificar gargalos de performance usando Angular DevTools.","duration":"55-70 minutos"}},{"id":"lesson-4-5","title":"Zone.js e Zoneless Apps","slug":"zonejs","module":"module-4","order":5,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-4-4"],"podcast":{"file":"assets/podcasts/04.5-Zone.m4a","title":"Zone.js e Zoneless Apps","description":"Zone.js é o motor da change detection tradicional do Angular.","duration":"50-65 minutos"}},{"id":"lesson-5-1","title":"Testes Completos (Unitários, Integração, E2E)","slug":"testes","module":"module-5","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-5"],"podcast":{"file":"assets/podcasts/05.1-Testes_Unitários_Integração_E2E_Angular.m4a","title":"Testes Unitários, Integração e E2E no Angular","description":"Testes são essenciais para aplicações profissionais.","duration":"70-85 minutos"}},{"id":"lesson-5-2","title":"SSR e PWA","slug":"ssr-pwa","module":"module-5","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-1"]},{"id":"lesson-5-3","title":"Segurança Avançada","slug":"seguranca","module":"module-5","order":3,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-2"]},{"id":"lesson-5-4","title":"Arquitetura Avançada","slug":"arquitetura-avancada","module":"module-5","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-3"]},{"id":"lesson-5-5","title":"Projeto Final Completo","slug":"projeto-final","module":"module-5","order":5,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-4"]}]
+    };
+    
+  </script>
+</body>
+</html>
+

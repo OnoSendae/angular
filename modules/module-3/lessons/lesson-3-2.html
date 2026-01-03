@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 3.2: Signals e Signal-First Architecture - Angular Expert - Do Básico ao Expert em 5 Dias</title>
+  <meta name="description" content="Treinamento intensivo e prático de Angular">
+  <link rel="stylesheet" href="/angular/assets/css/main.css">
+  
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Aula 3.2: Signals e Signal-First Architecture | Angular Expert - Do Básico ao Expert em 5 Dias</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Aula 3.2: Signals e Signal-First Architecture" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Treinamento intensivo e prático de Angular" />
+<meta property="og:description" content="Treinamento intensivo e prático de Angular" />
+<link rel="canonical" href="https://onosendae.github.io/angular/modules/module-3/lessons/lesson-3-2.html" />
+<meta property="og:url" content="https://onosendae.github.io/angular/modules/module-3/lessons/lesson-3-2.html" />
+<meta property="og:site_name" content="Angular Expert - Do Básico ao Expert em 5 Dias" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Aula 3.2: Signals e Signal-First Architecture" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Treinamento intensivo e prático de Angular","headline":"Aula 3.2: Signals e Signal-First Architecture","url":"https://onosendae.github.io/angular/modules/module-3/lessons/lesson-3-2.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Angular Expert - Do Básico ao Expert em 5 Dias",
+    "description": "Treinamento intensivo e prático de Angular",
+    "provider": {
+      "@type": "Organization",
+      "name": "Angular Expert"
+    },
+    "courseCode": "angular-expert-5-days",
+    "educationalLevel": "Advanced",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-content">
+    <h1 class="site-title">
+      <a href="/angular/">Angular Expert - Do Básico ao Expert em 5 Dias</a>
+    </h1>
+    <nav class="main-nav">
+      <a href="/angular/">Início</a>
+      <a href="/angular/about">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+
+  
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-navigation">
+  <h2>Módulos</h2>
+  <ul class="modules-list">
+    
+      <li>
+        <a href="/angular/modules/fundamentos-acelerados">
+          Fundamentos Acelerados
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/introducao-angular">
+                  Introdução ao Angular e Configuração
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/typescript-essencial">
+                  TypeScript Essencial para Angular
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/componentes-standalone">
+                  Componentes Standalone e Templates
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/data-binding">
+                  Data Binding e Diretivas Modernas
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/control-flow-pipes">
+                  Control Flow e Pipes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/desenvolvimento-intermediario">
+          Desenvolvimento Intermediário
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/servicos-di">
+                  Serviços e Injeção de Dependência
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/roteamento">
+                  Roteamento e Navegação Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/formularios-reativos">
+                  Formulários Reativos e Validação
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/http-client">
+                  HTTP Client e Interceptors
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/comunicacao-componentes">
+                  Comunicação entre Componentes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/programacao-reativa-estado">
+          Programação Reativa e Estado
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/rxjs-operators">
+                  RxJS Operators Avançados
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals">
+                  Signals e Signal-First Architecture
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/ngrx">
+                  NgRx - Gerenciamento de Estado
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/memory-leaks">
+                  Padrões Reativos e Memory Leaks
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals-observables">
+                  Integração Signals + Observables
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/performance-otimizacao">
+          Performance e Otimização
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/change-detection">
+                  Change Detection Strategies
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/lazy-loading">
+                  Lazy Loading e Code Splitting
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/deferrable-views">
+                  Deferrable Views e Performance
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/profiling">
+                  Profiling e Otimização
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/zonejs">
+                  Zone.js e Zoneless Apps
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/praticas-avancadas-projeto-final">
+          Práticas Avançadas e Projeto Final
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/testes">
+                  Testes Completos (Unitários, Integração, E2E)
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/ssr-pwa">
+                  SSR e PWA
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/seguranca">
+                  Segurança Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/arquitetura-avancada">
+                  Arquitetura Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/projeto-final">
+                  Projeto Final Completo
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+  </ul>
+</nav>
+
+
+    </aside>
+    
+    <main class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/angular/">Início</a></li>
+    
+      
+      
+        <li><a href="/angular/modules/programacao-reativa-estado">Programação Reativa e Estado</a></li>
+      
+    
+    
+      <li aria-current="page">Aula 3.2: Signals e Signal-First Architecture</li>
+    
+  </ol>
+</nav>
+
+
+      <script type="application/json" id="lesson-data">
+{
+  "lesson_id": "lesson-3-2",
+  "module_id": "module-3"
+}
+</script>
+
+<div class="podcast-player-container">
+  
+    <div class="podcast-player" id="podcast-player">
+  <div class="podcast-info">
+    <h3>Angular Signals - O Guia Completo e Prático</h3>
+    <p class="podcast-description">Signals são a nova forma reativa do Angular.</p>
+  </div>
+  
+  <div class="player-controls">
+    <button id="podcast-play" class="play-button" aria-label="Reproduzir podcast">
+      ▶
+    </button>
+    <button id="podcast-pause" class="pause-button" style="display: none;" aria-label="Pausar podcast">
+      ⏸
+    </button>
+    
+    <div class="progress-bar" id="podcast-progress">
+      <div class="progress" id="podcast-progress-fill"></div>
+    </div>
+    
+    <div class="time-display">
+      <span id="podcast-current-time">0:00</span> / <span id="podcast-duration">0:00</span>
+    </div>
+    
+    <div class="speed-control">
+      <label for="podcast-speed">Velocidade:</label>
+      <select id="podcast-speed">
+        <option value="0.5">0.5x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+    </div>
+    
+    <div class="volume-control">
+      <label for="podcast-volume">Volume:</label>
+      <input type="range" id="podcast-volume" min="0" max="100" value="100">
+    </div>
+  </div>
+</div>
+
+<div id="podcast-indicator" class="podcast-playing-indicator">
+  🎧 Podcast tocando
+</div>
+
+<script type="application/json" id="podcast-data">
+{
+  "audioFile": "/angular/assets/podcasts/03.2-Angular_Signals__O_Guia_Completo_e_Pr%C3%A1tico.m4a",
+  "lessonId": "lesson-3-2",
+  "podcastTitle": "Angular Signals - O Guia Completo e Prático"
+}
+</script>
+
+
+  
+</div>
+
+<article class="lesson-content">
+  <header>
+    <h1>Aula 3.2: Signals e Signal-First Architecture</h1>
+    <div class="lesson-meta">
+      <span>Duração: 120 minutos</span>
+      <span>Nível: Avançado</span>
+    </div>
+  </header>
+  
+  <h2 id="introdução">Introdução</h2>
+
+<p>Nesta aula, você dominará Signals, a nova primitiva reativa do Angular introduzida no Angular 16+. Signals representam uma evolução na forma como Angular gerencia reatividade, oferecendo melhor performance, type safety e uma API mais simples que Observables em muitos casos.</p>
+
+<h3 id="o-que-você-vai-aprender">O que você vai aprender</h3>
+
+<ul>
+  <li>Criar e usar signal() e computed()</li>
+  <li>Trabalhar com effect() para side effects</li>
+  <li>Usar Model Inputs para inputs reativos</li>
+  <li>Criar formulários baseados em Signals</li>
+  <li>Implementar Signal-First Architecture</li>
+  <li>Migrar de Observables para Signals</li>
+  <li>Integrar Signals com Observables</li>
+</ul>
+
+<h3 id="por-que-isso-é-importante">Por que isso é importante</h3>
+
+<p>Signals são o futuro do Angular. Eles oferecem melhor performance, código mais simples e melhor integração com o sistema de change detection. Signal-First Architecture é a direção recomendada para novas aplicações Angular.</p>
+
+<hr />
+
+<h2 id="conceitos-teóricos">Conceitos Teóricos</h2>
+
+<h3 id="signal">signal()</h3>
+
+<p><strong>Definição</strong>: <code class="language-plaintext highlighter-rouge">signal()</code> cria um signal reativo que mantém um valor e notifica dependentes quando o valor muda.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>signal():</p>
+<ul>
+  <li>Cria valor reativo primitivo</li>
+  <li>Type-safe por padrão</li>
+  <li>Notifica automaticamente dependentes</li>
+  <li>Pode ser atualizado com set(), update() ou mutate()</li>
+  <li>Melhor performance que Observables para valores simples</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>signal() é como uma variável especial que “grita” quando muda. Qualquer coisa que está “ouvindo” (computed, effect, template) é notificada automaticamente.</p>
+
+<p><strong>Visualização</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>signal(value)
+    │
+    ├─→ computed() ──→ Novo valor calculado
+    ├─→ effect() ────→ Side effect executado
+    └─→ Template ────→ View atualizada
+</code></pre></div></div>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">computed</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">CounterComponent</span> <span class="p">{</span>
+  <span class="nx">count</span> <span class="o">=</span> <span class="nf">signal</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="nx">doubleCount</span> <span class="o">=</span> <span class="nf">computed</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nf">count</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+  
+  <span class="nf">increment</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="nx">value</span> <span class="o">=&gt;</span> <span class="nx">value</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">setValue</span><span class="p">(</span><span class="nx">value</span><span class="p">:</span> <span class="kr">number</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">.</span><span class="nf">set</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">mutateArray</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">items</span> <span class="o">=</span> <span class="nf">signal</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span>
+    <span class="nx">items</span><span class="p">.</span><span class="nf">mutate</span><span class="p">(</span><span class="nx">arr</span> <span class="o">=&gt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="computed">computed()</h3>
+
+<p><strong>Definição</strong>: <code class="language-plaintext highlighter-rouge">computed()</code> cria um signal derivado que calcula seu valor baseado em outros signals.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>computed():</p>
+<ul>
+  <li>Calcula valor baseado em outros signals</li>
+  <li>Recalcula automaticamente quando dependências mudam</li>
+  <li>Lazy: só calcula quando acessado</li>
+  <li>Memoizado: cacheia resultado até dependências mudarem</li>
+  <li>Read-only: não pode ser modificado diretamente</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>computed() é como uma fórmula em uma planilha. Quando os valores de entrada mudam, a fórmula recalcula automaticamente.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">computed</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ShoppingCartComponent</span> <span class="p">{</span>
+  <span class="nx">items</span> <span class="o">=</span> <span class="nx">signal</span><span class="o">&lt;</span><span class="nx">Item</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">([]);</span>
+  
+  <span class="nx">totalPrice</span> <span class="o">=</span> <span class="nf">computed</span><span class="p">(()</span> <span class="o">=&gt;</span> 
+    <span class="k">this</span><span class="p">.</span><span class="nf">items</span><span class="p">().</span><span class="nf">reduce</span><span class="p">((</span><span class="nx">sum</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">sum</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">price</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="p">);</span>
+  
+  <span class="nx">itemCount</span> <span class="o">=</span> <span class="nf">computed</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nf">items</span><span class="p">().</span><span class="nx">length</span><span class="p">);</span>
+  
+  <span class="nx">hasItems</span> <span class="o">=</span> <span class="nf">computed</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nf">items</span><span class="p">().</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span>
+  
+  <span class="nx">discount</span> <span class="o">=</span> <span class="nf">signal</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  
+  <span class="nx">finalPrice</span> <span class="o">=</span> <span class="nf">computed</span><span class="p">(()</span> <span class="o">=&gt;</span> 
+    <span class="k">this</span><span class="p">.</span><span class="nf">totalPrice</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="k">this</span><span class="p">.</span><span class="nf">discount</span><span class="p">())</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="effect">effect()</h3>
+
+<p><strong>Definição</strong>: <code class="language-plaintext highlighter-rouge">effect()</code> executa side effects quando signals mudam, similar a watch em outros frameworks.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>effect():</p>
+<ul>
+  <li>Executa código quando signals mudam</li>
+  <li>Útil para logging, sincronização, side effects</li>
+  <li>Executa após mudanças serem aplicadas</li>
+  <li>Pode ser destruído automaticamente</li>
+  <li>Deve ser usado com cuidado para evitar loops infinitos</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>effect() é como um observador que reage a mudanças. Quando algo muda, ele executa uma ação.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">effect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">UserPreferencesComponent</span> <span class="p">{</span>
+  <span class="nx">theme</span> <span class="o">=</span> <span class="nx">signal</span><span class="o">&lt;</span><span class="dl">'</span><span class="s1">light</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">dark</span><span class="dl">'</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">'</span><span class="s1">light</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">fontSize</span> <span class="o">=</span> <span class="nf">signal</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
+  
+  <span class="nf">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">effect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">theme</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nf">theme</span><span class="p">();</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">theme</span><span class="p">;</span>
+      <span class="nx">localStorage</span><span class="p">.</span><span class="nf">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">theme</span><span class="dl">'</span><span class="p">,</span> <span class="nx">theme</span><span class="p">);</span>
+    <span class="p">});</span>
+    
+    <span class="nf">effect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">size</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nf">fontSize</span><span class="p">();</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">fontSize</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="nx">size</span><span class="p">}</span><span class="s2">px`</span><span class="p">;</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="model-inputs">Model Inputs</h3>
+
+<p><strong>Definição</strong>: Model Inputs (Angular 17+) permitem two-way binding usando signals, substituindo ngModel em muitos casos.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Model Inputs:</p>
+<ul>
+  <li>Usam <code class="language-plaintext highlighter-rouge">model()</code> para criar two-way binding</li>
+  <li>Type-safe e reativo</li>
+  <li>Mais simples que ngModel</li>
+  <li>Integrado com Signals</li>
+  <li>Suporta validação</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Model Inputs são como uma ponte bidirecional. Mudanças no componente pai e filho são sincronizadas automaticamente.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">model</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-child</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;input [value]="value()" (input)="value.set($any($event.target).value)"&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ChildComponent</span> <span class="p">{</span>
+  <span class="nx">value</span> <span class="o">=</span> <span class="nx">model</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">''</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-parent</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">ChildComponent</span><span class="p">],</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;app-child [(value)]="parentValue" /&gt;
+    &lt;p&gt;Valor do pai: {{ parentValue }}&lt;/p&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">ParentComponent</span> <span class="p">{</span>
+  <span class="nx">parentValue</span> <span class="o">=</span> <span class="nf">signal</span><span class="p">(</span><span class="dl">'</span><span class="s1">Valor inicial</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="signal-based-forms">Signal-Based Forms</h3>
+
+<p><strong>Definição</strong>: Formulários baseados em Signals usando Signal Forms API (Angular 19+).</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Signal Forms:</p>
+<ul>
+  <li>Usam signals para valores e estado</li>
+  <li>Mais simples que Reactive Forms</li>
+  <li>Melhor performance</li>
+  <li>Type-safe</li>
+  <li>Integrado com Signals</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Signal Forms são como formulários tradicionais, mas com superpoderes reativos. Cada campo é um signal que reage automaticamente.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">signal</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">FormsModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/forms</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-signal-form</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">FormsModule</span><span class="p">],</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;form&gt;
+      &lt;input [(ngModel)]="name" name="name"&gt;
+      &lt;input [(ngModel)]="email" name="email" type="email"&gt;
+      &lt;p&gt;Nome: {{ name() }}&lt;/p&gt;
+      &lt;p&gt;Email: {{ email() }}&lt;/p&gt;
+    &lt;/form&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">SignalFormComponent</span> <span class="p">{</span>
+  <span class="nx">name</span> <span class="o">=</span> <span class="nf">signal</span><span class="p">(</span><span class="dl">''</span><span class="p">);</span>
+  <span class="nx">email</span> <span class="o">=</span> <span class="nf">signal</span><span class="p">(</span><span class="dl">''</span><span class="p">);</span>
+  
+  <span class="kd">get</span> <span class="nf">name</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="kd">get</span> <span class="nf">email</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">email</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="signal-first-architecture">Signal-First Architecture</h3>
+
+<p><strong>Definição</strong>: Arquitetura onde Signals são a primitiva reativa primária, com Observables usados apenas quando necessário.</p>
+
+<p><strong>Explicação Detalhada</strong>:</p>
+
+<p>Signal-First:</p>
+<ul>
+  <li>Signals para estado local e derivado</li>
+  <li>Signals para comunicação entre componentes</li>
+  <li>Observables apenas para streams assíncronos (HTTP, eventos)</li>
+  <li>Integração via toSignal() e toObservable()</li>
+  <li>Melhor performance e simplicidade</li>
+</ul>
+
+<p><strong>Analogia</strong>:</p>
+
+<p>Signal-First é como usar a ferramenta certa para cada trabalho. Signals para valores simples, Observables para streams complexos.</p>
+
+<p><strong>Exemplo Prático</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">computed</span><span class="p">,</span> <span class="nx">effect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">HttpClient</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common/http</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">toSignal</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core/rxjs-interop</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-signal-first</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;div&gt;
+      &lt;h2&gt;{{ title() }}&lt;/h2&gt;
+      @if (loading()) {
+        &lt;p&gt;Carregando...&lt;/p&gt;
+      } @else {
+        &lt;ul&gt;
+          @for (item of items(); track item.id) {
+            &lt;li&gt;{{ item.name }}&lt;/li&gt;
+          }
+        &lt;/ul&gt;
+      }
+    &lt;/div&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">SignalFirstComponent</span> <span class="p">{</span>
+  <span class="nx">title</span> <span class="o">=</span> <span class="nf">signal</span><span class="p">(</span><span class="dl">'</span><span class="s1">Signal-First App</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">loading</span> <span class="o">=</span> <span class="nf">signal</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+  
+  <span class="k">private</span> <span class="nx">http</span> <span class="o">=</span> <span class="nf">inject</span><span class="p">(</span><span class="nx">HttpClient</span><span class="p">);</span>
+  
+  <span class="nx">items</span> <span class="o">=</span> <span class="nf">toSignal</span><span class="p">(</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="kd">get</span><span class="o">&lt;</span><span class="nx">Item</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api/items</span><span class="dl">'</span><span class="p">),</span>
+    <span class="p">{</span> <span class="na">initialValue</span><span class="p">:</span> <span class="p">[]</span> <span class="p">}</span>
+  <span class="p">);</span>
+  
+  <span class="nx">itemCount</span> <span class="o">=</span> <span class="nf">computed</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nf">items</span><span class="p">().</span><span class="nx">length</span><span class="p">);</span>
+  
+  <span class="nf">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">effect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Items changed:</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nf">items</span><span class="p">().</span><span class="nx">length</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="exemplos-práticos-completos">Exemplos Práticos Completos</h2>
+
+<h3 id="exemplo-1-componente-signal-first-completo">Exemplo 1: Componente Signal-First Completo</h3>
+
+<p><strong>Contexto</strong>: Criar componente completo usando Signals para todo estado.</p>
+
+<p><strong>Código</strong>:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">computed</span><span class="p">,</span> <span class="nx">effect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">Todo</span> <span class="p">{</span>
+  <span class="nl">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+  <span class="nl">text</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">completed</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-todo-signal</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">CommonModule</span><span class="p">],</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;div&gt;
+      &lt;h2&gt;Todo List (Signals)&lt;/h2&gt;
+      
+      &lt;input 
+        #input
+        (keyup.enter)="addTodo(input.value); input.value = ''"
+        placeholder="Nova tarefa"&gt;
+      
+      &lt;div&gt;
+        &lt;button (click)="filter.set('all')"&gt;Todas&lt;/button&gt;
+        &lt;button (click)="filter.set('active')"&gt;Ativas&lt;/button&gt;
+        &lt;button (click)="filter.set('completed')"&gt;Completas&lt;/button&gt;
+      &lt;/div&gt;
+      
+      &lt;p&gt;Total: {{ totalTodos() }} | Ativas: {{ activeTodos() }} | Completas: {{ completedTodos() }}&lt;/p&gt;
+      
+      &lt;ul&gt;
+        @for (todo of filteredTodos(); track todo.id) {
+          &lt;li&gt;
+            &lt;input 
+              type="checkbox" 
+              [checked]="todo.completed"
+              (change)="toggleTodo(todo.id)"&gt;
+            &lt;span [class.completed]="todo.completed"&gt;{{ todo.text }}&lt;/span&gt;
+            &lt;button (click)="removeTodo(todo.id)"&gt;Remover&lt;/button&gt;
+          &lt;/li&gt;
+        }
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  `</span>
+
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">TodoSignalComponent</span> <span class="p">{</span>
+  <span class="nx">todos</span> <span class="o">=</span> <span class="nx">signal</span><span class="o">&lt;</span><span class="nx">Todo</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">([]);</span>
+  <span class="nx">filter</span> <span class="o">=</span> <span class="nx">signal</span><span class="o">&lt;</span><span class="dl">'</span><span class="s1">all</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">active</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">completed</span><span class="dl">'</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">'</span><span class="s1">all</span><span class="dl">'</span><span class="p">);</span>
+  
+  <span class="nx">totalTodos</span> <span class="o">=</span> <span class="nf">computed</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nf">todos</span><span class="p">().</span><span class="nx">length</span><span class="p">);</span>
+  <span class="nx">activeTodos</span> <span class="o">=</span> <span class="nf">computed</span><span class="p">(()</span> <span class="o">=&gt;</span> 
+    <span class="k">this</span><span class="p">.</span><span class="nf">todos</span><span class="p">().</span><span class="nf">filter</span><span class="p">(</span><span class="nx">t</span> <span class="o">=&gt;</span> <span class="o">!</span><span class="nx">t</span><span class="p">.</span><span class="nx">completed</span><span class="p">).</span><span class="nx">length</span>
+  <span class="p">);</span>
+  <span class="nx">completedTodos</span> <span class="o">=</span> <span class="nf">computed</span><span class="p">(()</span> <span class="o">=&gt;</span> 
+    <span class="k">this</span><span class="p">.</span><span class="nf">todos</span><span class="p">().</span><span class="nf">filter</span><span class="p">(</span><span class="nx">t</span> <span class="o">=&gt;</span> <span class="nx">t</span><span class="p">.</span><span class="nx">completed</span><span class="p">).</span><span class="nx">length</span>
+  <span class="p">);</span>
+  
+  <span class="nx">filteredTodos</span> <span class="o">=</span> <span class="nf">computed</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">todos</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nf">todos</span><span class="p">();</span>
+    <span class="kd">const</span> <span class="nx">filter</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nf">filter</span><span class="p">();</span>
+    
+    <span class="k">switch </span><span class="p">(</span><span class="nx">filter</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">case</span> <span class="dl">'</span><span class="s1">active</span><span class="dl">'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nx">todos</span><span class="p">.</span><span class="nf">filter</span><span class="p">(</span><span class="nx">t</span> <span class="o">=&gt;</span> <span class="o">!</span><span class="nx">t</span><span class="p">.</span><span class="nx">completed</span><span class="p">);</span>
+      <span class="k">case</span> <span class="dl">'</span><span class="s1">completed</span><span class="dl">'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nx">todos</span><span class="p">.</span><span class="nf">filter</span><span class="p">(</span><span class="nx">t</span> <span class="o">=&gt;</span> <span class="nx">t</span><span class="p">.</span><span class="nx">completed</span><span class="p">);</span>
+      <span class="nl">default</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nx">todos</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+  
+  <span class="k">private</span> <span class="nx">nextId</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  
+  <span class="nf">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">effect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">todos</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nf">todos</span><span class="p">();</span>
+      <span class="nx">localStorage</span><span class="p">.</span><span class="nf">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">todos</span><span class="dl">'</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nf">stringify</span><span class="p">(</span><span class="nx">todos</span><span class="p">));</span>
+    <span class="p">});</span>
+    
+    <span class="kd">const</span> <span class="nx">saved</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nf">getItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">todos</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">saved</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">todos</span><span class="p">.</span><span class="nf">set</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="nx">saved</span><span class="p">));</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="nf">addTodo</span><span class="p">(</span><span class="nx">text</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nf">trim</span><span class="p">())</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">todos</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="nx">todos</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="p">...</span><span class="nx">todos</span><span class="p">,</span>
+        <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">nextId</span><span class="o">++</span><span class="p">,</span> <span class="na">text</span><span class="p">:</span> <span class="nx">text</span><span class="p">.</span><span class="nf">trim</span><span class="p">(),</span> <span class="na">completed</span><span class="p">:</span> <span class="kc">false</span> <span class="p">}</span>
+      <span class="p">]);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="nf">toggleTodo</span><span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">todos</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="nx">todos</span> <span class="o">=&gt;</span>
+      <span class="nx">todos</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="nx">t</span> <span class="o">=&gt;</span> <span class="nx">t</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">id</span> <span class="p">?</span> <span class="p">{</span> <span class="p">...</span><span class="nx">t</span><span class="p">,</span> <span class="na">completed</span><span class="p">:</span> <span class="o">!</span><span class="nx">t</span><span class="p">.</span><span class="nx">completed</span> <span class="p">}</span> <span class="p">:</span> <span class="nx">t</span><span class="p">)</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">removeTodo</span><span class="p">(</span><span class="nx">id</span><span class="p">:</span> <span class="kr">number</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">todos</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="nx">todos</span> <span class="o">=&gt;</span> <span class="nx">todos</span><span class="p">.</span><span class="nf">filter</span><span class="p">(</span><span class="nx">t</span> <span class="o">=&gt;</span> <span class="nx">t</span><span class="p">.</span><span class="nx">id</span> <span class="o">!==</span> <span class="nx">id</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="padrões-e-boas-práticas">Padrões e Boas Práticas</h2>
+
+<h3 id="-boas-práticas">✅ Boas Práticas</h3>
+
+<ol>
+  <li><strong>Use Signals para estado local</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Mais simples e performático</li>
+      <li><strong>Exemplo</strong>: <code class="language-plaintext highlighter-rouge">count = signal(0)</code></li>
+    </ul>
+  </li>
+  <li><strong>Use computed() para valores derivados</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Reatividade automática e memoização</li>
+      <li><strong>Exemplo</strong>: <code class="language-plaintext highlighter-rouge">total = computed(() =&gt; items().reduce(...))</code></li>
+    </ul>
+  </li>
+  <li><strong>Use effect() com cuidado</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Pode causar loops infinitos</li>
+      <li><strong>Exemplo</strong>: Apenas para side effects necessários</li>
+    </ul>
+  </li>
+  <li><strong>Prefira Signal-First quando possível</strong>
+    <ul>
+      <li><strong>Por quê</strong>: Melhor performance e simplicidade</li>
+      <li><strong>Exemplo</strong>: Signals para estado, Observables para HTTP</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="-anti-padrões-comuns">❌ Anti-padrões Comuns</h3>
+
+<ol>
+  <li><strong>Não use effect() para atualizar signals</strong>
+    <ul>
+      <li><strong>Problema</strong>: Pode causar loops infinitos</li>
+      <li><strong>Solução</strong>: Use computed() ou atualize diretamente</li>
+    </ul>
+  </li>
+  <li><strong>Não misture Signals e Observables desnecessariamente</strong>
+    <ul>
+      <li><strong>Problema</strong>: Complexidade desnecessária</li>
+      <li><strong>Solução</strong>: Use Signals quando possível</li>
+    </ul>
+  </li>
+  <li><strong>Não ignore toSignal() para HTTP</strong>
+    <ul>
+      <li><strong>Problema</strong>: Perde benefícios de Signals</li>
+      <li><strong>Solução</strong>: Converta Observables HTTP para Signals</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="exercícios-práticos">Exercícios Práticos</h2>
+
+<h3 id="exercício-1-signal-e-computed-básicos-básico">Exercício 1: signal() e computed() Básicos (Básico)</h3>
+
+<p><strong>Objetivo</strong>: Criar primeiros signals</p>
+
+<p><strong>Descrição</strong>: 
+Crie componente que usa signal() e computed() para gerenciar estado simples.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-3-2-1-signal-computed.md</code></p>
+
+<hr />
+
+<h3 id="exercício-2-effect-e-reatividade-intermediário">Exercício 2: effect() e Reatividade (Intermediário)</h3>
+
+<p><strong>Objetivo</strong>: Trabalhar com effects</p>
+
+<p><strong>Descrição</strong>:
+Crie componente que usa effect() para sincronizar estado com localStorage.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-3-2-2-effect.md</code></p>
+
+<hr />
+
+<h3 id="exercício-3-model-inputs-intermediário">Exercício 3: Model Inputs (Intermediário)</h3>
+
+<p><strong>Objetivo</strong>: Usar Model Inputs</p>
+
+<p><strong>Descrição</strong>:
+Crie componente que usa model() para two-way binding com signals.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-3-2-3-model-inputs.md</code></p>
+
+<hr />
+
+<h3 id="exercício-4-signal-based-forms-avançado">Exercício 4: Signal-Based Forms (Avançado)</h3>
+
+<p><strong>Objetivo</strong>: Criar formulário baseado em Signals</p>
+
+<p><strong>Descrição</strong>:
+Crie formulário completo usando Signal Forms API.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-3-2-4-signal-forms.md</code></p>
+
+<hr />
+
+<h3 id="exercício-5-signal-first-architecture-avançado">Exercício 5: Signal-First Architecture (Avançado)</h3>
+
+<p><strong>Objetivo</strong>: Implementar arquitetura Signal-First</p>
+
+<p><strong>Descrição</strong>:
+Crie aplicação completa usando Signal-First Architecture.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-3-2-5-signal-first.md</code></p>
+
+<hr />
+
+<h3 id="exercício-6-migração-observables-para-signals-avançado">Exercício 6: Migração Observables para Signals (Avançado)</h3>
+
+<p><strong>Objetivo</strong>: Migrar código existente</p>
+
+<p><strong>Descrição</strong>:
+Migre componente que usa Observables para usar Signals.</p>
+
+<p><strong>Arquivo</strong>: <code class="language-plaintext highlighter-rouge">exercises/exercise-3-2-6-migracao.md</code></p>
+
+<hr />
+
+<h2 id="referências-externas">Referências Externas</h2>
+
+<h3 id="documentação-oficial">Documentação Oficial</h3>
+
+<ul>
+  <li><strong><a href="https://angular.io/guide/signals">Angular Signals</a></strong>: Guia oficial de Signals</li>
+  <li><strong><a href="https://angular.io/api/core/signal">Signal API</a></strong>: Documentação signal()</li>
+  <li><strong><a href="https://angular.io/api/core/computed">computed API</a></strong>: Documentação computed()</li>
+  <li><strong><a href="https://angular.io/api/core/effect">effect API</a></strong>: Documentação effect()</li>
+</ul>
+
+<hr />
+
+<h2 id="resumo">Resumo</h2>
+
+<h3 id="principais-conceitos">Principais Conceitos</h3>
+
+<ul>
+  <li>signal() cria valores reativos primitivos</li>
+  <li>computed() cria valores derivados automaticamente</li>
+  <li>effect() executa side effects quando signals mudam</li>
+  <li>Model Inputs permitem two-way binding com signals</li>
+  <li>Signal Forms oferecem formulários baseados em signals</li>
+  <li>Signal-First Architecture é recomendada para novas apps</li>
+</ul>
+
+<h3 id="pontos-chave-para-lembrar">Pontos-Chave para Lembrar</h3>
+
+<ul>
+  <li>Use Signals para estado local</li>
+  <li>Use computed() para valores derivados</li>
+  <li>Use effect() com cuidado</li>
+  <li>Prefira Signal-First quando possível</li>
+  <li>Converta Observables HTTP para Signals</li>
+</ul>
+
+<h3 id="próximos-passos">Próximos Passos</h3>
+
+<ul>
+  <li>Próxima aula: NgRx - Gerenciamento de Estado</li>
+  <li>Praticar criando componentes Signal-First</li>
+  <li>Explorar integração Signals + Observables</li>
+</ul>
+
+<hr />
+
+<h2 id="checklist-de-qualidade">Checklist de Qualidade</h2>
+
+<p>Antes de considerar esta aula completa:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Introdução clara e envolvente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Todos os conceitos têm definições e explicações detalhadas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Analogias presentes para conceitos abstratos</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Diagramas ASCII para visualização de conceitos complexos</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Exemplos práticos completos e funcionais</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Boas práticas e anti-padrões documentados</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Exercícios práticos ordenados por dificuldade</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Referências externas validadas e organizadas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Resumo com pontos principais</li>
+</ul>
+
+<hr />
+
+<p><strong>Aula Anterior</strong>: <a href="./lesson-3-1-rxjs-operators.md">Aula 3.1: RxJS Operators Avançados</a><br />
+<strong>Próxima Aula</strong>: <a href="./lesson-3-3-ngrx.md">Aula 3.3: NgRx - Gerenciamento de Estado</a><br />
+<strong>Voltar ao Módulo</strong>: <a href="../modules/module-3-programacao-reativa-estado.md">Módulo 3: Programação Reativa e Estado</a></p>
+
+
+  
+  <div class="lesson-actions">
+    <button class="mark-lesson-complete" 
+            data-lesson-id="lesson-3-2" 
+            data-module-id="module-3"
+            aria-label="Marcar aula como completa">
+      Marcar como concluída
+    </button>
+  </div>
+</article>
+
+<nav class="lesson-navigation">
+  <nav class="lesson-navigation">
+  
+  
+  
+  
+    
+  
+    
+      
+      
+      
+      
+      
+        
+        <a href="/angular/modules/programacao-reativa-estado/lessons/rxjs-operators" class="prev-lesson">
+          ← RxJS Operators Avançados
+        </a>
+      
+      
+      
+        
+        <a href="/angular/modules/programacao-reativa-estado/lessons/ngrx" class="next-lesson">
+          NgRx - Gerenciamento de Estado →
+        </a>
+      
+      
+      
+</nav>
+
+
+</nav>
+
+<section class="exercises">
+  <h2>Exercícios Práticos</h2>
+  
+    
+      
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 3.2.1: signal() e computed() Básicos</h3>
+          <a href="/angular/modules/module-3/lessons/exercises/lesson-3-2-exercise-1-signal-computed">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 3.2.2: effect() e Reatividade</h3>
+          <a href="/angular/modules/module-3/lessons/exercises/lesson-3-2-exercise-2-effect">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 3.2.3: Model Inputs</h3>
+          <a href="/angular/modules/module-3/lessons/exercises/lesson-3-2-exercise-3-model-inputs">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 3.2.4: Signal-Based Forms</h3>
+          <a href="/angular/modules/module-3/lessons/exercises/lesson-3-2-exercise-4-signal-forms">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 3.2.5: Signal-First Architecture</h3>
+          <a href="/angular/modules/module-3/lessons/exercises/lesson-3-2-exercise-5-signal-first">Ver exercício</a>
+        </div>
+      
+    
+      
+      
+        <div class="exercise-card">
+          <h3>Exercício 3.2.6: Migração Observables para Signals</h3>
+          <a href="/angular/modules/module-3/lessons/exercises/lesson-3-2-exercise-6-migracao">Ver exercício</a>
+        </div>
+      
+    
+  
+</section>
+
+<script src="/angular/assets/js/podcast-player.js"></script>
+
+
+    </main>
+  </div>
+  
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Angular Expert - Do Básico ao Expert em 5 Dias. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+  <div id="progress-tracker" class="progress-tracker" style="display: none;">
+  <div class="overall-progress">
+    <h3>Progresso Geral</h3>
+    <div class="progress-bar">
+      <div class="progress-fill" id="overall-progress-fill"></div>
+    </div>
+    <span id="overall-progress-text">0%</span>
+  </div>
+</div>
+
+
+  
+  <script src="/angular/assets/js/navigation.js"></script>
+  <script src="/angular/assets/js/progress-tracker.js"></script>
+  <script src="/angular/assets/js/analytics.js"></script>
+  <script>
+    window.siteData = {
+      modules: [{"id":"module-1","title":"Fundamentos Acelerados","slug":"fundamentos-acelerados","duration":"8 horas","description":"Estabeleça as bases sólidas do Angular","lessons":["lesson-1-1","lesson-1-2","lesson-1-3","lesson-1-4","lesson-1-5"],"order":1},{"id":"module-2","title":"Desenvolvimento Intermediário","slug":"desenvolvimento-intermediario","duration":"8 horas","description":"Construa funcionalidades completas de aplicações reais","lessons":["lesson-2-1","lesson-2-2","lesson-2-3","lesson-2-4","lesson-2-5"],"order":2},{"id":"module-3","title":"Programação Reativa e Estado","slug":"programacao-reativa-estado","duration":"8 horas","description":"Domine programação reativa e gerenciamento de estado","lessons":["lesson-3-1","lesson-3-2","lesson-3-3","lesson-3-4","lesson-3-5"],"order":3},{"id":"module-4","title":"Performance e Otimização","slug":"performance-otimizacao","duration":"8 horas","description":"Crie aplicações extremamente performáticas","lessons":["lesson-4-1","lesson-4-2","lesson-4-3","lesson-4-4","lesson-4-5"],"order":4},{"id":"module-5","title":"Práticas Avançadas e Projeto Final","slug":"praticas-avancadas-projeto-final","duration":"8 horas","description":"Consolide conhecimento através de práticas avançadas","lessons":["lesson-5-1","lesson-5-2","lesson-5-3","lesson-5-4","lesson-5-5"],"order":5}],
+      lessons: [{"id":"lesson-1-1","title":"Introdução ao Angular e Configuração","slug":"introducao-angular","module":"module-1","order":1,"duration":"60 minutos","level":"Básico","prerequisites":[],"podcast":{"file":"assets/podcasts/01-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Fundação Angular: Tipagem, Encapsulamento e Generics","description":"Neste episódio, exploramos os fundamentos essenciais do Angular moderno. Você aprenderá sobre a arquitetura baseada em componentes, como o TypeScript fortalece o desenvolvimento Angular, e os conceitos de encapsulamento e generics que tornam o framework poderoso e escalável.","duration":"45-60 minutos"}},{"id":"lesson-1-2","title":"TypeScript Essencial para Angular","slug":"typescript-essencial","module":"module-1","order":2,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-1"]},{"id":"lesson-1-3","title":"Componentes Standalone e Templates","slug":"componentes-standalone","module":"module-1","order":3,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-2"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-4","title":"Data Binding e Diretivas Modernas","slug":"data-binding","module":"module-1","order":4,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-3"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-5","title":"Control Flow e Pipes","slug":"control-flow-pipes","module":"module-1","order":5,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-4"]},{"id":"lesson-2-1","title":"Serviços e Injeção de Dependência","slug":"servicos-di","module":"module-2","order":1,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-1-5"],"podcast":{"file":"assets/podcasts/02.1-Serviços_e_Injeção_de_Dependência_no_Angular.m4a","title":"Serviços e Injeção de Dependência no Angular","description":"Descubra como os serviços são o coração da arquitetura Angular.","duration":"50-65 minutos"}},{"id":"lesson-2-2","title":"Roteamento e Navegação Avançada","slug":"roteamento","module":"module-2","order":2,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-1"],"podcast":{"file":"assets/podcasts/02.2-SilêncioRouter_Guards_Resolvers_Lazy_Loading.m4a","title":"Router, Guards, Resolvers e Lazy Loading","description":"Domine o sistema de roteamento avançado do Angular.","duration":"55-70 minutos"}},{"id":"lesson-2-3","title":"Formulários Reativos e Validação","slug":"formularios-reativos","module":"module-2","order":3,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-2"],"podcast":{"file":"assets/podcasts/02.3-Dominando_os_Formulários_Reativos_do_Angular.m4a","title":"Dominando os Formulários Reativos do Angular","description":"Formulários reativos são uma das funcionalidades mais poderosas do Angular.","duration":"60-75 minutos"}},{"id":"lesson-2-4","title":"HTTP Client e Interceptors","slug":"http-client","module":"module-2","order":4,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-2-3"],"podcast":{"file":"assets/podcasts/02.4-HttpClient_e_Interceptors_no_Angular.m4a","title":"HttpClient e Interceptors no Angular","description":"Aprenda a consumir APIs REST de forma profissional com HttpClient.","duration":"50-65 minutos"}},{"id":"lesson-2-5","title":"Comunicação entre Componentes","slug":"comunicacao-componentes","module":"module-2","order":5,"duration":"60 minutos","level":"Intermediário","prerequisites":["lesson-2-4"],"podcast":{"file":"assets/podcasts/02.5-Comunicação_entre_Componentes_Input_Output_ViewChild.m4a","title":"Comunicação entre Componentes - Input, Output, ViewChild","description":"Domine todos os padrões de comunicação entre componentes no Angular.","duration":"45-60 minutos"}},{"id":"lesson-3-1","title":"RxJS Operators Avançados","slug":"rxjs-operators","module":"module-3","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-2-5"],"podcast":{"file":"assets/podcasts/03.1RxJS_Operators_Observables_SwitchMap_e_Busca_Perfeita.m4a","title":"RxJS Operators, Observables, SwitchMap e Busca Perfeita","description":"RxJS é fundamental para Angular moderno.","duration":"65-80 minutos"}},{"id":"lesson-3-2","title":"Signals e Signal-First Architecture","slug":"signals","module":"module-3","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-1"],"podcast":{"file":"assets/podcasts/03.2-Angular_Signals__O_Guia_Completo_e_Prático.m4a","title":"Angular Signals - O Guia Completo e Prático","description":"Signals são a nova forma reativa do Angular.","duration":"60-75 minutos"}},{"id":"lesson-3-3","title":"NgRx - Gerenciamento de Estado","slug":"ngrx","module":"module-3","order":3,"duration":"150 minutos","level":"Avançado","prerequisites":["lesson-3-2"],"podcast":{"file":"assets/podcasts/03.3-NgRx_quando_vale_a_pena_usar.m4a","title":"NgRx - Quando Vale a Pena Usar","description":"NgRx é poderoso, mas nem sempre necessário.","duration":"70-85 minutos"}},{"id":"lesson-3-4","title":"Padrões Reativos e Memory Leaks","slug":"memory-leaks","module":"module-3","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-3-3"],"podcast":{"file":"assets/podcasts/03.4-Combatendo_Memory_Leaks_com_Async_Pipe.m4a","title":"Combatendo Memory Leaks com Async Pipe","description":"Memory leaks são um problema comum em aplicações Angular reativas.","duration":"50-65 minutos"}},{"id":"lesson-3-5","title":"Integração Signals + Observables","slug":"signals-observables","module":"module-3","order":5,"duration":"30 minutos","level":"Avançado","prerequisites":["lesson-3-4"],"podcast":{"file":"assets/podcasts/03.5-toSignal_e_toObservable_as_pontes_do_Angular.m4a","title":"toSignal e toObservable - As Pontes do Angular","description":"Angular oferece funções para integrar Signals com Observables.","duration":"40-50 minutos"}},{"id":"lesson-4-1","title":"Change Detection Strategies","slug":"change-detection","module":"module-4","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-5"],"podcast":{"file":"assets/podcasts/04.1-OnPush_Imutabilidade_e_Performance_de_Apps.m4a","title":"OnPush, Imutabilidade e Performance de Apps","description":"Change Detection é crítico para performance.","duration":"60-75 minutos"}},{"id":"lesson-4-2","title":"Lazy Loading e Code Splitting","slug":"lazy-loading","module":"module-4","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-1"],"podcast":{"file":"assets/podcasts/04.2-Lazy_Loading_e_Code_Splitting_na_Web.m4a","title":"Lazy Loading e Code Splitting na Web","description":"Otimize o carregamento inicial da sua aplicação com lazy loading avançado.","duration":"55-70 minutos"}},{"id":"lesson-4-3","title":"Deferrable Views e Performance","slug":"deferrable-views","module":"module-4","order":3,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-2"],"podcast":{"file":"assets/podcasts/04.3-Angular_Deferrable_Views_no_Código_(@defer).m4a","title":"Angular Deferrable Views no Código (@defer)","description":"Deferrable Views são a nova forma de lazy loading de componentes no Angular.","duration":"50-65 minutos"}},{"id":"lesson-4-4","title":"Profiling e Otimização","slug":"profiling","module":"module-4","order":4,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-3"],"podcast":{"file":"assets/podcasts/04.4-Profiling_Angular_Otimização_Como_Fazer.m4a","title":"Profiling Angular - Otimização Como Fazer","description":"Aprenda a identificar gargalos de performance usando Angular DevTools.","duration":"55-70 minutos"}},{"id":"lesson-4-5","title":"Zone.js e Zoneless Apps","slug":"zonejs","module":"module-4","order":5,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-4-4"],"podcast":{"file":"assets/podcasts/04.5-Zone.m4a","title":"Zone.js e Zoneless Apps","description":"Zone.js é o motor da change detection tradicional do Angular.","duration":"50-65 minutos"}},{"id":"lesson-5-1","title":"Testes Completos (Unitários, Integração, E2E)","slug":"testes","module":"module-5","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-5"],"podcast":{"file":"assets/podcasts/05.1-Testes_Unitários_Integração_E2E_Angular.m4a","title":"Testes Unitários, Integração e E2E no Angular","description":"Testes são essenciais para aplicações profissionais.","duration":"70-85 minutos"}},{"id":"lesson-5-2","title":"SSR e PWA","slug":"ssr-pwa","module":"module-5","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-1"]},{"id":"lesson-5-3","title":"Segurança Avançada","slug":"seguranca","module":"module-5","order":3,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-2"]},{"id":"lesson-5-4","title":"Arquitetura Avançada","slug":"arquitetura-avancada","module":"module-5","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-3"]},{"id":"lesson-5-5","title":"Projeto Final Completo","slug":"projeto-final","module":"module-5","order":5,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-4"]}]
+    };
+    
+  </script>
+</body>
+</html>
+

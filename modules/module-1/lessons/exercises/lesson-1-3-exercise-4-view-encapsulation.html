@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 1.3.4: ViewEncapsulation e Estilos - Angular Expert - Do Básico ao Expert em 5 Dias</title>
+  <meta name="description" content="Treinamento intensivo e prático de Angular">
+  <link rel="stylesheet" href="/angular/assets/css/main.css">
+  
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Exercício 1.3.4: ViewEncapsulation e Estilos | Angular Expert - Do Básico ao Expert em 5 Dias</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Exercício 1.3.4: ViewEncapsulation e Estilos" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Treinamento intensivo e prático de Angular" />
+<meta property="og:description" content="Treinamento intensivo e prático de Angular" />
+<link rel="canonical" href="https://onosendae.github.io/angular/modules/module-1/lessons/exercises/lesson-1-3-exercise-4-view-encapsulation.html" />
+<meta property="og:url" content="https://onosendae.github.io/angular/modules/module-1/lessons/exercises/lesson-1-3-exercise-4-view-encapsulation.html" />
+<meta property="og:site_name" content="Angular Expert - Do Básico ao Expert em 5 Dias" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Exercício 1.3.4: ViewEncapsulation e Estilos" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Treinamento intensivo e prático de Angular","headline":"Exercício 1.3.4: ViewEncapsulation e Estilos","url":"https://onosendae.github.io/angular/modules/module-1/lessons/exercises/lesson-1-3-exercise-4-view-encapsulation.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Angular Expert - Do Básico ao Expert em 5 Dias",
+    "description": "Treinamento intensivo e prático de Angular",
+    "provider": {
+      "@type": "Organization",
+      "name": "Angular Expert"
+    },
+    "courseCode": "angular-expert-5-days",
+    "educationalLevel": "Advanced",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-content">
+    <h1 class="site-title">
+      <a href="/angular/">Angular Expert - Do Básico ao Expert em 5 Dias</a>
+    </h1>
+    <nav class="main-nav">
+      <a href="/angular/">Início</a>
+      <a href="/angular/about">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+
+  
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-navigation">
+  <h2>Módulos</h2>
+  <ul class="modules-list">
+    
+      <li>
+        <a href="/angular/modules/fundamentos-acelerados">
+          Fundamentos Acelerados
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/introducao-angular">
+                  Introdução ao Angular e Configuração
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/typescript-essencial">
+                  TypeScript Essencial para Angular
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/componentes-standalone">
+                  Componentes Standalone e Templates
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/data-binding">
+                  Data Binding e Diretivas Modernas
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/fundamentos-acelerados/lessons/control-flow-pipes">
+                  Control Flow e Pipes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/desenvolvimento-intermediario">
+          Desenvolvimento Intermediário
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/servicos-di">
+                  Serviços e Injeção de Dependência
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/roteamento">
+                  Roteamento e Navegação Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/formularios-reativos">
+                  Formulários Reativos e Validação
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/http-client">
+                  HTTP Client e Interceptors
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/desenvolvimento-intermediario/lessons/comunicacao-componentes">
+                  Comunicação entre Componentes
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/programacao-reativa-estado">
+          Programação Reativa e Estado
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/rxjs-operators">
+                  RxJS Operators Avançados
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals">
+                  Signals e Signal-First Architecture
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/ngrx">
+                  NgRx - Gerenciamento de Estado
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/memory-leaks">
+                  Padrões Reativos e Memory Leaks
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/programacao-reativa-estado/lessons/signals-observables">
+                  Integração Signals + Observables
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/performance-otimizacao">
+          Performance e Otimização
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/change-detection">
+                  Change Detection Strategies
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/lazy-loading">
+                  Lazy Loading e Code Splitting
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/deferrable-views">
+                  Deferrable Views e Performance
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/profiling">
+                  Profiling e Otimização
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/performance-otimizacao/lessons/zonejs">
+                  Zone.js e Zoneless Apps
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+      <li>
+        <a href="/angular/modules/praticas-avancadas-projeto-final">
+          Práticas Avançadas e Projeto Final
+        </a>
+        <ul class="lessons-list">
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/testes">
+                  Testes Completos (Unitários, Integração, E2E)
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/ssr-pwa">
+                  SSR e PWA
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/seguranca">
+                  Segurança Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/arquitetura-avancada">
+                  Arquitetura Avançada
+                </a>
+              </li>
+            
+          
+            
+            
+              <li>
+                <a href="/angular/modules/praticas-avancadas-projeto-final/lessons/projeto-final">
+                  Projeto Final Completo
+                </a>
+              </li>
+            
+          
+        </ul>
+      </li>
+    
+  </ul>
+</nav>
+
+
+    </aside>
+    
+    <main class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/angular/">Início</a></li>
+    
+      
+      
+        <li><a href="/angular/modules/fundamentos-acelerados">Fundamentos Acelerados</a></li>
+      
+    
+    
+      <li aria-current="page">Exercício 1.3.4: ViewEncapsulation e Estilos</li>
+    
+  </ol>
+</nav>
+
+
+      <article class="exercise-content">
+  <header>
+    <h1>Exercício 1.3.4: ViewEncapsulation e Estilos</h1>
+    <div class="exercise-meta">
+      
+        <span>Dificuldade: Intermediário</span>
+      
+      
+    </div>
+  </header>
+  
+  <h2 id="objetivo">Objetivo</h2>
+
+<p>Este exercício tem como objetivo praticar <strong>ViewEncapsulation</strong> através da <strong>criação de três versões do mesmo componente com diferentes estratégias de encapsulação</strong>.</p>
+
+<p>Ao completar este exercício, você será capaz de:</p>
+
+<ul>
+  <li>Entender diferentes modos de ViewEncapsulation</li>
+  <li>Aplicar ViewEncapsulation.Emulated (padrão)</li>
+  <li>Aplicar ViewEncapsulation.None</li>
+  <li>Aplicar ViewEncapsulation.ShadowDom</li>
+  <li>Observar diferenças práticas entre os modos</li>
+</ul>
+
+<hr />
+
+<h2 id="descrição">Descrição</h2>
+
+<p>Você precisa criar três versões do mesmo componente <code class="language-plaintext highlighter-rouge">StyledBoxComponent</code>, cada uma com um modo diferente de ViewEncapsulation. Isso permitirá observar como os estilos são aplicados e isolados em cada caso.</p>
+
+<h3 id="contexto">Contexto</h3>
+
+<p>Um desenvolvedor precisa entender como ViewEncapsulation funciona para escolher a estratégia correta em diferentes situações. Criar versões comparativas ajuda a visualizar as diferenças.</p>
+
+<h3 id="tarefa">Tarefa</h3>
+
+<p>Crie três componentes idênticos visualmente, mas com ViewEncapsulation diferentes:</p>
+
+<ol>
+  <li><strong>StyledBoxEmulatedComponent</strong>: ViewEncapsulation.Emulated (padrão)</li>
+  <li><strong>StyledBoxNoneComponent</strong>: ViewEncapsulation.None</li>
+  <li><strong>StyledBoxShadowComponent</strong>: ViewEncapsulation.ShadowDom</li>
+</ol>
+
+<p>Cada componente deve:</p>
+<ul>
+  <li>Ter o mesmo template HTML</li>
+  <li>Ter os mesmos estilos CSS</li>
+  <li>Exibir um box estilizado com título e conteúdo</li>
+  <li>Demonstrar como estilos são isolados ou não</li>
+</ul>
+
+<hr />
+
+<h2 id="requisitos">Requisitos</h2>
+
+<h3 id="funcionalidades-obrigatórias">Funcionalidades Obrigatórias</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Três componentes criados com templates idênticos</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Cada componente usa ViewEncapsulation diferente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Estilos CSS são os mesmos em todos</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Componente de demonstração mostra os três lado a lado</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Observações sobre diferenças documentadas</li>
+</ul>
+
+<h3 id="critérios-de-qualidade">Critérios de Qualidade</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Código segue boas práticas aprendidas na aula</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Componentes são funcionais</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Diferenças são observáveis</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Código é bem organizado</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Comentários explicam diferenças</li>
+</ul>
+
+<hr />
+
+<h2 id="dicas">Dicas</h2>
+
+<h3 id="dica-1-configurar-viewencapsulation">Dica 1: Configurar ViewEncapsulation</h3>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">ViewEncapsulation</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">encapsulation</span><span class="p">:</span> <span class="nx">ViewEncapsulation</span><span class="p">.</span><span class="nx">Emulated</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h3 id="dica-2-emulated-padrão">Dica 2: Emulated (Padrão)</h3>
+
+<p>Estilos são isolados usando atributos únicos gerados pelo Angular.</p>
+
+<h3 id="dica-3-none">Dica 3: None</h3>
+
+<p>Estilos são globais, sem isolamento. Podem afetar outros componentes.</p>
+
+<h3 id="dica-4-shadowdom">Dica 4: ShadowDom</h3>
+
+<p>Usa Shadow DOM nativo do navegador para isolamento completo.</p>
+
+<h3 id="dica-5-observar-no-devtools">Dica 5: Observar no DevTools</h3>
+
+<p>Use Chrome DevTools para inspecionar como estilos são aplicados em cada modo.</p>
+
+<hr />
+
+<h2 id="solução-esperada">Solução Esperada</h2>
+
+<h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
+
+<p><strong>styled-box-emulated.component.ts</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">ViewEncapsulation</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-styled-box-emulated</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">templateUrl</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./styled-box.component.html</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">styleUrls</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">./styled-box.component.css</span><span class="dl">'</span><span class="p">],</span>
+  <span class="na">encapsulation</span><span class="p">:</span> <span class="nx">ViewEncapsulation</span><span class="p">.</span><span class="nx">Emulated</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">StyledBoxEmulatedComponent</span> <span class="p">{</span>
+  <span class="nl">title</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Emulated (Padrão)</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Estilos isolados com atributos únicos</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>styled-box-none.component.ts</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">ViewEncapsulation</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-styled-box-none</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">templateUrl</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./styled-box.component.html</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">styleUrls</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">./styled-box.component.css</span><span class="dl">'</span><span class="p">],</span>
+  <span class="na">encapsulation</span><span class="p">:</span> <span class="nx">ViewEncapsulation</span><span class="p">.</span><span class="nx">None</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">StyledBoxNoneComponent</span> <span class="p">{</span>
+  <span class="nl">title</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">None (Global)</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Estilos são globais, sem isolamento</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>styled-box-shadow.component.ts</strong></p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">ViewEncapsulation</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-styled-box-shadow</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">templateUrl</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./styled-box.component.html</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">styleUrls</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">./styled-box.component.css</span><span class="dl">'</span><span class="p">],</span>
+  <span class="na">encapsulation</span><span class="p">:</span> <span class="nx">ViewEncapsulation</span><span class="p">.</span><span class="nx">ShadowDom</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">StyledBoxShadowComponent</span> <span class="p">{</span>
+  <span class="nl">title</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">ShadowDom</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Isolamento completo com Shadow DOM</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>styled-box.component.html</strong> (compartilhado)</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styled-box"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"box-title"</span><span class="nt">&gt;&lt;/h3&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"box-content"</span><span class="nt">&gt;&lt;article</span> <span class="na">class=</span><span class="s">"exercise-content"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Exercício 1.3.3: Componente com Template Avançado<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"exercise-meta"</span><span class="nt">&gt;</span>
+      
+        <span class="nt">&lt;span&gt;</span>Dificuldade: Intermediário<span class="nt">&lt;/span&gt;</span>
+      
+      
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  
+  <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"objetivo"</span><span class="nt">&gt;</span>Objetivo<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Este exercício tem como objetivo praticar <span class="nt">&lt;strong&gt;</span>templates avançados<span class="nt">&lt;/strong&gt;</span> através da <span class="nt">&lt;strong&gt;</span>criação de um componente de perfil de usuário com múltiplas funcionalidades<span class="nt">&lt;/strong&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Ao completar este exercício, você será capaz de:<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Usar interpolação avançada<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Aplicar property binding em diferentes contextos<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Implementar event binding complexo<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Usar diretivas estruturais (*ngIf, *ngFor)<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Combinar múltiplas técnicas de template<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"descrição"</span><span class="nt">&gt;</span>Descrição<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Você precisa criar um componente <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"language-plaintext highlighter-rouge"</span><span class="nt">&gt;</span>UserProfileComponent<span class="nt">&lt;/code&gt;</span> que exibe um perfil completo de usuário usando todas as técnicas de template aprendidas. O componente deve ser interativo e dinâmico.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"contexto"</span><span class="nt">&gt;</span>Contexto<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Uma aplicação precisa de um componente de perfil de usuário que exibe informações pessoais, estatísticas e permite interações. O componente deve demonstrar uso avançado de templates Angular.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"tarefa"</span><span class="nt">&gt;</span>Tarefa<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Crie um componente <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"language-plaintext highlighter-rouge"</span><span class="nt">&gt;</span>UserProfileComponent<span class="nt">&lt;/code&gt;</span> com:<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Dados do Usuário<span class="nt">&lt;/strong&gt;</span>: Interface <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"language-plaintext highlighter-rouge"</span><span class="nt">&gt;</span>User<span class="nt">&lt;/code&gt;</span> com nome, email, avatar, bio, idade, cidade<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Estatísticas<span class="nt">&lt;/strong&gt;</span>: Array de estatísticas (posts, seguidores, seguindo)<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Interpolação<span class="nt">&lt;/strong&gt;</span>: Exibir todos os dados do usuário<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Property Binding<span class="nt">&lt;/strong&gt;</span>: Binding de imagem, classes condicionais, atributos<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Event Binding<span class="nt">&lt;/strong&gt;</span>: Botões para editar perfil, seguir/deixar de seguir<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Diretivas<span class="nt">&lt;/strong&gt;</span>: *ngIf para mostrar/ocultar seções, *ngFor para estatísticas<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Two-Way Binding<span class="nt">&lt;/strong&gt;</span>: Campo de busca (se aplicável)<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"requisitos"</span><span class="nt">&gt;</span>Requisitos<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"funcionalidades-obrigatórias"</span><span class="nt">&gt;</span>Funcionalidades Obrigatórias<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"task-list"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>Interface <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"language-plaintext highlighter-rouge"</span><span class="nt">&gt;</span>User<span class="nt">&lt;/code&gt;</span> definida com todas as propriedades<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>Template usa interpolação para exibir dados<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>Property binding usado para imagem e classes<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>Event binding implementado em botões<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>Diretiva *ngIf usada para lógica condicional<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>Diretiva *ngFor usada para listar estatísticas<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>Componente é interativo e funcional<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"critérios-de-qualidade"</span><span class="nt">&gt;</span>Critérios de Qualidade<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"task-list"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>Código segue boas práticas aprendidas na aula<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>Template é bem estruturado e legível<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>Todas as técnicas de template são aplicadas<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>Código é organizado e mantível<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>Componente é reutilizável<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"dicas"</span><span class="nt">&gt;</span>Dicas<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"dica-1-interface-user"</span><span class="nt">&gt;</span>Dica 1: Interface User<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-typescript highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>interface<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>User<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>id<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>number<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>name<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>email<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>avatar<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>bio<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>age<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>number<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>city<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>isFollowing<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>boolean<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"dica-2-property-binding-de-imagem"</span><span class="nt">&gt;</span>Dica 2: Property Binding de Imagem<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-html highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>img<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>[src]=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"user.avatar"<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>[alt]=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"user.name"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"dica-3-classes-condicionais"</span><span class="nt">&gt;</span>Dica 3: Classes Condicionais<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-html highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>button<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>[class.following]=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"user.isFollowing"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+  {{ user.isFollowing ? 'Seguindo' : 'Seguir' }}
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/button<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"dica-4-ngfor-para-estatísticas"</span><span class="nt">&gt;</span>Dica 4: *ngFor para Estatísticas<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-html highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>div<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>*ngFor=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"let stat of statistics"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>span<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>: <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/span<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"dica-5-ngif-condicional"</span><span class="nt">&gt;</span>Dica 5: *ngIf Condicional<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-html highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>div<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>*ngIf=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"user.bio"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"solução-esperada"</span><span class="nt">&gt;</span>Solução Esperada<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"abordagem-recomendada"</span><span class="nt">&gt;</span>Abordagem Recomendada<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>user-profile.component.ts<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-typescript highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>import<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>Component<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>Input<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>Output<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>EventEmitter<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>from<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s1"</span><span class="nt">&gt;</span>@angular/core<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>import<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>CommonModule<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>from<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s1"</span><span class="nt">&gt;</span>@angular/common<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>interface<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>User<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>id<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>number<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>name<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>email<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>avatar<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>bio<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>age<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>number<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>city<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>isFollowing<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>boolean<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>interface<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>Statistic<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>label<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>value<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>number<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>icon<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nd"</span><span class="nt">&gt;</span>Component<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>({<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>selector<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s1"</span><span class="nt">&gt;</span>app-user-profile<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>standalone<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kc"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>imports<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>[<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>CommonModule<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>],<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>templateUrl<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s1"</span><span class="nt">&gt;</span>./user-profile.component.html<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>styleUrls<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>[<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s1"</span><span class="nt">&gt;</span>./user-profile.component.css<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>]<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>})<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>export<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kd"</span><span class="nt">&gt;</span>class<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>UserProfileComponent<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nd"</span><span class="nt">&gt;</span>Input<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>()<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>user<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>!<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>User<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nd"</span><span class="nt">&gt;</span>Output<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>()<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>followToggle<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>=<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>new<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>EventEmitter<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>User<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>();<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nd"</span><span class="nt">&gt;</span>Output<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>()<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>editProfile<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>=<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>new<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>EventEmitter<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>User<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>();<span class="nt">&lt;/span&gt;</span>
+
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>statistics<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>Statistic<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>[]<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>=<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>[<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>label<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s1"</span><span class="nt">&gt;</span>Posts<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>value<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mi"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>icon<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s1"</span><span class="nt">&gt;</span>📝<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>},<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>label<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s1"</span><span class="nt">&gt;</span>Seguidores<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>value<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mi"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>icon<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s1"</span><span class="nt">&gt;</span>👥<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>},<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>label<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s1"</span><span class="nt">&gt;</span>Seguindo<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>value<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mi"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>icon<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s1"</span><span class="nt">&gt;</span>➕<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"dl"</span><span class="nt">&gt;</span>'<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>];<span class="nt">&lt;/span&gt;</span>
+
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>onFollowToggle<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>():<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>void<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>this<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>user<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>isFollowing<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>=<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>!<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>this<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>user<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>isFollowing<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>this<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>followToggle<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>emit<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>(<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>this<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>user<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>);<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>onEditProfile<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>():<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>void<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>this<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>editProfile<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>emit<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>(<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>this<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>user<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>);<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>getAgeText<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>():<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>return<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"s2"</span><span class="nt">&gt;</span>`<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>${<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>this<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>user<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>age<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s2"</span><span class="nt">&gt;</span> anos`<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>getLocationText<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>():<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"kr"</span><span class="nt">&gt;</span>string<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>return<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"s2"</span><span class="nt">&gt;</span>`📍 <span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>${<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span>this<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>user<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>city<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s2"</span><span class="nt">&gt;</span>`<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>user-profile.component.html<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-html highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>div<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"user-profile"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>div<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"profile-header"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>img<span class="nt">&lt;/span&gt;</span> 
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>[src]=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"user.avatar"<span class="nt">&lt;/span&gt;</span> 
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>[alt]=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"user.name"<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"avatar"<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>[class.online]=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"user.isFollowing"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+    
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>div<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"profile-info"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>h2<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>{{ user.name }}<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/h2<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>p<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"email"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>{{ user.email }}<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>p<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"location"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>{{ getLocationText() }}<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>p<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"age"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>{{ getAgeText() }}<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>div<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"profile-actions"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>button<span class="nt">&lt;/span&gt;</span> 
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>[class.btn-following]=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"user.isFollowing"<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>[class.btn-follow]=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"!user.isFollowing"<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>(click)=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"onFollowToggle()"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+        {{ user.isFollowing ? 'Seguindo' : 'Seguir' }}
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/button<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+      
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>button<span class="nt">&lt;/span&gt;</span> 
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"btn-edit"<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>(click)=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"onEditProfile()"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+        Editar Perfil
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/button<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>div<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"profile-bio"<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>*ngIf=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"user.bio"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>h3<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>Sobre<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/h3<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>{{ user.bio }}<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>div<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"profile-statistics"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>div<span class="nt">&lt;/span&gt;</span> 
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>*ngFor=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"let stat of statistics"<span class="nt">&lt;/span&gt;</span> 
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"stat-item"<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>[attr.data-label]=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"stat.label"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>span<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"stat-icon"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>{{ stat.icon }}<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/span<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>span<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"stat-label"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>{{ stat.label }}<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/span<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>span<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"na"</span><span class="nt">&gt;</span>class=<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"s"</span><span class="nt">&gt;</span>"stat-value"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>{{ stat.value }}<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/span<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span><span class="ni">&amp;lt;</span>/div<span class="ni">&amp;gt;</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>user-profile.component.css<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-css highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.user-profile<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>max-width<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>600px<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>margin<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>auto<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>padding<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>2rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>border<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>1px<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>solid<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#e0e0e0<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>border-radius<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>8px<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.profile-header<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>display<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>flex<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>align-items<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>center<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>gap<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>1.5rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>margin-bottom<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>2rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.avatar<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>width<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>100px<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>height<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>100px<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>border-radius<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>50%<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>object-fit<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>cover<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>border<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>3px<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>solid<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#1976d2<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.avatar.online<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>border-color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#4caf50<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.profile-info<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span>h2<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>margin<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0.5rem<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#333<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.email<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#666<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>margin<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0.25rem<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.location<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.age<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#888<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>font-size<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0.9rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>margin<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0.25rem<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.profile-actions<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>display<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>flex<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>gap<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>1rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>margin-left<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>auto<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.btn-follow<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"o"</span><span class="nt">&gt;</span>,<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.btn-following<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>padding<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>8px<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>16px<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>border<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>none<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>border-radius<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>4px<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>cursor<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>pointer<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>font-weight<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>500<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.btn-follow<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>background-color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#1976d2<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>white<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.btn-following<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>background-color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#4caf50<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>white<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.btn-edit<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>padding<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>8px<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>16px<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>background-color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#f5f5f5<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>border<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>1px<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>solid<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#ddd<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>border-radius<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>4px<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>cursor<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>pointer<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.profile-bio<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>margin-bottom<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>2rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>padding<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>1rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>background-color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#f9f9f9<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>border-radius<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>4px<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.profile-statistics<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>display<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>flex<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>justify-content<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>space-around<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>gap<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>1rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.stat-item<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>display<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>flex<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>flex-direction<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>column<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>align-items<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>center<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>padding<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>1rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>background-color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#f5f5f5<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>border-radius<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>4px<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>flex<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.stat-icon<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>font-size<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>1.5rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>margin-bottom<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0.5rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.stat-label<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>font-size<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0.875rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#666<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>margin-bottom<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>0.25rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nc"</span><span class="nt">&gt;</span>.stat-value<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>{<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>font-size<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m"</span><span class="nt">&gt;</span>1.25rem<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>font-weight<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>bold<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nl"</span><span class="nt">&gt;</span>color<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nx"</span><span class="nt">&gt;</span>#333<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>;<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"p"</span><span class="nt">&gt;</span>}<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Explicação da Solução<span class="nt">&lt;/strong&gt;</span>:<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Interface <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"language-plaintext highlighter-rouge"</span><span class="nt">&gt;</span>User<span class="nt">&lt;/code&gt;</span> define estrutura de dados<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Interpolação exibe dados do usuário<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Property binding usado para imagem, classes e atributos<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Event binding em botões chama métodos<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>*ngIf mostra bio apenas se existir<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>*ngFor lista estatísticas dinamicamente<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Métodos helper formatam dados para exibição<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Decisões de Design<span class="nt">&lt;/strong&gt;</span>:<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Classes condicionais baseadas em estado<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Métodos helper melhoram legibilidade do template<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Estrutura HTML semântica<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Estilos responsivos e organizados<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"testes"</span><span class="nt">&gt;</span>Testes<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"casos-de-teste"</span><span class="nt">&gt;</span>Casos de Teste<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Teste 1<span class="nt">&lt;/strong&gt;</span>: Dados do usuário são exibidos<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Input<span class="nt">&lt;/strong&gt;</span>: Componente com <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"language-plaintext highlighter-rouge"</span><span class="nt">&gt;</span>user<span class="nt">&lt;/code&gt;</span> definido<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Output Esperado<span class="nt">&lt;/strong&gt;</span>: Nome, email, avatar, bio devem aparecer<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Teste 2<span class="nt">&lt;/strong&gt;</span>: Botão de seguir muda estado<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Input<span class="nt">&lt;/strong&gt;</span>: Clicar em botão “Seguir”<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Output Esperado<span class="nt">&lt;/strong&gt;</span>: Botão deve mudar para “Seguindo” e classe deve mudar<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Teste 3<span class="nt">&lt;/strong&gt;</span>: Bio só aparece se existir<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Input<span class="nt">&lt;/strong&gt;</span>: <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"language-plaintext highlighter-rouge"</span><span class="nt">&gt;</span>user.bio<span class="nt">&lt;/code&gt;</span> vazio<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Output Esperado<span class="nt">&lt;/strong&gt;</span>: Seção de bio não deve aparecer (*ngIf)<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Teste 4<span class="nt">&lt;/strong&gt;</span>: Estatísticas são listadas<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Input<span class="nt">&lt;/strong&gt;</span>: Array <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"language-plaintext highlighter-rouge"</span><span class="nt">&gt;</span>statistics<span class="nt">&lt;/code&gt;</span> com 3 itens<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Output Esperado<span class="nt">&lt;/strong&gt;</span>: 3 itens devem aparecer na lista (*ngFor)<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Teste 5<span class="nt">&lt;/strong&gt;</span>: Eventos são emitidos<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Input<span class="nt">&lt;/strong&gt;</span>: Clicar em botões<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Output Esperado<span class="nt">&lt;/strong&gt;</span>: Eventos devem ser emitidos (verificar no console)<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"extensões-opcional"</span><span class="nt">&gt;</span>Extensões (Opcional)<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Se você completou o exercício e quer um desafio adicional:<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Adicionar Two-Way Binding<span class="nt">&lt;/strong&gt;</span>: Campo de busca com <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"language-plaintext highlighter-rouge"</span><span class="nt">&gt;</span>[(ngModel)]<span class="nt">&lt;/code&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Adicionar Fotos<span class="nt">&lt;/strong&gt;</span>: Galeria de fotos do usuário com *ngFor<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Adicionar Formatação<span class="nt">&lt;/strong&gt;</span>: Pipes para formatar números e datas<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;</span>Adicionar Animações<span class="nt">&lt;/strong&gt;</span>: Transições CSS para mudanças de estado<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"referências-úteis"</span><span class="nt">&gt;</span>Referências Úteis<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://angular.io/guide/template-syntax"</span><span class="nt">&gt;</span>Template Syntax<span class="nt">&lt;/a&gt;&lt;/strong&gt;</span>: Guia completo de sintaxe de templates<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://angular.io/guide/property-binding"</span><span class="nt">&gt;</span>Property Binding<span class="nt">&lt;/a&gt;&lt;/strong&gt;</span>: Documentação de property binding<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://angular.io/guide/event-binding"</span><span class="nt">&gt;</span>Event Binding<span class="nt">&lt;/a&gt;&lt;/strong&gt;</span>: Documentação de event binding<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;strong&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://angular.io/guide/structural-directives"</span><span class="nt">&gt;</span>Structural Directives<span class="nt">&lt;/a&gt;&lt;/strong&gt;</span>: Diretivas estruturais<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"checklist-de-qualidade"</span><span class="nt">&gt;</span>Checklist de Qualidade<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Antes de considerar este exercício completo:<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"task-list"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="nt">/&gt;</span>Objetivo está claro<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="nt">/&gt;</span>Descrição fornece contexto suficiente<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="nt">/&gt;</span>Requisitos são específicos e mensuráveis<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="nt">/&gt;</span>Dicas guiam sem dar solução completa<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="nt">/&gt;</span>Solução esperada está completa e explicada<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="nt">/&gt;</span>Casos de teste cobrem cenários principais<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"task-list-item"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"task-list-item-checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="nt">/&gt;</span>Referências úteis estão incluídas<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+
+<span class="nt">&lt;/article&gt;</span>
+
+<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"exercise-navigation"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>← Voltar para a aula<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+
+<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box-footer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"box-badge"</span><span class="nt">&gt;</span>ViewEncapsulation<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p><strong>styled-box.component.css</strong> (compartilhado)</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.styled-box</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">1.5rem</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="nx">#1976d2</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">8px</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="m">135deg</span><span class="p">,</span> <span class="nx">#e3f2fd</span> <span class="m">0%</span><span class="p">,</span> <span class="nx">#bbdefb</span> <span class="m">100%</span><span class="p">);</span>
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">4px</span> <span class="m">6px</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.1</span><span class="p">);</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">1rem</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.box-title</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">#1976d2</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.5rem</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1rem</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.box-content</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">#424242</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.6</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1rem</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.box-footer</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">flex</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">flex-end</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.box-badge</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nx">#1976d2</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">white</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">4px</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">0.875rem</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">500</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Estilo global para teste */</span>
+<span class="nc">.global-test</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nx">yellow</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">3px</span> <span class="nb">solid</span> <span class="nx">red</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>demo.component.ts</strong> (demonstração)</p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">StyledBoxEmulatedComponent</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./styled-box-emulated.component</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">StyledBoxNoneComponent</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./styled-box-none.component</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">StyledBoxShadowComponent</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./styled-box-shadow.component</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-demo</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nx">StyledBoxEmulatedComponent</span><span class="p">,</span>
+    <span class="nx">StyledBoxNoneComponent</span><span class="p">,</span>
+    <span class="nx">StyledBoxShadowComponent</span>
+  <span class="p">],</span>
+  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    &lt;div class="demo-container"&gt;
+      &lt;h1&gt;Comparação de ViewEncapsulation&lt;/h1&gt;
+      
+      &lt;app-styled-box-emulated&gt;&lt;/app-styled-box-emulated&gt;
+      &lt;app-styled-box-none&gt;&lt;/app-styled-box-none&gt;
+      &lt;app-styled-box-shadow&gt;&lt;/app-styled-box-shadow&gt;
+      
+      &lt;div class="global-test"&gt;
+        &lt;p&gt;Este elemento tem classe global-test para testar vazamento de estilos&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  `</span><span class="p">,</span>
+  <span class="na">styles</span><span class="p">:</span> <span class="p">[</span><span class="s2">`
+    .demo-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 2rem;
+    }
+  `</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nc">DemoComponent</span> <span class="p">{}</span>
+</code></pre></div></div>
+
+<p><strong>Explicação da Solução</strong>:</p>
+
+<ol>
+  <li>Três componentes idênticos com ViewEncapsulation diferentes</li>
+  <li>Template e estilos compartilhados para comparação justa</li>
+  <li>Classe <code class="language-plaintext highlighter-rouge">.global-test</code> demonstra vazamento de estilos</li>
+  <li>Componente de demonstração mostra os três lado a lado</li>
+  <li>Diferenças observáveis no navegador e DevTools</li>
+</ol>
+
+<p><strong>Decisões de Design</strong>:</p>
+
+<ul>
+  <li>Mesmo template e estilos para comparação justa</li>
+  <li>Estilos chamativos para facilitar observação</li>
+  <li>Classe global para testar vazamento</li>
+  <li>Estrutura clara para demonstração</li>
+</ul>
+
+<p><strong>Observações Esperadas</strong>:</p>
+
+<ul>
+  <li><strong>Emulated</strong>: Estilos isolados com atributos únicos (<code class="language-plaintext highlighter-rouge">_ngcontent-*</code>)</li>
+  <li><strong>None</strong>: Estilos podem vazar e afetar <code class="language-plaintext highlighter-rouge">.global-test</code></li>
+  <li><strong>ShadowDom</strong>: Isolamento completo, estilos não vazam</li>
+</ul>
+
+<hr />
+
+<h2 id="testes">Testes</h2>
+
+<h3 id="casos-de-teste">Casos de Teste</h3>
+
+<p><strong>Teste 1</strong>: Componentes renderizam corretamente</p>
+<ul>
+  <li><strong>Input</strong>: Três componentes carregados</li>
+  <li><strong>Output Esperado</strong>: Três boxes idênticos visualmente devem aparecer</li>
+</ul>
+
+<p><strong>Teste 2</strong>: Inspecionar no DevTools - Emulated</p>
+<ul>
+  <li><strong>Input</strong>: Abrir DevTools e inspecionar componente Emulated</li>
+  <li><strong>Output Esperado</strong>: Ver atributos <code class="language-plaintext highlighter-rouge">_ngcontent-*</code> nos elementos</li>
+</ul>
+
+<p><strong>Teste 3</strong>: Inspecionar no DevTools - None</p>
+<ul>
+  <li><strong>Input</strong>: Inspecionar componente None</li>
+  <li><strong>Output Esperado</strong>: Sem atributos de isolamento, estilos podem vazar</li>
+</ul>
+
+<p><strong>Teste 4</strong>: Inspecionar no DevTools - ShadowDom</p>
+<ul>
+  <li><strong>Input</strong>: Inspecionar componente ShadowDom</li>
+  <li><strong>Output Esperado</strong>: Ver <code class="language-plaintext highlighter-rouge">#shadow-root</code> no DevTools</li>
+</ul>
+
+<p><strong>Teste 5</strong>: Testar vazamento de estilos</p>
+<ul>
+  <li><strong>Input</strong>: Adicionar classe <code class="language-plaintext highlighter-rouge">.global-test</code> em elemento externo</li>
+  <li><strong>Output Esperado</strong>: Apenas componente None deve ser afetado</li>
+</ul>
+
+<hr />
+
+<h2 id="extensões-opcional">Extensões (Opcional)</h2>
+
+<p>Se você completou o exercício e quer um desafio adicional:</p>
+
+<ol>
+  <li><strong>Adicionar Estilos Globais</strong>: Crie estilos globais e observe como afetam cada modo</li>
+  <li><strong>Testar Performance</strong>: Compare performance de cada modo</li>
+  <li><strong>Criar Guia</strong>: Documente quando usar cada modo</li>
+  <li><strong>Testar Compatibilidade</strong>: Teste ShadowDom em diferentes navegadores</li>
+</ol>
+
+<hr />
+
+<h2 id="referências-úteis">Referências Úteis</h2>
+
+<ul>
+  <li><strong><a href="https://angular.io/api/core/ViewEncapsulation">ViewEncapsulation</a></strong>: Documentação oficial</li>
+  <li><strong><a href="https://angular.io/guide/component-styles">Component Styles</a></strong>: Guia de estilos de componentes</li>
+  <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a></strong>: Documentação MDN</li>
+</ul>
+
+<hr />
+
+<h2 id="checklist-de-qualidade">Checklist de Qualidade</h2>
+
+<p>Antes de considerar este exercício completo:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Objetivo está claro</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Descrição fornece contexto suficiente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Requisitos são específicos e mensuráveis</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Dicas guiam sem dar solução completa</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Solução esperada está completa e explicada</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Casos de teste cobrem cenários principais</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Referências úteis estão incluídas</li>
+</ul>
+
+
+</article>
+
+<nav class="exercise-navigation">
+  <a href="">← Voltar para a aula</a>
+</nav>
+
+
+    </main>
+  </div>
+  
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Angular Expert - Do Básico ao Expert em 5 Dias. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+  <div id="progress-tracker" class="progress-tracker" style="display: none;">
+  <div class="overall-progress">
+    <h3>Progresso Geral</h3>
+    <div class="progress-bar">
+      <div class="progress-fill" id="overall-progress-fill"></div>
+    </div>
+    <span id="overall-progress-text">0%</span>
+  </div>
+</div>
+
+
+  
+  <script src="/angular/assets/js/navigation.js"></script>
+  <script src="/angular/assets/js/progress-tracker.js"></script>
+  <script src="/angular/assets/js/analytics.js"></script>
+  <script>
+    window.siteData = {
+      modules: [{"id":"module-1","title":"Fundamentos Acelerados","slug":"fundamentos-acelerados","duration":"8 horas","description":"Estabeleça as bases sólidas do Angular","lessons":["lesson-1-1","lesson-1-2","lesson-1-3","lesson-1-4","lesson-1-5"],"order":1},{"id":"module-2","title":"Desenvolvimento Intermediário","slug":"desenvolvimento-intermediario","duration":"8 horas","description":"Construa funcionalidades completas de aplicações reais","lessons":["lesson-2-1","lesson-2-2","lesson-2-3","lesson-2-4","lesson-2-5"],"order":2},{"id":"module-3","title":"Programação Reativa e Estado","slug":"programacao-reativa-estado","duration":"8 horas","description":"Domine programação reativa e gerenciamento de estado","lessons":["lesson-3-1","lesson-3-2","lesson-3-3","lesson-3-4","lesson-3-5"],"order":3},{"id":"module-4","title":"Performance e Otimização","slug":"performance-otimizacao","duration":"8 horas","description":"Crie aplicações extremamente performáticas","lessons":["lesson-4-1","lesson-4-2","lesson-4-3","lesson-4-4","lesson-4-5"],"order":4},{"id":"module-5","title":"Práticas Avançadas e Projeto Final","slug":"praticas-avancadas-projeto-final","duration":"8 horas","description":"Consolide conhecimento através de práticas avançadas","lessons":["lesson-5-1","lesson-5-2","lesson-5-3","lesson-5-4","lesson-5-5"],"order":5}],
+      lessons: [{"id":"lesson-1-1","title":"Introdução ao Angular e Configuração","slug":"introducao-angular","module":"module-1","order":1,"duration":"60 minutos","level":"Básico","prerequisites":[],"podcast":{"file":"assets/podcasts/01-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Fundação Angular: Tipagem, Encapsulamento e Generics","description":"Neste episódio, exploramos os fundamentos essenciais do Angular moderno. Você aprenderá sobre a arquitetura baseada em componentes, como o TypeScript fortalece o desenvolvimento Angular, e os conceitos de encapsulamento e generics que tornam o framework poderoso e escalável.","duration":"45-60 minutos"}},{"id":"lesson-1-2","title":"TypeScript Essencial para Angular","slug":"typescript-essencial","module":"module-1","order":2,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-1"]},{"id":"lesson-1-3","title":"Componentes Standalone e Templates","slug":"componentes-standalone","module":"module-1","order":3,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-2"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-4","title":"Data Binding e Diretivas Modernas","slug":"data-binding","module":"module-1","order":4,"duration":"120 minutos","level":"Básico","prerequisites":["lesson-1-3"],"podcast":{"file":"assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a","title":"Componentes Standalone, Templates, Data Binding e Diretivas Modernas","description":"Mergulhe profundamente nos componentes standalone do Angular, a evolução moderna que simplifica a arquitetura.","duration":"60-75 minutos"}},{"id":"lesson-1-5","title":"Control Flow e Pipes","slug":"control-flow-pipes","module":"module-1","order":5,"duration":"90 minutos","level":"Básico","prerequisites":["lesson-1-4"]},{"id":"lesson-2-1","title":"Serviços e Injeção de Dependência","slug":"servicos-di","module":"module-2","order":1,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-1-5"],"podcast":{"file":"assets/podcasts/02.1-Serviços_e_Injeção_de_Dependência_no_Angular.m4a","title":"Serviços e Injeção de Dependência no Angular","description":"Descubra como os serviços são o coração da arquitetura Angular.","duration":"50-65 minutos"}},{"id":"lesson-2-2","title":"Roteamento e Navegação Avançada","slug":"roteamento","module":"module-2","order":2,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-1"],"podcast":{"file":"assets/podcasts/02.2-SilêncioRouter_Guards_Resolvers_Lazy_Loading.m4a","title":"Router, Guards, Resolvers e Lazy Loading","description":"Domine o sistema de roteamento avançado do Angular.","duration":"55-70 minutos"}},{"id":"lesson-2-3","title":"Formulários Reativos e Validação","slug":"formularios-reativos","module":"module-2","order":3,"duration":"120 minutos","level":"Intermediário","prerequisites":["lesson-2-2"],"podcast":{"file":"assets/podcasts/02.3-Dominando_os_Formulários_Reativos_do_Angular.m4a","title":"Dominando os Formulários Reativos do Angular","description":"Formulários reativos são uma das funcionalidades mais poderosas do Angular.","duration":"60-75 minutos"}},{"id":"lesson-2-4","title":"HTTP Client e Interceptors","slug":"http-client","module":"module-2","order":4,"duration":"90 minutos","level":"Intermediário","prerequisites":["lesson-2-3"],"podcast":{"file":"assets/podcasts/02.4-HttpClient_e_Interceptors_no_Angular.m4a","title":"HttpClient e Interceptors no Angular","description":"Aprenda a consumir APIs REST de forma profissional com HttpClient.","duration":"50-65 minutos"}},{"id":"lesson-2-5","title":"Comunicação entre Componentes","slug":"comunicacao-componentes","module":"module-2","order":5,"duration":"60 minutos","level":"Intermediário","prerequisites":["lesson-2-4"],"podcast":{"file":"assets/podcasts/02.5-Comunicação_entre_Componentes_Input_Output_ViewChild.m4a","title":"Comunicação entre Componentes - Input, Output, ViewChild","description":"Domine todos os padrões de comunicação entre componentes no Angular.","duration":"45-60 minutos"}},{"id":"lesson-3-1","title":"RxJS Operators Avançados","slug":"rxjs-operators","module":"module-3","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-2-5"],"podcast":{"file":"assets/podcasts/03.1RxJS_Operators_Observables_SwitchMap_e_Busca_Perfeita.m4a","title":"RxJS Operators, Observables, SwitchMap e Busca Perfeita","description":"RxJS é fundamental para Angular moderno.","duration":"65-80 minutos"}},{"id":"lesson-3-2","title":"Signals e Signal-First Architecture","slug":"signals","module":"module-3","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-1"],"podcast":{"file":"assets/podcasts/03.2-Angular_Signals__O_Guia_Completo_e_Prático.m4a","title":"Angular Signals - O Guia Completo e Prático","description":"Signals são a nova forma reativa do Angular.","duration":"60-75 minutos"}},{"id":"lesson-3-3","title":"NgRx - Gerenciamento de Estado","slug":"ngrx","module":"module-3","order":3,"duration":"150 minutos","level":"Avançado","prerequisites":["lesson-3-2"],"podcast":{"file":"assets/podcasts/03.3-NgRx_quando_vale_a_pena_usar.m4a","title":"NgRx - Quando Vale a Pena Usar","description":"NgRx é poderoso, mas nem sempre necessário.","duration":"70-85 minutos"}},{"id":"lesson-3-4","title":"Padrões Reativos e Memory Leaks","slug":"memory-leaks","module":"module-3","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-3-3"],"podcast":{"file":"assets/podcasts/03.4-Combatendo_Memory_Leaks_com_Async_Pipe.m4a","title":"Combatendo Memory Leaks com Async Pipe","description":"Memory leaks são um problema comum em aplicações Angular reativas.","duration":"50-65 minutos"}},{"id":"lesson-3-5","title":"Integração Signals + Observables","slug":"signals-observables","module":"module-3","order":5,"duration":"30 minutos","level":"Avançado","prerequisites":["lesson-3-4"],"podcast":{"file":"assets/podcasts/03.5-toSignal_e_toObservable_as_pontes_do_Angular.m4a","title":"toSignal e toObservable - As Pontes do Angular","description":"Angular oferece funções para integrar Signals com Observables.","duration":"40-50 minutos"}},{"id":"lesson-4-1","title":"Change Detection Strategies","slug":"change-detection","module":"module-4","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-3-5"],"podcast":{"file":"assets/podcasts/04.1-OnPush_Imutabilidade_e_Performance_de_Apps.m4a","title":"OnPush, Imutabilidade e Performance de Apps","description":"Change Detection é crítico para performance.","duration":"60-75 minutos"}},{"id":"lesson-4-2","title":"Lazy Loading e Code Splitting","slug":"lazy-loading","module":"module-4","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-1"],"podcast":{"file":"assets/podcasts/04.2-Lazy_Loading_e_Code_Splitting_na_Web.m4a","title":"Lazy Loading e Code Splitting na Web","description":"Otimize o carregamento inicial da sua aplicação com lazy loading avançado.","duration":"55-70 minutos"}},{"id":"lesson-4-3","title":"Deferrable Views e Performance","slug":"deferrable-views","module":"module-4","order":3,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-2"],"podcast":{"file":"assets/podcasts/04.3-Angular_Deferrable_Views_no_Código_(@defer).m4a","title":"Angular Deferrable Views no Código (@defer)","description":"Deferrable Views são a nova forma de lazy loading de componentes no Angular.","duration":"50-65 minutos"}},{"id":"lesson-4-4","title":"Profiling e Otimização","slug":"profiling","module":"module-4","order":4,"duration":"90 minutos","level":"Avançado","prerequisites":["lesson-4-3"],"podcast":{"file":"assets/podcasts/04.4-Profiling_Angular_Otimização_Como_Fazer.m4a","title":"Profiling Angular - Otimização Como Fazer","description":"Aprenda a identificar gargalos de performance usando Angular DevTools.","duration":"55-70 minutos"}},{"id":"lesson-4-5","title":"Zone.js e Zoneless Apps","slug":"zonejs","module":"module-4","order":5,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-4-4"],"podcast":{"file":"assets/podcasts/04.5-Zone.m4a","title":"Zone.js e Zoneless Apps","description":"Zone.js é o motor da change detection tradicional do Angular.","duration":"50-65 minutos"}},{"id":"lesson-5-1","title":"Testes Completos (Unitários, Integração, E2E)","slug":"testes","module":"module-5","order":1,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-4-5"],"podcast":{"file":"assets/podcasts/05.1-Testes_Unitários_Integração_E2E_Angular.m4a","title":"Testes Unitários, Integração e E2E no Angular","description":"Testes são essenciais para aplicações profissionais.","duration":"70-85 minutos"}},{"id":"lesson-5-2","title":"SSR e PWA","slug":"ssr-pwa","module":"module-5","order":2,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-1"]},{"id":"lesson-5-3","title":"Segurança Avançada","slug":"seguranca","module":"module-5","order":3,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-2"]},{"id":"lesson-5-4","title":"Arquitetura Avançada","slug":"arquitetura-avancada","module":"module-5","order":4,"duration":"60 minutos","level":"Avançado","prerequisites":["lesson-5-3"]},{"id":"lesson-5-5","title":"Projeto Final Completo","slug":"projeto-final","module":"module-5","order":5,"duration":"120 minutos","level":"Avançado","prerequisites":["lesson-5-4"]}]
+    };
+    
+  </script>
+</body>
+</html>
+
