@@ -239,6 +239,7 @@ export class LifecycleDemoComponent implements
 ```
 
 **lifecycle-demo.component.html**
+{% raw %}
 ```html
 <div class="lifecycle-demo">
   <div class="demo-controls">
@@ -280,6 +281,7 @@ export class LifecycleDemoComponent implements
   </div>
 </div>
 ```
+{% endraw %}
 
 **lifecycle-demo.component.css**
 ```css

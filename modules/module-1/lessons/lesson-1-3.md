@@ -455,7 +455,6 @@ interface Product {
   selector: 'app-product-card',
   standalone: true,
   imports: [CommonModule],
-{% raw %}
   template: `
     <div class="product-card" [class.out-of-stock]="!product.inStock">
       <img [src]="product.imageUrl" [alt]="product.name">
@@ -469,7 +468,6 @@ interface Product {
     </div>
   `,
   styles: [`
-{% endraw %}
     .product-card {
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -517,14 +515,12 @@ import { interval, Subscription } from 'rxjs';
 @Component({
   selector: 'app-timer',
   standalone: true,
-{% raw %}
   template: `
     <div class="timer">
       <h2>Timer: {{ seconds }}s</h2>
       <p>Status: {{ status }}</p>
     </div>
   `
-{% endraw %}
 })
 export class TimerComponent implements OnInit, OnDestroy {
   @Input() initialSeconds: number = 0;
