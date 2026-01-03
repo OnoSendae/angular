@@ -9,7 +9,7 @@ Treinamento intensivo e prático de Angular projetado para levar desenvolvedores
 
 ## Módulos do Curso
 
-{% for module in site.data.modules %}
+{% for module in site.data.modules.modules %}
 ### {{ module.order }}. {{ module.title }}
 
 **Duração**: {{ module.duration }}  

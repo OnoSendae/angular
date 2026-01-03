@@ -46,8 +46,8 @@
   <script src="{{ '/assets/js/analytics.js' | relative_url }}"></script>
   <script>
     window.siteData = {
-      modules: {{ site.data.modules | jsonify }},
-      lessons: {{ site.data.lessons | jsonify }}
+      modules: {{ site.data.modules.modules | jsonify }},
+      lessons: {{ site.data.lessons.lessons | jsonify }}
     };
     {% if site.google_analytics.enabled %}
     window.GA_ID = '{{ site.google_analytics.id }}';
