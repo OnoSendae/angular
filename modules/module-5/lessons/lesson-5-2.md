@@ -15,6 +15,7 @@ exercises:
   - "lesson-5-2-exercise-3"
   - "lesson-5-2-exercise-4"
   - "lesson-5-2-exercise-5"
+permalink: /modules/praticas-avancadas-projeto-final/lessons/ssr-pwa/
 ---
 
 ## Introdução

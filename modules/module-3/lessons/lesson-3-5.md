@@ -18,6 +18,7 @@ podcast:
   title: "toSignal e toObservable - As Pontes do Angular"
   description: "Angular oferece funções para integrar Signals com Observables."
   duration: "40-50 minutos"
+permalink: /modules/programacao-reativa-estado/lessons/signals-observables/
 ---
 
 ## Introdução

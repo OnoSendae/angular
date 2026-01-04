@@ -19,6 +19,7 @@ podcast:
   title: "Combatendo Memory Leaks com Async Pipe"
   description: "Memory leaks são um problema comum em aplicações Angular reativas."
   duration: "50-65 minutos"
+permalink: /modules/programacao-reativa-estado/lessons/memory-leaks/
 ---
 
 ## Introdução

@@ -20,6 +20,7 @@ podcast:
   title: "HttpClient e Interceptors no Angular"
   description: "Aprenda a consumir APIs REST de forma profissional com HttpClient."
   duration: "50-65 minutos"
+permalink: /modules/desenvolvimento-intermediario/lessons/http-client/
 ---
 
 ## Introdução

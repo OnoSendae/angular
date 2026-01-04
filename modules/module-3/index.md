@@ -11,6 +11,7 @@ lessons:
   - "lesson-3-4"
   - "lesson-3-5"
 module: module-3
+permalink: /modules/programacao-reativa-estado/
 ---
 
 ## Objetivos do Módulo

@@ -23,6 +23,7 @@ podcast:
   title: "RxJS Operators, Observables, SwitchMap e Busca Perfeita"
   description: "RxJS é fundamental para Angular moderno."
   duration: "65-80 minutos"
+permalink: /modules/programacao-reativa-estado/lessons/rxjs-operators/
 ---
 
 ## Introdução

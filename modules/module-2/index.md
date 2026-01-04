@@ -11,6 +11,7 @@ lessons:
   - "lesson-2-4"
   - "lesson-2-5"
 module: module-2
+permalink: /modules/desenvolvimento-intermediario/
 ---
 
 ## Objetivos do Módulo

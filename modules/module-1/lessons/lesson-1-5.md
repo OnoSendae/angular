@@ -15,6 +15,7 @@ exercises:
   - "lesson-1-5-exercise-3"
   - "lesson-1-5-exercise-4"
   - "lesson-1-5-exercise-5"
+permalink: /modules/fundamentos-acelerados/lessons/control-flow-pipes/
 ---
 
 ## Introdução

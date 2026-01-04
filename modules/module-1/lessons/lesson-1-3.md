@@ -17,10 +17,11 @@ exercises:
   - "lesson-1-3-exercise-5"
   - "lesson-1-3-exercise-6"
 podcast:
-  file: "assets/podcasts/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.m4a"
+  file: "assets/podcasts/01.3e4-Fundacao_Angular_Tipagem_Encapsulamento_e_Generics.m4a"
   title: "Componentes Standalone, Templates, Data Binding e Diretivas Modernas"
   description: "Mergulhe profundamente nos componentes standalone do Angular."
   duration: "60-75 minutos"
+permalink: /modules/fundamentos-acelerados/lessons/componentes-standalone/
 ---
 
 ## Introdução

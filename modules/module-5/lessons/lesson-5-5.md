@@ -8,6 +8,7 @@ duration: 120 minutos
 level: Avançado
 prerequisites: ["lesson-5-4"]
 exercises: []
+permalink: /modules/praticas-avancadas-projeto-final/lessons/projeto-final/
 ---
 
 ## Introdução

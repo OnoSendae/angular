@@ -11,6 +11,7 @@ lessons:
   - "lesson-1-4"
   - "lesson-1-5"
 module: module-1
+permalink: /modules/fundamentos-acelerados/
 ---
 
 ## Objetivos do Módulo

@@ -14,6 +14,7 @@ exercises:
   - "lesson-5-3-exercise-2"
   - "lesson-5-3-exercise-3"
   - "lesson-5-3-exercise-4"
+permalink: /modules/praticas-avancadas-projeto-final/lessons/seguranca/
 ---
 
 ## Introdução

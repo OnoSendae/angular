@@ -15,10 +15,11 @@ exercises:
   - "lesson-2-5-exercise-3"
   - "lesson-2-5-exercise-4"
 podcast:
-  file: "assets/podcasts/02.5-Comunicação_entre_Componentes_Input_Output_ViewChild.m4a"
+  file: "assets/podcasts/02.5-Comunicacao_entre_Componentes_Input_Output_ViewChild.m4a"
   title: "Comunicação entre Componentes - Input, Output, ViewChild"
   description: "Domine todos os padrões de comunicação entre componentes no Angular."
   duration: "45-60 minutos"
+permalink: /modules/desenvolvimento-intermediario/lessons/comunicacao-componentes/
 ---
 
 ## Introdução

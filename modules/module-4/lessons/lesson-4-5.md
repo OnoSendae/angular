@@ -18,6 +18,7 @@ podcast:
   title: "Zone.js e Zoneless Apps"
   description: "Zone.js é o motor da change detection tradicional do Angular."
   duration: "50-65 minutos"
+permalink: /modules/performance-otimizacao/lessons/zonejs/
 ---
 
 ## Introdução

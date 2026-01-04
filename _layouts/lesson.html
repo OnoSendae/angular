@@ -14,6 +14,10 @@ layout: default
     {% include podcast-player.html 
        podcast=page.podcast 
        lesson_id=page.lesson_id %}
+  {% else %}
+    {% include podcast-player.html 
+       podcast=null 
+       lesson_id=page.lesson_id %}
   {% endif %}
 </div>
 

@@ -11,6 +11,7 @@ lessons:
   - "lesson-4-4"
   - "lesson-4-5"
 module: module-4
+permalink: /modules/performance-otimizacao/
 ---
 
 ## Objetivos do Módulo

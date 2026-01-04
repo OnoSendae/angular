@@ -12,6 +12,7 @@ exercises:
   - "lesson-5-4-exercise-1"
   - "lesson-5-4-exercise-2"
   - "lesson-5-4-exercise-3"
+permalink: /modules/praticas-avancadas-projeto-final/lessons/arquitetura-avancada/
 ---
 
 ## Introdução

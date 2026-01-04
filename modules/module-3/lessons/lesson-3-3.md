@@ -22,6 +22,7 @@ podcast:
   title: "NgRx - Quando Vale a Pena Usar"
   description: "NgRx é poderoso, mas nem sempre necessário."
   duration: "70-85 minutos"
+permalink: /modules/programacao-reativa-estado/lessons/ngrx/
 ---
 
 ## Introdução

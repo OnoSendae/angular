@@ -11,6 +11,7 @@ lessons:
   - "lesson-5-4"
   - "lesson-5-5"
 module: module-5
+permalink: /modules/praticas-avancadas-projeto-final/
 ---
 
 ## Objetivos do Módulo

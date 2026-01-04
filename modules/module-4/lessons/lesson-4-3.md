@@ -15,10 +15,11 @@ exercises:
   - "lesson-4-3-exercise-3"
   - "lesson-4-3-exercise-4"
 podcast:
-  file: "assets/podcasts/04.3-Angular_Deferrable_Views_no_Código_(@defer).m4a"
+  file: "assets/podcasts/04.3-Angular_Deferrable_Views_no_Codigo_defer_.m4a"
   title: "Angular Deferrable Views no Código (@defer)"
   description: "Deferrable Views são a nova forma de lazy loading de componentes no Angular."
   duration: "50-65 minutos"
+permalink: /modules/performance-otimizacao/lessons/deferrable-views/
 ---
 
 ## Introdução
