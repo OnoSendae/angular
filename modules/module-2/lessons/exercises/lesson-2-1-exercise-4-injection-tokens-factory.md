@@ -306,8 +306,9 @@ import { API_CONFIG, ApiConfig } from './api-config';
 
       <p>API URL: {{ apiService.getBaseUrl() }}</p>
 {% endraw %}
-
+{% raw %}
       <p>Timeout: {{ apiService.getTimeout() }}ms</p>
+{% endraw %}
 
     </div>
   `

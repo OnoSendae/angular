@@ -268,8 +268,9 @@ import { ComponentScopedService } from './component-scoped.service';
 
         <p>ID: {{ rootService.getInstanceId() }}</p>
 {% endraw %}
-
+{% raw %}
         <p>{{ rootService.getScope() }}</p>
+{% endraw %}
 
       </div>
       
@@ -279,8 +280,9 @@ import { ComponentScopedService } from './component-scoped.service';
 
         <p>ID: {{ anyService.getInstanceId() }}</p>
 {% endraw %}
-
+{% raw %}
         <p>{{ anyService.getScope() }}</p>
+{% endraw %}
 
       </div>
       
@@ -290,8 +292,9 @@ import { ComponentScopedService } from './component-scoped.service';
 
         <p>ID: {{ componentService.getInstanceId() }}</p>
 {% endraw %}
-
+{% raw %}
         <p>{{ componentService.getScope() }}</p>
+{% endraw %}
 
       </div>
       
@@ -412,10 +415,11 @@ import { ComponentScopedService } from './component-scoped.service';
 
       <p>RootService ID: {{ rootService.getInstanceId() }} (mesmo)</p>
 {% endraw %}
-
+{% raw %}
       <p>AnyService ID: {{ anyService.getInstanceId() }} (mesmo se mesmo módulo)</p>
 
       <p>ComponentScopedService ID: {{ componentService.getInstanceId() }} (novo)</p>
+{% endraw %}
 
     </div>
   `

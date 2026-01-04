@@ -203,8 +203,9 @@ import { ChildComponent } from './child.component';
 
       <p>GlobalService ID: {{ globalService.getInstanceId() }}</p>
 {% endraw %}
-
+{% raw %}
       <p>ComponentService ID: {{ componentService.getInstanceId() }}</p>
+{% endraw %}
 
       <app-child></app-child>
     </div>
@@ -295,8 +296,9 @@ import { ComponentService } from './component.service';
 
       <p>GlobalService ID: {{ globalService.getInstanceId() }}</p>
 {% endraw %}
-
+{% raw %}
       <p>ComponentService ID: {{ componentService.getInstanceId() }}</p>
+{% endraw %}
 
       <p class="note">
         GlobalService: Mesma instância (root)<br>

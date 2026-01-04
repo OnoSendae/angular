@@ -415,8 +415,9 @@ import { Component, signal, computed, effect } from '@angular/core';
 
       <p>{{ count() }}</p>
 {% endraw %}
-
+{% raw %}
       <p>{{ doubleCount() }}</p>
+{% endraw %}
 
       <button (click)="increment()">Increment</button>
     </div>

@@ -208,8 +208,9 @@ import { CommonModule } from '@angular/common';
 
       <p>Valor: {{ count() }}</p>
 {% endraw %}
-
+{% raw %}
       <p>Dobro: {{ doubleCount() }}</p>
+{% endraw %}
 
       <div class="buttons">
         <button (click)="increment()">+</button>
