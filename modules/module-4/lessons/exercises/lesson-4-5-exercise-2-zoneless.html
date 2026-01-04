@@ -430,7 +430,35 @@
 
 <h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
 
-<p><strong>main.ts</strong></p>
+<p><strong>main.ts</strong>
+import { bootstrapApplication } from ‘@angular/platform-browser’;
+import { provideExperimentalZonelessChangeDetection } from ‘@angular/core’;
+import { provideRouter } from ‘@angular/router’;
+import { provideHttpClient } from ‘@angular/common/http’;
+import { AppComponent } from ‘./app/app.component’;
+import { routes } from ‘./app/app.routes’;</p>
+
+<p>bootstrapApplication(AppComponent, {
+  providers: [
+    provideExperimentalZonelessChangeDetection(),
+    provideRouter(routes),
+    provideHttpClient()
+  ]
+});
+import { bootstrapApplication } from ‘@angular/platform-browser’;
+import { provideExperimentalZonelessChangeDetection } from ‘@angular/core’;
+import { provideRouter } from ‘@angular/router’;
+import { provideHttpClient } from ‘@angular/common/http’;
+import { AppComponent } from ‘./app/app.component’;
+import { routes } from ‘./app/app.routes’;</p>
+
+<p>bootstrapApplication(AppComponent, {
+  providers: [
+    provideExperimentalZonelessChangeDetection(),
+    provideRouter(routes),
+    provideHttpClient()
+  ]
+});</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">bootstrapApplication</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/platform-browser</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">provideExperimentalZonelessChangeDetection</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">provideRouter</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/router</span><span class="dl">'</span><span class="p">;</span>
@@ -447,7 +475,56 @@
 <span class="p">});</span>
 </code></pre></div></div>
 
-<p><strong>app.component.ts</strong></p>
+<p><strong>app.component.ts</strong>
+import { Component, signal, computed } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;
+import { RouterOutlet } from ‘@angular/router’;
+import { HeaderComponent } from ‘./header/header.component’;</p>
+
+<p>@Component({
+  selector: ‘app-root’,
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, HeaderComponent],
+  template: `
+    &lt;div class="app"&gt;
+      &lt;app-header [title]=”appTitle()”&gt;&lt;/app-header&gt;
+      &lt;main&gt;
+        <router-outlet></router-outlet>
+      &lt;/main&gt;
+      &lt;footer&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;p&gt;Versão: {{ version() }}&lt;/p&gt;
+
+
+  &lt;/footer&gt;
+&lt;/div&gt;   ` }) export class AppComponent {   appTitle = signal('Zoneless App');   version = signal('1.0.0'); }
+</code></pre></div></div>
+
+<p>import { Component, signal, computed } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;
+import { RouterOutlet } from ‘@angular/router’;
+import { HeaderComponent } from ‘./header/header.component’;</p>
+
+<p>@Component({
+  selector: ‘app-root’,
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, HeaderComponent],
+  template: `
+    &lt;div class="app"&gt;
+      &lt;app-header [title]=”appTitle()”&gt;&lt;/app-header&gt;
+      &lt;main&gt;
+        <router-outlet></router-outlet>
+      &lt;/main&gt;
+      &lt;footer&gt;
+        &lt;p&gt;Versão: {{ version() }}&lt;/p&gt;
+      &lt;/footer&gt;
+    &lt;/div&gt;
+  `
+})
+export class AppComponent {
+  appTitle = signal(‘Zoneless App’);
+  version = signal(‘1.0.0’);
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">computed</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">RouterOutlet</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/router</span><span class="dl">'</span><span class="p">;</span>
@@ -464,7 +541,7 @@
         &lt;router-outlet&gt;&lt;/router-outlet&gt;
       &lt;/main&gt;
       &lt;footer&gt;
-        &lt;p&gt;Versão: &lt;/p&gt;
+        &lt;p&gt;Versão: {{ version() }}&lt;/p&gt;
       &lt;/footer&gt;
     &lt;/div&gt;
   `</span>
@@ -475,7 +552,124 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>counter.component.ts</strong></p>
+<p><strong>counter.component.ts</strong>
+import { Component, signal, computed } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>@Component({
+  selector: ‘app-counter’,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    &lt;div class="counter"&gt;
+      &lt;h2&gt;Contador (Zoneless)&lt;/h2&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;Valor: {{ count() }}&lt;/p&gt;
+
+
+  &lt;p&gt;Dobro: &lt;/p&gt;
+
+  &lt;div class="buttons"&gt;
+    &lt;button (click)="increment()"&gt;+&lt;/button&gt;
+    &lt;button (click)="decrement()"&gt;-&lt;/button&gt;
+    &lt;button (click)="reset()"&gt;Reset&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;   `,   styles: [`
+.counter {
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+button {
+  flex: 1;
+  padding: 0.75rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}   `] }) export class CounterComponent {   count = signal(0);   doubleCount = computed(() =&gt; this.count() * 2);
+</code></pre></div></div>
+
+<p>increment(): void {
+    this.count.update(v =&gt; v + 1);
+  }</p>
+
+<p>decrement(): void {
+    this.count.update(v =&gt; v - 1);
+  }</p>
+
+<p>reset(): void {
+    this.count.set(0);
+  }
+}</p>
+
+<p>import { Component, signal, computed } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>@Component({
+  selector: ‘app-counter’,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    &lt;div class="counter"&gt;
+      &lt;h2&gt;Contador (Zoneless)&lt;/h2&gt;
+      &lt;p&gt;Valor: {{ count() }}&lt;/p&gt;
+      &lt;p&gt;Dobro: {{ doubleCount() }}&lt;/p&gt;
+      &lt;div class="buttons"&gt;
+        &lt;button (click)=”increment()”&gt;+&lt;/button&gt;
+        &lt;button (click)=”decrement()”&gt;-&lt;/button&gt;
+        &lt;button (click)=”reset()”&gt;Reset&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  <code class="language-plaintext highlighter-rouge">,
+  styles: [</code>
+    .counter {
+      padding: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: 2rem auto;
+    }</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+button {
+  flex: 1;
+  padding: 0.75rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}   `] }) export class CounterComponent {   count = signal(0);   doubleCount = computed(() =&gt; this.count() * 2);
+</code></pre></div></div>
+
+<p>increment(): void {
+    this.count.update(v =&gt; v + 1);
+  }</p>
+
+<p>decrement(): void {
+    this.count.update(v =&gt; v - 1);
+  }</p>
+
+<p>reset(): void {
+    this.count.set(0);
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">computed</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
 
@@ -486,8 +680,8 @@
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;div class="counter"&gt;
       &lt;h2&gt;Contador (Zoneless)&lt;/h2&gt;
-      &lt;p&gt;Valor: 9&lt;/p&gt;
-      &lt;p&gt;Dobro: &lt;/p&gt;
+      &lt;p&gt;Valor: {{ count() }}&lt;/p&gt;
+      &lt;p&gt;Dobro: {{ doubleCount() }}&lt;/p&gt;
       &lt;div class="buttons"&gt;
         &lt;button (click)="increment()"&gt;+&lt;/button&gt;
         &lt;button (click)="decrement()"&gt;-&lt;/button&gt;
@@ -539,7 +733,116 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>user-list.component.ts</strong></p>
+<p><strong>user-list.component.ts</strong>
+import { Component, signal, computed, inject } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;
+import { HttpClient } from ‘@angular/common/http’;
+import { toSignal } from ‘@angular/core/rxjs-interop’;</p>
+
+<p>interface User {
+  id: number;
+  name: string;
+  email: string;
+}</p>
+
+<p>@Component({
+  selector: ‘app-user-list’,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    &lt;div&gt;
+      &lt;h2&gt;Usuários (Zoneless)&lt;/h2&gt;
+      &lt;button (click)=”loadUsers()”&gt;Carregar Usuários&lt;/button&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  @if (loading()) {
+    &lt;p&gt;Carregando...&lt;/p&gt;
+  }
+  
+  &lt;ul&gt;
+    @for (user of users(); track user.id) {
+      &lt;li&gt; - &lt;/li&gt;
+    }
+  &lt;/ul&gt;
+  
+
+
+  &lt;p&gt;Total: {{ userCount() }}&lt;/p&gt;
+
+
+&lt;/div&gt;   ` }) export class UserListComponent {   private http = inject(HttpClient);
+</code></pre></div></div>
+
+<p>loading = signal(false);
+  users = signal&lt;User[]&gt;([]);</p>
+
+<p>userCount = computed(() =&gt; this.users().length);</p>
+
+<p>loadUsers(): void {
+    this.loading.set(true);
+    this.http.get&lt;User[]&gt;(‘/api/users’).subscribe({
+      next: (users) =&gt; {
+        this.users.set(users);
+        this.loading.set(false);
+      },
+      error: () =&gt; {
+        this.loading.set(false);
+      }
+    });
+  }
+}</p>
+
+<p>import { Component, signal, computed, inject } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;
+import { HttpClient } from ‘@angular/common/http’;
+import { toSignal } from ‘@angular/core/rxjs-interop’;</p>
+
+<p>interface User {
+  id: number;
+  name: string;
+  email: string;
+}</p>
+
+<p>@Component({
+  selector: ‘app-user-list’,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    &lt;div&gt;
+      &lt;h2&gt;Usuários (Zoneless)&lt;/h2&gt;
+      &lt;button (click)=”loadUsers()”&gt;Carregar Usuários&lt;/button&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  @if (loading()) {
+    &lt;p&gt;Carregando...&lt;/p&gt;
+  }
+  
+  &lt;ul&gt;
+    @for (user of users(); track user.id) {
+      &lt;li&gt;{{ user.name }} - {{ user.email }}&lt;/li&gt;
+    }
+  &lt;/ul&gt;
+  
+  &lt;p&gt;Total: {{ userCount() }}&lt;/p&gt;
+&lt;/div&gt;   ` }) export class UserListComponent {   private http = inject(HttpClient);
+</code></pre></div></div>
+
+<p>loading = signal(false);
+  users = signal&lt;User[]&gt;([]);</p>
+
+<p>userCount = computed(() =&gt; this.users().length);</p>
+
+<p>loadUsers(): void {
+    this.loading.set(true);
+    this.http.get&lt;User[]&gt;(‘/api/users’).subscribe({
+      next: (users) =&gt; {
+        this.users.set(users);
+        this.loading.set(false);
+      },
+      error: () =&gt; {
+        this.loading.set(false);
+      }
+    });
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">computed</span><span class="p">,</span> <span class="nx">inject</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">HttpClient</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common/http</span><span class="dl">'</span><span class="p">;</span>
@@ -566,11 +869,11 @@
       
       &lt;ul&gt;
         @for (user of users(); track user.id) {
-          &lt;li&gt; - &lt;/li&gt;
+          &lt;li&gt;{{ user.name }} - {{ user.email }}&lt;/li&gt;
         }
       &lt;/ul&gt;
       
-      &lt;p&gt;Total: &lt;/p&gt;
+      &lt;p&gt;Total: {{ userCount() }}&lt;/p&gt;
     &lt;/div&gt;
   `</span>
 <span class="p">})</span>

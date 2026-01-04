@@ -430,7 +430,72 @@
 
 <h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
 
-<p><strong>counter.component.ts</strong></p>
+<p><strong>counter.component.ts</strong>
+import { Component, signal } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>@Component({
+  selector: ‘app-counter’,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    &lt;div class="counter"&gt;
+      &lt;h2&gt;Contador&lt;/h2&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;Valor: {{ count() }}&lt;/p&gt;
+
+
+  &lt;button (click)="increment()"&gt;+&lt;/button&gt;
+  &lt;button (click)="decrement()"&gt;-&lt;/button&gt;
+  &lt;button (click)="reset()"&gt;Reset&lt;/button&gt;
+&lt;/div&gt;   ` }) export class CounterComponent {   count = signal(0);
+</code></pre></div></div>
+
+<p>increment(): void {
+    this.count.update(v =&gt; v + 1);
+  }</p>
+
+<p>decrement(): void {
+    this.count.update(v =&gt; v - 1);
+  }</p>
+
+<p>reset(): void {
+    this.count.set(0);
+  }
+}</p>
+
+<p>import { Component, signal } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>@Component({
+  selector: ‘app-counter’,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    &lt;div class="counter"&gt;
+      &lt;h2&gt;Contador&lt;/h2&gt;
+      &lt;p&gt;Valor: {{ count() }}&lt;/p&gt;
+      &lt;button (click)=”increment()”&gt;+&lt;/button&gt;
+      &lt;button (click)=”decrement()”&gt;-&lt;/button&gt;
+      &lt;button (click)=”reset()”&gt;Reset&lt;/button&gt;
+    &lt;/div&gt;
+  `
+})
+export class CounterComponent {
+  count = signal(0);</p>
+
+<p>increment(): void {
+    this.count.update(v =&gt; v + 1);
+  }</p>
+
+<p>decrement(): void {
+    this.count.update(v =&gt; v - 1);
+  }</p>
+
+<p>reset(): void {
+    this.count.set(0);
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">signal</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
 
@@ -441,7 +506,7 @@
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;div class="counter"&gt;
       &lt;h2&gt;Contador&lt;/h2&gt;
-      &lt;p&gt;Valor: 9&lt;/p&gt;
+      &lt;p&gt;Valor: {{ count() }}&lt;/p&gt;
       &lt;button (click)="increment()"&gt;+&lt;/button&gt;
       &lt;button (click)="decrement()"&gt;-&lt;/button&gt;
       &lt;button (click)="reset()"&gt;Reset&lt;/button&gt;
@@ -465,7 +530,97 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>counter.component.spec.ts</strong></p>
+<p><strong>counter.component.spec.ts</strong>
+import { ComponentFixture, TestBed } from ‘@angular/core/testing’;
+import { CounterComponent } from ‘./counter.component’;</p>
+
+<p>describe(‘CounterComponent’, () =&gt; {
+  let component: CounterComponent;
+  let fixture: ComponentFixture<CounterComponent>;</CounterComponent></p>
+
+<p>beforeEach(async () =&gt; {
+    await TestBed.configureTestingModule({
+      imports: [CounterComponent]
+    }).compileComponents();</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fixture = TestBed.createComponent(CounterComponent);
+component = fixture.componentInstance;
+fixture.detectChanges();   });
+</code></pre></div></div>
+
+<p>it(‘should create’, () =&gt; {
+    expect(component).toBeTruthy();
+  });</p>
+
+<p>it(‘should initialize with count 0’, () =&gt; {
+    expect(component.count()).toBe(0);
+  });</p>
+
+<p>it(‘should increment count’, () =&gt; {
+    component.increment();
+    expect(component.count()).toBe(1);</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>component.increment();
+expect(component.count()).toBe(2);   });
+</code></pre></div></div>
+
+<p>it(‘should decrement count’, () =&gt; {
+    component.count.set(5);
+    component.decrement();
+    expect(component.count()).toBe(4);
+  });</p>
+
+<p>it(‘should reset count to 0’, () =&gt; {
+    component.count.set(10);
+    component.reset();
+    expect(component.count()).toBe(0);
+  });
+});
+import { ComponentFixture, TestBed } from ‘@angular/core/testing’;
+import { CounterComponent } from ‘./counter.component’;</p>
+
+<p>describe(‘CounterComponent’, () =&gt; {
+  let component: CounterComponent;
+  let fixture: ComponentFixture<CounterComponent>;</CounterComponent></p>
+
+<p>beforeEach(async () =&gt; {
+    await TestBed.configureTestingModule({
+      imports: [CounterComponent]
+    }).compileComponents();</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fixture = TestBed.createComponent(CounterComponent);
+component = fixture.componentInstance;
+fixture.detectChanges();   });
+</code></pre></div></div>
+
+<p>it(‘should create’, () =&gt; {
+    expect(component).toBeTruthy();
+  });</p>
+
+<p>it(‘should initialize with count 0’, () =&gt; {
+    expect(component.count()).toBe(0);
+  });</p>
+
+<p>it(‘should increment count’, () =&gt; {
+    component.increment();
+    expect(component.count()).toBe(1);</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>component.increment();
+expect(component.count()).toBe(2);   });
+</code></pre></div></div>
+
+<p>it(‘should decrement count’, () =&gt; {
+    component.count.set(5);
+    component.decrement();
+    expect(component.count()).toBe(4);
+  });</p>
+
+<p>it(‘should reset count to 0’, () =&gt; {
+    component.count.set(10);
+    component.reset();
+    expect(component.count()).toBe(0);
+  });
+});</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">ComponentFixture</span><span class="p">,</span> <span class="nx">TestBed</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core/testing</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CounterComponent</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./counter.component</span><span class="dl">'</span><span class="p">;</span>
 
@@ -513,7 +668,27 @@
 <span class="p">});</span>
 </code></pre></div></div>
 
-<p><strong>jest.config.js</strong></p>
+<p><strong>jest.config.js</strong>
+module.exports = {
+  preset: ‘jest-preset-angular’,
+  setupFilesAfterEnv: [‘<rootDir>/setup-jest.ts'],
+  testMatch: ['**/*.spec.ts'],
+  collectCoverageFrom: [
+    'src/**/*.ts',
+    '!src/**/*.spec.ts',
+    '!src/**/*.module.ts'
+  ]
+};
+module.exports = {
+  preset: 'jest-preset-angular',
+  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
+  testMatch: ['**/*.spec.ts'],
+  collectCoverageFrom: [
+    'src/**/*.ts',
+    '!src/**/*.spec.ts',
+    '!src/**/*.module.ts'
+  ]
+};</rootDir></rootDir></p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">preset</span><span class="p">:</span> <span class="dl">'</span><span class="s1">jest-preset-angular</span><span class="dl">'</span><span class="p">,</span>
   <span class="na">setupFilesAfterEnv</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">&lt;rootDir&gt;/setup-jest.ts</span><span class="dl">'</span><span class="p">],</span>

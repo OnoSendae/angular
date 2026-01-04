@@ -432,7 +432,39 @@
 
 <h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
 
-<p><strong>api-config.ts</strong></p>
+<p><strong>api-config.ts</strong>
+import { InjectionToken } from ‘@angular/core’;</p>
+
+<p>export interface ApiConfig {
+  baseUrl: string;
+  timeout: number;
+  retries: number;
+  apiKey?: string;
+}</p>
+
+<p>export const API_CONFIG = new InjectionToken<ApiConfig>('API_CONFIG');</ApiConfig></p>
+
+<p>export const DEFAULT_API_CONFIG: ApiConfig = {
+  baseUrl: ‘https://api.example.com’,
+  timeout: 5000,
+  retries: 3
+};
+import { InjectionToken } from ‘@angular/core’;</p>
+
+<p>export interface ApiConfig {
+  baseUrl: string;
+  timeout: number;
+  retries: number;
+  apiKey?: string;
+}</p>
+
+<p>export const API_CONFIG = new InjectionToken<ApiConfig>('API_CONFIG');</ApiConfig></p>
+
+<p>export const DEFAULT_API_CONFIG: ApiConfig = {
+  baseUrl: ‘https://api.example.com’,
+  timeout: 5000,
+  retries: 3
+};</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">InjectionToken</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="k">export</span> <span class="kr">interface</span> <span class="nx">ApiConfig</span> <span class="p">{</span>
@@ -451,7 +483,83 @@
 <span class="p">};</span>
 </code></pre></div></div>
 
-<p><strong>api.service.ts</strong></p>
+<p><strong>api.service.ts</strong>
+import { Injectable, Inject, inject } from ‘@angular/core’;
+import { HttpClient } from ‘@angular/common/http’;
+import { Observable } from ‘rxjs’;
+import { API_CONFIG, ApiConfig } from ‘./api-config’;</p>
+
+<p>@Injectable({
+  providedIn: ‘root’,
+  useFactory: (http: HttpClient, config: ApiConfig) =&gt; {
+    return new ApiService(http, config);
+  },
+  deps: [HttpClient, API_CONFIG]
+})
+export class ApiService {
+  constructor(
+    private http: HttpClient,
+    @Inject(API_CONFIG) private config: ApiConfig
+  ) {
+    console.log(‘ApiService criado com config:’, this.config);
+  }</p>
+
+<p>getBaseUrl(): string {
+    return this.config.baseUrl;
+  }</p>
+
+<p>getTimeout(): number {
+    return this.config.timeout;
+  }</p>
+
+<p>get<T>(endpoint: string): Observable<T> {
+    const url = `${this.config.baseUrl}${endpoint}`;
+    return this.http.get<T>(url);
+  }</T></T></T></p>
+
+<p>post<T>(endpoint: string, data: any): Observable<T> {
+    const url = `${this.config.baseUrl}${endpoint}`;
+    return this.http.post<T>(url, data);
+  }
+}
+import { Injectable, Inject, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { API_CONFIG, ApiConfig } from './api-config';</T></T></T></p>
+
+<p>@Injectable({
+  providedIn: ‘root’,
+  useFactory: (http: HttpClient, config: ApiConfig) =&gt; {
+    return new ApiService(http, config);
+  },
+  deps: [HttpClient, API_CONFIG]
+})
+export class ApiService {
+  constructor(
+    private http: HttpClient,
+    @Inject(API_CONFIG) private config: ApiConfig
+  ) {
+    console.log(‘ApiService criado com config:’, this.config);
+  }</p>
+
+<p>getBaseUrl(): string {
+    return this.config.baseUrl;
+  }</p>
+
+<p>getTimeout(): number {
+    return this.config.timeout;
+  }</p>
+
+<p>get<T>(endpoint: string): Observable<T> {
+    const url = `${this.config.baseUrl}${endpoint}`;
+    return this.http.get<T>(url);
+  }</T></T></T></p>
+
+<p>post<T>(endpoint: string, data: any): Observable<T> {
+    const url = `${this.config.baseUrl}${endpoint}`;
+    return this.http.post<T>(url, data);
+  }
+}</T></T></T></p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Injectable</span><span class="p">,</span> <span class="nx">Inject</span><span class="p">,</span> <span class="nx">inject</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">HttpClient</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common/http</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">Observable</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">rxjs</span><span class="dl">'</span><span class="p">;</span>
@@ -492,7 +600,35 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>app.config.ts</strong></p>
+<p><strong>app.config.ts</strong>
+import { ApplicationConfig, provideZoneJsChangeDetection } from ‘@angular/core’;
+import { provideHttpClient } from ‘@angular/common/http’;
+import { API_CONFIG, DEFAULT_API_CONFIG } from ‘./api-config’;</p>
+
+<p>export const appConfig: ApplicationConfig = {
+  providers: [
+    provideZoneJsChangeDetection({ eventCoalescing: true }),
+    provideHttpClient(),
+    {
+      provide: API_CONFIG,
+      useValue: DEFAULT_API_CONFIG
+    }
+  ]
+};
+import { ApplicationConfig, provideZoneJsChangeDetection } from ‘@angular/core’;
+import { provideHttpClient } from ‘@angular/common/http’;
+import { API_CONFIG, DEFAULT_API_CONFIG } from ‘./api-config’;</p>
+
+<p>export const appConfig: ApplicationConfig = {
+  providers: [
+    provideZoneJsChangeDetection({ eventCoalescing: true }),
+    provideHttpClient(),
+    {
+      provide: API_CONFIG,
+      useValue: DEFAULT_API_CONFIG
+    }
+  ]
+};</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">ApplicationConfig</span><span class="p">,</span> <span class="nx">provideZoneJsChangeDetection</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">provideHttpClient</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common/http</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">API_CONFIG</span><span class="p">,</span> <span class="nx">DEFAULT_API_CONFIG</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./api-config</span><span class="dl">'</span><span class="p">;</span>
@@ -509,7 +645,66 @@
 <span class="p">};</span>
 </code></pre></div></div>
 
-<p><strong>feature.component.ts</strong></p>
+<p><strong>feature.component.ts</strong>
+import { Component } from ‘@angular/core’;
+import { ApiService } from ‘./api.service’;
+import { API_CONFIG, ApiConfig } from ‘./api-config’;</p>
+
+<p>@Component({
+  selector: ‘app-feature’,
+  standalone: true,
+  providers: [
+    {
+      provide: API_CONFIG,
+      useValue: {
+        baseUrl: ‘https://api.feature.com’,
+        timeout: 10000,
+        retries: 5,
+        apiKey: ‘feature-key’
+      }
+    }
+  ],
+  template: `
+    &lt;div&gt;
+      &lt;h2&gt;Feature Component&lt;/h2&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;API URL: {{ apiService.getBaseUrl() }}&lt;/p&gt;
+
+
+  &lt;p&gt;Timeout: ms&lt;/p&gt;
+
+&lt;/div&gt;   ` }) export class FeatureComponent {   apiService = inject(ApiService); }
+</code></pre></div></div>
+
+<p>import { Component } from ‘@angular/core’;
+import { ApiService } from ‘./api.service’;
+import { API_CONFIG, ApiConfig } from ‘./api-config’;</p>
+
+<p>@Component({
+  selector: ‘app-feature’,
+  standalone: true,
+  providers: [
+    {
+      provide: API_CONFIG,
+      useValue: {
+        baseUrl: ‘https://api.feature.com’,
+        timeout: 10000,
+        retries: 5,
+        apiKey: ‘feature-key’
+      }
+    }
+  ],
+  template: `
+    &lt;div&gt;
+      &lt;h2&gt;Feature Component&lt;/h2&gt;
+      &lt;p&gt;API URL: {{ apiService.getBaseUrl() }}&lt;/p&gt;
+      &lt;p&gt;Timeout: {{ apiService.getTimeout() }}ms&lt;/p&gt;
+    &lt;/div&gt;
+  `
+})
+export class FeatureComponent {
+  apiService = inject(ApiService);
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">ApiService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./api.service</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">API_CONFIG</span><span class="p">,</span> <span class="nx">ApiConfig</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./api-config</span><span class="dl">'</span><span class="p">;</span>
@@ -531,8 +726,8 @@
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;div&gt;
       &lt;h2&gt;Feature Component&lt;/h2&gt;
-      &lt;p&gt;API URL: &lt;/p&gt;
-      &lt;p&gt;Timeout: ms&lt;/p&gt;
+      &lt;p&gt;API URL: {{ apiService.getBaseUrl() }}&lt;/p&gt;
+      &lt;p&gt;Timeout: {{ apiService.getTimeout() }}ms&lt;/p&gt;
     &lt;/div&gt;
   `</span>
 <span class="p">})</span>

@@ -430,7 +430,97 @@
 
 <h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
 
-<p><strong>counter-model.component.ts</strong></p>
+<p><strong>counter-model.component.ts</strong>
+import { Component, model } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>@Component({
+  selector: ‘app-counter-model’,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    &lt;div class="counter"&gt;
+      &lt;h3&gt;Contador&lt;/h3&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;Valor: {{ count() }}&lt;/p&gt;
+
+
+  &lt;div class="buttons"&gt;
+    &lt;button (click)="increment()"&gt;+&lt;/button&gt;
+    &lt;button (click)="decrement()"&gt;-&lt;/button&gt;
+    &lt;button (click)="reset()"&gt;Reset&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;   `,   styles: [`
+.counter {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}   `] }) export class CounterModelComponent {   count = model&lt;number&gt;(0);
+</code></pre></div></div>
+
+<p>increment(): void {
+    this.count.update(value =&gt; value + 1);
+  }</p>
+
+<p>decrement(): void {
+    this.count.update(value =&gt; value - 1);
+  }</p>
+
+<p>reset(): void {
+    this.count.set(0);
+  }
+}</p>
+
+<p>import { Component, model } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>@Component({
+  selector: ‘app-counter-model’,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    &lt;div class="counter"&gt;
+      &lt;h3&gt;Contador&lt;/h3&gt;
+      &lt;p&gt;Valor: {{ count() }}&lt;/p&gt;
+      &lt;div class="buttons"&gt;
+        &lt;button (click)=”increment()”&gt;+&lt;/button&gt;
+        &lt;button (click)=”decrement()”&gt;-&lt;/button&gt;
+        &lt;button (click)=”reset()”&gt;Reset&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  <code class="language-plaintext highlighter-rouge">,
+  styles: [</code>
+    .counter {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 4px;
+    }</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}   `] }) export class CounterModelComponent {   count = model&lt;number&gt;(0);
+</code></pre></div></div>
+
+<p>increment(): void {
+    this.count.update(value =&gt; value + 1);
+  }</p>
+
+<p>decrement(): void {
+    this.count.update(value =&gt; value - 1);
+  }</p>
+
+<p>reset(): void {
+    this.count.set(0);
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">model</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
 
@@ -441,7 +531,7 @@
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;div class="counter"&gt;
       &lt;h3&gt;Contador&lt;/h3&gt;
-      &lt;p&gt;Valor: 9&lt;/p&gt;
+      &lt;p&gt;Valor: {{ count() }}&lt;/p&gt;
       &lt;div class="buttons"&gt;
         &lt;button (click)="increment()"&gt;+&lt;/button&gt;
         &lt;button (click)="decrement()"&gt;-&lt;/button&gt;
@@ -480,7 +570,73 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>parent-model.component.ts</strong></p>
+<p><strong>parent-model.component.ts</strong>
+import { Component, signal } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;
+import { CounterModelComponent } from ‘./counter-model.component’;</p>
+
+<p>@Component({
+  selector: ‘app-parent-model’,
+  standalone: true,
+  imports: [CommonModule, CounterModelComponent],
+  template: `
+    &lt;div&gt;
+      &lt;h2&gt;Parent Component&lt;/h2&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;Valor no pai: {{ parentCount() }}&lt;/p&gt;
+
+
+  
+  &lt;app-counter-model [(count)]="parentCount"&gt;&lt;/app-counter-model&gt;
+  
+  &lt;div class="controls"&gt;
+    &lt;button (click)="setValue(10)"&gt;Definir como 10&lt;/button&gt;
+    &lt;button (click)="setValue(0)"&gt;Resetar&lt;/button&gt;
+    &lt;button (click)="increment()"&gt;Incrementar do Pai&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;   ` }) export class ParentModelComponent {   parentCount = signal&lt;number&gt;(5);
+</code></pre></div></div>
+
+<p>setValue(value: number): void {
+    this.parentCount.set(value);
+  }</p>
+
+<p>increment(): void {
+    this.parentCount.update(value =&gt; value + 1);
+  }
+}</p>
+
+<p>import { Component, signal } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;
+import { CounterModelComponent } from ‘./counter-model.component’;</p>
+
+<p>@Component({
+  selector: ‘app-parent-model’,
+  standalone: true,
+  imports: [CommonModule, CounterModelComponent],
+  template: `
+    &lt;div&gt;
+      &lt;h2&gt;Parent Component&lt;/h2&gt;
+      &lt;p&gt;Valor no pai: {{ parentCount() }}&lt;/p&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;app-counter-model [(count)]="parentCount"&gt;&lt;/app-counter-model&gt;
+  
+  &lt;div class="controls"&gt;
+    &lt;button (click)="setValue(10)"&gt;Definir como 10&lt;/button&gt;
+    &lt;button (click)="setValue(0)"&gt;Resetar&lt;/button&gt;
+    &lt;button (click)="increment()"&gt;Incrementar do Pai&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;   ` }) export class ParentModelComponent {   parentCount = signal&lt;number&gt;(5);
+</code></pre></div></div>
+
+<p>setValue(value: number): void {
+    this.parentCount.set(value);
+  }</p>
+
+<p>increment(): void {
+    this.parentCount.update(value =&gt; value + 1);
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">signal</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CounterModelComponent</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./counter-model.component</span><span class="dl">'</span><span class="p">;</span>
@@ -492,7 +648,7 @@
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;div&gt;
       &lt;h2&gt;Parent Component&lt;/h2&gt;
-      &lt;p&gt;Valor no pai: &lt;/p&gt;
+      &lt;p&gt;Valor no pai: {{ parentCount() }}&lt;/p&gt;
       
       &lt;app-counter-model [(count)]="parentCount"&gt;&lt;/app-counter-model&gt;
       

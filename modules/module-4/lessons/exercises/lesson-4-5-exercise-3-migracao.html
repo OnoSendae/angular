@@ -432,100 +432,167 @@
 <h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
 
 <p><strong>migration-plan.md</strong></p>
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Plano de Migração para Zoneless</span>
+<h1 id="plano-de-migração-para-zoneless">Plano de Migração para Zoneless</h1>
 
-<span class="gu">## 1. Análise</span>
+<h2 id="1-análise">1. Análise</h2>
 
-<span class="gu">### Componentes Identificados</span>
-<span class="p">-</span> AppComponent (root)
-<span class="p">-</span> CounterComponent
-<span class="p">-</span> UserListComponent
-<span class="p">-</span> ProductListComponent
-<span class="p">-</span> CartComponent
+<h3 id="componentes-identificados">Componentes Identificados</h3>
+<ul>
+  <li>AppComponent (root)</li>
+  <li>CounterComponent</li>
+  <li>UserListComponent</li>
+  <li>ProductListComponent</li>
+  <li>CartComponent</li>
+</ul>
 
-<span class="gu">### Dependências de Zone.js</span>
-<span class="p">-</span> setTimeout/setInterval
-<span class="p">-</span> Event listeners
-<span class="p">-</span> HTTP requests
-<span class="p">-</span> Observables
+<h3 id="dependências-de-zonejs">Dependências de Zone.js</h3>
+<ul>
+  <li>setTimeout/setInterval</li>
+  <li>Event listeners</li>
+  <li>HTTP requests</li>
+  <li>Observables</li>
+</ul>
 
-<span class="gu">## 2. Estratégia</span>
+<h2 id="2-estratégia">2. Estratégia</h2>
 
-<span class="gu">### Fase 1: Preparação</span>
-<span class="p">-</span> Converter para Signals onde possível
-<span class="p">-</span> Remover dependências explícitas de Zone.js
-<span class="p">-</span> Adicionar change detection manual quando necessário
+<h3 id="fase-1-preparação">Fase 1: Preparação</h3>
+<ul>
+  <li>Converter para Signals onde possível</li>
+  <li>Remover dependências explícitas de Zone.js</li>
+  <li>Adicionar change detection manual quando necessário</li>
+</ul>
 
-<span class="gu">### Fase 2: Migração Gradual</span>
-<span class="p">-</span> Migrar componentes novos primeiro
-<span class="p">-</span> Migrar componentes simples
-<span class="p">-</span> Migrar componentes complexos
+<h3 id="fase-2-migração-gradual">Fase 2: Migração Gradual</h3>
+<ul>
+  <li>Migrar componentes novos primeiro</li>
+  <li>Migrar componentes simples</li>
+  <li>Migrar componentes complexos</li>
+</ul>
 
-<span class="gu">### Fase 3: Finalização</span>
-<span class="p">-</span> Habilitar zoneless
-<span class="p">-</span> Testar extensivamente
-<span class="p">-</span> Corrigir problemas
+<h3 id="fase-3-finalização">Fase 3: Finalização</h3>
+<ul>
+  <li>Habilitar zoneless</li>
+  <li>Testar extensivamente</li>
+  <li>Corrigir problemas</li>
+</ul>
 
-<span class="gu">## 3. Checklist</span>
-<span class="p">
--</span> [ ] Todos componentes usam Signals
-<span class="p">-</span> [ ] Observables convertidos para Signals
-<span class="p">-</span> [ ] Change detection manual adicionada quando necessário
-<span class="p">-</span> [ ] Testes atualizados
-<span class="p">-</span> [ ] Performance verificada
-</code></pre></div></div>
+<h2 id="3-checklist">3. Checklist</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Todos componentes usam Signals</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Observables convertidos para Signals</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Change detection manual adicionada quando necessário</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Testes atualizados</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Performance verificada
+```markdown
+    <h1 id="plano-de-migração-para-zoneless-1">Plano de Migração para Zoneless</h1>
+  </li>
+</ul>
+
+<h2 id="1-análise-1">1. Análise</h2>
+
+<h3 id="componentes-identificados-1">Componentes Identificados</h3>
+<ul>
+  <li>AppComponent (root)</li>
+  <li>CounterComponent</li>
+  <li>UserListComponent</li>
+  <li>ProductListComponent</li>
+  <li>CartComponent</li>
+</ul>
+
+<h3 id="dependências-de-zonejs-1">Dependências de Zone.js</h3>
+<ul>
+  <li>setTimeout/setInterval</li>
+  <li>Event listeners</li>
+  <li>HTTP requests</li>
+  <li>Observables</li>
+</ul>
+
+<h2 id="2-estratégia-1">2. Estratégia</h2>
+
+<h3 id="fase-1-preparação-1">Fase 1: Preparação</h3>
+<ul>
+  <li>Converter para Signals onde possível</li>
+  <li>Remover dependências explícitas de Zone.js</li>
+  <li>Adicionar change detection manual quando necessário</li>
+</ul>
+
+<h3 id="fase-2-migração-gradual-1">Fase 2: Migração Gradual</h3>
+<ul>
+  <li>Migrar componentes novos primeiro</li>
+  <li>Migrar componentes simples</li>
+  <li>Migrar componentes complexos</li>
+</ul>
+
+<h3 id="fase-3-finalização-1">Fase 3: Finalização</h3>
+<ul>
+  <li>Habilitar zoneless</li>
+  <li>Testar extensivamente</li>
+  <li>Corrigir problemas</li>
+</ul>
+
+<h2 id="3-checklist-1">3. Checklist</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Todos componentes usam Signals</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Observables convertidos para Signals</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Change detection manual adicionada quando necessário</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Testes atualizados</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Performance verificada
+```</li>
+</ul>
 
 <p><strong>before-migration.component.ts</strong> (ANTES)</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">OnInit</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">HttpClient</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common/http</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">Observable</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">rxjs</span><span class="dl">'</span><span class="p">;</span>
+<p>import { Component, OnInit } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;
+import { HttpClient } from ‘@angular/common/http’;
+import { Observable } from ‘rxjs’;</p>
 
-<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
-  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-before</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">CommonModule</span><span class="p">],</span>
-  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+<p>@Component({
+  selector: ‘app-before’,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
     &lt;div&gt;
       &lt;h2&gt;Antes da Migração&lt;/h2&gt;
       &lt;p&gt;Count: {{ count }}&lt;/p&gt;
       &lt;ul&gt;
-        &lt;li *ngFor="let user of users$ | async"&gt;{{ user.name }}&lt;/li&gt;
+        &lt;li *ngFor=”let user of users$ | async”&gt;{{ user.name }}&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
-  `</span>
+  `</p>
 
-<span class="p">})</span>
-<span class="k">export</span> <span class="kd">class</span> <span class="nc">BeforeComponent</span> <span class="k">implements</span> <span class="nx">OnInit</span> <span class="p">{</span>
-  <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="nx">users$</span><span class="p">:</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="kr">any</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span>
-  
-  <span class="nf">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">http</span><span class="p">:</span> <span class="nx">HttpClient</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">users$</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="kd">get</span><span class="o">&lt;</span><span class="kr">any</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api/users</span><span class="dl">'</span><span class="p">);</span>
-  <span class="p">}</span>
-  
-  <span class="nf">ngOnInit</span><span class="p">():</span> <span class="k">void</span> <span class="p">{</span>
-    <span class="nf">setInterval</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="o">++</span><span class="p">;</span>
-    <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<p>})
+export class BeforeComponent implements OnInit {
+  count = 0;
+  users$: Observable&lt;any[]&gt;;</p>
 
-<p><strong>after-migration.component.ts</strong> (DEPOIS)</p>
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">computed</span><span class="p">,</span> <span class="nx">inject</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">HttpClient</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common/http</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">toSignal</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core/rxjs-interop</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">interval</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">rxjs</span><span class="dl">'</span><span class="p">;</span>
+<p>constructor(private http: HttpClient) {
+    this.users$ = this.http.get&lt;any[]&gt;(‘/api/users’);
+  }</p>
 
-<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
-  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-after</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">CommonModule</span><span class="p">],</span>
+<p>ngOnInit(): void {
+    setInterval(() =&gt; {
+      this.count++;
+    }, 1000);
+  }
+}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+**after-migration.component.ts** (DEPOIS)
 
-  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+```typescript
+import { Component, signal, computed, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { interval } from 'rxjs';
+
+@Component({
+  selector: 'app-after',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
     &lt;div&gt;
       &lt;h2&gt;Depois da Migração&lt;/h2&gt;
       &lt;p&gt;Count: {{ count() }}&lt;/p&gt;
@@ -535,28 +602,32 @@
         }
       &lt;/ul&gt;
     &lt;/div&gt;
-  `</span>
-
-<span class="p">})</span>
-<span class="k">export</span> <span class="kd">class</span> <span class="nc">AfterComponent</span> <span class="p">{</span>
-  <span class="k">private</span> <span class="nx">http</span> <span class="o">=</span> <span class="nf">inject</span><span class="p">(</span><span class="nx">HttpClient</span><span class="p">);</span>
+  `
+})
+export class AfterComponent {
+  private http = inject(HttpClient);
   
-  <span class="nx">count</span> <span class="o">=</span> <span class="nf">signal</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  count = signal(0);
   
-  <span class="nx">users</span> <span class="o">=</span> <span class="nf">toSignal</span><span class="p">(</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="kd">get</span><span class="o">&lt;</span><span class="kr">any</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api/users</span><span class="dl">'</span><span class="p">),</span>
-    <span class="p">{</span> <span class="na">initialValue</span><span class="p">:</span> <span class="p">[]</span> <span class="p">}</span>
-  <span class="p">);</span>
+  users = toSignal(
+    this.http.get&lt;any[]&gt;('/api/users'),
+    { initialValue: [] }
+  );
   
-  <span class="nf">constructor</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">interval</span><span class="p">(</span><span class="mi">1000</span><span class="p">).</span><span class="nf">subscribe</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="nx">v</span> <span class="o">=&gt;</span> <span class="nx">v</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-    <span class="p">});</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+  constructor() {
+    interval(1000).subscribe(() =&gt; {
+      this.count.update(v =&gt; v + 1);
+    });
+  }
+}
 </code></pre></div></div>
 
 <p><strong>migration-steps.md</strong></p>
+<h1 id="passos-de-migração">Passos de Migração</h1>
+
+<h2 id="1-converter-propriedades-para-signals">1. Converter Propriedades para Signals</h2>
+
+<p>Antes:</p>
 <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Passos de Migração</span>
 
 <span class="gu">## 1. Converter Propriedades para Signals</span>
@@ -564,16 +635,24 @@
 Antes:
 </code></pre></div></div>
 <p>count = 0;</p>
+
+<p>Depois:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 Depois:
 </code></pre></div></div>
 <p>count = signal(0);</p>
+
+<h2 id="2-converter-observables-para-signals">2. Converter Observables para Signals</h2>
+
+<p>Antes:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ## 2. Converter Observables para Signals
 
 Antes:
 </code></pre></div></div>
 <p>users$ = this.http.get(‘/api/users’);</p>
+
+<p>Depois:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 Depois:
 </code></pre></div></div>
@@ -581,6 +660,10 @@ Depois:
   this.http.get(‘/api/users’),
   { initialValue: [] }
 );</p>
+
+<h2 id="3-atualizar-templates">3. Atualizar Templates</h2>
+
+<p>Antes:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ## 3. Atualizar Templates
 
@@ -588,13 +671,20 @@ Antes:
 </code></pre></div></div>
 <p>9</p>
 <p>&lt;li *ngFor=”let user of users$ | async”&gt;&lt;/li&gt;</p>
+
+<p>Depois:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 Depois:
 </code></pre></div></div>
-<p>9</p>
+
+<p>{{ count() }}</p>
+
 <p>@for (user of users(); track user.id) {</p>
 <li></li>
 <p>}</p>
+
+<h2 id="4-habilitar-zoneless">4. Habilitar Zoneless</h2>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ## 4. Habilitar Zoneless
 
@@ -604,13 +694,24 @@ Depois:
     provideExperimentalZonelessChangeDetection()
   ]
 });</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-## 5. Testar e Corrigir
 
-- Testar todos componentes
-- Verificar change detection
-- Corrigir problemas encontrados
-</code></pre></div></div>
+<h2 id="5-testar-e-corrigir">5. Testar e Corrigir</h2>
+
+<ul>
+  <li>Testar todos componentes</li>
+  <li>Verificar change detection</li>
+  <li>Corrigir problemas encontrados
+```</li>
+</ul>
+
+<h2 id="5-testar-e-corrigir-1">5. Testar e Corrigir</h2>
+
+<ul>
+  <li>Testar todos componentes</li>
+  <li>Verificar change detection</li>
+  <li>Corrigir problemas encontrados
+```</li>
+</ul>
 
 <p><strong>Explicação da Solução</strong>:</p>
 

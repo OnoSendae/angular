@@ -475,6 +475,18 @@
 
 <p><strong>Visualização</strong>:</p>
 
+<p>Async Operation ──Zone.js──→ Change Detection ──→ Update View
+    │                              │
+    ├── setTimeout                 │
+    ├── Promise                    │
+    ├── Event                      │
+    └── HTTP                       │
+Async Operation ──Zone.js──→ Change Detection ──→ Update View
+    │                              │
+    ├── setTimeout                 │
+    ├── Promise                    │
+    ├── Event                      │
+    └── HTTP                       │</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Async Operation ──Zone.js──→ Change Detection ──→ Update View
     │                              │
     ├── setTimeout                 │
@@ -485,6 +497,38 @@
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>import { Component } from ‘@angular/core’;</p>
+
+<p>@Component({
+  selector: ‘app-zone’,
+  standalone: true,
+  template: <code class="language-plaintext highlighter-rouge">&lt;p&gt;9&lt;/p&gt;</code>
+})
+export class ZoneComponent {
+  count = 0;</p>
+
+<p>constructor() {
+    setTimeout(() =&gt; {
+      this.count++;
+    }, 1000);
+  }
+}
+import { Component } from ‘@angular/core’;</p>
+
+<p>@Component({
+  selector: ‘app-zone’,
+  standalone: true,
+  template: <code class="language-plaintext highlighter-rouge">&lt;p&gt;9&lt;/p&gt;</code>
+})
+export class ZoneComponent {
+  count = 0;</p>
+
+<p>constructor() {
+    setTimeout(() =&gt; {
+      this.count++;
+    }, 1000);
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
@@ -526,6 +570,52 @@
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>import { Component, NgZone } from ‘@angular/core’;</p>
+
+<p>@Component({
+  selector: ‘app-ngzone’,
+  standalone: true,
+  template: <code class="language-plaintext highlighter-rouge">&lt;p&gt;9&lt;/p&gt;</code>
+})
+export class NgZoneComponent {
+  count = 0;</p>
+
+<p>constructor(private ngZone: NgZone) {}</p>
+
+<p>heavyOperation(): void {
+    this.ngZone.runOutsideAngular(() =&gt; {
+      for (let i = 0; i &lt; 1000000; i++) {
+        this.count = i;
+      }
+      this.ngZone.run(() =&gt; {
+        this.count = 1000000;
+      });
+    });
+  }
+}
+import { Component, NgZone } from ‘@angular/core’;</p>
+
+<p>@Component({
+  selector: ‘app-ngzone’,
+  standalone: true,
+  template: <code class="language-plaintext highlighter-rouge">&lt;p&gt;9&lt;/p&gt;</code>
+})
+export class NgZoneComponent {
+  count = 0;</p>
+
+<p>constructor(private ngZone: NgZone) {}</p>
+
+<p>heavyOperation(): void {
+    this.ngZone.runOutsideAngular(() =&gt; {
+      for (let i = 0; i &lt; 1000000; i++) {
+        this.count = i;
+      }
+      this.ngZone.run(() =&gt; {
+        this.count = 1000000;
+      });
+    });
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">NgZone</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
@@ -570,6 +660,24 @@
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>import { bootstrapApplication } from ‘@angular/platform-browser’;
+import { provideExperimentalZonelessChangeDetection } from ‘@angular/core’;
+import { AppComponent } from ‘./app/app.component’;</p>
+
+<p>bootstrapApplication(AppComponent, {
+  providers: [
+    provideExperimentalZonelessChangeDetection()
+  ]
+});
+import { bootstrapApplication } from ‘@angular/platform-browser’;
+import { provideExperimentalZonelessChangeDetection } from ‘@angular/core’;
+import { AppComponent } from ‘./app/app.component’;</p>
+
+<p>bootstrapApplication(AppComponent, {
+  providers: [
+    provideExperimentalZonelessChangeDetection()
+  ]
+});</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">bootstrapApplication</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/platform-browser</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">provideExperimentalZonelessChangeDetection</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">AppComponent</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./app/app.component</span><span class="dl">'</span><span class="p">;</span>
@@ -605,6 +713,61 @@
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>import { Component, signal, ChangeDetectorRef } from ‘@angular/core’;
+import { bootstrapApplication } from ‘@angular/platform-browser’;
+import { provideExperimentalZonelessChangeDetection } from ‘@angular/core’;</p>
+
+<p>@Component({
+  selector: ‘app-zoneless’,
+  standalone: true,
+  template: `
+    &lt;div&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;{{ count() }}&lt;/p&gt;
+
+
+  &lt;button (click)="increment()"&gt;Increment&lt;/button&gt;
+&lt;/div&gt;   ` }) export class ZonelessComponent {   count = signal(0);
+</code></pre></div></div>
+
+<p>increment(): void {
+    this.count.update(v =&gt; v + 1);
+  }
+}</p>
+
+<p>bootstrapApplication(ZonelessComponent, {
+  providers: [
+    provideExperimentalZonelessChangeDetection()
+  ]
+});</p>
+
+<p>import { Component, signal, ChangeDetectorRef } from ‘@angular/core’;
+import { bootstrapApplication } from ‘@angular/platform-browser’;
+import { provideExperimentalZonelessChangeDetection } from ‘@angular/core’;</p>
+
+<p>@Component({
+  selector: ‘app-zoneless’,
+  standalone: true,
+  template: `
+    &lt;div&gt;
+      &lt;p&gt;{{ count() }}&lt;/p&gt;
+      &lt;button (click)=”increment()”&gt;Increment&lt;/button&gt;
+    &lt;/div&gt;
+  `
+})
+export class ZonelessComponent {
+  count = signal(0);</p>
+
+<p>increment(): void {
+    this.count.update(v =&gt; v + 1);
+  }
+}</p>
+
+<p>bootstrapApplication(ZonelessComponent, {
+  providers: [
+    provideExperimentalZonelessChangeDetection()
+  ]
+});</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">ChangeDetectorRef</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">bootstrapApplication</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/platform-browser</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">provideExperimentalZonelessChangeDetection</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
@@ -614,7 +777,7 @@
   <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;div&gt;
-      &lt;p&gt;9&lt;/p&gt;
+      &lt;p&gt;{{ count() }}&lt;/p&gt;
       &lt;button (click)="increment()"&gt;Increment&lt;/button&gt;
     &lt;/div&gt;
   `</span>
@@ -653,6 +816,61 @@
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>import { Component, signal, computed, effect } from ‘@angular/core’;</p>
+
+<p>@Component({
+  selector: ‘app-migrated’,
+  standalone: true,
+  template: `
+    &lt;div&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;{{ count() }}&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;/p&gt;
+
+  &lt;button (click)="increment()"&gt;Increment&lt;/button&gt;
+&lt;/div&gt;   ` }) export class MigratedComponent {   count = signal(0);   doubleCount = computed(() =&gt; this.count() * 2);
+</code></pre></div></div>
+
+<p>constructor() {
+    effect(() =&gt; {
+      console.log(‘Count changed:’, this.count());
+    });
+  }</p>
+
+<p>increment(): void {
+    this.count.update(v =&gt; v + 1);
+  }
+}</p>
+
+<p>import { Component, signal, computed, effect } from ‘@angular/core’;</p>
+
+<p>@Component({
+  selector: ‘app-migrated’,
+  standalone: true,
+  template: `
+    &lt;div&gt;
+      &lt;p&gt;{{ count() }}&lt;/p&gt;
+      &lt;p&gt;{{ doubleCount() }}&lt;/p&gt;
+      &lt;button (click)=”increment()”&gt;Increment&lt;/button&gt;
+    &lt;/div&gt;
+  `
+})
+export class MigratedComponent {
+  count = signal(0);
+  doubleCount = computed(() =&gt; this.count() * 2);</p>
+
+<p>constructor() {
+    effect(() =&gt; {
+      console.log(‘Count changed:’, this.count());
+    });
+  }</p>
+
+<p>increment(): void {
+    this.count.update(v =&gt; v + 1);
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">computed</span><span class="p">,</span> <span class="nx">effect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
@@ -660,8 +878,8 @@
   <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;div&gt;
-      &lt;p&gt;9&lt;/p&gt;
-      &lt;p&gt;&lt;/p&gt;
+      &lt;p&gt;{{ count() }}&lt;/p&gt;
+      &lt;p&gt;{{ doubleCount() }}&lt;/p&gt;
       &lt;button (click)="increment()"&gt;Increment&lt;/button&gt;
     &lt;/div&gt;
   `</span>
@@ -692,6 +910,54 @@
 
 <p><strong>Código</strong>:</p>
 
+<p>import { Component, signal, computed } from ‘@angular/core’;
+import { bootstrapApplication } from ‘@angular/platform-browser’;
+import { provideExperimentalZonelessChangeDetection } from ‘@angular/core’;
+import { provideRouter } from ‘@angular/router’;
+import { routes } from ‘./app.routes’;</p>
+
+<p>@Component({
+  selector: ‘app-root’,
+  standalone: true,
+  template: `
+    &lt;div&gt;
+      &lt;h1&gt;Zoneless App&lt;/h1&gt;
+      <router-outlet></router-outlet>
+    &lt;/div&gt;
+  `
+})
+export class AppComponent {}</p>
+
+<p>bootstrapApplication(AppComponent, {
+  providers: [
+    provideExperimentalZonelessChangeDetection(),
+    provideRouter(routes)
+  ]
+});
+import { Component, signal, computed } from ‘@angular/core’;
+import { bootstrapApplication } from ‘@angular/platform-browser’;
+import { provideExperimentalZonelessChangeDetection } from ‘@angular/core’;
+import { provideRouter } from ‘@angular/router’;
+import { routes } from ‘./app.routes’;</p>
+
+<p>@Component({
+  selector: ‘app-root’,
+  standalone: true,
+  template: `
+    &lt;div&gt;
+      &lt;h1&gt;Zoneless App&lt;/h1&gt;
+      <router-outlet></router-outlet>
+    &lt;/div&gt;
+  `
+})
+export class AppComponent {}</p>
+
+<p>bootstrapApplication(AppComponent, {
+  providers: [
+    provideExperimentalZonelessChangeDetection(),
+    provideRouter(routes)
+  ]
+});</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">computed</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">bootstrapApplication</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/platform-browser</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">provideExperimentalZonelessChangeDetection</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>

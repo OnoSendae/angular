@@ -431,7 +431,47 @@
 
 <h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
 
-<p><strong>global.service.ts</strong></p>
+<p><strong>global.service.ts</strong>
+import { Injectable } from ‘@angular/core’;</p>
+
+<p>@Injectable({
+  providedIn: ‘root’
+})
+export class GlobalService {
+  private instanceId = Math.random().toString(36).substr(2, 9);</p>
+
+<p>constructor() {
+    console.log(<code class="language-plaintext highlighter-rouge">GlobalService criado: ${this.instanceId}</code>);
+  }</p>
+
+<p>getInstanceId(): string {
+    return this.instanceId;
+  }</p>
+
+<p>getServiceName(): string {
+    return ‘GlobalService (root)’;
+  }
+}
+import { Injectable } from ‘@angular/core’;</p>
+
+<p>@Injectable({
+  providedIn: ‘root’
+})
+export class GlobalService {
+  private instanceId = Math.random().toString(36).substr(2, 9);</p>
+
+<p>constructor() {
+    console.log(<code class="language-plaintext highlighter-rouge">GlobalService criado: ${this.instanceId}</code>);
+  }</p>
+
+<p>getInstanceId(): string {
+    return this.instanceId;
+  }</p>
+
+<p>getServiceName(): string {
+    return ‘GlobalService (root)’;
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="p">@</span><span class="nd">Injectable</span><span class="p">({</span>
@@ -454,7 +494,43 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>component.service.ts</strong></p>
+<p><strong>component.service.ts</strong>
+import { Injectable } from ‘@angular/core’;</p>
+
+<p>@Injectable()
+export class ComponentService {
+  private instanceId = Math.random().toString(36).substr(2, 9);</p>
+
+<p>constructor() {
+    console.log(<code class="language-plaintext highlighter-rouge">ComponentService criado: ${this.instanceId}</code>);
+  }</p>
+
+<p>getInstanceId(): string {
+    return this.instanceId;
+  }</p>
+
+<p>getServiceName(): string {
+    return ‘ComponentService (component level)’;
+  }
+}
+import { Injectable } from ‘@angular/core’;</p>
+
+<p>@Injectable()
+export class ComponentService {
+  private instanceId = Math.random().toString(36).substr(2, 9);</p>
+
+<p>constructor() {
+    console.log(<code class="language-plaintext highlighter-rouge">ComponentService criado: ${this.instanceId}</code>);
+  }</p>
+
+<p>getInstanceId(): string {
+    return this.instanceId;
+  }</p>
+
+<p>getServiceName(): string {
+    return ‘ComponentService (component level)’;
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="p">@</span><span class="nd">Injectable</span><span class="p">()</span>
@@ -475,7 +551,62 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>parent.component.ts</strong></p>
+<p><strong>parent.component.ts</strong>
+import { Component } from ‘@angular/core’;
+import { GlobalService } from ‘./global.service’;
+import { ComponentService } from ‘./component.service’;
+import { ChildComponent } from ‘./child.component’;</p>
+
+<p>@Component({
+  selector: ‘app-parent’,
+  standalone: true,
+  imports: [ChildComponent],
+  providers: [ComponentService],
+  template: `
+    &lt;div class="parent"&gt;
+      &lt;h2&gt;Componente Pai&lt;/h2&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;GlobalService ID: {{ globalService.getInstanceId() }}&lt;/p&gt;
+
+
+  &lt;p&gt;ComponentService ID: &lt;/p&gt;
+
+  &lt;app-child&gt;&lt;/app-child&gt;
+&lt;/div&gt;   ` }) export class ParentComponent {   constructor(
+public globalService: GlobalService,
+public componentService: ComponentService   ) {
+console.log('ParentComponent - GlobalService:', this.globalService.getInstanceId());
+console.log('ParentComponent - ComponentService:', this.componentService.getInstanceId());   } }
+</code></pre></div></div>
+
+<p>import { Component } from ‘@angular/core’;
+import { GlobalService } from ‘./global.service’;
+import { ComponentService } from ‘./component.service’;
+import { ChildComponent } from ‘./child.component’;</p>
+
+<p>@Component({
+  selector: ‘app-parent’,
+  standalone: true,
+  imports: [ChildComponent],
+  providers: [ComponentService],
+  template: `
+    &lt;div class="parent"&gt;
+      &lt;h2&gt;Componente Pai&lt;/h2&gt;
+      &lt;p&gt;GlobalService ID: {{ globalService.getInstanceId() }}&lt;/p&gt;
+      &lt;p&gt;ComponentService ID: {{ componentService.getInstanceId() }}&lt;/p&gt;
+      <app-child></app-child>
+    &lt;/div&gt;
+  `
+})
+export class ParentComponent {
+  constructor(
+    public globalService: GlobalService,
+    public componentService: ComponentService
+  ) {
+    console.log(‘ParentComponent - GlobalService:’, this.globalService.getInstanceId());
+    console.log(‘ParentComponent - ComponentService:’, this.componentService.getInstanceId());
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">GlobalService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./global.service</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">ComponentService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./component.service</span><span class="dl">'</span><span class="p">;</span>
@@ -489,8 +620,8 @@
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;div class="parent"&gt;
       &lt;h2&gt;Componente Pai&lt;/h2&gt;
-      &lt;p&gt;GlobalService ID: &lt;/p&gt;
-      &lt;p&gt;ComponentService ID: &lt;/p&gt;
+      &lt;p&gt;GlobalService ID: {{ globalService.getInstanceId() }}&lt;/p&gt;
+      &lt;p&gt;ComponentService ID: {{ componentService.getInstanceId() }}&lt;/p&gt;
       &lt;app-child&gt;&lt;/app-child&gt;
     &lt;/div&gt;
   `</span>
@@ -506,7 +637,62 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>child.component.ts</strong></p>
+<p><strong>child.component.ts</strong>
+import { Component } from ‘@angular/core’;
+import { GlobalService } from ‘./global.service’;
+import { ComponentService } from ‘./component.service’;</p>
+
+<p>@Component({
+  selector: ‘app-child’,
+  standalone: true,
+  template: `
+    &lt;div class="child"&gt;
+      &lt;h3&gt;Componente Filho&lt;/h3&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;GlobalService ID: {{ globalService.getInstanceId() }}&lt;/p&gt;
+
+
+  &lt;p&gt;ComponentService ID: &lt;/p&gt;
+
+  &lt;p class="note"&gt;
+    GlobalService: Mesma instância (root)&lt;br&gt;
+    ComponentService: Mesma instância do pai (herdado)
+  &lt;/p&gt;
+&lt;/div&gt;   ` }) export class ChildComponent {   constructor(
+public globalService: GlobalService,
+public componentService: ComponentService   ) {
+console.log('ChildComponent - GlobalService:', this.globalService.getInstanceId());
+console.log('ChildComponent - ComponentService:', this.componentService.getInstanceId());   } }
+</code></pre></div></div>
+
+<p>import { Component } from ‘@angular/core’;
+import { GlobalService } from ‘./global.service’;
+import { ComponentService } from ‘./component.service’;</p>
+
+<p>@Component({
+  selector: ‘app-child’,
+  standalone: true,
+  template: `
+    &lt;div class="child"&gt;
+      &lt;h3&gt;Componente Filho&lt;/h3&gt;
+      &lt;p&gt;GlobalService ID: {{ globalService.getInstanceId() }}&lt;/p&gt;
+      &lt;p&gt;ComponentService ID: {{ componentService.getInstanceId() }}&lt;/p&gt;
+      &lt;p class="note"&gt;
+        GlobalService: Mesma instância (root)<br />
+        ComponentService: Mesma instância do pai (herdado)
+      &lt;/p&gt;
+    &lt;/div&gt;
+  `
+})
+export class ChildComponent {
+  constructor(
+    public globalService: GlobalService,
+    public componentService: ComponentService
+  ) {
+    console.log(‘ChildComponent - GlobalService:’, this.globalService.getInstanceId());
+    console.log(‘ChildComponent - ComponentService:’, this.componentService.getInstanceId());
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">GlobalService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./global.service</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">ComponentService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./component.service</span><span class="dl">'</span><span class="p">;</span>
@@ -517,8 +703,8 @@
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;div class="child"&gt;
       &lt;h3&gt;Componente Filho&lt;/h3&gt;
-      &lt;p&gt;GlobalService ID: &lt;/p&gt;
-      &lt;p&gt;ComponentService ID: &lt;/p&gt;
+      &lt;p&gt;GlobalService ID: {{ globalService.getInstanceId() }}&lt;/p&gt;
+      &lt;p&gt;ComponentService ID: {{ componentService.getInstanceId() }}&lt;/p&gt;
       &lt;p class="note"&gt;
         GlobalService: Mesma instância (root)&lt;br&gt;
         ComponentService: Mesma instância do pai (herdado)

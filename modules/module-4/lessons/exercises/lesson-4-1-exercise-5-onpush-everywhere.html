@@ -431,7 +431,51 @@
 
 <h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
 
-<p><strong>app.component.ts</strong></p>
+<p><strong>app.component.ts</strong>
+import { Component, ChangeDetectionStrategy } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;
+import { RouterOutlet } from ‘@angular/router’;
+import { HeaderComponent } from ‘./header/header.component’;
+import { FooterComponent } from ‘./footer/footer.component’;</p>
+
+<p>@Component({
+  selector: ‘app-root’,
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    &lt;div class="app"&gt;
+      <app-header></app-header>
+      &lt;main&gt;
+        <router-outlet></router-outlet>
+      &lt;/main&gt;
+      <app-footer></app-footer>
+    &lt;/div&gt;
+  `
+})
+export class AppComponent {}
+import { Component, ChangeDetectionStrategy } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;
+import { RouterOutlet } from ‘@angular/router’;
+import { HeaderComponent } from ‘./header/header.component’;
+import { FooterComponent } from ‘./footer/footer.component’;</p>
+
+<p>@Component({
+  selector: ‘app-root’,
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    &lt;div class="app"&gt;
+      <app-header></app-header>
+      &lt;main&gt;
+        <router-outlet></router-outlet>
+      &lt;/main&gt;
+      <app-footer></app-footer>
+    &lt;/div&gt;
+  `
+})
+export class AppComponent {}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">ChangeDetectionStrategy</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">RouterOutlet</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/router</span><span class="dl">'</span><span class="p">;</span>
@@ -456,7 +500,49 @@
 <span class="k">export</span> <span class="kd">class</span> <span class="nc">AppComponent</span> <span class="p">{}</span>
 </code></pre></div></div>
 
-<p><strong>header.component.ts</strong></p>
+<p><strong>header.component.ts</strong>
+import { Component, ChangeDetectionStrategy, signal } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>@Component({
+  selector: ‘app-header’,
+  standalone: true,
+  imports: [CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    &lt;header&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;h1&gt;{{ title() }}&lt;/h1&gt;
+
+
+  &lt;nav&gt;
+    &lt;a routerLink="/home"&gt;Home&lt;/a&gt;
+    &lt;a routerLink="/about"&gt;About&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;   ` }) export class HeaderComponent {   title = signal('My App'); }
+</code></pre></div></div>
+
+<p>import { Component, ChangeDetectionStrategy, signal } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>@Component({
+  selector: ‘app-header’,
+  standalone: true,
+  imports: [CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    &lt;header&gt;
+      &lt;h1&gt;{{ title() }}&lt;/h1&gt;
+      &lt;nav&gt;
+        <a routerlink="/home">Home</a>
+        <a routerlink="/about">About</a>
+      &lt;/nav&gt;
+    &lt;/header&gt;
+  `
+})
+export class HeaderComponent {
+  title = signal(‘My App’);
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">ChangeDetectionStrategy</span><span class="p">,</span> <span class="nx">signal</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
 
@@ -467,7 +553,7 @@
   <span class="na">changeDetection</span><span class="p">:</span> <span class="nx">ChangeDetectionStrategy</span><span class="p">.</span><span class="nx">OnPush</span><span class="p">,</span>
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;header&gt;
-      &lt;h1&gt;&lt;/h1&gt;
+      &lt;h1&gt;{{ title() }}&lt;/h1&gt;
       &lt;nav&gt;
         &lt;a routerLink="/home"&gt;Home&lt;/a&gt;
         &lt;a routerLink="/about"&gt;About&lt;/a&gt;
@@ -480,7 +566,64 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>user-list.component.ts</strong></p>
+<p><strong>user-list.component.ts</strong>
+import { Component, ChangeDetectionStrategy, Input, signal, computed } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>interface User {
+  id: number;
+  name: string;
+  email: string;
+}</p>
+
+<p>@Component({
+  selector: ‘app-user-list’,
+  standalone: true,
+  imports: [CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    &lt;div&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;h2&gt;{{ title() }}&lt;/h2&gt;
+
+
+  &lt;ul&gt;
+    @for (user of users(); track user.id) {
+      &lt;li&gt; - &lt;/li&gt;
+    }
+  &lt;/ul&gt;
+&lt;/div&gt;   ` }) export class UserListComponent {   @Input() users = signal&lt;User[]&gt;([]);   title = signal('Usuários'); }
+</code></pre></div></div>
+
+<p>import { Component, ChangeDetectionStrategy, Input, signal, computed } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>interface User {
+  id: number;
+  name: string;
+  email: string;
+}</p>
+
+<p>@Component({
+  selector: ‘app-user-list’,
+  standalone: true,
+  imports: [CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    &lt;div&gt;
+      &lt;h2&gt;{{ title() }}&lt;/h2&gt;
+      &lt;ul&gt;
+        @for (user of users(); track user.id) {
+          &lt;li&gt;{{ user.name }} - {{ user.email }}&lt;/li&gt;
+        }
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  `
+})
+export class UserListComponent {
+  @Input() users = signal&lt;User[]&gt;([]);
+  title = signal(‘Usuários’);
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">ChangeDetectionStrategy</span><span class="p">,</span> <span class="nx">Input</span><span class="p">,</span> <span class="nx">signal</span><span class="p">,</span> <span class="nx">computed</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
 
@@ -497,10 +640,10 @@
   <span class="na">changeDetection</span><span class="p">:</span> <span class="nx">ChangeDetectionStrategy</span><span class="p">.</span><span class="nx">OnPush</span><span class="p">,</span>
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;div&gt;
-      &lt;h2&gt;&lt;/h2&gt;
+      &lt;h2&gt;{{ title() }}&lt;/h2&gt;
       &lt;ul&gt;
         @for (user of users(); track user.id) {
-          &lt;li&gt; - &lt;/li&gt;
+          &lt;li&gt;{{ user.name }} - {{ user.email }}&lt;/li&gt;
         }
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -513,34 +656,121 @@
 </code></pre></div></div>
 
 <p><strong>migration-checklist.md</strong></p>
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Checklist de Migração para OnPush Everywhere</span>
+<h1 id="checklist-de-migração-para-onpush-everywhere">Checklist de Migração para OnPush Everywhere</h1>
 
-<span class="gu">## 1. Auditoria</span>
-<span class="p">-</span> [ ] Listar todos componentes
-<span class="p">-</span> [ ] Identificar componentes que podem usar OnPush
-<span class="p">-</span> [ ] Identificar dependências
+<h2 id="1-auditoria">1. Auditoria</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Listar todos componentes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Identificar componentes que podem usar OnPush</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Identificar dependências</li>
+</ul>
 
-<span class="gu">## 2. Conversão</span>
-<span class="p">-</span> [ ] Adicionar ChangeDetectionStrategy.OnPush
-<span class="p">-</span> [ ] Converter propriedades para Signals
-<span class="p">-</span> [ ] Garantir imutabilidade
-<span class="p">-</span> [ ] Usar trackBy em listas
+<h2 id="2-conversão">2. Conversão</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Adicionar ChangeDetectionStrategy.OnPush</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Converter propriedades para Signals</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Garantir imutabilidade</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Usar trackBy em listas</li>
+</ul>
 
-<span class="gu">## 3. Testes</span>
-<span class="p">-</span> [ ] Testar cada componente
-<span class="p">-</span> [ ] Verificar change detection
-<span class="p">-</span> [ ] Validar funcionalidade
+<h2 id="3-testes">3. Testes</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Testar cada componente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verificar change detection</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Validar funcionalidade</li>
+</ul>
 
-<span class="gu">## 4. Otimização</span>
-<span class="p">-</span> [ ] Usar markForCheck() quando necessário
-<span class="p">-</span> [ ] Otimizar operações de array
-<span class="p">-</span> [ ] Verificar performance
+<h2 id="4-otimização">4. Otimização</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Usar markForCheck() quando necessário</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Otimizar operações de array</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verificar performance</li>
+</ul>
 
-<span class="gu">## 5. Documentação</span>
-<span class="p">-</span> [ ] Documentar mudanças
-<span class="p">-</span> [ ] Criar guia de boas práticas
-<span class="p">-</span> [ ] Treinar equipe
-</code></pre></div></div>
+<h2 id="5-documentação">5. Documentação</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Documentar mudanças</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Criar guia de boas práticas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Treinar equipe
+    <h1 id="checklist-de-migração-para-onpush-everywhere-1">Checklist de Migração para OnPush Everywhere</h1>
+  </li>
+</ul>
+
+<h2 id="1-auditoria-1">1. Auditoria</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Listar todos componentes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Identificar componentes que podem usar OnPush</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Identificar dependências</li>
+</ul>
+
+<h2 id="2-conversão-1">2. Conversão</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Adicionar ChangeDetectionStrategy.OnPush</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Converter propriedades para Signals</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Garantir imutabilidade</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Usar trackBy em listas</li>
+</ul>
+
+<h2 id="3-testes-1">3. Testes</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Testar cada componente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verificar change detection</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Validar funcionalidade</li>
+</ul>
+
+<h2 id="4-otimização-1">4. Otimização</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Usar markForCheck() quando necessário</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Otimizar operações de array</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verificar performance</li>
+</ul>
+
+<h2 id="5-documentação-1">5. Documentação</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Documentar mudanças</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Criar guia de boas práticas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Treinar equipe
+```markdown
+    <h1 id="checklist-de-migração-para-onpush-everywhere-2">Checklist de Migração para OnPush Everywhere</h1>
+  </li>
+</ul>
+
+<h2 id="1-auditoria-2">1. Auditoria</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Listar todos componentes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Identificar componentes que podem usar OnPush</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Identificar dependências</li>
+</ul>
+
+<h2 id="2-conversão-2">2. Conversão</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Adicionar ChangeDetectionStrategy.OnPush</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Converter propriedades para Signals</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Garantir imutabilidade</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Usar trackBy em listas</li>
+</ul>
+
+<h2 id="3-testes-2">3. Testes</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Testar cada componente</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verificar change detection</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Validar funcionalidade</li>
+</ul>
+
+<h2 id="4-otimização-2">4. Otimização</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Usar markForCheck() quando necessário</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Otimizar operações de array</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verificar performance</li>
+</ul>
+
+<h2 id="5-documentação-2">5. Documentação</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Documentar mudanças</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Criar guia de boas práticas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Treinar equipe
+```</li>
+</ul>
 
 <p><strong>Explicação da Solução</strong>:</p>
 

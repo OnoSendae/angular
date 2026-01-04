@@ -455,7 +455,7 @@
 
 <h2 id="conceitos-teóricos">Conceitos Teóricos</h2>
 
-<h3 id="interpolação-">Interpolação ()</h3>
+<h3 id="interpolação--">Interpolação ({{ }})</h3>
 
 <p><strong>Definição</strong>: Interpolação é a forma mais simples de exibir dados do componente no template usando a sintaxe ``.</p>
 
@@ -466,16 +466,16 @@
   <li>
     <p>Variáveis simples: ``</p>
   </li>
+  <li>Expressões: <code class="language-plaintext highlighter-rouge">{{ 1 + 1 }}</code></li>
   <li>
-    <p>Expressões: <code class="language-plaintext highlighter-rouge">{{ 1 + 1 }}</code></p>
+    <p>Chamadas de método: <code class="language-plaintext highlighter-rouge">{{ getFullName() }}</code></p>
   </li>
-  <li>Chamadas de método: ``</li>
   <li>Propriedades aninhadas: ``</li>
 </ul>
 
 <p><strong>Analogia</strong>:</p>
 
-<p>Interpolação é como preencher um formulário em branco. O template é o formulário, e `` são os campos que serão preenchidos com dados do componente.</p>
+<p>Interpolação é como preencher um formulário em branco. O template é o formulário, e <code class="language-plaintext highlighter-rouge">{{ }}</code> são os campos que serão preenchidos com dados do componente.</p>
 
 <p><strong>Visualização</strong>:</p>
 
@@ -485,13 +485,21 @@
 │ age = 30       │  ────────→ │ {{ age }}   │
 └────────────────┘            └─────────────┘
                               ↓
-
                           "João"
                           "30"
 </code></pre></div></div>
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>export class UserComponent {
+  userName: string = ‘João Silva’;
+  userAge: number = 30;
+  isActive: boolean = true;</p>
+
+<p>getDisplayName(): string {
+    return <code class="language-plaintext highlighter-rouge">${this.userName} (${this.userAge})</code>;
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">UserComponent</span> <span class="p">{</span>
   <span class="nl">userName</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">João Silva</span><span class="dl">'</span><span class="p">;</span>
   <span class="nl">userAge</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
@@ -503,6 +511,10 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
+<h1>{{ userName }}</h1>
+<p>Idade: {{ userAge }}</p>
+<p>Status: {{ isActive ? 'Ativo' : 'Inativo' }}</p>
+<p>{{ getDisplayName() }}</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>{{ userName }}<span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;p&gt;</span>Idade: {{ userAge }}<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p&gt;</span>Status: {{ isActive ? 'Ativo' : 'Inativo' }}<span class="nt">&lt;/p&gt;</span>
@@ -530,6 +542,11 @@
 
 <p><strong>Visualização</strong>:</p>
 
+<p>Component                    Template
+┌─────────────┐            ┌─────────────┐
+│ imageUrl    │  ────────→ │ [src]=”…” │
+│ isDisabled  │  ────────→ │ [disabled]  │
+└─────────────┘            └─────────────┘</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Component                    Template
 ┌─────────────┐            ┌─────────────┐
 │ imageUrl    │  ────────→ │ [src]="..." │
@@ -539,6 +556,11 @@
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>export class ImageComponent {
+  imageUrl: string = ‘https://example.com/image.jpg’;
+  isDisabled: boolean = false;
+  buttonText: string = ‘Clique aqui’;
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">ImageComponent</span> <span class="p">{</span>
   <span class="nl">imageUrl</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https://example.com/image.jpg</span><span class="dl">'</span><span class="p">;</span>
   <span class="nl">isDisabled</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
@@ -546,6 +568,9 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
+<p>&lt;img [src]=”imageUrl” [alt]=”buttonText”&gt;
+&lt;button [disabled]=”isDisabled”&gt;&lt;/button&gt;
+&lt;input [value]=”buttonText” [readonly]=”isDisabled”&gt;</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">[src]=</span><span class="s">"imageUrl"</span> <span class="na">[alt]=</span><span class="s">"buttonText"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">[disabled]=</span><span class="s">"isDisabled"</span><span class="nt">&gt;&lt;/button&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">[value]=</span><span class="s">"buttonText"</span> <span class="na">[readonly]=</span><span class="s">"isDisabled"</span><span class="nt">&gt;</span>
@@ -573,6 +598,11 @@
 
 <p><strong>Visualização</strong>:</p>
 
+<p>Template                    Component
+┌─────────────┐            ┌─────────────┐
+│ (click)     │  ────────→ │ onClick()   │
+│ (keyup)     │  ────────→ │ onKeyUp()   │
+└─────────────┘            └─────────────┘</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Template                    Component
 ┌─────────────┐            ┌─────────────┐
 │ (click)     │  ────────→ │ onClick()   │
@@ -582,6 +612,22 @@
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>export class ButtonComponent {
+  clickCount: number = 0;</p>
+
+<p>onClick(): void {
+    this.clickCount++;
+    console.log(‘Botão clicado!’);
+  }</p>
+
+<p>onKeyUp(event: KeyboardEvent): void {
+    console.log(‘Tecla pressionada:’, event.key);
+  }</p>
+
+<p>onMouseEnter(): void {
+    console.log(‘Mouse entrou’);
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">ButtonComponent</span> <span class="p">{</span>
   <span class="nl">clickCount</span><span class="p">:</span> <span class="kr">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
   
@@ -600,6 +646,10 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
+<p>&lt;button (click)=”onClick()”&gt;Clique aqui&lt;/button&gt;
+&lt;input (keyup)=”onKeyUp($event)” placeholder=”Digite algo”&gt;
+&lt;div (mouseenter)=”onMouseEnter()”&gt;Passe o mouse&lt;/div&gt;</p>
+<p>Cliques: </p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">(click)=</span><span class="s">"onClick()"</span><span class="nt">&gt;</span>Clique aqui<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">(keyup)=</span><span class="s">"onKeyUp($event)"</span> <span class="na">placeholder=</span><span class="s">"Digite algo"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">(mouseenter)=</span><span class="s">"onMouseEnter()"</span><span class="nt">&gt;</span>Passe o mouse<span class="nt">&lt;/div&gt;</span>
@@ -628,6 +678,10 @@
 
 <p><strong>Visualização</strong>:</p>
 
+<p>Component  ←──────────────→  Template
+┌─────────┐                ┌─────────────┐
+│ name    │  ←───────────→ │ [(ngModel)] │
+└─────────┘                └─────────────┘</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Component  ←──────────────→  Template
 ┌─────────┐                ┌─────────────┐
 │ name    │  ←───────────→ │ [(ngModel)] │
@@ -636,6 +690,13 @@
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>import { FormsModule } from ‘@angular/forms’;</p>
+
+<p>export class FormComponent {
+  userName: string = ‘’;
+  userEmail: string = ‘’;
+  isSubscribed: boolean = false;
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">FormsModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/forms</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="k">export</span> <span class="kd">class</span> <span class="nc">FormComponent</span> <span class="p">{</span>
@@ -645,6 +706,13 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
+<p>&lt;input [(ngModel)]=”userName” placeholder=”Nome”&gt;
+&lt;input [(ngModel)]=”userEmail” placeholder=”Email”&gt;
+&lt;input type=”checkbox” [(ngModel)]=”isSubscribed”&gt; Inscrever-se</p>
+
+<p>Nome: </p>
+<p>Email: </p>
+<p>Inscrito: </p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">[(ngModel)]=</span><span class="s">"userName"</span> <span class="na">placeholder=</span><span class="s">"Nome"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">[(ngModel)]=</span><span class="s">"userEmail"</span> <span class="na">placeholder=</span><span class="s">"Email"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">[(ngModel)]=</span><span class="s">"isSubscribed"</span><span class="nt">&gt;</span> Inscrever-se
@@ -680,6 +748,20 @@
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>export class StyledComponent {
+  isActive: boolean = true;
+  isDisabled: boolean = false;
+  textColor: string = ‘blue’;
+  fontSize: number = 16;</p>
+
+<p>getClasses(): {[key: string]: boolean} {
+    return {
+      ‘active’: this.isActive,
+      ‘disabled’: this.isDisabled,
+      ‘highlight’: this.isActive &amp;&amp; !this.isDisabled
+    };
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">StyledComponent</span> <span class="p">{</span>
   <span class="nl">isActive</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
   <span class="nl">isDisabled</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
@@ -696,6 +778,10 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
+<p>&lt;div [ngClass]=”getClasses()”&gt;Conteúdo&lt;/div&gt;
+&lt;div [ngClass]=”{‘active’: isActive, ‘error’: !isActive}”&gt;Status&lt;/div&gt;
+&lt;div [ngStyle]=”{‘color’: textColor, ‘font-size’: fontSize + ‘px’}”&gt;Texto&lt;/div&gt;
+&lt;div [style.color]=”textColor” [style.font-size.px]=”fontSize”&gt;Texto 2&lt;/div&gt;</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">[ngClass]=</span><span class="s">"getClasses()"</span><span class="nt">&gt;</span>Conteúdo<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">[ngClass]=</span><span class="s">"{'active': isActive, 'error': !isActive}"</span><span class="nt">&gt;</span>Status<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">[ngStyle]=</span><span class="s">"{'color': textColor, 'font-size': fontSize + 'px'}"</span><span class="nt">&gt;</span>Texto<span class="nt">&lt;/div&gt;</span>
@@ -724,6 +810,11 @@
 
 <p><strong>Visualização</strong>:</p>
 
+<p>*ngIf                    *ngFor
+┌─────────┐            ┌─────────┐
+│ if true │  → Exibe   │ for item│  → Repete
+│ if false│  → Remove  │ in list │     elemento
+└─────────┘            └─────────┘</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*ngIf                    *ngFor
 ┌─────────┐            ┌─────────┐
 │ if true │  → Exibe   │ for item│  → Repete
@@ -733,6 +824,11 @@
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>export class ListComponent {
+  items: string[] = [‘Item 1’, ‘Item 2’, ‘Item 3’];
+  showList: boolean = true;
+  selectedValue: string = ‘option1’;
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">ListComponent</span> <span class="p">{</span>
   <span class="nl">items</span><span class="p">:</span> <span class="kr">string</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">Item 1</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Item 2</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Item 3</span><span class="dl">'</span><span class="p">];</span>
   <span class="nl">showList</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
@@ -740,10 +836,24 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
+<p>&lt;div *ngIf=”showList”&gt;</p>
+<ul>
+    &lt;li *ngFor="let item of items; let i = index"&gt;
+      {{ i + 1 }}. {{ item }}
+    &lt;/li&gt;
+  </ul>
+<p>&lt;/div&gt;</p>
+
+<p>&lt;div [ngSwitch]=”selectedValue”&gt;
+  &lt;p *ngSwitchCase=”‘option1’“&gt;Opção 1 selecionada&lt;/p&gt;
+  &lt;p *ngSwitchCase=”‘option2’“&gt;Opção 2 selecionada&lt;/p&gt;
+  &lt;p *ngSwitchDefault&gt;Nenhuma opção selecionada&lt;/p&gt;
+&lt;/div&gt;</p>
+
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">*ngIf=</span><span class="s">"showList"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">*ngFor=</span><span class="s">"let item of items; let i = index"</span><span class="nt">&gt;</span>
-      . 
+      {{ i + 1 }}. {{ item }}
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -773,6 +883,14 @@
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>export class AttributeDirectiveComponent {
+  isHighlighted: boolean = false;
+  currentColor: string = ‘blue’;</p>
+
+<p>toggleHighlight(): void {
+    this.isHighlighted = !this.isHighlighted;
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">class</span> <span class="nc">AttributeDirectiveComponent</span> <span class="p">{</span>
   <span class="nl">isHighlighted</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
   <span class="nl">currentColor</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">blue</span><span class="dl">'</span><span class="p">;</span>
@@ -783,6 +901,11 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
+<p>&lt;div 
+  [ngClass]=”{‘highlight’: isHighlighted, ‘active’: true}”
+  [ngStyle]=”{‘background-color’: currentColor}”&gt;
+  Conteúdo estilizado
+&lt;/div&gt;</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> 
   <span class="na">[ngClass]=</span><span class="s">"{'highlight': isHighlighted, 'active': true}"</span>
   <span class="na">[ngStyle]=</span><span class="s">"{'background-color': currentColor}"</span><span class="nt">&gt;</span>
@@ -812,6 +935,30 @@
 
 <p><strong>Exemplo Prático</strong>:</p>
 
+<p>import { Directive, HostBinding, HostListener, Input } from ‘@angular/core’;</p>
+
+<p>@Directive({
+  selector: ‘[appHighlight]’,
+  standalone: true
+})
+export class HighlightDirective {
+  @Input() appHighlight: string = ‘yellow’;
+  @Input() defaultColor: string = ‘transparent’;</p>
+
+<p>@HostBinding(‘style.backgroundColor’) backgroundColor: string = ‘’;</p>
+
+<p>ngOnInit(): void {
+    this.backgroundColor = this.defaultColor;
+  }</p>
+
+<p>@HostListener(‘mouseenter’) onMouseEnter(): void {
+    this.backgroundColor = this.appHighlight;
+  }</p>
+
+<p>@HostListener(‘mouseleave’) onMouseLeave(): void {
+    this.backgroundColor = this.defaultColor;
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Directive</span><span class="p">,</span> <span class="nx">HostBinding</span><span class="p">,</span> <span class="nx">HostListener</span><span class="p">,</span> <span class="nx">Input</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="p">@</span><span class="nd">Directive</span><span class="p">({</span>
@@ -838,6 +985,9 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
+<p>&lt;p [appHighlight]=”‘yellow’” [defaultColor]=”‘lightblue’”&gt;
+  Passe o mouse sobre mim
+&lt;/p&gt;</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">[appHighlight]=</span><span class="s">"'yellow'"</span> <span class="na">[defaultColor]=</span><span class="s">"'lightblue'"</span><span class="nt">&gt;</span>
   Passe o mouse sobre mim
 <span class="nt">&lt;/p&gt;</span>
@@ -853,6 +1003,71 @@
 
 <p><strong>Código</strong>:</p>
 
+<p>import { Component } from ‘@angular/core’;
+import { FormsModule } from ‘@angular/forms’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>interface User {
+  name: string;
+  email: string;
+  age: number;
+  subscribe: boolean;
+}</p>
+
+<p>@Component({
+  selector: ‘app-user-form’,
+  standalone: true,
+  imports: [FormsModule, CommonModule],
+  template: `
+    &lt;form (ngSubmit)=”onSubmit()”&gt;
+      &lt;div&gt;
+        <label>Nome:</label>
+        &lt;input [(ngModel)]=”user.name” name=”name” required&gt;
+      &lt;/div&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;div&gt;
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input [(ngModel)]="user.email" type="email" name="email" required&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;label&gt;Idade:&lt;/label&gt;
+    &lt;input [(ngModel)]="user.age" type="number" name="age" min="18"&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;label&gt;
+      &lt;input type="checkbox" [(ngModel)]="user.subscribe" name="subscribe"&gt;
+      Receber newsletter
+    &lt;/label&gt;
+  &lt;/div&gt;
+  
+  &lt;button type="submit" [disabled]="!isValid()"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;div *ngIf="submitted"&gt;
+  &lt;h3&gt;Dados enviados:&lt;/h3&gt;
+  &lt;pre&gt;{{ user | json }}&lt;/pre&gt;
+&lt;/div&gt;   ` }) export class UserFormComponent {   user: User = {
+name: '',
+email: '',
+age: 18,
+subscribe: false   };
+</code></pre></div></div>
+
+<p>submitted: boolean = false;</p>
+
+<p>isValid(): boolean {
+    return this.user.name.length &gt; 0 &amp;&amp; 
+           this.user.email.includes(‘@’) &amp;&amp; 
+           this.user.age &gt;= 18;
+  }</p>
+
+<p>onSubmit(): void {
+    this.submitted = true;
+    console.log(‘Formulário enviado:’, this.user);
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">FormsModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/forms</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
@@ -932,6 +1147,106 @@
 
 <p><strong>Código</strong>:</p>
 
+<p>import { Component } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>interface Task {
+  id: number;
+  title: string;
+  completed: boolean;
+  priority: ‘low’ | ‘medium’ | ‘high’;
+}</p>
+
+<p>@Component({
+  selector: ‘app-task-list’,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    &lt;div class="task-list"&gt;
+      &lt;input 
+        [(ngModel)]=”searchTerm” 
+        placeholder=”Buscar tarefas…”
+        (input)=”filterTasks()”&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;div class="filters"&gt;
+    &lt;button 
+      *ngFor="let filter of filters"
+      [class.active]="activeFilter === filter"
+      (click)="setFilter(filter)"&gt;
+      {{ filter }}
+    &lt;/button&gt;
+  &lt;/div&gt;
+  
+  &lt;ul&gt;
+    &lt;li 
+      *ngFor="let task of filteredTasks; trackBy: trackByTaskId"
+      [ngClass]="{
+        'completed': task.completed,
+        'high-priority': task.priority === 'high',
+        'medium-priority': task.priority === 'medium',
+        'low-priority': task.priority === 'low'
+      }"
+      (click)="toggleTask(task.id)"&gt;
+      &lt;span&gt;{{ task.title }}&lt;/span&gt;
+      &lt;span [ngSwitch]="task.priority"&gt;
+        &lt;span *ngSwitchCase="'high'" class="badge high"&gt;Alta&lt;/span&gt;
+        &lt;span *ngSwitchCase="'medium'" class="badge medium"&gt;Média&lt;/span&gt;
+        &lt;span *ngSwitchDefault class="badge low"&gt;Baixa&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  
+  &lt;p *ngIf="filteredTasks.length === 0"&gt;Nenhuma tarefa encontrada&lt;/p&gt;
+&lt;/div&gt;   ` }) export class TaskListComponent {   tasks: Task[] = [
+{ id: 1, title: 'Tarefa 1', completed: false, priority: 'high' },
+{ id: 2, title: 'Tarefa 2', completed: true, priority: 'medium' },
+{ id: 3, title: 'Tarefa 3', completed: false, priority: 'low' }   ];
+</code></pre></div></div>
+
+<p>filteredTasks: Task[] = [];
+  searchTerm: string = ‘’;
+  activeFilter: string = ‘all’;
+  filters: string[] = [‘all’, ‘active’, ‘completed’];</p>
+
+<p>ngOnInit(): void {
+    this.filterTasks();
+  }</p>
+
+<p>filterTasks(): void {
+    let filtered = this.tasks;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (this.searchTerm) {
+  filtered = filtered.filter(t =&gt; 
+    t.title.toLowerCase().includes(this.searchTerm.toLowerCase())
+  );
+}
+
+if (this.activeFilter === 'active') {
+  filtered = filtered.filter(t =&gt; !t.completed);
+} else if (this.activeFilter === 'completed') {
+  filtered = filtered.filter(t =&gt; t.completed);
+}
+
+this.filteredTasks = filtered;   }
+</code></pre></div></div>
+
+<p>setFilter(filter: string): void {
+    this.activeFilter = filter;
+    this.filterTasks();
+  }</p>
+
+<p>toggleTask(id: number): void {
+    const task = this.tasks.find(t =&gt; t.id === id);
+    if (task) {
+      task.completed = !task.completed;
+      this.filterTasks();
+    }
+  }</p>
+
+<p>trackByTaskId(index: number, task: Task): number {
+    return task.id;
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
 

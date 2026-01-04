@@ -429,7 +429,61 @@
 
 <h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
 
-<p><strong>counter-default.component.ts</strong> (Original)</p>
+<p><strong>counter-default.component.ts</strong> (Original)
+import { Component } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>@Component({
+  selector: ‘app-counter-default’,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    &lt;div&gt;
+      &lt;h2&gt;Contador (Default)&lt;/h2&gt;
+      &lt;p&gt;Valor: 9&lt;/p&gt;
+      &lt;button (click)=”increment()”&gt;Incrementar&lt;/button&gt;
+      &lt;button (click)=”decrement()”&gt;Decrementar&lt;/button&gt;
+    &lt;/div&gt;
+  `
+})
+export class CounterDefaultComponent {
+  count = 0;</p>
+
+<p>increment(): void {
+    this.count++;
+  }</p>
+
+<p>decrement(): void {
+    this.count–;
+  }
+}
+import { Component } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>@Component({
+  selector: ‘app-counter-default’,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    &lt;div&gt;
+      &lt;h2&gt;Contador (Default)&lt;/h2&gt;
+      &lt;p&gt;Valor: 9&lt;/p&gt;
+      &lt;button (click)=”increment()”&gt;Incrementar&lt;/button&gt;
+      &lt;button (click)=”decrement()”&gt;Decrementar&lt;/button&gt;
+    &lt;/div&gt;
+  `
+})
+export class CounterDefaultComponent {
+  count = 0;</p>
+
+<p>increment(): void {
+    this.count++;
+  }</p>
+
+<p>decrement(): void {
+    this.count–;
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
 
@@ -459,7 +513,64 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>counter-onpush.component.ts</strong> (Convertido)</p>
+<p><strong>counter-onpush.component.ts</strong> (Convertido)
+import { Component, ChangeDetectionStrategy, signal } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>@Component({
+  selector: ‘app-counter-onpush’,
+  standalone: true,
+  imports: [CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    &lt;div&gt;
+      &lt;h2&gt;Contador (OnPush)&lt;/h2&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;Valor: {{ count() }}&lt;/p&gt;
+
+
+  &lt;button (click)="increment()"&gt;Incrementar&lt;/button&gt;
+  &lt;button (click)="decrement()"&gt;Decrementar&lt;/button&gt;
+&lt;/div&gt;   ` }) export class CounterOnPushComponent {   count = signal(0);
+</code></pre></div></div>
+
+<p>increment(): void {
+    this.count.update(v =&gt; v + 1);
+  }</p>
+
+<p>decrement(): void {
+    this.count.update(v =&gt; v - 1);
+  }
+}</p>
+
+<p>import { Component, ChangeDetectionStrategy, signal } from ‘@angular/core’;
+import { CommonModule } from ‘@angular/common’;</p>
+
+<p>@Component({
+  selector: ‘app-counter-onpush’,
+  standalone: true,
+  imports: [CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    &lt;div&gt;
+      &lt;h2&gt;Contador (OnPush)&lt;/h2&gt;
+      &lt;p&gt;Valor: {{ count() }}&lt;/p&gt;
+      &lt;button (click)=”increment()”&gt;Incrementar&lt;/button&gt;
+      &lt;button (click)=”decrement()”&gt;Decrementar&lt;/button&gt;
+    &lt;/div&gt;
+  `
+})
+export class CounterOnPushComponent {
+  count = signal(0);</p>
+
+<p>increment(): void {
+    this.count.update(v =&gt; v + 1);
+  }</p>
+
+<p>decrement(): void {
+    this.count.update(v =&gt; v - 1);
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">ChangeDetectionStrategy</span><span class="p">,</span> <span class="nx">signal</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">CommonModule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/common</span><span class="dl">'</span><span class="p">;</span>
 
@@ -471,7 +582,7 @@
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;div&gt;
       &lt;h2&gt;Contador (OnPush)&lt;/h2&gt;
-      &lt;p&gt;Valor: 9&lt;/p&gt;
+      &lt;p&gt;Valor: {{ count() }}&lt;/p&gt;
       &lt;button (click)="increment()"&gt;Incrementar&lt;/button&gt;
       &lt;button (click)="decrement()"&gt;Decrementar&lt;/button&gt;
     &lt;/div&gt;

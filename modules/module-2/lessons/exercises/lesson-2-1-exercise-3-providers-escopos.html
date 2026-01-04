@@ -430,7 +430,47 @@
 
 <h3 id="abordagem-recomendada">Abordagem Recomendada</h3>
 
-<p><strong>root.service.ts</strong></p>
+<p><strong>root.service.ts</strong>
+import { Injectable } from ‘@angular/core’;</p>
+
+<p>@Injectable({
+  providedIn: ‘root’
+})
+export class RootService {
+  private instanceId = Math.random().toString(36).substr(2, 9);</p>
+
+<p>constructor() {
+    console.log(<code class="language-plaintext highlighter-rouge">[ROOT] RootService criado: ${this.instanceId}</code>);
+  }</p>
+
+<p>getInstanceId(): string {
+    return this.instanceId;
+  }</p>
+
+<p>getScope(): string {
+    return ‘root - Singleton global’;
+  }
+}
+import { Injectable } from ‘@angular/core’;</p>
+
+<p>@Injectable({
+  providedIn: ‘root’
+})
+export class RootService {
+  private instanceId = Math.random().toString(36).substr(2, 9);</p>
+
+<p>constructor() {
+    console.log(<code class="language-plaintext highlighter-rouge">[ROOT] RootService criado: ${this.instanceId}</code>);
+  }</p>
+
+<p>getInstanceId(): string {
+    return this.instanceId;
+  }</p>
+
+<p>getScope(): string {
+    return ‘root - Singleton global’;
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="p">@</span><span class="nd">Injectable</span><span class="p">({</span>
@@ -453,7 +493,47 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>any.service.ts</strong></p>
+<p><strong>any.service.ts</strong>
+import { Injectable } from ‘@angular/core’;</p>
+
+<p>@Injectable({
+  providedIn: ‘any’
+})
+export class AnyService {
+  private instanceId = Math.random().toString(36).substr(2, 9);</p>
+
+<p>constructor() {
+    console.log(<code class="language-plaintext highlighter-rouge">[ANY] AnyService criado: ${this.instanceId}</code>);
+  }</p>
+
+<p>getInstanceId(): string {
+    return this.instanceId;
+  }</p>
+
+<p>getScope(): string {
+    return ‘any - Nova instância por módulo lazy’;
+  }
+}
+import { Injectable } from ‘@angular/core’;</p>
+
+<p>@Injectable({
+  providedIn: ‘any’
+})
+export class AnyService {
+  private instanceId = Math.random().toString(36).substr(2, 9);</p>
+
+<p>constructor() {
+    console.log(<code class="language-plaintext highlighter-rouge">[ANY] AnyService criado: ${this.instanceId}</code>);
+  }</p>
+
+<p>getInstanceId(): string {
+    return this.instanceId;
+  }</p>
+
+<p>getScope(): string {
+    return ‘any - Nova instância por módulo lazy’;
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="p">@</span><span class="nd">Injectable</span><span class="p">({</span>
@@ -476,7 +556,43 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>component-scoped.service.ts</strong></p>
+<p><strong>component-scoped.service.ts</strong>
+import { Injectable } from ‘@angular/core’;</p>
+
+<p>@Injectable()
+export class ComponentScopedService {
+  private instanceId = Math.random().toString(36).substr(2, 9);</p>
+
+<p>constructor() {
+    console.log(<code class="language-plaintext highlighter-rouge">[COMPONENT] ComponentScopedService criado: ${this.instanceId}</code>);
+  }</p>
+
+<p>getInstanceId(): string {
+    return this.instanceId;
+  }</p>
+
+<p>getScope(): string {
+    return ‘component - Nova instância por componente’;
+  }
+}
+import { Injectable } from ‘@angular/core’;</p>
+
+<p>@Injectable()
+export class ComponentScopedService {
+  private instanceId = Math.random().toString(36).substr(2, 9);</p>
+
+<p>constructor() {
+    console.log(<code class="language-plaintext highlighter-rouge">[COMPONENT] ComponentScopedService criado: ${this.instanceId}</code>);
+  }</p>
+
+<p>getInstanceId(): string {
+    return this.instanceId;
+  }</p>
+
+<p>getScope(): string {
+    return ‘component - Nova instância por componente’;
+  }
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="p">@</span><span class="nd">Injectable</span><span class="p">()</span>
@@ -497,52 +613,183 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>demo.component.ts</strong></p>
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">RootService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./root.service</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">AnyService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./any.service</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">ComponentScopedService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./component-scoped.service</span><span class="dl">'</span><span class="p">;</span>
+<p><strong>demo.component.ts</strong>
+import { Component } from ‘@angular/core’;
+import { RootService } from ‘./root.service’;
+import { AnyService } from ‘./any.service’;
+import { ComponentScopedService } from ‘./component-scoped.service’;</p>
 
-<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
-  <span class="na">selector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app-demo</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">standalone</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="na">providers</span><span class="p">:</span> <span class="p">[</span><span class="nx">ComponentScopedService</span><span class="p">],</span>
-  <span class="na">template</span><span class="p">:</span> <span class="s2">`
+<p>@Component({
+  selector: ‘app-demo’,
+  standalone: true,
+  providers: [ComponentScopedService],
+  template: `
     &lt;div class="demo"&gt;
-      &lt;h2&gt;Demonstração de Escopos&lt;/h2&gt;
-      
-      &lt;div class="service-info"&gt;
-        &lt;h3&gt;RootService (providedIn: 'root')&lt;/h3&gt;
-        &lt;p&gt;ID: &lt;/p&gt;
-        &lt;p&gt;&lt;/p&gt;
-      &lt;/div&gt;
-      
-      &lt;div class="service-info"&gt;
-        &lt;h3&gt;AnyService (providedIn: 'any')&lt;/h3&gt;
-        &lt;p&gt;ID: &lt;/p&gt;
-        &lt;p&gt;&lt;/p&gt;
-      &lt;/div&gt;
-      
-      &lt;div class="service-info"&gt;
-        &lt;h3&gt;ComponentScopedService (component providers)&lt;/h3&gt;
-        &lt;p&gt;ID: &lt;/p&gt;
-        &lt;p&gt;&lt;/p&gt;
-      &lt;/div&gt;
-      
-      &lt;app-demo-child&gt;&lt;/app-demo-child&gt;
-    &lt;/div&gt;
-  `</span>
-<span class="p">})</span>
-<span class="k">export</span> <span class="kd">class</span> <span class="nc">DemoComponent</span> <span class="p">{</span>
-  <span class="nf">constructor</span><span class="p">(</span>
-    <span class="k">public</span> <span class="nx">rootService</span><span class="p">:</span> <span class="nx">RootService</span><span class="p">,</span>
-    <span class="k">public</span> <span class="nx">anyService</span><span class="p">:</span> <span class="nx">AnyService</span><span class="p">,</span>
-    <span class="k">public</span> <span class="nx">componentService</span><span class="p">:</span> <span class="nx">ComponentScopedService</span>
-  <span class="p">)</span> <span class="p">{}</span>
-<span class="p">}</span>
+      &lt;h2&gt;Demonstração de Escopos&lt;/h2&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;div class="service-info"&gt;
+    &lt;h3&gt;RootService (providedIn: 'root')&lt;/h3&gt;
+
+
+    &lt;p&gt;ID: {{ rootService.getInstanceId() }}&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;/p&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="service-info"&gt;
+    &lt;h3&gt;AnyService (providedIn: 'any')&lt;/h3&gt;
+
+
+    &lt;p&gt;ID: {{ anyService.getInstanceId() }}&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;/p&gt;
+
+  &lt;/div&gt;
+  
+  &lt;div class="service-info"&gt;
+    &lt;h3&gt;ComponentScopedService (component providers)&lt;/h3&gt;
+
+
+    &lt;p&gt;ID: {{ componentService.getInstanceId() }}&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;/p&gt;
+
+  &lt;/div&gt;
+  
+  &lt;app-demo-child&gt;&lt;/app-demo-child&gt;
+&lt;/div&gt;   ` }) export class DemoComponent {   constructor(
+public rootService: RootService,
+public anyService: AnyService,
+public componentService: ComponentScopedService   ) {} }
 </code></pre></div></div>
 
-<p><strong>demo-child.component.ts</strong></p>
+<p>import { Component } from ‘@angular/core’;
+import { RootService } from ‘./root.service’;
+import { AnyService } from ‘./any.service’;
+import { ComponentScopedService } from ‘./component-scoped.service’;</p>
+
+<p>@Component({
+  selector: ‘app-demo’,
+  standalone: true,
+  providers: [ComponentScopedService],
+  template: `
+    &lt;div class="demo"&gt;
+      &lt;h2&gt;Demonstração de Escopos&lt;/h2&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;div class="service-info"&gt;
+    &lt;h3&gt;RootService (providedIn: 'root')&lt;/h3&gt;
+    &lt;p&gt;ID: {{ rootService.getInstanceId() }}&lt;/p&gt;
+    &lt;p&gt;{{ rootService.getScope() }}&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="service-info"&gt;
+    &lt;h3&gt;AnyService (providedIn: 'any')&lt;/h3&gt;
+    &lt;p&gt;ID: {{ anyService.getInstanceId() }}&lt;/p&gt;
+    &lt;p&gt;{{ anyService.getScope() }}&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="service-info"&gt;
+    &lt;h3&gt;ComponentScopedService (component providers)&lt;/h3&gt;
+    &lt;p&gt;ID: {{ componentService.getInstanceId() }}&lt;/p&gt;
+    &lt;p&gt;{{ componentService.getScope() }}&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;app-demo-child&gt;&lt;/app-demo-child&gt;
+&lt;/div&gt;   ` }) export class DemoComponent {   constructor(
+public rootService: RootService,
+public anyService: AnyService,
+public componentService: ComponentScopedService   ) {} } ```typescript import { Component } from '@angular/core'; import { RootService } from './root.service'; import { AnyService } from './any.service'; import { ComponentScopedService } from './component-scoped.service';
+</code></pre></div></div>
+
+<p>@Component({
+  selector: ‘app-demo’,
+  standalone: true,
+  providers: [ComponentScopedService],
+  template: `
+    &lt;div class="demo"&gt;
+      &lt;h2&gt;Demonstração de Escopos&lt;/h2&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;div class="service-info"&gt;
+    &lt;h3&gt;RootService (providedIn: 'root')&lt;/h3&gt;
+    &lt;p&gt;ID: {{ rootService.getInstanceId() }}&lt;/p&gt;
+    &lt;p&gt;{{ rootService.getScope() }}&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="service-info"&gt;
+    &lt;h3&gt;AnyService (providedIn: 'any')&lt;/h3&gt;
+    &lt;p&gt;ID: {{ anyService.getInstanceId() }}&lt;/p&gt;
+    &lt;p&gt;{{ anyService.getScope() }}&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="service-info"&gt;
+    &lt;h3&gt;ComponentScopedService (component providers)&lt;/h3&gt;
+    &lt;p&gt;ID: {{ componentService.getInstanceId() }}&lt;/p&gt;
+    &lt;p&gt;{{ componentService.getScope() }}&lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;app-demo-child&gt;&lt;/app-demo-child&gt;
+&lt;/div&gt;   ` }) export class DemoComponent {   constructor(
+public rootService: RootService,
+public anyService: AnyService,
+public componentService: ComponentScopedService   ) {} } ```
+</code></pre></div></div>
+
+<p><strong>demo-child.component.ts</strong>
+import { Component } from ‘@angular/core’;
+import { RootService } from ‘./root.service’;
+import { AnyService } from ‘./any.service’;
+import { ComponentScopedService } from ‘./component-scoped.service’;</p>
+
+<p>@Component({
+  selector: ‘app-demo-child’,
+  standalone: true,
+  providers: [ComponentScopedService],
+  template: `
+    &lt;div class="child-demo"&gt;
+      &lt;h3&gt;Componente Filho&lt;/h3&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;RootService ID: {{ rootService.getInstanceId() }} (mesmo)&lt;/p&gt;
+
+
+  &lt;p&gt;AnyService ID:  (mesmo se mesmo módulo)&lt;/p&gt;
+
+  &lt;p&gt;ComponentScopedService ID:  (novo)&lt;/p&gt;
+
+&lt;/div&gt;   ` }) export class DemoChildComponent {   constructor(
+public rootService: RootService,
+public anyService: AnyService,
+public componentService: ComponentScopedService   ) {} }
+</code></pre></div></div>
+
+<p>import { Component } from ‘@angular/core’;
+import { RootService } from ‘./root.service’;
+import { AnyService } from ‘./any.service’;
+import { ComponentScopedService } from ‘./component-scoped.service’;</p>
+
+<p>@Component({
+  selector: ‘app-demo-child’,
+  standalone: true,
+  providers: [ComponentScopedService],
+  template: `
+    &lt;div class="child-demo"&gt;
+      &lt;h3&gt;Componente Filho&lt;/h3&gt;
+      &lt;p&gt;RootService ID: {{ rootService.getInstanceId() }} (mesmo)&lt;/p&gt;
+      &lt;p&gt;AnyService ID: {{ anyService.getInstanceId() }} (mesmo se mesmo módulo)&lt;/p&gt;
+      &lt;p&gt;ComponentScopedService ID: {{ componentService.getInstanceId() }} (novo)&lt;/p&gt;
+    &lt;/div&gt;
+  `
+})
+export class DemoChildComponent {
+  constructor(
+    public rootService: RootService,
+    public anyService: AnyService,
+    public componentService: ComponentScopedService
+  ) {}
+}</p>
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@angular/core</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">RootService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./root.service</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">AnyService</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./any.service</span><span class="dl">'</span><span class="p">;</span>
@@ -555,9 +802,9 @@
   <span class="na">template</span><span class="p">:</span> <span class="s2">`
     &lt;div class="child-demo"&gt;
       &lt;h3&gt;Componente Filho&lt;/h3&gt;
-      &lt;p&gt;RootService ID:  (mesmo)&lt;/p&gt;
-      &lt;p&gt;AnyService ID:  (mesmo se mesmo módulo)&lt;/p&gt;
-      &lt;p&gt;ComponentScopedService ID:  (novo)&lt;/p&gt;
+      &lt;p&gt;RootService ID: {{ rootService.getInstanceId() }} (mesmo)&lt;/p&gt;
+      &lt;p&gt;AnyService ID: {{ anyService.getInstanceId() }} (mesmo se mesmo módulo)&lt;/p&gt;
+      &lt;p&gt;ComponentScopedService ID: {{ componentService.getInstanceId() }} (novo)&lt;/p&gt;
     &lt;/div&gt;
   `</span>
 <span class="p">})</span>
