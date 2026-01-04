@@ -569,7 +569,8 @@ import { ChildComponent } from ‘./child.component’;</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;GlobalService ID: {{ globalService.getInstanceId() }}&lt;/p&gt;
 
 
-  &lt;p&gt;ComponentService ID: &lt;/p&gt;
+  &lt;p&gt;ComponentService ID: {{ componentService.getInstanceId() }}&lt;/p&gt;
+
 
   &lt;app-child&gt;&lt;/app-child&gt;
 &lt;/div&gt;   ` }) export class ParentComponent {   constructor(
@@ -652,7 +653,8 @@ import { ComponentService } from ‘./component.service’;</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;GlobalService ID: {{ globalService.getInstanceId() }}&lt;/p&gt;
 
 
-  &lt;p&gt;ComponentService ID: &lt;/p&gt;
+  &lt;p&gt;ComponentService ID: {{ componentService.getInstanceId() }}&lt;/p&gt;
+
 
   &lt;p class="note"&gt;
     GlobalService: Mesma instância (root)&lt;br&gt;

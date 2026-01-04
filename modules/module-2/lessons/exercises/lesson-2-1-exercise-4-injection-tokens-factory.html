@@ -671,7 +671,8 @@ import { API_CONFIG, ApiConfig } from ‘./api-config’;</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;API URL: {{ apiService.getBaseUrl() }}&lt;/p&gt;
 
 
-  &lt;p&gt;Timeout: ms&lt;/p&gt;
+  &lt;p&gt;Timeout: {{ apiService.getTimeout() }}ms&lt;/p&gt;
+
 
 &lt;/div&gt;   ` }) export class FeatureComponent {   apiService = inject(ApiService); }
 </code></pre></div></div>

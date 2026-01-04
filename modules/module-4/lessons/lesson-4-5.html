@@ -827,7 +827,8 @@ export class ZonelessComponent {
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;{{ count() }}&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;/p&gt;
+  &lt;p&gt;{{ doubleCount() }}&lt;/p&gt;
+
 
   &lt;button (click)="increment()"&gt;Increment&lt;/button&gt;
 &lt;/div&gt;   ` }) export class MigratedComponent {   count = signal(0);   doubleCount = computed(() =&gt; this.count() * 2);

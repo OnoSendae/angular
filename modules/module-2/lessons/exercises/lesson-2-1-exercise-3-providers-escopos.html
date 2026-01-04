@@ -634,7 +634,8 @@ import { ComponentScopedService } from ‘./component-scoped.service’;</p>
     &lt;p&gt;ID: {{ rootService.getInstanceId() }}&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;{{ rootService.getScope() }}&lt;/p&gt;
+
 
   &lt;/div&gt;
   
@@ -645,7 +646,8 @@ import { ComponentScopedService } from ‘./component-scoped.service’;</p>
     &lt;p&gt;ID: {{ anyService.getInstanceId() }}&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;{{ anyService.getScope() }}&lt;/p&gt;
+
 
   &lt;/div&gt;
   
@@ -656,7 +658,8 @@ import { ComponentScopedService } from ‘./component-scoped.service’;</p>
     &lt;p&gt;ID: {{ componentService.getInstanceId() }}&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;{{ componentService.getScope() }}&lt;/p&gt;
+
 
   &lt;/div&gt;
   
@@ -755,9 +758,10 @@ import { ComponentScopedService } from ‘./component-scoped.service’;</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;p&gt;RootService ID: {{ rootService.getInstanceId() }} (mesmo)&lt;/p&gt;
 
 
-  &lt;p&gt;AnyService ID:  (mesmo se mesmo módulo)&lt;/p&gt;
+  &lt;p&gt;AnyService ID: {{ anyService.getInstanceId() }} (mesmo se mesmo módulo)&lt;/p&gt;
 
-  &lt;p&gt;ComponentScopedService ID:  (novo)&lt;/p&gt;
+  &lt;p&gt;ComponentScopedService ID: {{ componentService.getInstanceId() }} (novo)&lt;/p&gt;
+
 
 &lt;/div&gt;   ` }) export class DemoChildComponent {   constructor(
 public rootService: RootService,
