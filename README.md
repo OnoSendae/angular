@@ -1,410 +1,738 @@
-# 🚀 Angular Expert
+# Angular Expert 5 Dias - Plataforma de Ensino
 
-<div align="center">
+Plataforma de ensino online construída com Jekyll para cursos estruturados em módulos, aulas e exercícios. Suporta podcasts, vídeos, rastreamento de progresso e navegação intuitiva.
 
-![Angular](https://img.shields.io/badge/Angular-17+-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Jekyll](https://img.shields.io/badge/Jekyll-4.3-CC0000?style=for-the-badge&logo=jekyll&logoColor=white)
+## 📋 Índice
 
-**Treinamento intensivo e prático para dominar Angular do zero ao nível expert**
+- [Requisitos](#requisitos)
+- [Instalação](#instalação)
+- [Como Rodar](#como-rodar)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Como Utilizar](#como-utilizar)
+- [Personalização para Outra Temática](#personalização-para-outra-temática)
+- [Alterando Conteúdo](#alterando-conteúdo)
+- [Deploy](#deploy)
+- [Troubleshooting](#troubleshooting)
 
-[📚 Começar Curso](#-módulos-do-curso) • [🎯 Objetivos](#-objetivos-do-curso) • [📋 Pré-requisitos](#-pré-requisitos) • [💡 Metodologia](#-metodologia)
+## 🔧 Requisitos
 
-</div>
+- **Ruby** 2.7 ou superior
+- **RubyGems** (geralmente vem com Ruby)
+- **Bundler** (instalado via `gem install bundler`)
+- **Node.js** 18+ (opcional, para alguns recursos)
+- **Git** (para controle de versão)
 
+### Verificando Instalações
+
+```bash
+ruby --version    # Deve ser 2.7+
+gem --version     # Deve estar instalado
+bundler --version # Deve estar instalado
+```
+
+## 📦 Instalação
+
+### 1. Clone o Repositório
+
+```bash
+git clone <url-do-repositorio>
+cd angular-expert-5-days-site
+```
+
+### 2. Instale as Dependências
+
+```bash
+bundle install
+```
+
+Isso instalará todas as gems necessárias definidas no `Gemfile`:
+- Jekyll 4.3+
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-seo-tag
+- minima (tema Jekyll)
+
+### 3. Verifique a Instalação
+
+```bash
+bundle exec jekyll --version
+```
+
+## 🚀 Como Rodar
+
+### Modo Desenvolvimento (com hot reload)
+
+```bash
+bundle exec jekyll serve
+```
+
+O site estará disponível em: `http://localhost:4000`
+
+### Modo Desenvolvimento com Watch (recomendado)
+
+```bash
+bundle exec jekyll serve --watch
+```
+
+Isso recarrega automaticamente quando você faz alterações nos arquivos.
+
+### Opções Adicionais
+
+```bash
+# Rodar em porta específica
+bundle exec jekyll serve --port 3000
+
+# Rodar com drafts habilitados
+bundle exec jekyll serve --drafts
+
+# Build sem servidor (gera arquivos estáticos)
+bundle exec jekyll build
+
+# Build para produção (otimizado)
+JEKYLL_ENV=production bundle exec jekyll build
+```
+
+### Acessando o Site
+
+Após iniciar o servidor, acesse:
+- **URL Local**: `http://localhost:4000`
+- **URL da Rede**: `http://<seu-ip>:4000` (para acessar de outros dispositivos)
+
+## 📁 Estrutura do Projeto
+
+```
+angular-expert-5-days-site/
+├── _config.yml              # Configuração principal do Jekyll
+├── _data/                   # Arquivos de dados YAML
+│   ├── modules.yml          # Definição dos módulos
+│   ├── lessons.yml          # Definição das aulas
+│   ├── exercises.yml        # Definição dos exercícios
+│   ├── videos.yml          # Metadados dos vídeos
+│   └── podcasts.yml        # Metadados dos podcasts
+├── _includes/               # Componentes reutilizáveis
+│   ├── header.html
+│   ├── footer.html
+│   ├── navigation.html
+│   ├── breadcrumbs.html
+│   ├── podcast-player.html
+│   ├── video-player.html
+│   └── progress-tracker.html
+├── _layouts/               # Templates de página
+│   ├── default.html
+│   ├── module.html
+│   ├── lesson.html
+│   └── exercise.html
+├── _sass/                   # Estilos SCSS
+│   ├── main.scss
+│   ├── _theme.scss
+│   ├── _variables.scss
+│   └── ...
+├── assets/                  # Recursos estáticos
+│   ├── css/
+│   ├── js/
+│   ├── images/
+│   ├── podcasts/           # Arquivos de áudio (.m4a)
+│   └── videos/             # Arquivos de vídeo (.mp4)
+├── modules/                 # Conteúdo dos módulos
+│   ├── module-1/
+│   │   ├── index.md        # Página do módulo
+│   │   └── lessons/        # Aulas do módulo
+│   │       ├── lesson-1-1.md
+│   │       └── exercises/  # Exercícios
+│   └── ...
+├── index.md                 # Página inicial
+├── about.md                 # Página sobre
+├── Gemfile                  # Dependências Ruby
+└── README.md                # Este arquivo
+```
+
+## 🎯 Como Utilizar
+
+### Navegação
+
+1. **Página Inicial** (`/`): Lista todos os módulos disponíveis
+2. **Módulo** (`/modules/<slug>`): Página do módulo com lista de aulas
+3. **Aula** (`/modules/<slug>/lessons/<lesson-slug>`): Conteúdo da aula com player de podcast/vídeo
+4. **Exercício** (`/modules/<slug>/lessons/exercises/<exercise-slug>`): Exercício prático
+
+### Funcionalidades
+
+- **Player de Podcast**: Reproduz áudios em formato M4A
+- **Player de Vídeo**: Reproduz vídeos em formato MP4
+- **Rastreamento de Progresso**: Salva progresso localmente no navegador
+- **Navegação entre Aulas**: Botões de próxima/anterior
+- **Tema Claro/Escuro**: Alternância automática baseada em preferências do sistema
+- **Breadcrumbs**: Navegação hierárquica
+
+### Estrutura de Dados
+
+O projeto usa arquivos YAML em `_data/` para definir a estrutura:
+
+- **modules.yml**: Define módulos e suas aulas
+- **lessons.yml**: Define aulas com metadados (duração, nível, pré-requisitos)
+- **exercises.yml**: Define exercícios vinculados às aulas
+- **videos.yml**: Metadados dos vídeos
+- **podcasts.yml**: Metadados dos podcasts
+
+## 🔄 Personalização para Outra Temática
+
+Para adaptar este projeto para outra temática (ex: React, Vue, Python, etc.), siga estes passos:
+
+### 1. Atualizar Configuração Principal
+
+Edite `_config.yml`:
+
+```yaml
+title: "Sua Nova Temática"
+description: "Descrição do seu curso"
+url: "https://seu-dominio.github.io"
+baseurl: "/seu-curso"
+author: "Seu Nome"
+```
+
+### 2. Atualizar Dados dos Módulos
+
+Edite `_data/modules.yml`:
+
+```yaml
+modules:
+  - id: module-1
+    title: "Fundamentos da Nova Temática"
+    slug: "fundamentos"
+    duration: "8 horas"
+    description: "Descrição do módulo"
+    lessons:
+      - lesson-1-1
+      - lesson-1-2
+    order: 1
+```
+
+### 3. Atualizar Dados das Aulas
+
+Edite `_data/lessons.yml`:
+
+```yaml
+lessons:
+  - id: lesson-1-1
+    title: "Introdução à Nova Temática"
+    slug: "introducao"
+    module: module-1
+    order: 1
+    duration: "60 minutos"
+    level: "Básico"
+    prerequisites: []
+    podcast:
+      file: "assets/podcasts/01-introducao.m4a"
+      image: "assets/images/podcasts/01-introducao.png"
+      title: "Introdução"
+      description: "Descrição do podcast"
+      duration: "45-60 minutos"
+```
+
+### 4. Substituir Conteúdo dos Arquivos Markdown
+
+- Edite `index.md` para refletir a nova temática
+- Atualize `modules/module-1/index.md` com conteúdo do novo módulo
+- Atualize `modules/module-1/lessons/lesson-1-1.md` com conteúdo da nova aula
+
+### 5. Substituir Mídia
+
+- Substitua arquivos em `assets/podcasts/` pelos seus podcasts
+- Substitua arquivos em `assets/videos/` pelos seus vídeos
+- Substitua imagens em `assets/images/podcasts/` pelas suas imagens
+
+### 6. Atualizar Metadados de Vídeos e Podcasts
+
+Edite `_data/videos.yml` e `_data/podcasts.yml` com os novos metadados:
+
+```yaml
+videos:
+  - id: video-1-1
+    lesson_id: lesson-1-1
+    file: "assets/videos/01-introducao.mp4"
+    title: "Introdução"
+    description: "Descrição do vídeo"
+    duration: "45-60 minutos"
+    thumbnail: "assets/images/podcasts/01-introducao.png"
+```
+
+### 7. Atualizar Estilos (Opcional)
+
+Modifique arquivos em `_sass/` para personalizar cores e estilos:
+
+- `_colors.scss`: Cores do tema
+- `_theme.scss`: Estilos gerais
+- `_variables.scss`: Variáveis SCSS
+
+### 8. Limpar Dados Antigos
+
+Remova ou atualize:
+- Conteúdo antigo em `modules/`
+- Exercícios antigos em `modules/*/lessons/exercises/`
+- Referências antigas nos arquivos YAML
+
+## ✏️ Alterando Conteúdo
+
+### Passo a Passo Detalhado
+
+#### 1. Adicionar um Novo Módulo
+
+**Passo 1.1**: Edite `_data/modules.yml`
+
+```yaml
+modules:
+  - id: module-6
+    title: "Novo Módulo"
+    slug: "novo-modulo"
+    duration: "8 horas"
+    description: "Descrição do novo módulo"
+    lessons:
+      - lesson-6-1
+      - lesson-6-2
+    order: 6
+```
+
+**Passo 1.2**: Crie o diretório do módulo
+
+```bash
+mkdir -p modules/module-6/lessons/exercises
+```
+
+**Passo 1.3**: Crie `modules/module-6/index.md`
+
+```markdown
+---
+layout: module
+title: "Novo Módulo"
+slug: novo-modulo
+duration: "8 horas"
+description: "Descrição do novo módulo"
+lessons: 
+  - "lesson-6-1"
+  - "lesson-6-2"
+module: module-6
+permalink: /modules/novo-modulo/
 ---
 
-## 📖 Sobre o Curso
+## Conteúdo do Módulo
 
-**Angular Expert** é um treinamento completo e intensivo que leva você desde os conceitos fundamentais até técnicas avançadas de desenvolvimento Angular. Este curso foi projetado para desenvolvedores que desejam dominar Angular de forma prática e eficiente, construindo conhecimento sólido através de exercícios práticos e projetos reais.
+Aqui vai o conteúdo do módulo...
+```
 
-### 🎯 Objetivos do Curso
+#### 2. Adicionar uma Nova Aula
 
-Ao final deste treinamento, você será capaz de:
+**Passo 2.1**: Edite `_data/lessons.yml`
 
-- ✅ Criar aplicações Angular modernas usando Standalone Components
-- ✅ Dominar TypeScript essencial para desenvolvimento Angular profissional
-- ✅ Implementar arquiteturas escaláveis e manuteníveis
-- ✅ Gerenciar estado de forma eficiente com Signals e NgRx
-- ✅ Otimizar performance de aplicações Angular
-- ✅ Criar testes completos (unitários, integração e E2E)
-- ✅ Implementar SSR e PWA
-- ✅ Aplicar segurança avançada em aplicações web
-- ✅ Fazer deploy de aplicações Angular em produção
+```yaml
+lessons:
+  - id: lesson-6-1
+    title: "Nova Aula"
+    slug: "nova-aula"
+    module: module-6
+    order: 1
+    duration: "60 minutos"
+    level: "Básico"
+    prerequisites: []
+    podcast:
+      file: "assets/podcasts/06.1-nova-aula.m4a"
+      image: "assets/images/podcasts/06.1-nova-aula.png"
+      title: "Nova Aula"
+      description: "Descrição"
+      duration: "45-60 minutos"
+```
 
-### 📊 Estatísticas do Curso
+**Passo 2.2**: Crie `modules/module-6/lessons/lesson-6-1.md`
 
-- **📚 5 Módulos** completos e progressivos
-- **🎓 25 Aulas** detalhadas com teoria e prática
-- **💻 119 Exercícios** práticos para fixação
-- **🎙️ 18 Podcasts** com explicações aprofundadas
-- **⏱️ 40 horas** de conteúdo total
-- **🏆 1 Projeto Final** completo end-to-end
-
+```markdown
+---
+layout: lesson
+title: "Aula 6.1: Nova Aula"
+slug: nova-aula
+module: module-6
+lesson_id: lesson-6-1
+duration: "60 minutos"
+level: "Básico"
+prerequisites: []
+exercises: []
+podcast:
+  file: "assets/podcasts/06.1-nova-aula.m4a"
+  image: "assets/images/podcasts/06.1-nova-aula.png"
+  title: "Nova Aula"
+  description: "Descrição"
+  duration: "45-60 minutos"
+permalink: /modules/novo-modulo/lessons/nova-aula/
 ---
 
-## 📋 Pré-requisitos
+## Conteúdo da Aula
 
-Para aproveitar ao máximo este curso, é recomendado ter:
+Aqui vai o conteúdo da aula...
+```
 
-- ✅ Conhecimento básico de **JavaScript ES6+**
-- ✅ Familiaridade com **HTML/CSS**
-- ✅ **Node.js** instalado (versão 18 ou superior)
-- ✅ Editor de código configurado (VS Code recomendado)
-- ✅ Conhecimento básico de linha de comando
-- ✅ Vontade de aprender e praticar! 🚀
+**Passo 2.3**: Adicione os arquivos de mídia
 
-> **Nota**: Não é necessário conhecimento prévio de Angular ou TypeScript. O curso começa do zero e cobre todos os fundamentos necessários.
+- Coloque o podcast em `assets/podcasts/06.1-nova-aula.m4a`
+- Coloque a imagem em `assets/images/podcasts/06.1-nova-aula.png`
+- (Opcional) Coloque o vídeo em `assets/videos/06.1-nova-aula.mp4`
 
+**Passo 2.4**: Atualize `_data/podcasts.yml` e `_data/videos.yml` se necessário
+
+#### 3. Adicionar um Novo Exercício
+
+**Passo 3.1**: Edite `_data/exercises.yml`
+
+```yaml
+exercises:
+  - id: lesson-6-1-exercise-1
+    title: "Exercício 6.1.1: Primeiro Exercício"
+    lesson_id: lesson-6-1
+    module: module-6
+    slug: primeiro-exercicio
+    order: 1
+    url: /modules/novo-modulo/lessons/exercises/lesson-6-1-exercise-1-primeiro-exercicio
+```
+
+**Passo 3.2**: Crie `modules/module-6/lessons/exercises/lesson-6-1-exercise-1-primeiro-exercicio.md`
+
+```markdown
+---
+layout: exercise
+title: "Exercício 6.1.1: Primeiro Exercício"
+slug: primeiro-exercicio
+lesson_id: lesson-6-1
+module: module-6
+order: 1
+permalink: /modules/novo-modulo/lessons/exercises/primeiro-exercicio/
 ---
 
-## 🎓 Estrutura do Curso
+## Objetivo
 
-O curso está organizado em **5 módulos progressivos**, cada um com **5 aulas** e múltiplos exercícios práticos. Cada módulo constrói sobre o conhecimento do anterior, garantindo uma curva de aprendizado suave e eficiente.
+Descrição do exercício...
 
-### 📚 Módulos do Curso
+## Instruções
 
-#### [Módulo 1: Fundamentos Acelerados](./modules/module-1/) ⏱️ 8 horas
+1. Passo 1
+2. Passo 2
+3. Passo 3
 
-**Estabeleça as bases sólidas do Angular**
+## Solução
 
-Este módulo estabelece as fundações essenciais do Angular através de prática intensiva. Você criará seu primeiro projeto Angular e aprenderá os conceitos fundamentais através de exercícios práticos imediatos.
+```typescript
+// Código da solução
+```
+```
 
-**O que você vai aprender:**
-- Configuração completa do ambiente Angular
-- TypeScript essencial para Angular
-- Componentes Standalone (Angular 17+)
-- Data Binding avançado
-- Control Flow moderno (@if, @for, @switch)
-- Pipes customizados
+**Passo 3.3**: Atualize a aula para referenciar o exercício
 
-**Aulas:**
-1. Introdução ao Angular e Configuração (60 min)
-2. TypeScript Essencial para Angular (90 min)
-3. Componentes Standalone e Templates (120 min)
-4. Data Binding e Diretivas Modernas (120 min)
-5. Control Flow e Pipes (90 min)
+Edite `modules/module-6/lessons/lesson-6-1.md`:
 
-**Exercícios:** 26 exercícios práticos  
-**Projeto:** Todo List Básico
+```markdown
+---
+layout: lesson
+...
+exercises: 
+  - lesson-6-1-exercise-1
+...
+---
+```
 
+#### 4. Editar Conteúdo Existente
+
+**Para editar uma aula existente**:
+
+1. Abra o arquivo `.md` correspondente em `modules/<module>/lessons/`
+2. Edite o conteúdo markdown
+3. Salve o arquivo
+4. O Jekyll recarrega automaticamente (se estiver rodando com `--watch`)
+
+**Para editar metadados**:
+
+1. Edite o arquivo YAML correspondente em `_data/`
+2. Salve o arquivo
+3. O Jekyll recarrega automaticamente
+
+#### 5. Adicionar Vídeo a uma Aula
+
+**Passo 5.1**: Adicione o vídeo em `assets/videos/`
+
+**Passo 5.2**: Edite `_data/videos.yml`
+
+```yaml
+videos:
+  - id: video-6-1
+    lesson_id: lesson-6-1
+    file: "assets/videos/06.1-nova-aula.mp4"
+    title: "Nova Aula"
+    description: "Descrição"
+    duration: "45-60 minutos"
+    thumbnail: "assets/images/podcasts/06.1-nova-aula.png"
+```
+
+**Passo 5.3**: Edite a aula para incluir o vídeo
+
+Em `modules/module-6/lessons/lesson-6-1.md`:
+
+```markdown
+---
+layout: lesson
+...
+video:
+  file: "assets/videos/06.1-nova-aula.mp4"
+  thumbnail: "assets/images/podcasts/06.1-nova-aula.png"
+  title: "Nova Aula"
+  description: "Descrição"
+  duration: "45-60 minutos"
+---
+```
+
+#### 6. Reordenar Módulos/Aulas
+
+**Para reordenar módulos**:
+
+Edite `_data/modules.yml` e ajuste o campo `order`:
+
+```yaml
+modules:
+  - id: module-1
+    order: 1  # Primeiro módulo
+  - id: module-2
+    order: 2  # Segundo módulo
+```
+
+**Para reordenar aulas**:
+
+Edite `_data/lessons.yml` e ajuste o campo `order`:
+
+```yaml
+lessons:
+  - id: lesson-1-1
+    order: 1  # Primeira aula
+  - id: lesson-1-2
+    order: 2  # Segunda aula
+```
+
+#### 7. Atualizar Pré-requisitos
+
+Edite `_data/lessons.yml`:
+
+```yaml
+lessons:
+  - id: lesson-6-2
+    prerequisites: ["lesson-6-1"]  # Requer lesson-6-1
+```
+
+#### 8. Modificar Navegação
+
+Edite `_includes/navigation.html` para personalizar o menu de navegação.
+
+#### 9. Personalizar Estilos
+
+**Cores**: Edite `_sass/_colors.scss`
+
+```scss
+$primary-color: #your-color;
+$secondary-color: #your-color;
+```
+
+**Tema**: Edite `_sass/_theme.scss` para modificar estilos gerais.
+
+**Variáveis**: Edite `_sass/_variables.scss` para ajustar espaçamentos, fontes, etc.
+
+### Formato de Arquivos Markdown
+
+Os arquivos `.md` usam Front Matter YAML no topo:
+
+```markdown
+---
+layout: lesson
+title: "Título"
+slug: slug-da-pagina
+module: module-1
+lesson_id: lesson-1-1
+duration: "60 minutos"
+level: "Básico"
+prerequisites: []
+exercises: []
+podcast:
+  file: "assets/podcasts/01-aula.m4a"
+  image: "assets/images/podcasts/01-aula.png"
+  title: "Título do Podcast"
+  description: "Descrição"
+  duration: "45-60 minutos"
+permalink: /modules/modulo/lessons/aula/
 ---
 
-#### [Módulo 2: Desenvolvimento Intermediário](./modules/module-2/) ⏱️ 8 horas
+## Conteúdo Markdown
 
-**Construa funcionalidades completas de aplicações reais**
+Aqui vai o conteúdo da página usando Markdown...
+```
 
-Aprenda a construir funcionalidades completas de aplicações reais usando serviços, roteamento, formulários reativos e comunicação com APIs.
+### Convenções de Nomenclatura
 
-**O que você vai aprender:**
-- Serviços e Injeção de Dependência avançada
-- Roteamento complexo com Guards e Resolvers
-- Formulários Reativos com validação customizada
-- HTTP Client e Interceptors
-- Comunicação entre componentes
+- **Módulos**: `module-1`, `module-2`, etc.
+- **Aulas**: `lesson-1-1`, `lesson-1-2`, etc. (módulo-aula)
+- **Exercícios**: `lesson-1-1-exercise-1`, `lesson-1-1-exercise-2`, etc.
+- **Slugs**: kebab-case (ex: `introducao-angular`)
+- **Arquivos de mídia**: Seguir padrão `MM.N-titulo.extensao`
 
-**Aulas:**
-1. Serviços e Injeção de Dependência (90 min)
-2. Roteamento e Navegação Avançada (120 min)
-3. Formulários Reativos e Validação (120 min)
-4. HTTP Client e Interceptors (90 min)
-5. Comunicação entre Componentes (60 min)
+## 🚢 Deploy
 
-**Exercícios:** 27 exercícios práticos  
-**Projeto:** CRUD de Produtos completo
+### GitHub Pages
 
----
+**Passo 1**: Configure `_config.yml`
 
-#### [Módulo 3: Programação Reativa e Estado](./modules/module-3/) ⏱️ 8 horas
+```yaml
+url: "https://seu-usuario.github.io"
+baseurl: "/nome-do-repositorio"
+```
 
-**Domine programação reativa e gerenciamento de estado**
+**Passo 2**: Faça build para produção
 
-Aprofunde-se em programação reativa com RxJS, implemente Signals e aprenda a gerenciar estado global com NgRx.
+```bash
+JEKYLL_ENV=production bundle exec jekyll build
+```
 
-**O que você vai aprender:**
-- RxJS Operators avançados
-- Signals e Signal-First Architecture
-- NgRx para gerenciamento de estado global
-- Padrões reativos que evitam memory leaks
-- Integração Signals + Observables
+**Passo 3**: Commit e push
 
-**Aulas:**
-1. RxJS Operators Avançados (120 min)
-2. Signals e Signal-First Architecture (120 min)
-3. NgRx - Gerenciamento de Estado (150 min)
-4. Padrões Reativos e Memory Leaks (60 min)
-5. Integração Signals + Observables (30 min)
+```bash
+git add .
+git commit -m "Build para produção"
+git push origin main
+```
 
-**Exercícios:** 28 exercícios práticos  
-**Projeto:** Gerenciador de Estado Completo
+**Passo 4**: Configure GitHub Pages
 
----
+1. Vá em Settings > Pages
+2. Selecione a branch `main`
+3. Selecione a pasta `/docs` ou `/ (root)`
+4. Salve
 
-#### [Módulo 4: Performance e Otimização](./modules/module-4/) ⏱️ 8 horas
+### Netlify
 
-**Crie aplicações extremamente performáticas**
+**Passo 1**: Crie `netlify.toml`
 
-Aprenda técnicas avançadas de otimização para criar aplicações Angular rápidas e eficientes.
+```toml
+[build]
+  command = "bundle exec jekyll build"
+  publish = "_site"
 
-**O que você vai aprender:**
-- Change Detection Strategies (OnPush)
-- Lazy Loading e Code Splitting avançado
-- Deferrable Views (@defer)
-- Profiling e otimização
-- Zone.js e aplicações Zoneless
+[[plugins]]
+  package = "@netlify/plugin-jekyll"
+```
 
-**Aulas:**
-1. Change Detection Strategies (120 min)
-2. Lazy Loading e Code Splitting (120 min)
-3. Deferrable Views e Performance (90 min)
-4. Profiling e Otimização (90 min)
-5. Zone.js e Zoneless Apps (60 min)
+**Passo 2**: Faça deploy via Netlify CLI ou interface web
 
-**Exercícios:** 23 exercícios práticos  
-**Projeto:** Otimização de Aplicação Existente
+### Vercel
 
----
+**Passo 1**: Crie `vercel.json`
 
-#### [Módulo 5: Práticas Avançadas e Projeto Final](./modules/module-5/) ⏱️ 8 horas
+```json
+{
+  "buildCommand": "bundle exec jekyll build",
+  "outputDirectory": "_site"
+}
+```
 
-**Consolide conhecimento através de práticas avançadas**
+**Passo 2**: Faça deploy via Vercel CLI ou interface web
 
-Aplique todas as técnicas aprendidas em um projeto completo, incluindo testes, SSR/PWA, segurança e arquitetura avançada.
+## 🔍 Troubleshooting
 
-**O que você vai aprender:**
-- Testes completos (unitários, integração, E2E)
-- SSR (Server-Side Rendering) e PWA
-- Segurança avançada
-- Arquitetura escalável (Clean Architecture)
-- Deploy em produção
+### Problema: `bundle install` falha
 
-**Aulas:**
-1. Testes Completos (120 min)
-2. SSR e PWA (120 min)
-3. Segurança Avançada (60 min)
-4. Arquitetura Avançada (60 min)
-5. Projeto Final Completo (120 min)
+**Solução**: Instale dependências do sistema
 
-**Exercícios:** 18 exercícios práticos + Projeto Final  
-**Projeto:** Task Manager Completo (4-6 horas)
+```bash
+# macOS
+brew install ruby
 
----
+# Ubuntu/Debian
+sudo apt-get install ruby-full build-essential
 
-## 💡 Metodologia
+# Windows
+# Use RubyInstaller
+```
 
-### 🎯 Abordagem Prática
+### Problema: Jekyll não inicia
 
-Este curso segue uma metodologia **hands-on** (mão na massa), onde você aprende fazendo:
+**Solução**: Verifique se todas as dependências estão instaladas
 
-1. **📖 Teoria Fundamentada**: Cada conceito é explicado de forma clara e didática
-2. **💻 Prática Imediata**: Exercícios práticos após cada conceito
-3. **🎙️ Podcasts Explicativos**: Aprofundamento através de podcasts detalhados
-4. **🏗️ Projetos Reais**: Projetos práticos que consolidam o aprendizado
-5. **🔄 Revisão Progressiva**: Conceitos são revisitados e aprofundados
+```bash
+bundle install
+bundle exec jekyll doctor
+```
 
-### 📚 Recursos Incluídos
+### Problema: Mudanças não aparecem
 
-- ✅ **Aulas em Markdown** com explicações detalhadas
-- ✅ **Exercícios práticos** com soluções passo a passo
-- ✅ **Podcasts** com explicações aprofundadas (18 episódios)
-- ✅ **Projetos práticos** por módulo
-- ✅ **Código de exemplo** completo e comentado
-- ✅ **Player de podcast integrado** para ouvir enquanto estuda
-- ✅ **Sistema de progresso** para acompanhar seu avanço
-- ✅ **Navegação intuitiva** entre módulos e aulas
+**Solução**: 
+1. Limpe o cache: `bundle exec jekyll clean`
+2. Rebuild: `bundle exec jekyll build`
+3. Reinicie o servidor
 
----
+### Problema: Erro de permissão
 
-## 🚀 Como Usar Este Curso
+**Solução**: 
 
-### 1️⃣ Acesse o Site
+```bash
+# macOS/Linux
+sudo gem install bundler
 
-O curso está disponível em formato web, otimizado para estudo online. Cada aula pode ser acompanhada com o player de podcast integrado.
+# Ou use rbenv/rvm para gerenciar versões Ruby
+```
 
-### 2️⃣ Siga a Ordem dos Módulos
+### Problema: Assets não carregam
 
-Os módulos foram projetados para serem estudados em sequência. Cada módulo constrói sobre o conhecimento do anterior.
+**Solução**: 
+1. Verifique se os caminhos estão corretos em `_config.yml`
+2. Use `relative_url` nos templates: `{{ '/assets/file.css' | relative_url }}`
+3. Verifique se os arquivos existem em `assets/`
 
-### 3️⃣ Pratique os Exercícios
+### Problema: Podcast/Vídeo não reproduz
 
-Não pule os exercícios! Eles são essenciais para fixar o conhecimento e desenvolver habilidades práticas.
+**Solução**:
+1. Verifique se o arquivo existe no caminho especificado
+2. Verifique o formato do arquivo (M4A para podcasts, MP4 para vídeos)
+3. Verifique os metadados em `_data/podcasts.yml` ou `_data/videos.yml`
+4. Verifique o console do navegador para erros JavaScript
 
-### 4️⃣ Ouça os Podcasts
+### Problema: Progresso não salva
 
-Os podcasts oferecem explicações aprofundadas e diferentes perspectivas sobre os conceitos. Use o player integrado para ouvir enquanto lê o conteúdo.
-
-### 5️⃣ Complete os Projetos
-
-Os projetos práticos consolidam todo o conhecimento do módulo. Dedique tempo para completá-los completamente.
-
-### 6️⃣ Acompanhe seu Progresso
-
-Use o sistema de progresso integrado para acompanhar quais aulas você já completou e seu progresso geral no curso.
-
----
-
-## 🎯 Dicas para Sucesso
-
-### ⏰ Organize seu Tempo
-
-- **Dedique 8 horas por módulo** para aproveitar completamente o conteúdo
-- **Estude de forma consistente** - melhor 1 hora por dia do que 8 horas de uma vez
-- **Pratique imediatamente** após cada conceito aprendido
-
-### 💻 Configure seu Ambiente
-
-- Instale todas as ferramentas necessárias antes de começar
-- Configure seu editor de código (VS Code recomendado)
-- Familiarize-se com o Angular CLI
-
-### 📝 Faça Anotações
-
-- Anote conceitos importantes
-- Documente suas dúvidas e descobertas
-- Crie um repositório Git para seus exercícios
-
-### 🤝 Pratique Regularmente
-
-- Não apenas leia - **escreva código**
-- Complete todos os exercícios
-- Experimente variações dos exemplos
-- Construa seus próprios projetos
-
-### 🎙️ Use os Podcasts
-
-- Ouça os podcasts enquanto revisa o conteúdo
-- Use o player integrado para pausar e retomar facilmente
-- Tome notas durante os podcasts
-
----
-
-## 🏆 Certificação
-
-Ao completar todos os módulos e o projeto final, você terá demonstrado:
-
-✅ Domínio completo dos fundamentos do Angular  
-✅ Capacidade de desenvolver aplicações intermediárias  
-✅ Habilidade em programação reativa avançada  
-✅ Competência em otimização de performance  
-✅ Experiência em práticas avançadas de desenvolvimento  
-
-**Parabéns! Você é agora um Angular Expert!** 🎉
-
----
+**Solução**:
+1. Verifique se o localStorage está habilitado no navegador
+2. Verifique o console do navegador para erros JavaScript
+3. Verifique se `assets/js/progress-tracker.js` está carregado
 
 ## 📚 Recursos Adicionais
 
-### Documentação Oficial
-- [Angular Documentation](https://angular.io/docs)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [RxJS Documentation](https://rxjs.dev/)
-- [NgRx Documentation](https://ngrx.io/)
+### Documentação Jekyll
 
-### Ferramentas Recomendadas
-- [Angular CLI](https://angular.io/cli)
-- [Angular DevTools](https://angular.io/guide/devtools)
-- [VS Code Angular Extension](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
+- [Jekyll Docs](https://jekyllrb.com/docs/)
+- [Liquid Template Language](https://shopify.github.io/liquid/)
+- [Jekyll Front Matter](https://jekyllrb.com/docs/front-matter/)
 
-### Comunidade
-- [Angular Discord](https://discord.gg/angular)
-- [Angular Reddit](https://www.reddit.com/r/Angular2/)
-- [Angular GitHub](https://github.com/angular/angular)
+### Markdown
 
----
+- [Markdown Guide](https://www.markdownguide.org/)
+- [GitHub Flavored Markdown](https://github.github.com/gfm/)
 
-## ❓ FAQ - Perguntas Frequentes
+### YAML
 
-### Quanto tempo leva para completar o curso?
-
-O curso foi projetado para ser completado em **5 dias** (40 horas totais), dedicando aproximadamente **8 horas por módulo**. No entanto, você pode estudar no seu próprio ritmo.
-
-### Preciso de conhecimento prévio de Angular?
-
-Não! O curso começa do zero e cobre todos os fundamentos necessários, incluindo TypeScript essencial.
-
-### Os exercícios têm soluções?
-
-Sim! Todos os exercícios incluem soluções detalhadas e explicações passo a passo.
-
-### Posso usar este curso para preparação profissional?
-
-Absolutamente! O curso cobre desde fundamentos até técnicas avançadas usadas em ambientes profissionais, incluindo testes, SSR, PWA e arquitetura escalável.
-
-### Os podcasts são obrigatórios?
-
-Não são obrigatórios, mas altamente recomendados! Eles oferecem explicações aprofundadas e diferentes perspectivas sobre os conceitos.
-
-### Como acompanho meu progresso?
-
-O site inclui um sistema integrado de rastreamento de progresso que salva seu avanço localmente. Você pode marcar aulas como completas e acompanhar seu progresso geral.
-
-### Posso fazer o curso offline?
-
-O conteúdo está disponível online, mas você pode fazer download dos arquivos Markdown e estudar offline se preferir.
-
----
+- [YAML Syntax](https://yaml.org/spec/1.2/spec.html)
 
 ## 🤝 Contribuindo
 
-Este é um projeto educacional em constante evolução. Contribuições, sugestões e feedback são bem-vindos!
+1. Faça fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
+4. Push para a branch (`git push origin feature/nova-feature`)
+5. Abra um Pull Request
 
-### Como Contribuir
+## 📝 Licença
 
-1. Reporte bugs ou sugestões através de issues
-2. Sugira melhorias no conteúdo
-3. Compartilhe seus projetos criados durante o curso
-4. Ajude outros estudantes na comunidade
+[Especifique a licença do projeto aqui]
 
----
+## 👤 Autor
 
-## 📄 Licença
-
-Este curso é disponibilizado para fins educacionais. Sinta-se livre para usar, compartilhar e adaptar o conteúdo para seus estudos.
-
----
-
-## 🙏 Agradecimentos
-
-Agradecemos a todos que contribuíram para tornar este curso possível, incluindo:
-
-- Comunidade Angular por criar um framework incrível
-- Desenvolvedores que compartilharam conhecimento
-- Estudantes que forneceram feedback valioso
+[Seu Nome] - [seu-email@exemplo.com]
 
 ---
 
-## 📞 Contato e Suporte
-
-- **Issues**: Reporte problemas ou sugestões através das issues do repositório
-- **Discussões**: Participe das discussões da comunidade
-- **Feedback**: Seu feedback é valioso para melhorar o curso!
-
----
-
-<div align="center">
-
-**Desenvolvido com ❤️ para a comunidade Angular**
-
-⭐ **Se este curso foi útil para você, considere dar uma estrela no repositório!**
-
-🚀 **Bons estudos e sucesso na sua jornada Angular!**
-
-</div>
-
----
-
-## 📊 Roadmap do Curso
-
-```
-Dia 1 → Módulo 1: Fundamentos Acelerados
-Dia 2 → Módulo 2: Desenvolvimento Intermediário  
-Dia 3 → Módulo 3: Programação Reativa e Estado
-Dia 4 → Módulo 4: Performance e Otimização
-Dia 5 → Módulo 5: Práticas Avançadas e Projeto Final
-```
-
----
-
-**Última atualização**: Janeiro 2026  
-**Versão do Angular**: 17+  
-**Versão do TypeScript**: 5.0+
+**Nota**: Este projeto foi originalmente configurado para um curso de Angular, mas pode ser facilmente adaptado para qualquer temática seguindo os passos de personalização acima.
