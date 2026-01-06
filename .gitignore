@@ -9,4 +9,8 @@ node_modules/
 *.log
 .DS_Store
 Gemfile.lock
+docs/
+backups/
+new-lessons/
+
 

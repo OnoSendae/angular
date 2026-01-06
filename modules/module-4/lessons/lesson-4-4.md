@@ -6,15 +6,8 @@ module: module-4
 lesson_id: lesson-4-4
 duration: "90 minutos"
 level: "Avançado"
-prerequisites: 
-  - "lesson-4-3"
-exercises:
-  - 
-  - "lesson-4-4-exercise-1"
-  - "lesson-4-4-exercise-2"
-  - "lesson-4-4-exercise-3"
-  - "lesson-4-4-exercise-4"
-  - "lesson-4-4-exercise-5"
+prerequisites: []
+exercises: []
 podcast:
   file: "assets/podcasts/04.4-Profiling_Angular_Otimizacao_Como_Fazer.m4a"
   image: "assets/images/podcasts/04.4-Profiling_Angular_Otimizacao_Como_Fazer.png"
@@ -440,4 +433,3 @@ Antes de considerar esta aula completa:
 **Aula Anterior**: [Aula 4.3: Deferrable Views e Performance](./lesson-4-3-deferrable-views.md)  
 **Próxima Aula**: [Aula 4.5: Zone.js e Zoneless Apps](./lesson-4-5-zonejs.md)  
 **Voltar ao Módulo**: [Módulo 4: Performance e Otimização](../modules/module-4-performance-otimizacao.md)
-

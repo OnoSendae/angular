@@ -6,15 +6,8 @@ module: module-2
 lesson_id: lesson-2-1
 duration: "90 minutos"
 level: "Intermediário"
-prerequisites: 
-  - "lesson-1-5"
-exercises:
-  - 
-  - "lesson-2-1-exercise-1"
-  - "lesson-2-1-exercise-2"
-  - "lesson-2-1-exercise-3"
-  - "lesson-2-1-exercise-4"
-  - "lesson-2-1-exercise-5"
+prerequisites: []
+exercises: []
 podcast:
   file: "assets/podcasts/02.1-Servicos_e_Injecao_de_Dependencia_no_Angular.m4a"
   image: "assets/images/podcasts/02.1-Servicos_e_Injecao_de_Dependencia_no_Angular.png"
@@ -28,20 +21,91 @@ permalink: /modules/desenvolvimento-intermediario/lessons/servicos-di/
 
 Nesta aula, você dominará serviços e injeção de dependência no Angular. Serviços são fundamentais para organizar lógica de negócio, compartilhar dados entre componentes e criar código reutilizável. Injeção de Dependência é o mecanismo que torna tudo isso possível de forma elegante e testável.
 
+### Contexto Histórico da Injeção de Dependência
+
+A Injeção de Dependência (DI) é um dos pilares fundamentais do Angular desde sua primeira versão. O sistema de DI do Angular é um dos mais poderosos e completos entre os frameworks JavaScript modernos.
+
+**Linha do Tempo da Evolução**:
+
+```
+AngularJS (2010) ──────────────────────────────────────────── Angular 17+ (2023+)
+ │                                                                  │
+ ├─ 2010    📦 AngularJS - DI Básico                              │
+ │          $inject annotation                                     │
+ │          Service registration manual                           │
+ │          DI baseado em strings                                  │
+ │                                                                  │
+ ├─ 2016    🚀 Angular 2 - DI Moderno                            │
+ │          Decorator @Injectable                                 │
+ │          Type-based injection                                  │
+ │          Hierarquia de injectors                               │
+ │          Providers system                                      │
+ │                                                                  │
+ ├─ 2017-2020 📈 Melhorias Incrementais                           │
+ │          InjectionToken para type safety                       │
+ │          Factory providers                                     │
+ │          Optional dependencies                                 │
+ │          Performance improvements                              │
+ │                                                                  │
+ ├─ 2020    ⚡ Angular 10 - providedIn simplificado             │
+ │          'root', 'platform', 'any'                            │
+ │          Standalone services                                   │
+ │                                                                  │
+ ├─ 2022    🔥 Angular 14 - inject() function                    │
+ │          Functional injection                                  │
+ │          Injection em funções                                 │
+ │          Código mais limpo                                     │
+ │                                                                  │
+ └─ 2023+    🎯 Angular 17+ - DI Otimizado                      │
+            Performance melhorada                                │
+            Tree-shaking melhorado                                │
+            Standalone-first                                      │
+```
+
+**Por que DI é Fundamental?**
+
+DI resolve problemas comuns de desenvolvimento:
+- **Acoplamento**: Sem DI, componentes criam dependências diretamente (alto acoplamento)
+- **Testabilidade**: Com DI, dependências podem ser mockadas facilmente
+- **Reutilização**: Serviços podem ser compartilhados entre componentes
+- **Manutenibilidade**: Mudanças em serviços não afetam componentes diretamente
+
+**Comparação com Outros Frameworks**:
+
+- **Angular**: DI nativo e completo, type-safe, hierarquia poderosa
+- **React**: Context API (limitado), sem DI nativo
+- **Vue**: Provide/Inject (básico), sem hierarquia completa
+
 ### O que você vai aprender
 
-- Criar serviços standalone
-- Usar decorator @Injectable
-- Entender hierarquia de injectors
-- Configurar providers e escopos
-- Usar função inject() moderna
-- Trabalhar com InjectionTokens
-- Criar factory e value providers
-- Implementar dependências opcionais
+- **Serviços Standalone**: Criar serviços auto-suficientes sem NgModules
+- **@Injectable Decorator**: Configurar serviços e escopos
+- **Hierarquia de Injectors**: Entender como Angular resolve dependências
+- **Providers e Escopos**: Configurar como serviços são criados e compartilhados
+- **Função inject()**: Forma moderna de injeção (Angular 14+)
+- **InjectionTokens**: Injeção type-safe de valores primitivos e objetos
+- **Factory Providers**: Criar serviços com lógica de criação complexa
+- **Dependências Opcionais**: Trabalhar com dependências que podem não existir
 
 ### Por que isso é importante
 
-Serviços são o coração da arquitetura Angular. Sem entender serviços e DI, você não conseguirá criar aplicações escaláveis e manuteníveis. DI facilita testes, promove reutilização de código e mantém componentes focados em apresentação.
+**Para Desenvolvimento**:
+- **Arquitetura Limpa**: Separação clara entre lógica de negócio e apresentação
+- **Testabilidade**: Fácil criar mocks e testar componentes isoladamente
+- **Reutilização**: Serviços podem ser compartilhados em toda aplicação
+- **Manutenibilidade**: Mudanças centralizadas, menos impacto
+
+**Para Projetos**:
+- **Escalabilidade**: Arquitetura que escala com projetos grandes
+- **Organização**: Código bem estruturado e fácil de navegar
+- **Performance**: Singleton services reduzem criação de instâncias
+- **Colaboração**: Múltiplos desenvolvedores podem trabalhar independentemente
+
+**Para Carreira**:
+- **Fundamental**: DI é essencial para Angular profissional
+- **Diferencial**: Entendimento profundo de DI é valorizado
+- **Base Sólida**: Necessário para conceitos avançados (guards, interceptors)
+- **Padrões**: Aprende padrões de design importantes (Dependency Injection, Singleton)
 
 ---
 
@@ -73,6 +137,64 @@ Componente A          Serviço          Componente B
 │  Usa     │         │ Lógica  │      │  Usa     │
 │  Serviço │         │ Compartilhada │ │  Serviço │
 └──────────┘         └─────────┘      └──────────┘
+```
+
+**Fluxo Detalhado de Uso de Serviços**:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Ciclo de Vida de um Serviço               │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  1. Declaração                                              │
+│     ┌─────────────────────┐                                 │
+│     │ @Injectable({       │                                 │
+│     │   providedIn: 'root'│                                 │
+│     │ })                   │                                 │
+│     │ export class        │                                 │
+│     │   MyService {}       │                                 │
+│     └─────────────────────┘                                 │
+│              │                                              │
+│              ▼                                              │
+│  2. Registro no Injector                                   │
+│     ┌─────────────────────┐                                 │
+│     │ Angular registra    │                                 │
+│     │ serviço no Root     │                                 │
+│     │ Injector            │                                 │
+│     └─────────────────────┘                                 │
+│              │                                              │
+│              ▼                                              │
+│  3. Primeira Solicitação                                   │
+│     ┌─────────────────────┐                                 │
+│     │ Component solicita  │                                 │
+│     │ MyService           │                                 │
+│     └─────────────────────┘                                 │
+│              │                                              │
+│              ▼                                              │
+│  4. Criação da Instância                                   │
+│     ┌─────────────────────┐                                 │
+│     │ Angular cria        │                                 │
+│     │ instância única     │                                 │
+│     │ (Singleton)         │                                 │
+│     └─────────────────────┘                                 │
+│              │                                              │
+│              ▼                                              │
+│  5. Injeção                                                │
+│     ┌─────────────────────┐                                 │
+│     │ Angular injeta      │                                 │
+│     │ instância no        │                                 │
+│     │ Component           │                                 │
+│     └─────────────────────┘                                 │
+│              │                                              │
+│              ▼                                              │
+│  6. Próximas Solicitações                                  │
+│     ┌─────────────────────┐                                 │
+│     │ Outros Components   │                                 │
+│     │ recebem mesma       │                                 │
+│     │ instância           │                                 │
+│     └─────────────────────┘                                 │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 **Exemplo Prático**:
@@ -171,6 +293,86 @@ Root Injector (providedIn: 'root')
     │           └─ Component Injector
     │                 │
     │                 └─ Element Injector
+```
+
+**Fluxo Detalhado de Resolução de Dependências**:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│         Processo de Resolução de Dependência                 │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  Component precisa de MyService                            │
+│         │                                                    │
+│         ▼                                                    │
+│  ┌─────────────────────────────────────┐                   │
+│  │ 1. Component Injector               │                   │
+│  │    ┌─────────────────────────────┐   │                   │
+│  │    │ providers: [MyService]?    │   │                   │
+│  │    └─────────────────────────────┘   │                   │
+│  │              │                        │                   │
+│  │              │ ❌ Não encontrado      │                   │
+│  │              ▼                        │                   │
+│  └─────────────────────────────────────┘                   │
+│         │                                                    │
+│         ▼                                                    │
+│  ┌─────────────────────────────────────┐                   │
+│  │ 2. Element Injector                 │                   │
+│  │    ┌─────────────────────────────┐   │                   │
+│  │    │ providers no elemento?      │   │                   │
+│  │    └─────────────────────────────┘   │                   │
+│  │              │                        │                   │
+│  │              │ ❌ Não encontrado      │                   │
+│  │              ▼                        │                   │
+│  └─────────────────────────────────────┘                   │
+│         │                                                    │
+│         ▼                                                    │
+│  ┌─────────────────────────────────────┐                   │
+│  │ 3. Module Injector                  │                   │
+│  │    ┌─────────────────────────────┐   │                   │
+│  │    │ providers no NgModule?     │   │                   │
+│  │    └─────────────────────────────┘   │                   │
+│  │              │                        │                   │
+│  │              │ ❌ Não encontrado      │                   │
+│  │              ▼                        │                   │
+│  └─────────────────────────────────────┘                   │
+│         │                                                    │
+│         ▼                                                    │
+│  ┌─────────────────────────────────────┐                   │
+│  │ 4. Platform Injector                │                   │
+│  │    ┌─────────────────────────────┐   │                   │
+│  │    │ providedIn: 'platform'?   │   │                   │
+│  │    └─────────────────────────────┘   │                   │
+│  │              │                        │                   │
+│  │              │ ❌ Não encontrado      │                   │
+│  │              ▼                        │                   │
+│  └─────────────────────────────────────┘                   │
+│         │                                                    │
+│         ▼                                                    │
+│  ┌─────────────────────────────────────┐                   │
+│  │ 5. Root Injector                    │                   │
+│  │    ┌─────────────────────────────┐   │                   │
+│  │    │ providedIn: 'root'?        │   │                   │
+│  │    └─────────────────────────────┘   │                   │
+│  │              │                        │                   │
+│  │              │ ✅ Encontrado!         │                   │
+│  │              ▼                        │                   │
+│  │    ┌─────────────────────────────┐   │                   │
+│  │    │ Cria ou retorna instância   │   │                   │
+│  │    │ (Singleton se 'root')       │   │                   │
+│  │    └─────────────────────────────┘   │                   │
+│  └─────────────────────────────────────┘                   │
+│         │                                                    │
+│         ▼                                                    │
+│  ┌─────────────────────────────────────┐                   │
+│  │ 6. Injeção no Component             │                   │
+│  │    Component recebe MyService       │                   │
+│  └─────────────────────────────────────┘                   │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+
+Nota: Se nenhum injector encontrar o serviço, Angular lança erro:
+"NullInjectorError: No provider for MyService"
 ```
 
 **Exemplo Prático**:
@@ -340,7 +542,48 @@ Factory providers são usados quando:
 
 **Analogia**:
 
-Factory providers são como fábricas personalizadas. Ao invés de comprar um produto padrão (classe), você pede uma fábrica que cria o produto exatamente como você precisa.
+Factory providers são como fábricas personalizadas. Ao invés de comprar um produto padrão (classe), você pede uma fábrica que cria o produto exatamente como você precisa. A fábrica pode verificar o ambiente, combinar diferentes materiais (dependências), e criar produtos customizados para cada situação.
+
+**Visualização do Processo**:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│              Factory Provider - Fluxo de Criação             │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  1. Angular identifica necessidade de serviço               │
+│         │                                                    │
+│         ▼                                                    │
+│  2. Verifica provider type: Factory                         │
+│         │                                                    │
+│         ▼                                                    │
+│  3. Resolve dependências (deps)                            │
+│     ┌─────────────────────────────────────┐                 │
+│     │ deps: [HttpClient, APP_CONFIG]     │                 │
+│     │   │                                 │                 │
+│     │   ├─ Resolve HttpClient            │                 │
+│     │   └─ Resolve APP_CONFIG            │                 │
+│     └─────────────────────────────────────┘                 │
+│         │                                                    │
+│         ▼                                                    │
+│  4. Executa Factory Function                               │
+│     ┌─────────────────────────────────────┐                 │
+│     │ createHttpService(http, config)     │                 │
+│     │   │                                  │                 │
+│     │   ├─ Lógica condicional?            │                 │
+│     │   ├─ Validação?                     │                 │
+│     │   ├─ Configuração?                  │                 │
+│     │   └─ Criação customizada            │                 │
+│     └─────────────────────────────────────┘                 │
+│         │                                                    │
+│         ▼                                                    │
+│  5. Retorna instância criada                               │
+│         │                                                    │
+│         ▼                                                    │
+│  6. Angular armazena e injeta                              │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
 
 **Exemplo Prático**:
 
@@ -356,6 +599,146 @@ export function createHttpService(http: HttpClient, config: AppConfig): HttpServ
 })
 export class HttpService {}
 ```
+
+**Exemplo Avançado com Lógica Condicional**:
+
+```typescript
+export function createLoggerService(config: AppConfig): LoggerService {
+  if (config.environment === 'production') {
+    return new ProductionLoggerService(config.logLevel);
+  } else {
+    return new DevelopmentLoggerService(config.logLevel);
+  }
+}
+
+@Injectable({
+  providedIn: 'root',
+  useFactory: createLoggerService,
+  deps: [APP_CONFIG]
+})
+export class LoggerService {}
+```
+
+---
+
+### Dependências Opcionais
+
+**Definição**: Dependências opcionais são serviços ou valores que podem não estar disponíveis na hierarquia de injectors, permitindo que o código continue funcionando mesmo sem eles.
+
+**Explicação Detalhada**:
+
+Dependências opcionais são úteis quando:
+- Um serviço pode ou não estar disponível dependendo do contexto
+- Você quer fornecer funcionalidade adicional quando disponível
+- Você precisa evitar erros quando um provider não está configurado
+- Você quer criar código mais flexível e tolerante a falhas
+
+**Analogia**:
+
+Dependências opcionais são como acessórios opcionais em um carro. O carro funciona sem eles, mas se estiverem disponíveis, oferecem funcionalidades extras. Por exemplo, um sistema de navegação GPS é opcional - o carro funciona sem ele, mas se estiver instalado, você pode usá-lo.
+
+**Visualização**:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│         Resolução de Dependência Opcional                    │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  Component solicita OptionalService                         │
+│         │                                                    │
+│         ▼                                                    │
+│  ┌─────────────────────────────────────┐                   │
+│  │ Angular busca na hierarquia         │                   │
+│  │   Component → Module → Root        │                   │
+│  └─────────────────────────────────────┘                   │
+│         │                                                    │
+│         ├─ ✅ Encontrado                                    │
+│         │   ┌─────────────────────────┐                     │
+│         │   │ Injeta instância        │                     │
+│         │   │ Component usa serviço   │                     │
+│         │   └─────────────────────────┘                     │
+│         │                                                    │
+│         └─ ❌ Não encontrado                                 │
+│             ┌─────────────────────────┐                     │
+│             │ Injeta null             │                     │
+│             │ Component verifica null │                     │
+│             │ Continua funcionando    │                     │
+│             │ sem o serviço           │                     │
+│             └─────────────────────────┘                     │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Exemplo Prático com @Optional()**:
+
+```typescript
+import { Injectable, Optional, inject } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AnalyticsService {
+  trackEvent(event: string): void {
+    console.log(`Tracking: ${event}`);
+  }
+}
+
+export class MyComponent {
+  private analytics = inject(AnalyticsService, { optional: true });
+  
+  onClick(): void {
+    if (this.analytics) {
+      this.analytics.trackEvent('button_clicked');
+    } else {
+      console.log('Analytics não disponível');
+    }
+  }
+}
+```
+
+**Exemplo com Constructor Injection**:
+
+```typescript
+import { Injectable, Optional } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class MyComponent {
+  constructor(
+    @Optional() private analytics?: AnalyticsService
+  ) {}
+  
+  trackAction(action: string): void {
+    this.analytics?.trackEvent(action);
+  }
+}
+```
+
+**Exemplo com Valor Padrão**:
+
+```typescript
+import { Injectable, inject, Optional } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class FeatureService {
+  private logger = inject(LoggerService, { optional: true }) ?? new ConsoleLogger();
+  
+  doSomething(): void {
+    this.logger.log('Feature executed');
+  }
+}
+```
+
+**Casos de Uso Comuns**:
+
+1. **Serviços de Debug/Logging**: Disponíveis apenas em desenvolvimento
+2. **Analytics**: Pode não estar configurado em todos os ambientes
+3. **Feature Flags**: Funcionalidades experimentais que podem não estar disponíveis
+4. **Plugins**: Extensões que podem ou não estar instaladas
+5. **Configurações Específicas**: Configurações que variam por ambiente
 
 ---
 
@@ -450,6 +833,281 @@ export class StorageService {
 }
 ```
 
+**Uso no Component**:
+
+```typescript
+import { Component } from '@angular/core';
+import { STORAGE_CONFIG } from './storage.service';
+
+@Component({
+  selector: 'app-root',
+  providers: [
+    {
+      provide: STORAGE_CONFIG,
+      useValue: {
+        prefix: 'myapp_',
+        expiration: 7200000
+      }
+    }
+  ]
+})
+export class AppComponent {
+  constructor(private storage: StorageService) {}
+}
+```
+
+---
+
+### Exemplo 3: Serviço com Múltiplas Dependências e Factory
+
+**Contexto**: Criar serviço que depende de múltiplos serviços e usa factory para configuração complexa.
+
+**Código**:
+
+```typescript
+import { Injectable, inject, InjectionToken } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
+
+export interface ApiConfig {
+  baseUrl: string;
+  retries: number;
+  timeout: number;
+}
+
+export const API_CONFIG = new InjectionToken<ApiConfig>('API_CONFIG');
+
+export function createApiService(
+  http: HttpClient,
+  router: Router,
+  config: ApiConfig
+): ApiService {
+  return new ApiService(http, router, config);
+}
+
+@Injectable({
+  providedIn: 'root',
+  useFactory: createApiService,
+  deps: [HttpClient, Router, API_CONFIG]
+})
+export class ApiService {
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private config: ApiConfig
+  ) {}
+  
+  get<T>(endpoint: string): Observable<T> {
+    return this.http.get<T>(`${this.config.baseUrl}${endpoint}`).pipe(
+      retry(this.config.retries),
+      catchError(error => {
+        if (error.status === 401) {
+          this.router.navigate(['/login']);
+        }
+        return throwError(() => error);
+      })
+    );
+  }
+  
+  post<T>(endpoint: string, data: any): Observable<T> {
+    return this.http.post<T>(`${this.config.baseUrl}${endpoint}`, data).pipe(
+      retry(this.config.retries),
+      catchError(error => {
+        if (error.status === 401) {
+          this.router.navigate(['/login']);
+        }
+        return throwError(() => error);
+      })
+    );
+  }
+}
+```
+
+---
+
+### Exemplo 4: Serviço com Dependência Opcional
+
+**Contexto**: Criar serviço que funciona com ou sem serviço de analytics.
+
+**Código**:
+
+```typescript
+import { Injectable, inject, Optional } from '@angular/core';
+
+export interface AnalyticsEvent {
+  name: string;
+  properties?: Record<string, any>;
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AnalyticsService {
+  track(event: AnalyticsEvent): void {
+    console.log('Analytics:', event);
+  }
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+  private analytics = inject(AnalyticsService, { optional: true });
+  
+  private users: User[] = [];
+  
+  addUser(user: User): void {
+    this.users.push(user);
+    
+    if (this.analytics) {
+      this.analytics.track({
+        name: 'user_added',
+        properties: { userId: user.id }
+      });
+    }
+  }
+  
+  getUsers(): User[] {
+    return [...this.users];
+  }
+}
+```
+
+---
+
+### Exemplo 5: Serviço com Escopo por Componente
+
+**Contexto**: Criar serviço que mantém estado isolado por componente.
+
+**Código**:
+
+```typescript
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class ComponentStateService {
+  private state: Map<string, any> = new Map();
+  
+  set(key: string, value: any): void {
+    this.state.set(key, value);
+  }
+  
+  get<T>(key: string): T | undefined {
+    return this.state.get(key) as T;
+  }
+  
+  clear(): void {
+    this.state.clear();
+  }
+}
+
+@Component({
+  selector: 'app-user-form',
+  providers: [ComponentStateService]
+})
+export class UserFormComponent {
+  constructor(private state: ComponentStateService) {}
+  
+  ngOnInit(): void {
+    this.state.set('formData', {});
+  }
+  
+  ngOnDestroy(): void {
+    this.state.clear();
+  }
+}
+```
+
+---
+
+## Comparação com Outras Abordagens
+
+### Angular DI vs React Context vs Vue Provide/Inject
+
+**Tabela Comparativa Detalhada**:
+
+| Aspecto | Angular DI | React Context | Vue Provide/Inject | Svelte Stores |
+|---------|-----------|---------------|-------------------|---------------|
+| **Type Safety** | Completo (TypeScript) | Opcional (TypeScript) | Opcional (TypeScript) | Opcional (TypeScript) |
+| **Hierarquia** | Completa (5 níveis) | Limitada (Provider tree) | Básica (Provide/Inject) | Não aplicável |
+| **Singleton** | Nativo (`providedIn: 'root'`) | Manual (Context Provider) | Manual (provide) | Manual (store) |
+| **Factory** | Suportado (useFactory) | Não | Não | Não |
+| **Injection Tokens** | Sim (InjectionToken) | Não | Não | Não |
+| **Performance** | Excelente (tree-shaking) | Boa (pode causar re-renders) | Boa | Excelente |
+| **Testabilidade** | Excelente (fácil mockar) | Boa (mock Provider) | Boa | Boa |
+| **Curva de Aprendizado** | Moderada | Baixa | Baixa | Baixa |
+| **Bundle Size** | Otimizado (tree-shaking) | Pequeno | Pequeno | Mínimo |
+| **Resolução de Dependências** | Automática (hierarquia) | Manual (Provider tree) | Manual (provide/inject) | Manual |
+| **Dependências Circulares** | Detectado em compile-time | Possível (runtime) | Possível (runtime) | Não aplicável |
+| **Dependências Opcionais** | Sim (@Optional) | Sim (default value) | Sim (default value) | Não aplicável |
+| **Lazy Loading** | Suportado (`providedIn: 'any'`) | Limitado | Limitado | Não aplicável |
+| **Code Splitting** | Excelente | Bom | Bom | Excelente |
+
+**Comparação de Sintaxe**:
+
+**Angular**:
+```typescript
+@Injectable({ providedIn: 'root' })
+export class MyService {}
+
+export class MyComponent {
+  private service = inject(MyService);
+}
+```
+
+**React**:
+```typescript
+const ServiceContext = createContext<MyService | null>(null);
+
+function MyComponent() {
+  const service = useContext(ServiceContext);
+}
+```
+
+**Vue**:
+```typescript
+provide('myService', myServiceInstance);
+
+const service = inject('myService');
+```
+
+**Análise de Trade-offs**:
+
+**Angular DI - Vantagens**:
+- Sistema completo e robusto
+- Type safety completo
+- Hierarquia poderosa
+- Excelente para projetos grandes
+- Suporte a padrões avançados (factory, tokens)
+
+**Angular DI - Desvantagens**:
+- Curva de aprendizado mais íngreme
+- Mais verboso para casos simples
+- Requer TypeScript para melhor experiência
+
+**React Context - Vantagens**:
+- Simples e direto
+- Integrado ao React
+- Bom para casos simples
+
+**React Context - Desvantagens**:
+- Pode causar re-renders desnecessários
+- Sem hierarquia completa
+- Sem factory providers
+- Type safety opcional
+
+**Vue Provide/Inject - Vantagens**:
+- Simples e intuitivo
+- Integrado ao Vue
+- Bom para casos básicos
+
+**Vue Provide/Inject - Desvantagens**:
+- Hierarquia limitada
+- Sem factory providers
+- Type safety opcional
+
 ---
 
 ## Padrões e Boas Práticas
@@ -457,34 +1115,123 @@ export class StorageService {
 ### ✅ Boas Práticas
 
 1. **Sempre use providedIn: 'root' para serviços singleton**
-   - **Por quê**: Simplifica configuração e garante singleton
-   - **Exemplo**: `@Injectable({ providedIn: 'root' })`
+   - **Por quê**: Simplifica configuração, garante singleton, melhor tree-shaking
+   - **Exemplo Bom**: `@Injectable({ providedIn: 'root' })`
+   - **Exemplo Ruim**: Fornecer em múltiplos NgModules
+   - **Benefícios**: Menos configuração, singleton garantido, melhor performance
 
 2. **Use inject() para código mais limpo**
-   - **Por quê**: Sintaxe mais moderna e flexível
-   - **Exemplo**: `private service = inject(MyService)`
+   - **Por quê**: Sintaxe mais moderna, funciona em funções, melhor para testes
+   - **Exemplo Bom**: `private service = inject(MyService)`
+   - **Exemplo Ruim**: `constructor(private service: MyService) {}` (quando inject() é melhor)
+   - **Benefícios**: Código mais limpo, mais flexível, melhor testabilidade
 
 3. **Use InjectionTokens para valores primitivos**
-   - **Por quê**: Type safety e flexibilidade
-   - **Exemplo**: `new InjectionToken<string>('API_URL')`
+   - **Por quê**: Type safety, flexibilidade, APIs públicas claras
+   - **Exemplo Bom**: `export const API_URL = new InjectionToken<string>('API_URL')`
+   - **Exemplo Ruim**: Injetar strings diretamente sem token
+   - **Benefícios**: Type safety, fácil de mockar em testes, documentação clara
 
 4. **Mantenha serviços focados em uma responsabilidade**
-   - **Por quê**: Facilita manutenção e testes
-   - **Exemplo**: UserService para usuários, AuthService para autenticação
+   - **Por quê**: Facilita manutenção, testes e reutilização
+   - **Exemplo Bom**: `UserService` para usuários, `AuthService` para autenticação
+   - **Exemplo Ruim**: `UserAuthService` que faz tudo
+   - **Benefícios**: Código mais limpo, fácil de testar, fácil de manter
+
+5. **Use factory providers para criação complexa**
+   - **Por quê**: Permite lógica de criação, configuração dinâmica
+   - **Exemplo Bom**: Factory que cria serviço baseado em configuração
+   - **Benefícios**: Flexibilidade, configuração dinâmica
+
+6. **Documente dependências com interfaces**
+   - **Por quê**: Type safety, documentação clara, fácil refatoração
+   - **Exemplo Bom**: Usar interfaces para configurações
+   - **Benefícios**: Type safety, documentação inline
+
+7. **Use providedIn: 'any' apenas quando necessário**
+   - **Por quê**: Cria nova instância por módulo lazy, use apenas quando realmente necessário
+   - **Quando usar**: Quando precisa de instância separada por módulo lazy
+   - **Benefícios**: Isolamento quando necessário
+
+8. **Use dependências opcionais quando apropriado**
+   - **Por quê**: Permite código mais flexível e tolerante a falhas
+   - **Exemplo Bom**: `private analytics = inject(AnalyticsService, { optional: true })`
+   - **Exemplo Ruim**: Assumir que serviço sempre existe sem verificação
+   - **Benefícios**: Código mais robusto, fácil de testar, funciona em diferentes contextos
+
+9. **Organize serviços por domínio/funcionalidade**
+   - **Por quê**: Facilita navegação, manutenção e entendimento do código
+   - **Exemplo Bom**: `services/user/user.service.ts`, `services/auth/auth.service.ts`
+   - **Exemplo Ruim**: Todos serviços em uma pasta `services/`
+   - **Benefícios**: Código organizado, fácil de encontrar, melhor escalabilidade
+
+10. **Use interfaces para configurações injetadas**
+    - **Por quê**: Type safety, documentação clara, fácil refatoração
+    - **Exemplo Bom**: `export interface ApiConfig { baseUrl: string; timeout: number; }`
+    - **Exemplo Ruim**: Injetar objetos sem tipo definido
+    - **Benefícios**: Type safety, autocomplete, documentação inline
 
 ### ❌ Anti-padrões Comuns
 
 1. **Não forneça serviços em múltiplos lugares**
-   - **Problema**: Pode criar múltiplas instâncias
+   - **Problema**: Pode criar múltiplas instâncias, comportamento inconsistente
+   - **Exemplo Ruim**: Fornecer mesmo serviço em múltiplos módulos
    - **Solução**: Use `providedIn: 'root'` ou um único provider
+   - **Impacto**: Bugs difíceis de rastrear, comportamento inconsistente
 
 2. **Não injete serviços diretamente em templates**
-   - **Problema**: Dificulta testes e mudanças
+   - **Problema**: Dificulta testes, viola separação de responsabilidades
+   - **Exemplo Ruim**: `{{ userService.getUser().name }}` no template
    - **Solução**: Injete no componente e exponha via propriedades
+   - **Impacto**: Testes difíceis, código acoplado
 
 3. **Não use serviços para lógica de apresentação**
-   - **Problema**: Viola separação de responsabilidades
-   - **Solução**: Mantenha lógica de apresentação no componente
+   - **Problema**: Viola separação de responsabilidades, dificulta reutilização
+   - **Exemplo Ruim**: Serviço que formata strings para exibição
+   - **Solução**: Mantenha lógica de apresentação no componente ou use pipes
+   - **Impacto**: Serviços não reutilizáveis, violação de responsabilidades
+
+4. **Não crie serviços muito grandes**
+   - **Problema**: Dificulta manutenção, testes complexos, baixa reutilização
+   - **Exemplo Ruim**: Serviço com 500+ linhas, múltiplas responsabilidades
+   - **Solução**: Divida em serviços menores e focados
+   - **Impacto**: Código difícil de manter e testar
+
+5. **Não ignore erros de DI**
+   - **Problema**: Pode causar erros em runtime difíceis de debugar
+   - **Exemplo Ruim**: Ignorar erros de "No provider for X"
+   - **Solução**: Sempre forneça providers necessários ou use `@Optional()`
+   - **Impacto**: Erros em runtime, difícil debug
+
+6. **Não use providedIn sem entender escopos**
+   - **Problema**: Pode criar instâncias não intencionais
+   - **Exemplo Ruim**: Usar `providedIn: 'any'` quando `'root'` é suficiente
+   - **Solução**: Entenda diferenças entre escopos antes de usar
+   - **Impacto**: Múltiplas instâncias, comportamento inesperado
+
+7. **Não injete dependências circulares**
+   - **Problema**: Erro de DI, código difícil de manter
+   - **Exemplo Ruim**: ServiceA injeta ServiceB que injeta ServiceA
+   - **Solução**: Refatore para remover dependência circular ou use `forwardRef()`
+   - **Impacto**: Erro de compilação, arquitetura ruim
+
+8. **Não use serviços para armazenar estado de UI**
+   - **Problema**: Viola separação de responsabilidades, dificulta reutilização
+   - **Exemplo Ruim**: Serviço que armazena estado de formulário específico de componente
+   - **Solução**: Use serviços apenas para estado de negócio, estado de UI no componente
+   - **Impacto**: Serviços acoplados a UI, difícil de reutilizar
+
+9. **Não ignore o tree-shaking**
+   - **Problema**: Serviços não usados podem ser incluídos no bundle
+   - **Exemplo Ruim**: Serviço sem `providedIn` em NgModule que não é usado
+   - **Solução**: Sempre use `providedIn: 'root'` ou configure providers corretamente
+   - **Impacto**: Bundle maior, performance pior
+
+10. **Não crie serviços para tudo**
+    - **Problema**: Over-engineering, código desnecessariamente complexo
+    - **Exemplo Ruim**: Serviço para função utilitária simples que poderia ser função pura
+    - **Solução**: Use serviços apenas quando precisa de DI, estado compartilhado ou lógica complexa
+    - **Impacto**: Código mais complexo, mais difícil de entender
 
 ---
 
@@ -550,9 +1297,27 @@ Crie um serviço de gerenciamento de tarefas completo que usa inject(), Injectio
 ### Documentação Oficial
 
 - **[Angular Services](https://angular.io/guide/services)**: Guia oficial de serviços
-- **[Dependency Injection](https://angular.io/guide/dependency-injection)**: Guia de DI
-- **[Dependency Injection in Action](https://angular.io/guide/dependency-injection-in-action)**: DI em ação
-- **[InjectionToken](https://angular.io/api/core/InjectionToken)**: Documentação InjectionToken
+- **[Dependency Injection](https://angular.io/guide/dependency-injection)**: Guia completo de DI
+- **[Dependency Injection in Action](https://angular.io/guide/dependency-injection-in-action)**: DI em ação com exemplos práticos
+- **[InjectionToken](https://angular.io/api/core/InjectionToken)**: Documentação completa do InjectionToken
+- **[Hierarchical Dependency Injection](https://angular.io/guide/hierarchical-dependency-injection)**: Guia sobre hierarquia de injectors
+- **[Dependency Injection Providers](https://angular.io/guide/dependency-injection-providers)**: Guia sobre providers
+
+### Artigos e Tutoriais
+
+- **[Understanding Angular Dependency Injection](https://angular.io/guide/dependency-injection)**: Tutorial oficial aprofundado
+- **[Angular Dependency Injection Explained](https://www.freecodecamp.org/news/angular-dependency-injection/)**: Explicação detalhada com exemplos
+- **[Advanced Angular Dependency Injection](https://blog.angular.io/)**: Padrões avançados de DI
+
+### Vídeos
+
+- **[Angular Dependency Injection Deep Dive](https://www.youtube.com/)**: Vídeo tutorial completo
+- **[Understanding Angular Injectors](https://www.youtube.com/)**: Explicação visual da hierarquia
+
+### Ferramentas
+
+- **[Angular DevTools](https://angular.io/guide/devtools)**: Ferramenta para debugar DI e serviços
+- **[Angular CLI](https://angular.io/cli)**: Gerar serviços com `ng generate service`
 
 ---
 
@@ -560,20 +1325,27 @@ Crie um serviço de gerenciamento de tarefas completo que usa inject(), Injectio
 
 ### Principais Conceitos
 
-- Serviços encapsulam lógica de negócio reutilizável
-- @Injectable marca classes como injetáveis
-- Hierarquia de injectors resolve dependências
-- Providers definem como serviços são criados
-- inject() é a forma moderna de injeção
-- InjectionTokens permitem injeção type-safe de valores
+- **Serviços**: Classes TypeScript decoradas com `@Injectable` que encapsulam lógica de negócio reutilizável
+- **@Injectable Decorator**: Marca classes como injetáveis e configura escopo (`providedIn`)
+- **Hierarquia de Injectors**: Sistema de 5 níveis (Element → Component → Module → Platform → Root) que resolve dependências
+- **Providers**: Definem como e onde serviços são criados (Class, Value, Factory, Existing)
+- **inject() Function**: Forma moderna (Angular 14+) de injeção que funciona fora de construtores
+- **InjectionTokens**: Tokens type-safe para injeção de valores primitivos, objetos e interfaces
+- **Factory Providers**: Permitem criar instâncias com lógica de criação complexa
+- **Dependências Opcionais**: Serviços que podem não estar disponíveis usando `@Optional()` ou `{ optional: true }`
 
 ### Pontos-Chave para Lembrar
 
-- Use `providedIn: 'root'` para serviços singleton
-- Prefira `inject()` para código mais limpo
-- Use InjectionTokens para valores primitivos
-- Mantenha serviços focados em uma responsabilidade
-- Entenda hierarquia de injectors para debug
+- **Sempre use `providedIn: 'root'`** para serviços singleton (padrão recomendado)
+- **Prefira `inject()`** sobre constructor injection quando possível (código mais limpo)
+- **Use InjectionTokens** para valores primitivos e configurações (type safety)
+- **Mantenha serviços focados** em uma única responsabilidade (Single Responsibility Principle)
+- **Entenda hierarquia de injectors** para debug e resolução de problemas
+- **Use factory providers** quando criação requer lógica complexa
+- **Considere dependências opcionais** para código mais flexível e tolerante a falhas
+- **Organize serviços por domínio** para melhor estruturação do código
+- **Evite dependências circulares** - refatore quando necessário
+- **Use interfaces** para configurações injetadas (type safety e documentação)
 
 ### Próximos Passos
 
@@ -602,4 +1374,3 @@ Antes de considerar esta aula completa:
 **Aula Anterior**: [Aula 1.5: Control Flow e Pipes](./lesson-1-5-control-flow-pipes.md)  
 **Próxima Aula**: [Aula 2.2: Roteamento e Navegação Avançada](./lesson-2-2-roteamento.md)  
 **Voltar ao Módulo**: [Módulo 2: Desenvolvimento Intermediário](../modules/module-2-desenvolvimento-intermediario.md)
-
