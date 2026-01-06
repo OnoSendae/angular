@@ -33,6 +33,14 @@ layout: default
   {% endif %}
 </div>
 
+{% if page.video %}
+<div class="video-player-container">
+  {% include video-player.html 
+     video=page.video 
+     lesson_id=page.lesson_id %}
+</div>
+{% endif %}
+
 <article class="lesson-content">
   <header>
     <h1>{{ page.title }}</h1>
@@ -74,4 +82,5 @@ layout: default
 </section>
 
 <script src="{{ '/assets/js/podcast-player.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/video-player.js' | relative_url }}"></script>
 

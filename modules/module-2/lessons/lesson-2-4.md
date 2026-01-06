@@ -14,6 +14,12 @@ podcast:
   title: "HttpClient e Interceptors no Angular"
   description: "Aprenda a consumir APIs REST de forma profissional com HttpClient."
   duration: "50-65 minutos"
+video:
+  file: "assets/videos/02.4-HttpClient_e_Interceptors_no_Angular.mp4"
+  thumbnail: "assets/images/podcasts/02.4-HttpClient_e_Interceptors_no_Angular.png"
+  title: "HttpClient e Interceptors no Angular"
+  description: "Aprenda a consumir APIs REST de forma profissional com HttpClient."
+  duration: "50-65 minutos"
 permalink: /modules/desenvolvimento-intermediario/lessons/http-client/
 ---
 

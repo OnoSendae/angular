@@ -14,6 +14,12 @@ podcast:
   title: "Lazy Loading e Code Splitting na Web"
   description: "Otimize o carregamento inicial da sua aplicação com lazy loading avançado."
   duration: "55-70 minutos"
+video:
+  file: "assets/videos/04.2-Lazy_Loading_e_Code_Splitting_na_Web.mp4"
+  thumbnail: "assets/images/podcasts/04.2-Lazy_Loading_e_Code_Splitting_na_Web.png"
+  title: "Lazy Loading e Code Splitting na Web"
+  description: "Otimize o carregamento inicial da sua aplicação com lazy loading avançado."
+  duration: "55-70 minutos"
 permalink: /modules/performance-otimizacao/lessons/lazy-loading/
 ---
 

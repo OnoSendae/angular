@@ -14,6 +14,12 @@ podcast:
   title: "Testes Unitários, Integração e E2E no Angular"
   description: "Testes são essenciais para aplicações profissionais."
   duration: "70-85 minutos"
+video:
+  file: "assets/videos/05.1-Testes_Unitários_Integração_E2E_Angular.mp4"
+  thumbnail: "assets/images/podcasts/05.1-Testes_Unitarios_Integracao_E2E_Angular.png"
+  title: "Testes Unitários, Integração e E2E no Angular"
+  description: "Testes são essenciais para aplicações profissionais."
+  duration: "70-85 minutos"
 permalink: /modules/praticas-avancadas-projeto-final/lessons/testes/
 ---
 

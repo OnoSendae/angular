@@ -14,6 +14,12 @@ podcast:
   title: "OnPush, Imutabilidade e Performance de Apps"
   description: "Change Detection é crítico para performance."
   duration: "60-75 minutos"
+video:
+  file: "assets/videos/04.1-OnPush_Imutabilidade_e_Performance_de_Apps.mp4"
+  thumbnail: "assets/images/podcasts/04.1-OnPush_Imutabilidade_e_Performance_de_Apps.png"
+  title: "OnPush, Imutabilidade e Performance de Apps"
+  description: "Change Detection é crítico para performance."
+  duration: "60-75 minutos"
 permalink: /modules/performance-otimizacao/lessons/change-detection/
 ---
 

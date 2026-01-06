@@ -14,6 +14,12 @@ podcast:
   title: "Angular Signals - O Guia Completo e Prático"
   description: "Signals são a nova forma reativa do Angular."
   duration: "60-75 minutos"
+video:
+  file: "assets/videos/03.2-Angular_Signals__O_Guia_Completo_e_Prático.mp4"
+  thumbnail: "assets/images/podcasts/03.2-Angular_Signals_O_Guia_Completo_e_Pratico.png"
+  title: "Angular Signals - O Guia Completo e Prático"
+  description: "Signals são a nova forma reativa do Angular."
+  duration: "60-75 minutos"
 permalink: /modules/programacao-reativa-estado/lessons/signals/
 ---
 

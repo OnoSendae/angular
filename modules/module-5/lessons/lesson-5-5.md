@@ -8,6 +8,18 @@ duration: "120 minutos"
 level: "Expert"
 prerequisites: ["lesson-5-4"]
 exercises: []
+podcast:
+  file: "assets/podcasts/05.5-Projeto_final_Angular_Clean_Architecture_para_recrutadores.m4a"
+  image: "assets/images/podcasts/05.5-Projeto_final_Angular_Clean_Architecture_para_recrutadores.png"
+  title: "Projeto Final Angular - Clean Architecture para Recrutadores"
+  description: "Projeto completo integrando todos os conceitos aprendidos. Aprenda a construir uma aplicação Angular profissional seguindo Clean Architecture e boas práticas."
+  duration: "90-120 minutos"
+video:
+  file: "assets/videos/05.5-Projeto_final_Angular_Clean_Architecture_para_recrutadores.mp4"
+  thumbnail: "assets/images/podcasts/05.5-Projeto_final_Angular_Clean_Architecture_para_recrutadores.png"
+  title: "Projeto Final Angular - Clean Architecture para Recrutadores"
+  description: "Projeto completo integrando todos os conceitos aprendidos."
+  duration: "90-120 minutos"
 permalink: /modules/praticas-avancadas-projeto-final/lessons/projeto-final/
 ---
 

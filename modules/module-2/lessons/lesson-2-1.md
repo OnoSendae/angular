@@ -14,6 +14,12 @@ podcast:
   title: "Serviços e Injeção de Dependência no Angular"
   description: "Descubra como os serviços são o coração da arquitetura Angular."
   duration: "50-65 minutos"
+video:
+  file: "assets/videos/02.1-Serviços_e_Injeção_de_Dependência_no_Angular.mp4"
+  thumbnail: "assets/images/podcasts/02.1-Servicos_e_Injecao_de_Dependencia_no_Angular.png"
+  title: "Serviços e Injeção de Dependência no Angular"
+  description: "Descubra como os serviços são o coração da arquitetura Angular."
+  duration: "50-65 minutos"
 permalink: /modules/desenvolvimento-intermediario/lessons/servicos-di/
 ---
 

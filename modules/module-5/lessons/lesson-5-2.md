@@ -8,6 +8,18 @@ duration: "120 minutos"
 level: "Expert"
 prerequisites: []
 exercises: []
+podcast:
+  file: "assets/podcasts/05.2-SSR_e_PWA_Desvendados_Velocidade_e_Aplicativo.m4a"
+  image: "assets/images/podcasts/05.2-SSR_e_PWA_Desvendados_Velocidade_e_Aplicativo.png"
+  title: "SSR e PWA Desvendados"
+  description: "Aprenda sobre Server-Side Rendering e Progressive Web Apps no Angular. Descubra como melhorar SEO, performance inicial e criar aplicações que funcionam offline."
+  duration: "60-75 minutos"
+video:
+  file: "assets/videos/05.2-SSR_e_PWA_Desvendados_Velocidade_e_Aplicativo.mp4"
+  thumbnail: "assets/images/podcasts/05.2-SSR_e_PWA_Desvendados_Velocidade_e_Aplicativo.png"
+  title: "SSR e PWA Desvendados"
+  description: "Aprenda sobre Server-Side Rendering e Progressive Web Apps no Angular."
+  duration: "60-75 minutos"
 permalink: /modules/praticas-avancadas-projeto-final/lessons/ssr-pwa/
 ---
 

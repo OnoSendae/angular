@@ -14,6 +14,12 @@ podcast:
   title: "Router, Guards, Resolvers e Lazy Loading"
   description: "Domine o sistema de roteamento avançado do Angular."
   duration: "55-70 minutos"
+video:
+  file: "assets/videos/02.2-SilencioRouter_Guards_Resolvers_Lazy_Loading.mp4"
+  thumbnail: "assets/images/podcasts/02.2-SilencioRouter_Guards_Resolvers_Lazy_Loading.png"
+  title: "Router, Guards, Resolvers e Lazy Loading"
+  description: "Domine o sistema de roteamento avançado do Angular."
+  duration: "55-70 minutos"
 permalink: /modules/desenvolvimento-intermediario/lessons/roteamento/
 ---
 

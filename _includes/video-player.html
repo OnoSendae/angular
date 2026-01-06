@@ -1,0 +1,104 @@
+{% if include.video %}
+<style>
+  .video-player-container,
+  .video-player-container *,
+  .video-player,
+  .video-player *,
+  .video-container,
+  .video-container video,
+  #video-element {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .video-container {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+  
+  #video-element {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  .player-controls {
+    display: none !important;
+  }
+  
+  .player-controls .speed-control {
+    margin-left: auto !important;
+  }
+  
+  .player-controls .time-display,
+  .player-controls .speed-control,
+  .player-controls .volume-control {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+</style>
+<hr />
+<div class="video-player" id="video-player">
+  <div class="video-info">
+    <h3>{{ include.video.title }}</h3>
+    <p class="video-description">{{ include.video.description }}</p>
+  </div>
+  
+  <div class="video-container">
+    <video id="video-element" controls preload="metadata" src="{{ include.video.file | relative_url }}" style="max-width: 100%; width: 100%; height: auto; box-sizing: border-box;">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+  </div>
+  
+  <div class="player-controls">
+    <div class="time-display">
+      <span id="video-current-time">0:00</span><span> / </span><span id="video-duration">0:00</span>
+    </div>
+    
+    <div class="speed-control">
+      <label for="video-speed">Velocidade</label>
+      <select id="video-speed" aria-label="Velocidade de reprodução">
+        <option value="0.5">0.5x</option>
+        <option value="0.75">0.75x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+    </div>
+    
+    <div class="volume-control">
+      <label for="video-volume">Volume</label>
+      <input type="range" id="video-volume" min="0" max="100" value="100" aria-label="Volume">
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+<script type="application/json" id="video-data">
+{
+  "videoFile": {% if include.video %}"{{ include.video.file | relative_url }}"{% else %}null{% endif %},
+  "lessonId": "{{ include.lesson_id }}",
+  "videoTitle": {% if include.video %}"{{ include.video.title }}"{% else %}null{% endif %},
+  "videoDescription": {% if include.video %}"{{ include.video.description }}"{% else %}null{% endif %},
+  "videoThumbnail": {% if include.video and include.video.thumbnail %}"{{ include.video.thumbnail | relative_url }}"{% else %}null{% endif %}
+}
+</script>
+
+<script type="application/json" id="lessons-videos-data">
+[
+  {% for lesson in site.data.lessons.lessons %}
+    {% if lesson.video %}
+      {
+        "id": "{{ lesson.id }}",
+        "title": "{{ lesson.title }}",
+        "order": {{ lesson.order }},
+        "module": "{{ lesson.module }}",
+        "videoFile": "{{ lesson.video.file }}"
+      }{% unless forloop.last %},{% endunless %}
+    {% endif %}
+  {% endfor %}
+]
+</script>
+

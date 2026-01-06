@@ -14,6 +14,12 @@ podcast:
   title: "Profiling Angular - Otimização Como Fazer"
   description: "Aprenda a identificar gargalos de performance usando Angular DevTools."
   duration: "55-70 minutos"
+video:
+  file: "assets/videos/04.4-Profiling_Angular_Otimização_Como_Fazer.mp4"
+  thumbnail: "assets/images/podcasts/04.4-Profiling_Angular_Otimizacao_Como_Fazer.png"
+  title: "Profiling Angular - Otimização Como Fazer"
+  description: "Aprenda a identificar gargalos de performance usando Angular DevTools."
+  duration: "55-70 minutos"
 permalink: /modules/performance-otimizacao/lessons/profiling/
 ---
 

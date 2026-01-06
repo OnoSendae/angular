@@ -143,3 +143,35 @@ podcasts:
     duration: "70-85 minutos"
     published_date: "2026-01-03"
 
+  - id: podcast-5-2
+    lesson_id: lesson-5-2
+    file: "assets/podcasts/05.2-SSR_e_PWA_Desvendados_Velocidade_e_Aplicativo.m4a"
+    title: "SSR e PWA Desvendados"
+    description: "Aprenda sobre Server-Side Rendering e Progressive Web Apps no Angular. Descubra como melhorar SEO, performance inicial e criar aplicações que funcionam offline."
+    duration: "60-75 minutos"
+    published_date: "2026-01-03"
+
+  - id: podcast-5-3
+    lesson_id: lesson-5-3
+    file: "assets/podcasts/05.3-JWT_e_XSS_Construindo_uma_Fortaleza_Web.m4a"
+    title: "JWT e XSS - Construindo uma Fortaleza Web"
+    description: "Domine segurança avançada em aplicações Angular. Aprenda sobre autenticação JWT, proteção contra XSS, sanitização de dados e melhores práticas de segurança."
+    duration: "55-70 minutos"
+    published_date: "2026-01-03"
+
+  - id: podcast-5-4
+    lesson_id: lesson-5-4
+    file: "assets/podcasts/05.4-Clean_Architecture_SOLID_e_Design_Patterns.m4a"
+    title: "Clean Architecture, SOLID e Design Patterns"
+    description: "Aprenda a estruturar aplicações Angular seguindo princípios SOLID, Clean Architecture e padrões de design profissionais para código escalável e manutenível."
+    duration: "70-85 minutos"
+    published_date: "2026-01-03"
+
+  - id: podcast-5-5
+    lesson_id: lesson-5-5
+    file: "assets/podcasts/05.5-Projeto_final_Angular_Clean_Architecture_para_recrutadores.m4a"
+    title: "Projeto Final Angular - Clean Architecture para Recrutadores"
+    description: "Projeto completo integrando todos os conceitos aprendidos. Aprenda a construir uma aplicação Angular profissional seguindo Clean Architecture e boas práticas."
+    duration: "90-120 minutos"
+    published_date: "2026-01-03"
+

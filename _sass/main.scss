@@ -6,6 +6,7 @@
 @import 'theme';
 @import 'navigation';
 @import 'podcast-player';
+@import 'video-player';
 @import 'progress-tracker';
 @import 'breadcrumbs';
 
@@ -224,11 +225,17 @@ body {
   display: flex;
   padding: $spacing-lg;
   gap: $spacing-xl;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .content {
   flex: 1;
   min-width: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
   
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-primary);

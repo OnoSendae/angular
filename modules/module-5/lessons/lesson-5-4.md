@@ -8,6 +8,18 @@ duration: "90 minutos"
 level: "Expert"
 prerequisites: ["lesson-5-3"]
 exercises: []
+podcast:
+  file: "assets/podcasts/05.4-Clean_Architecture_SOLID_e_Design_Patterns.m4a"
+  image: "assets/images/podcasts/05.4-Clean_Architecture_SOLID_e_Design_Patterns.png"
+  title: "Clean Architecture, SOLID e Design Patterns"
+  description: "Aprenda a estruturar aplicações Angular seguindo princípios SOLID, Clean Architecture e padrões de design profissionais para código escalável e manutenível."
+  duration: "70-85 minutos"
+video:
+  file: "assets/videos/05.4-Clean_Architecture_SOLID_e_Design_Patterns.mp4"
+  thumbnail: "assets/images/podcasts/05.4-Clean_Architecture_SOLID_e_Design_Patterns.png"
+  title: "Clean Architecture, SOLID e Design Patterns"
+  description: "Aprenda a estruturar aplicações Angular seguindo princípios SOLID e Clean Architecture."
+  duration: "70-85 minutos"
 permalink: /modules/praticas-avancadas-projeto-final/lessons/arquitetura/
 ---
 

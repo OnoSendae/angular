@@ -310,6 +310,18 @@ lessons:
     duration: "120 minutos"
     level: "Avançado"
     prerequisites: ["lesson-5-1"]
+    podcast:
+      file: "assets/podcasts/05.2-SSR_e_PWA_Desvendados_Velocidade_e_Aplicativo.m4a"
+      image: "assets/images/podcasts/05.2-SSR_e_PWA_Desvendados_Velocidade_e_Aplicativo.png"
+      title: "SSR e PWA Desvendados"
+      description: "Aprenda sobre Server-Side Rendering e Progressive Web Apps no Angular. Descubra como melhorar SEO, performance inicial e criar aplicações que funcionam offline."
+      duration: "60-75 minutos"
+    video:
+      file: "assets/videos/05.2-SSR_e_PWA_Desvendados_Velocidade_e_Aplicativo.mp4"
+      thumbnail: "assets/images/podcasts/05.2-SSR_e_PWA_Desvendados_Velocidade_e_Aplicativo.png"
+      title: "SSR e PWA Desvendados"
+      description: "Aprenda sobre Server-Side Rendering e Progressive Web Apps no Angular."
+      duration: "60-75 minutos"
 
   - id: lesson-5-3
     title: "Segurança Avançada"
@@ -319,6 +331,18 @@ lessons:
     duration: "60 minutos"
     level: "Avançado"
     prerequisites: ["lesson-5-2"]
+    podcast:
+      file: "assets/podcasts/05.3-JWT_e_XSS_Construindo_uma_Fortaleza_Web.m4a"
+      image: "assets/images/podcasts/05.3-JWT_e_XSS_Construindo_uma_Fortaleza_Web.png"
+      title: "JWT e XSS - Construindo uma Fortaleza Web"
+      description: "Domine segurança avançada em aplicações Angular. Aprenda sobre autenticação JWT, proteção contra XSS, sanitização de dados e melhores práticas de segurança."
+      duration: "55-70 minutos"
+    video:
+      file: "assets/videos/05.3-JWT_e_XSS_Construindo_uma_Fortaleza_Web.mp4"
+      thumbnail: "assets/images/podcasts/05.3-JWT_e_XSS_Construindo_uma_Fortaleza_Web.png"
+      title: "JWT e XSS - Construindo uma Fortaleza Web"
+      description: "Domine segurança avançada em aplicações Angular."
+      duration: "55-70 minutos"
 
   - id: lesson-5-4
     title: "Arquitetura Avançada"
@@ -328,6 +352,18 @@ lessons:
     duration: "60 minutos"
     level: "Avançado"
     prerequisites: ["lesson-5-3"]
+    podcast:
+      file: "assets/podcasts/05.4-Clean_Architecture_SOLID_e_Design_Patterns.m4a"
+      image: "assets/images/podcasts/05.4-Clean_Architecture_SOLID_e_Design_Patterns.png"
+      title: "Clean Architecture, SOLID e Design Patterns"
+      description: "Aprenda a estruturar aplicações Angular seguindo princípios SOLID, Clean Architecture e padrões de design profissionais para código escalável e manutenível."
+      duration: "70-85 minutos"
+    video:
+      file: "assets/videos/05.4-Clean_Architecture_SOLID_e_Design_Patterns.mp4"
+      thumbnail: "assets/images/podcasts/05.4-Clean_Architecture_SOLID_e_Design_Patterns.png"
+      title: "Clean Architecture, SOLID e Design Patterns"
+      description: "Aprenda a estruturar aplicações Angular seguindo princípios SOLID e Clean Architecture."
+      duration: "70-85 minutos"
 
   - id: lesson-5-5
     title: "Projeto Final Completo"
@@ -337,4 +373,16 @@ lessons:
     duration: "120 minutos"
     level: "Avançado"
     prerequisites: ["lesson-5-4"]
+    podcast:
+      file: "assets/podcasts/05.5-Projeto_final_Angular_Clean_Architecture_para_recrutadores.m4a"
+      image: "assets/images/podcasts/05.5-Projeto_final_Angular_Clean_Architecture_para_recrutadores.png"
+      title: "Projeto Final Angular - Clean Architecture para Recrutadores"
+      description: "Projeto completo integrando todos os conceitos aprendidos. Aprenda a construir uma aplicação Angular profissional seguindo Clean Architecture e boas práticas."
+      duration: "90-120 minutos"
+    video:
+      file: "assets/videos/05.5-Projeto_final_Angular_Clean_Architecture_para_recrutadores.mp4"
+      thumbnail: "assets/images/podcasts/05.5-Projeto_final_Angular_Clean_Architecture_para_recrutadores.png"
+      title: "Projeto Final Angular - Clean Architecture para Recrutadores"
+      description: "Projeto completo integrando todos os conceitos aprendidos."
+      duration: "90-120 minutos"
 

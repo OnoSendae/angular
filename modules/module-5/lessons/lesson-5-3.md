@@ -8,6 +8,18 @@ duration: "60 minutos"
 level: "Expert"
 prerequisites: []
 exercises: []
+podcast:
+  file: "assets/podcasts/05.3-JWT_e_XSS_Construindo_uma_Fortaleza_Web.m4a"
+  image: "assets/images/podcasts/05.3-JWT_e_XSS_Construindo_uma_Fortaleza_Web.png"
+  title: "JWT e XSS - Construindo uma Fortaleza Web"
+  description: "Domine segurança avançada em aplicações Angular. Aprenda sobre autenticação JWT, proteção contra XSS, sanitização de dados e melhores práticas de segurança."
+  duration: "55-70 minutos"
+video:
+  file: "assets/videos/05.3-JWT_e_XSS_Construindo_uma_Fortaleza_Web.mp4"
+  thumbnail: "assets/images/podcasts/05.3-JWT_e_XSS_Construindo_uma_Fortaleza_Web.png"
+  title: "JWT e XSS - Construindo uma Fortaleza Web"
+  description: "Domine segurança avançada em aplicações Angular."
+  duration: "55-70 minutos"
 permalink: /modules/praticas-avancadas-projeto-final/lessons/seguranca/
 ---
 
