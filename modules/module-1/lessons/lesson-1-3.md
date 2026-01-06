@@ -9,15 +9,15 @@ level: "Intermediário"
 prerequisites: []
 exercises: []
 podcast:
-  file: "assets/podcasts/01.3e4-Fundacao_Angular_Tipagem_Encapsulamento_e_Generics.m4a"
-  image: "assets/images/podcasts/01.3e4-Fundacao_Angular_Tipagem_Encapsulamento_e_Generics.png"
-  title: "Componentes Standalone, Templates, Data Binding e Diretivas Modernas"
+  file: "assets/podcasts/1.3-Componentes_Standalone_e_Ciclo_de_Vida_Angular.m4a"
+  image: "assets/images/podcasts/1.3-Componentes_Standalone_e_Ciclo_de_Vida_Angular.png"
+  title: "Componentes Standalone e Ciclo de Vida Angular"
   description: "Mergulhe profundamente nos componentes standalone do Angular."
   duration: "60-75 minutos"
 video:
-  file: "assets/videos/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.mp4"
-  thumbnail: "assets/images/podcasts/01.3e4-Fundacao_Angular_Tipagem_Encapsulamento_e_Generics.png"
-  title: "Componentes Standalone, Templates, Data Binding e Diretivas Modernas"
+  file: "assets/videos/1.3-Componentes_Standalone_e_Ciclo_de_Vida_Angular.mp4"
+  thumbnail: "assets/images/podcasts/1.3-Componentes_Standalone_e_Ciclo_de_Vida_Angular.png"
+  title: "Componentes Standalone e Ciclo de Vida Angular"
   description: "Mergulhe profundamente nos componentes standalone do Angular."
   duration: "60-75 minutos"
 permalink: /modules/fundamentos-acelerados/lessons/componentes-standalone/

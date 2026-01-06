@@ -9,15 +9,15 @@ level: "Básico"
 prerequisites: []
 exercises: []
 podcast:
-  file: "assets/podcasts/01-Fundacao_Angular_Tipagem_Encapsulamento_e_Generics.m4a"
-  image: "assets/images/podcasts/01-Fundacao_Angular_Tipagem_Encapsulamento_e_Generics.png"
-  title: "Fundação Angular: Tipagem, Encapsulamento e Generics"
+  file: "assets/podcasts/1.1-Angular_CLI_arquitetura_da_fábrica_moderna.m4a"
+  image: "assets/images/podcasts/1.1-Angular_CLI_arquitetura_da_fábrica_moderna.png"
+  title: "Angular CLI: Arquitetura da Fábrica Moderna"
   description: "Neste episódio, exploramos os fundamentos essenciais do Angular moderno."
   duration: "45-60 minutos"
 video:
-  file: "assets/videos/01-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.mp4"
-  thumbnail: "assets/images/podcasts/01-Fundacao_Angular_Tipagem_Encapsulamento_e_Generics.png"
-  title: "Fundação Angular: Tipagem, Encapsulamento e Generics"
+  file: "assets/videos/1.1-Angular_CLI_arquitetura_da_fábrica_moderna.mp4"
+  thumbnail: "assets/images/podcasts/1.1-Angular_CLI_arquitetura_da_fábrica_moderna.png"
+  title: "Angular CLI: Arquitetura da Fábrica Moderna"
   description: "Neste episódio, exploramos os fundamentos essenciais do Angular moderno."
   duration: "45-60 minutos"
 permalink: /modules/fundamentos-acelerados/lessons/introducao-angular/

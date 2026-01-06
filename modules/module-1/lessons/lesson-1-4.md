@@ -9,16 +9,16 @@ level: "Intermediário"
 prerequisites: []
 exercises: []
 podcast:
-  file: "assets/podcasts/01.3e4-Fundacao_Angular_Tipagem_Encapsulamento_e_Generics.m4a"
-  image: "assets/images/podcasts/01.3e4-Fundacao_Angular_Tipagem_Encapsulamento_e_Generics.png"
-  title: "Componentes Standalone, Templates, Data Binding e Diretivas Modernas"
-  description: "Mergulhe profundamente nos componentes standalone do Angular."
+  file: "assets/podcasts/1.4-Data_Binding_e_Diretivas_no_Angular.m4a"
+  image: "assets/images/podcasts/1.4-Data_Binding_e_Diretivas_no_Angular.png"
+  title: "Data Binding e Diretivas no Angular"
+  description: "Domine todas as formas de data binding e diretivas modernas do Angular."
   duration: "60-75 minutos"
 video:
-  file: "assets/videos/01.3e4-Fundação_Angular_Tipagem_Encapsulamento_e_Generics.mp4"
-  thumbnail: "assets/images/podcasts/01.3e4-Fundacao_Angular_Tipagem_Encapsulamento_e_Generics.png"
-  title: "Componentes Standalone, Templates, Data Binding e Diretivas Modernas"
-  description: "Mergulhe profundamente nos componentes standalone do Angular."
+  file: "assets/videos/1.4-Data_Binding_e_Diretivas_no_Angular.mp4"
+  thumbnail: "assets/images/podcasts/1.4-Data_Binding_e_Diretivas_no_Angular.png"
+  title: "Data Binding e Diretivas no Angular"
+  description: "Domine todas as formas de data binding e diretivas modernas do Angular."
   duration: "60-75 minutos"
 permalink: /modules/fundamentos-acelerados/lessons/data-binding/
 ---

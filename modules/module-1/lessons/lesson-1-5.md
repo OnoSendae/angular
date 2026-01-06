@@ -8,6 +8,18 @@ duration: "90 minutos"
 level: "Intermediário"
 prerequisites: []
 exercises: []
+podcast:
+  file: "assets/podcasts/1.5-Control_Flow_e_Pipes_Angular_17.m4a"
+  image: "assets/images/podcasts/1.5-Control_Flow_e_Pipes_Angular_17.png"
+  title: "Control Flow e Pipes Angular 17"
+  description: "Aprenda sobre Control Flow moderno e Pipes para transformação de dados."
+  duration: "60-75 minutos"
+video:
+  file: "assets/videos/1.5-Control_Flow_e_Pipes_Angular_17.mp4"
+  thumbnail: "assets/images/podcasts/1.5-Control_Flow_e_Pipes_Angular_17.png"
+  title: "Control Flow e Pipes Angular 17"
+  description: "Aprenda sobre Control Flow moderno e Pipes para transformação de dados."
+  duration: "60-75 minutos"
 permalink: /modules/fundamentos-acelerados/lessons/control-flow-pipes/
 ---
 
